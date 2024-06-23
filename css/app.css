@@ -135,7 +135,7 @@ body {
 .slider_2-padding {
   padding-bottom: 200px;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .slider_2-padding {
     margin: 0 25px;
   }
@@ -160,12 +160,12 @@ body {
   background-color: #708090;
   z-index: 1;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .slider_2-date-line:after {
     bottom: -200px;
   }
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .slider_2-date-line.slider_2-date-line-lg:after {
     top: 55px;
   }
@@ -184,7 +184,7 @@ body {
   right: calc(50% - 5px);
   bottom: -5px;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .slider_2-date-line .slider_2-date:before {
     width: 13px;
     height: 13px;
@@ -207,7 +207,7 @@ body {
   font-weight: bold;
   font-style: oblique;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .slider_2-heading {
     transform: rotate(-3deg) translateY(-13px) translatex(-25px);
   }
@@ -262,16 +262,10 @@ body {
   width: 100%;
   margin: auto;
 }
-@media only screen and (min-width: 576px) {
-  .slider_3-border-img {
-    padding: 7.5px;
-    border-radius: 2.5px;
-  }
-}
 @media only screen and (min-width: 992px) {
   .slider_3-border-img {
     width: 80%;
-    padding: 15px;
+    padding: 10px;
     border-top-right-radius: 25px;
     border-top-left-radius: 5px;
     border-bottom-right-radius: 25px;
@@ -286,11 +280,6 @@ body {
   box-sizing: border-box;
   border-radius: 0;
   padding: 33% 0;
-}
-@media only screen and (min-width: 576px) {
-  .slider_3-background {
-    border-radius: 2.5px;
-  }
 }
 @media only screen and (min-width: 992px) {
   .slider_3-background {
@@ -317,7 +306,7 @@ body {
   will-change: background-color, top, right, bottom, left;
 }
 .slider_3-shrink-container.has-shrink {
-  background-color: #CD853F;
+  background-color: #B0C4DE;
   top: 8%;
   right: 5%;
   bottom: 8%;
@@ -350,7 +339,7 @@ body {
 .image-fill-right {
   display: none;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .image-fill-right {
     display: block;
     left: 0;
@@ -367,7 +356,7 @@ body {
 .image-fill-left {
   display: none;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .image-fill-left {
     display: block;
     right: 0;
@@ -387,7 +376,7 @@ body {
   padding: 14%;
   height: initial;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .image-1 {
     margin: initial;
     padding: 75px 75px;
@@ -399,7 +388,7 @@ body {
 .image-1.has-opacity-image {
   opacity: 1;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .image-1.has-opacity-image {
     opacity: 0;
   }
@@ -408,7 +397,7 @@ body {
 .image-2 {
   display: none;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .image-2 {
     display: block;
     right: 0;
@@ -421,7 +410,7 @@ body {
 .image-2.has-opacity-image {
   opacity: 1;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .image-2.has-opacity-image {
     opacity: 0;
   }
@@ -435,7 +424,7 @@ body {
   opacity: 1;
   font-size: large;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .slider_3-inner {
     transition: opacity 0.375s ease-in;
     width: 100%;
@@ -445,7 +434,7 @@ body {
 .slider_3-inner.has-opacity-inner {
   opacity: 0.0375;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .slider_3-inner.has-opacity-inner {
     opacity: 0;
   }
@@ -453,11 +442,11 @@ body {
 .slider_3-inner a {
   transition: color 0.2s ease;
   will-change: color;
-  color: #FFC0CB;
+  color: #ffffff;
   text-decoration: none;
 }
 .slider_3-inner a:hover, .slider_3-inner a:focus {
-  color: #B0C4DE;
+  color: #708090;
 }
 
 .slider_3-percentage {
@@ -468,14 +457,14 @@ body {
   transition: opacity 0.5s linear;
   will-change: opacity;
   opacity: 0;
-  background-color: #B0C4DE;
+  background-color: #ffffff;
   overflow: hidden;
 }
 .slider_3-percentage .percentage-change {
   position: absolute;
   height: 2px;
   left: 0;
-  background-color: #ffffff;
+  background-color: #CD853F;
 }
 
 .slider_3-button-next {
@@ -491,7 +480,7 @@ body {
   will-change: opacity;
   border-radius: 50%;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .slider_3-button-next:hover {
     opacity: 0.5;
   }
@@ -584,16 +573,10 @@ body {
   width: 100%;
   margin: auto;
 }
-@media only screen and (min-width: 576px) {
-  .slider_3-border-img {
-    padding: 7.5px;
-    border-radius: 2.5px;
-  }
-}
 @media only screen and (min-width: 992px) {
   .slider_3-border-img {
     width: 80%;
-    padding: 15px;
+    padding: 10px;
     border-top-right-radius: 25px;
     border-top-left-radius: 5px;
     border-bottom-right-radius: 25px;
@@ -608,11 +591,6 @@ body {
   box-sizing: border-box;
   border-radius: 0;
   padding: 33% 0;
-}
-@media only screen and (min-width: 576px) {
-  .slider_3-background {
-    border-radius: 2.5px;
-  }
 }
 @media only screen and (min-width: 992px) {
   .slider_3-background {
@@ -639,7 +617,7 @@ body {
   will-change: background-color, top, right, bottom, left;
 }
 .slider_3-shrink-container.has-shrink {
-  background-color: #CD853F;
+  background-color: #B0C4DE;
   top: 8%;
   right: 5%;
   bottom: 8%;
@@ -672,7 +650,7 @@ body {
 .image-fill-right {
   display: none;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .image-fill-right {
     display: block;
     left: 0;
@@ -689,7 +667,7 @@ body {
 .image-fill-left {
   display: none;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .image-fill-left {
     display: block;
     right: 0;
@@ -709,7 +687,7 @@ body {
   padding: 14%;
   height: initial;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .image-1 {
     margin: initial;
     padding: 75px 75px;
@@ -721,7 +699,7 @@ body {
 .image-1.has-opacity-image {
   opacity: 1;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .image-1.has-opacity-image {
     opacity: 0;
   }
@@ -730,7 +708,7 @@ body {
 .image-2 {
   display: none;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .image-2 {
     display: block;
     right: 0;
@@ -743,7 +721,7 @@ body {
 .image-2.has-opacity-image {
   opacity: 1;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .image-2.has-opacity-image {
     opacity: 0;
   }
@@ -757,7 +735,7 @@ body {
   opacity: 1;
   font-size: large;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .slider_3-inner {
     transition: opacity 0.375s ease-in;
     width: 100%;
@@ -767,7 +745,7 @@ body {
 .slider_3-inner.has-opacity-inner {
   opacity: 0.0375;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .slider_3-inner.has-opacity-inner {
     opacity: 0;
   }
@@ -775,11 +753,11 @@ body {
 .slider_3-inner a {
   transition: color 0.2s ease;
   will-change: color;
-  color: #FFC0CB;
+  color: #ffffff;
   text-decoration: none;
 }
 .slider_3-inner a:hover, .slider_3-inner a:focus {
-  color: #B0C4DE;
+  color: #708090;
 }
 
 .slider_3-percentage {
@@ -790,14 +768,14 @@ body {
   transition: opacity 0.5s linear;
   will-change: opacity;
   opacity: 0;
-  background-color: #B0C4DE;
+  background-color: #ffffff;
   overflow: hidden;
 }
 .slider_3-percentage .percentage-change {
   position: absolute;
   height: 2px;
   left: 0;
-  background-color: #ffffff;
+  background-color: #CD853F;
 }
 
 .slider_3-button-next {
@@ -813,7 +791,7 @@ body {
   will-change: opacity;
   border-radius: 50%;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .slider_3-button-next:hover {
     opacity: 0.5;
   }

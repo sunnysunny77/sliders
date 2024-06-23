@@ -5,13 +5,9 @@
   border-radius: 0;
   width: 100%;
   margin: auto;
-  @include min-sm {
-    padding: 7.5px;
-    border-radius: 2.5px;
-  }
   @include min-lg {
     width: 80%;
-    padding: 15px;
+    padding: 10px;
     border-top-right-radius: 25px;
     border-top-left-radius: 5px;
     border-bottom-right-radius: 25px;
@@ -26,9 +22,6 @@
   box-sizing: border-box;
   border-radius: 0;
   padding: 33% 0;
-  @include min-sm {
-    border-radius: 2.5px;
-  }
   @include min-lg {
     border-top-right-radius: 17px;
     border-top-left-radius: 2.5px;
@@ -57,7 +50,7 @@
     left 0.5s linear;
   will-change: background-color, top, right, bottom, left;
   &.has-shrink {
-    background-color: $color_4;
+    background-color: $color_2;
     top: 8%;
     right: 5%;
     bottom: 8%;
@@ -90,7 +83,7 @@
 
 .image-fill-right {
   display: none;
-  @include min_lg {
+  @include min-md {
     display: block;
     left: 0;
     position: absolute;
@@ -105,7 +98,7 @@
 
 .image-fill-left {
   display: none;
-  @include min_lg {
+  @include min-md {
     display: block;
     right: 0;
     position: absolute;
@@ -123,7 +116,7 @@
   margin: auto 12.5% auto 12.5%;
   padding: 14%;
   height: initial;
-  @include min_lg {
+  @include min-md {
     margin: initial;
     padding: 75px 75px;
     transition: opacity 0.375s ease-in;
@@ -132,7 +125,7 @@
   }
   &.has-opacity-image {
     opacity: 1;
-    @include min_lg {
+    @include min-md {
       opacity: 0;
     }
   }
@@ -140,7 +133,7 @@
 
 .image-2 {
   display: none;
-  @include min_lg {
+  @include min-md {
     display: block;
     right: 0;
     position: absolute;
@@ -150,7 +143,7 @@
   }
   &.has-opacity-image {
     opacity: 1;
-    @include min_lg {
+    @include min-md {
       opacity: 0;
     }
   }
@@ -163,25 +156,25 @@
   will-change: opacity;
   opacity: 1;
   font-size: large;
-  @include min_lg {
+  @include min-md {
     transition: opacity 0.375s ease-in;
     width: 100%;
     margin: auto auto auto 2%;
   }
   &.has-opacity-inner {
     opacity: 0.0375;
-    @include min_lg {
+    @include min-md {
       opacity: 0;
     }
   }
   a {
     transition: color 0.2s ease;
     will-change: color;
-    color: $color_3;
+    color: $white;
     text-decoration: none;
     &:hover,
     &:focus {
-      color: $color_2;
+      color: $color_7;
     }
   }
 }
@@ -194,13 +187,13 @@
   transition: opacity 0.5s linear;
   will-change: opacity;
   opacity: 0;
-  background-color: $color_2;
+  background-color: $white;
   overflow: hidden;
   .percentage-change {
     position: absolute;
     height: 2px;
     left: 0;
-    background-color: $white;
+    background-color: $color_4;
   }
 }
 
@@ -217,7 +210,7 @@
   will-change: opacity;
   border-radius: 50%;
   &:hover {
-    @include min_lg {
+    @include min-md {
       opacity: 0.5;
     }
   }

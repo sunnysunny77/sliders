@@ -87,9 +87,9 @@
 
 <hr id="slider_2-top" class="my-5">
 
-<div class="container g-0">
+<h2 class="text-center my-5"> Slider 2 </h2>
 
-	<h2 class="text-center my-5"> Slider 2 </h2>
+<div class="container g-0">
 
 	<div class="slider_2-container position-relative timeline-container">
 
@@ -102,14 +102,14 @@
 		while ($index < 5) {
 
 			$direction = $index % 2 === 1 ? "flex-row" : "flex-row-reverse";
-			$justify_image = $index % 2 === 1 ? "justify-content-lg-start" : "justify-content-lg-end";
-			$justify_content = $index % 2 === 1 ? "justify-content-lg-end" : "justify-content-lg-start";
+			$justify_image = $index % 2 === 1 ? "justify-content-md-start" : "justify-content-md-end";
+			$justify_content = $index % 2 === 1 ? "justify-content-md-end" : "justify-content-md-start";
 			$display = "d-none";
-			$date_line_lg = "";
+			$date_line_md = "";
 
 			if ($index === 1) {
 
-				$date_line_lg = "slider_2-date-line-lg";
+				$date_line_md = "slider_2-date-line-md";
 				$display = "d-flex";
 			}
 
@@ -124,15 +124,15 @@
 
 			<div class="slider_2-item timeline-item  <?php echo $display; ?>  g-0">
 
-				<div class="slider_2-padding row justify-content-center justify-content-lg-between <?php echo $direction; ?>">
+				<div class="slider_2-padding row justify-content-center justify-content-md-between <?php echo $direction; ?> g-0">
 
-					<img class="col-12 col-lg-5 col-xl-4 slider_2-img <?php echo $pad_image; ?>" src="https://placehold.co/400x400/EEE/31343C"  alt="Placehold">
+					<img class="col-12 col-md-4 col-xl-4 slider_2-img <?php echo $pad_image; ?>" src="https://placehold.co/400x400/EEE/31343C"  alt="Placehold">
 			
-					<div class="slider_2-date-line col-2 col-xl-4 <?php echo $date_line_lg; ?> position-relative d-flex justify-content-center align-items-lg-center py-5 py-lg-0">
+					<div class="slider_2-date-line col-2 col-xl-4 <?php echo $date_line_md; ?> position-relative d-flex justify-content-center align-items-md-center py-5 py-md-0">
 
 						<div class="slider_2-date position-relative">
 
-							<div class="slider_2-date-text d-flex align-items-center justify-content-center my-5 py-2 py-lg-3 mx-auto">
+							<div class="slider_2-date-text d-flex align-items-center justify-content-center my-5 py-2 py-md-3 mx-auto">
 								<?php echo $index . "000"?>
 							</div>
 
@@ -140,13 +140,13 @@
 
 					</div>
 
-					<div class="col-12 col-lg-5 col-xl-4">
+					<div class="col-12 col-md-4 col-xl-4">
 
 						<div class="row <?php echo $justify_content; ?> g-0">
 
-							<div class="slider_2-heading col-12 d-flex justify-content-center justify-content-lg-start px-5 px-lg-0 pb-4 py-lg-5">
+							<div class="slider_2-heading col-12 d-flex justify-content-center justify-content-md-start px-5 px-md-0 pb-4 py-md-5">
 
-								<div class="text-content text-center border <?php echo $color_array[$count] ?> py-2 px-4 px-lg-3 py-lg-3 mb-4 mb-lg-0">
+								<div class="text-content text-center border <?php echo $color_array[$count] ?> py-2 px-4 px-md-3 py-md-3 mb-4 mb-md-0">
 
 									Donec dui quam, et pellentesque
 
@@ -154,11 +154,9 @@
 
 							</div>
 
-							<div class="col-12 text-center text-lg-start px-4 px-lg-0">
+							<div class="col-12 text-center text-md-start px-4 px-md-0">
 							
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies lectus augue, ut commodo mi sagittis ut. Morbi tellus nunc, facilisis eu mi sed, ullamcorper congue tellus. In quam ex, accumsan ut varius ut, vestibulum nec nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tortor est, commodo vel quam eget, placerat viverra arcu. Nam eu laoreet lorem. Aliquam facilisis elementum risus, ut suscipit massa finibus et. Curabitur rutrum sapien eget fermentum dignissim. Curabitur pulvinar arcu urna, at rutrum urna molestie vel. Cras hendrerit sit amet ipsum in dignissim. Nam aliquam, purus a vulputate tempus, mauris ante auctor turpis, condimentum semper augue eros sit amet tellus. Maecenas augue lorem, condimentum sed viverra eget, pulvinar eget augue. Sed a metus eros. Donec vel felis et magna porta mollis. Maecenas vehicula quam sit amet ligula euismod, et pretium lacus dignissim.
-
-								Integer in augue laoreet lectus viverra mollis. In condimentum dui quam, et pellentesque felis congue egestas. Suspendisse non velit malesuada nibh scelerisque aliquam in at quam. Sed tempus elit at pharetra consequat. Donec vel velit ullamcorper, viverra neque eu, malesuada eros. Etiam viverra nisl non ante rutrum placerat. Sed pulvinar nulla sed lectus ornare, eu auctor elit mollis. Sed semper arcu nibh, non cursus lacus accumsan in. Sed rutrum dui enim, nec dictum dolor vulputate ut. Ut ultricies condimentum sapien eu congue. Suspendisse ac vehicula ante.
 
 							</div>
 
@@ -178,7 +176,7 @@
 
 		?>
 
-		<div class="slider_2-button-container position-absolute d-flex justify-content-center pt-5 pt-lg-0">
+		<div class="slider_2-button-container position-absolute d-flex justify-content-center pt-5 pt-md-0">
 
 			<button class="c-custom-1 timeline-button"><i class="fa-solid fa-arrow-down"></i></button>
 
@@ -192,7 +190,7 @@
 
 <h2 class="text-center my-5"> Slider 3 </h2>
 
-<div class="container g-0">
+<div class="container-lg g-0">
 
 	<div class="slider_3-border-img">
 
@@ -212,7 +210,7 @@
 
 				<div class="static-count d-none">
 
-					<img class="slider_3-img" src="https://placehold.co/150x150/B0C4DE/31343C" alt="mail" />
+					<img class="slider_3-img" src="https://placehold.co/150x150/3708090/708090" alt="mail" />
 
 					<div>
 
@@ -224,7 +222,7 @@
 
 				<div class="static-count d-none">
 
-					<img class="slider_3-img" src="https://placehold.co/150x150/3708090/708090" alt="telephone" />
+					<img class="slider_3-img" src="https://placehold.co/150x150/FFC0CB/31343C" alt="telephone" />
 
 					<div>
 
@@ -236,7 +234,7 @@
 
 				<div class="static-count  d-none">
 
-					<img class="slider_3-img" src="https://placehold.co/150x150/31343C/B0C4DE" alt="LinkedIn" />
+					<img class="slider_3-img" src="https://placehold.co/150x150/EEE/31343C" alt="LinkedIn" />
 
 					<div>
 
