@@ -1,0 +1,174 @@
+.slider_3-list-cotainer {
+    position: relative;
+    width: 95%;
+    height: min(40vh, 250px);
+    background-color: $color_2;
+    overflow: hidden;
+    border-top: 3px solid $color_4;
+    border-bottom: 3px solid $color_4;
+    @include min_lg {
+        border: none;
+        height: 37vh;
+        max-height: 350px;
+        min-height: 205px;
+        width: calc(100% - 290px);
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+}
+
+.slider_3-scroll {
+    height: calc(min(40vh, 250px) - 40px);
+    margin: 20px 0;
+    overflow-y: scroll;
+    scrollbar-color: $color_4 transparent;
+    @include min_lg {
+        height: calc(37vh - 40px);
+        max-height: 310px;
+        min-height: 165px;
+    }
+    &::-webkit-scrollbar {
+        width: 7px;
+    }
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: $color_4;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background: transparent;
+    }
+}
+
+.slider_3-list {
+    margin: 0;
+    width: 100%;
+    padding: 0 20px;
+    list-style-type: none;
+    @include min_lg {
+        width: 90%;
+        padding: 0 7px 0 40px;
+    }
+    li img {
+        margin: 40px 0 min(10.5vh, 100px) 0;
+        width: 10.5vh;
+        height: 10.5vh;
+        min-width: 50px;
+        min-height: 50px;
+        max-width: 100px;
+        max-height: 100px;
+        @include min_lg {
+            margin: 40px 0 min(10.5vh, 100px) 4%;
+        }
+    }
+    ol li {
+        h3 {
+            padding: 40px 0 7px 0;
+            margin: 0;
+            font-weight: normal;
+            a {
+                color: $color_6;
+                text-decoration: none;
+                font-size: x-large;
+                transition: text-decoration-color 0.2s ease;
+                text-decoration: underline;
+                text-decoration-color: transparent;
+                &:hover,
+                &:focus {
+                    text-decoration-color: $color_6;
+                }
+            }
+        }
+        &:last-child {
+            min-height: calc(45vh - 40px);
+        }
+    }
+}
+
+.slider_3-site-container {
+    background-color: $color_2;
+    height: 50vh;
+    width: 95%;
+    position: relative;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    @include min_lg {
+        height: 37vh;
+        max-height: 350px;
+        min-height: 205px;
+        width: 290px;
+        padding: 30px;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+    }
+}
+
+.slider_3-site {
+    height: 0;
+    width: 0;
+    opacity: 0;
+    transition: opacity 0.375s;
+    will-change: opacity;
+    overflow: hidden;
+    img {
+        object-position: center;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+        @include min_lg {
+            border-radius: 0;
+            object-fit: contain;
+        }
+    }
+    a {
+        font-size: medium;
+        bottom: 3px;
+        left: 20px;
+        color: $white;
+        position: absolute;
+        @include min_lg {
+            top: 6.25px;
+            font-size: 12.5px;
+            bottom: initial;
+            font-size: small;
+        }
+        &:hover,
+        &:focus {
+            color: $white;
+            text-decoration: none;
+        }
+    }
+}
+
+.d-has-display {
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+}
+
+.slider_3-close {
+    position: absolute;
+    font-size: 17px;
+    right: 25px;
+    bottom: 3px;
+    opacity: 1;
+    cursor: pointer;
+    background: transparent;
+    outline: none;
+    border: none;
+    color: $white;
+    @include min_lg {
+        top: 7.5px;
+        right: 10px;
+        bottom: initial;
+        border-radius: 100%;
+        border: 1px solid;
+        padding: 4px 5px;
+        font-size: 10px;
+        line-height: 10px;
+    }
+}

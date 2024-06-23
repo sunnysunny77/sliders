@@ -1,0 +1,24 @@
+@mixin min_sm {
+    @media only screen and (min-width: 576px) {
+        @content;
+    }
+}
+
+@mixin min_lg {
+    @media only screen and (min-width: 992px) {
+        @content;
+    }
+}
+
+@mixin max_lg {
+    @media only screen and (min-width: 991px) {
+        @content;
+    }
+}
+
+@mixin min_xl {
+    @media only screen and (min-width: 1200px) {
+        @content;
+    }
+}
+

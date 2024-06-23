@@ -1,0 +1,23 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "description": "sliders",
+  "main": "./js/app.js",
+  "scripts": {
+    "build": "node ./node_modules/sass/sass.js ./scss:./css",
+    "watch": "node ./node_modules/sass/sass.js ./scss:./css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunnysunny77/template.git"
+  },
+  "author": "D.C",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sunnysunny77/template/issues"
+  },
+  "homepage": "https://github.com/sunnysunny77/template#readme",
+  "dependencies": {
+    "sass": "latest"
+  }
+}
