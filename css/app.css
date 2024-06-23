@@ -949,7 +949,6 @@ body {
 }
 .slider_3-site img {
   object-position: center;
-  object-fit: cover;
   height: 100%;
   width: 100%;
   border-bottom-left-radius: 25px;
@@ -958,6 +957,15 @@ body {
 @media only screen and (min-width: 992px) {
   .slider_3-site img {
     border-radius: 0;
+  }
+}
+@media only screen and (orientation: portrait) {
+  .slider_3-site img {
+    object-fit: cover;
+  }
+}
+@media only screen and (orientation: landscape) {
+  .slider_3-site img {
     object-fit: contain;
   }
 }

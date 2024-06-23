@@ -22,3 +22,15 @@
     }
 }
 
+@mixin portrait {
+    @media only screen and (orientation: portrait) {
+        @content;
+    }
+}
+
+@mixin landscape {
+    @media only screen and (orientation: landscape) {
+        @content;
+    }
+}
+

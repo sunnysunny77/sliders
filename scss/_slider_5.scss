@@ -114,13 +114,19 @@
     overflow: hidden;
     img {
         object-position: center;
-        object-fit: cover;
+   
         height: 100%;
         width: 100%;
         border-bottom-left-radius: 25px;
         border-bottom-right-radius: 25px;
         @include min_lg {
             border-radius: 0;
+            
+        }
+        @include portrait {
+            object-fit: cover;
+        }
+        @include landscape {
             object-fit: contain;
         }
     }
