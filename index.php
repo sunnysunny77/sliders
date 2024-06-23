@@ -275,7 +275,7 @@
 
 <div class="container g-0">
 
-	<div class="row slider_3-height-container height-container d-flex flex-column flex-lg-row align-items-lg-start justify-content-lg-between g-0">
+	<div class="row slider_4-height-container height-container d-flex flex-column flex-lg-row align-items-lg-start justify-content-lg-between g-0">
 
         <p class="col-12 col-lg-7 d-flex h-100 align-items-lg-center px-4 px-lg-0 m-0">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -302,9 +302,9 @@
           pariatur.
         </p>
 
-		<div class="col-12 col-lg-4 slider_3-figure-container pt-5 pt-lg-0">
+		<div class="col-12 col-lg-4 slider_4-figure-container pt-5 pt-lg-0">
 
-			<a class="slider_3-figure figure-one scroll d-lg-has-height w-100 d-flex justify-content-center mb-sm-5 mb-lg-0" href="#">
+			<a class="slider_4-figure figure-one scroll d-lg-has-height w-100 d-flex justify-content-center mb-sm-5 mb-lg-0" href="#">
 
 				<img src="https://placehold.co/440x293/B0C4DE/31343C"  alt="Placehold"/>
 
@@ -314,7 +314,7 @@
 
 			</a>
 
-			<a class="slider_3-figure figure-two scroll d-lg-0-height w-100 d-flex justify-content-center" href="#">
+			<a class="slider_4-figure figure-two scroll d-lg-0-height w-100 d-flex justify-content-center" href="#">
 
 				<img src="https://placehold.co/440x293/31343C/B0C4DE"  alt="Placehold"/>
 				
@@ -336,23 +336,23 @@
 
 <div class="container g-0">
 
-	<div class="slider_3-cotainer d-flex flex-wrap justify-content-center">
+	<div class="slider_5-container d-flex flex-wrap justify-content-center">
 
-		<div class="slider_3-list-cotainer">
+		<div class="slider_5-list-container">
 			
-			<div class="slider_3-scroll scroll-listener">
+			<div class="slider_5-scroll scroll-listener">
 
-				<ul class="slider_3-list">
+				<ul class="slider_5-list">
 
 					<li>
 
 						Scroll preview
 
-						<img class="d-block" src="https://placehold.co/100x100/31343C/B0C4DE"  alt="Placehold"/>
+						<img src="https://placehold.co/100x100/31343C/B0C4DE"  alt="Placehold"/>
 
 						<ol>
 
-							<li class="slider_3-scroll-preview scroll-preview">
+							<li class="slider_5-scroll-preview scroll-preview">
 								<h3><a target="lorem" href="https://google.com/"> Lorem ipsum dolor </a></h3>
 								Lorem ipsum
 								<br />
@@ -367,7 +367,7 @@
 								<br />
 							</li>
 
-							<li class="slider_3-scroll-preview scroll-preview">
+							<li class="slider_5-scroll-preview scroll-preview">
 								<h3><a target="dolor" href="https://google.com/"> Lorem ipsum dolor </a></h3>
 								Eiusmod tempor 
 								<br />
@@ -391,15 +391,15 @@
 
 		</div>
 
-		<div class="slider_3-site-container site-container d-flex align-items-start">
+		<div class="slider_5-site-container site-container d-flex align-items-start">
 
-			<div id="site-1" class="slider_3-site site-img d-has-display">
+			<div id="site-1" class="slider_5-site site-img d-has-display">
 
 				<img src="https://placehold.co/400x400/B0C4DE/31343C" alt="Placehold"/>
 
 			</div>
 
-			<div id="site-2" class="slider_3-site site-img">
+			<div id="site-2" class="slider_5-site site-img">
 
 				<img src="https://placehold.co/400x400/3708090/708090" alt="Placehold"/>
 
@@ -409,7 +409,7 @@
 
 			</div>
 
-			<div id="site-3" class="slider_3-site site-img">
+			<div id="site-3" class="slider_5-site site-img">
 
 				<img src="https://placehold.co/400x400/31343C/B0C4DE" alt="Placehold" />
 
@@ -419,7 +419,7 @@
 
 			</div>
 
-			<button aria-label="close" class="slider_3-close slider-close">X</button>
+			<button aria-label="close" class="slider_5-close slider-close">X</button>
 
 		</div>
 

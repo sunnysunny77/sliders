@@ -1,4 +1,4 @@
-.slider_3-height-container {
+.slider_4-height-container {
     height: unset;
     @include min_lg {
         height: 100vh;
@@ -6,7 +6,7 @@
     }
 }
 
-.slider_3-figure-container {
+.slider_4-figure-container {
     @include min_lg {
         position: sticky;
         top: 25vh;
@@ -14,7 +14,7 @@
     }
 }
 
-.slider_3-figure {
+.slider_4-figure {
     position: relative;
     overflow: hidden;
     color: $color_4;

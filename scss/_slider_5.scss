@@ -1,4 +1,4 @@
-.slider_3-list-cotainer {
+.slider_5-list-container {
     position: relative;
     width: 95%;
     height: min(40vh, 250px);
@@ -17,7 +17,7 @@
     }
 }
 
-.slider_3-scroll {
+.slider_5-scroll {
     height: calc(min(40vh, 250px) - 40px);
     margin: 20px 0;
     overflow-y: scroll;
@@ -41,7 +41,7 @@
     }
 }
 
-.slider_3-list {
+.slider_5-list {
     margin: 0;
     width: 100%;
     padding: 0 20px;
@@ -51,6 +51,7 @@
         padding: 0 7px 0 40px;
     }
     li img {
+        display: block;
         margin: 40px 0 min(10.5vh, 100px) 0;
         width: 10.5vh;
         height: 10.5vh;
@@ -86,7 +87,7 @@
     }
 }
 
-.slider_3-site-container {
+.slider_5-site-container {
     background-color: $color_2;
     height: 50vh;
     width: 95%;
@@ -105,7 +106,7 @@
     }
 }
 
-.slider_3-site {
+.slider_5-site {
     height: 0;
     width: 0;
     opacity: 0;
@@ -163,7 +164,7 @@
     }
 }
 
-.slider_3-close {
+.slider_5-close {
     position: absolute;
     font-size: 17px;
     right: 25px;
