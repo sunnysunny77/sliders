@@ -43,11 +43,11 @@
 
 .slider_5-list {
     margin: 0;
-    width: 100%;
+    width: 90%;
     padding: 0 20px;
     list-style-type: none;
+    word-wrap: break-word;
     @include min_lg {
-        width: 90%;
         padding: 0 7px 0 40px;
     }
     li img {
@@ -115,37 +115,34 @@
     overflow: hidden;
     img {
         object-position: center;
-   
+        object-fit: contain;
         height: 100%;
         width: 100%;
         border-bottom-left-radius: 25px;
         border-bottom-right-radius: 25px;
         @include min_lg {
-            border-radius: 0;
-            
-        }
-        @include portrait {
-            object-fit: cover;
-        }
-        @include landscape {
-            object-fit: contain;
+            border-radius: 0;    
         }
     }
     a {
         font-size: medium;
         bottom: 3px;
-        left: 20px;
+        padding: 3px 6px 3px 25px;
+        left: 0;
         color: $white;
         position: absolute;
         width: 0;
         height: 0;
         overflow: hidden;
+        border-bottom-left-radius: 25px;
         @include min_lg {
+            padding: 0;
             top: 6.25px;
             font-size: 12.5px;
             bottom: initial;
             font-size: small;
             text-decoration: underline;
+            border-bottom-left-radius: initial;
         }
         &:hover {
             color: $white;
