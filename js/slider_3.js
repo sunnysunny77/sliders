@@ -37,7 +37,7 @@ const slider_3 = () => {
     arraySrc.push(item.children[0].src);
     arrayHref.push([
       item.children[1].children[0].href,
-      item.children[1].children[0].innerHTML,
+      item.children[1].children[0].innerHTML
     ]);
     arrayText.push(item.children[1].innerHTML);
   }
@@ -69,9 +69,9 @@ const slider_3 = () => {
       image_fill_left.href = arrayHref[0][0];
       image_fill_right.href = arrayHref[counter][0];
       image_fill_left.innerHTML =
-        '<span class="d-none">' + arrayHref[0][1] + "</span>";
+        `<span class="d-none">${  arrayHref[0][1]  }</span>`;
       image_fill_right.innerHTML =
-        '<span class="d-none">' + arrayHref[counter][1] + "</span>";
+        `<span class="d-none">${  arrayHref[counter][1]  }</span>`;
 
       return;
     }
@@ -82,9 +82,9 @@ const slider_3 = () => {
       image_fill_left.href = arrayHref[counter + 1][0];
       image_fill_right.href = arrayHref[counter][0];
       image_fill_left.innerHTML =
-        '<span class="d-none">' + arrayHref[counter + 1][1] + "</span>";
+        `<span class="d-none">${  arrayHref[counter + 1][1]  }</span>`;
       image_fill_right.innerHTML =
-        '<span class="d-none">' + arrayHref[counter][1] + "</span>";
+        `<span class="d-none">${  arrayHref[counter][1]  }</span>`;
 
       return;
     }
@@ -94,9 +94,9 @@ const slider_3 = () => {
     image_fill_left.href = arrayHref[counter + 1][0];
     image_fill_right.href = arrayHref[counter][0];
     image_fill_left.innerHTML =
-      '<span class="d-none">' + arrayHref[counter + 1][1] + "</span>";
+      `<span class="d-none">${  arrayHref[counter + 1][1]  }</span>`;
     image_fill_right.innerHTML =
-      '<span class="d-none">' + arrayHref[counter][1] + "</span>";
+      `<span class="d-none">${  arrayHref[counter][1]  }</span>`;
   };
 
   const iterationStart = () => {
@@ -110,8 +110,8 @@ const slider_3 = () => {
       image1.href = arrayHref[counter][0];
       image2.href = arrayHref[0][0];
       image1.innerHTML =
-        '<span class="d-none">' + arrayHref[counter][1] + "</span>";
-      image2.innerHTML = '<span class="d-none">' + arrayHref[0][1] + "</span>";
+        `<span class="d-none">${  arrayHref[counter][1]  }</span>`;
+      image2.innerHTML = `<span class="d-none">${  arrayHref[0][1]  }</span>`;
       inner.innerHTML = arrayText[counter];
 
       return;
@@ -123,9 +123,9 @@ const slider_3 = () => {
       image1.href = arrayHref[counter][0];
       image2.href = arrayHref[counter + 1][0];
       image1.innerHTML =
-        '<span class="d-none">' + arrayHref[counter][1] + "</span>";
+        `<span class="d-none">${  arrayHref[counter][1]  }</span>`;
       image2.innerHTML =
-        '<span class="d-none">' + arrayHref[counter + 1][1] + "</span>";
+        `<span class="d-none">${  arrayHref[counter + 1][1]  }</span>`;
       inner.innerHTML = arrayText[counter];
 
       return;
@@ -136,9 +136,9 @@ const slider_3 = () => {
     image1.href = arrayHref[counter][0];
     image2.href = arrayHref[counter + 1][0];
     image1.innerHTML =
-      '<span class="d-none">' + arrayHref[counter][1] + "</span>";
+      `<span class="d-none">${  arrayHref[counter][1]  }</span>`;
     image2.innerHTML =
-      '<span class="d-none">' + arrayHref[counter + 1][1] + "</span>";
+      `<span class="d-none">${  arrayHref[counter + 1][1]  }</span>`;
     inner.innerHTML = arrayText[counter];
   };
 
@@ -196,12 +196,12 @@ const slider_3 = () => {
   image2.href = arrayHref[1][0];
   image_fill_left.href = arrayHref[1][0];
   image_fill_right.href = arrayHref[0][0];
-  image1.innerHTML = '<span class="d-none">' + arrayHref[0][1] + "</span>";
-  image2.innerHTML = '<span class="d-none">' + arrayHref[1][1] + "</span>";
+  image1.innerHTML = `<span class="d-none">${  arrayHref[0][1]  }</span>`;
+  image2.innerHTML = `<span class="d-none">${  arrayHref[1][1]  }</span>`;
   image_fill_left.innerHTML =
-    '<span class="d-none">' + arrayHref[1][1] + "</span>";
+    `<span class="d-none">${  arrayHref[1][1]  }</span>`;
   image_fill_right.innerHTML =
-    '<span class="d-none">' + arrayHref[0][1] + "</span>";
+    `<span class="d-none">${  arrayHref[0][1]  }</span>`;
   inner.innerHTML = arrayText[0];
   width = percent;
   percentage.style.width = `${width}%`;

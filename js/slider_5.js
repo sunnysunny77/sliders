@@ -15,8 +15,8 @@ const slider_5 = () => {
   }
 
   const picture_display = (item) => {
-    picture_id.forEach((element) => {
-      const obj = document.getElementById(element);
+    for (const index of picture_id) {
+      const obj = document.querySelector(`#${index}`);
       const bool = obj.id === item;
       const contains = obj.classList.contains("d-has-display");
       if (bool && !contains) {
@@ -24,7 +24,7 @@ const slider_5 = () => {
       } else if (!bool && contains) {
         obj.classList.remove("d-has-display");
       }
-    });
+    }
   };
 
   events(
@@ -32,7 +32,6 @@ const slider_5 = () => {
     "scroll",
     (event) => {
       const ranges = [...scroll_preview].map((item) => item.offsetTop);
-      const length = ranges.length;
       const scroll_pos = event.target.scrollTop;
 
       if (scroll_pos < ranges[0]) {
@@ -47,13 +46,13 @@ const slider_5 = () => {
           picture_display(picture_id[i + 1]);
         }
       }
-      if (scroll_pos > ranges[ranges.length - 1]) {
+      if (scroll_pos > ranges.at(-1)) {
         picture_display(picture_id.at(-1));
       }
     },
     { passive: true }
   );
-  
+
   events(slider_close, "click", () =>{
     scroll_listener.scroll(0, 0);
   });
