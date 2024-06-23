@@ -968,9 +968,7 @@ body {
   left: 0;
   color: #ffffff;
   position: absolute;
-  width: 0;
-  height: 0;
-  overflow: hidden;
+  display: none;
   border-bottom-left-radius: 25px;
 }
 @media only screen and (min-width: 992px) {
@@ -995,8 +993,7 @@ body {
   opacity: 1;
 }
 .d-has-display a {
-  width: initial;
-  height: initial;
+  display: block;
 }
 
 .slider_5-close {

@@ -121,7 +121,8 @@
         border-bottom-left-radius: 25px;
         border-bottom-right-radius: 25px;
         @include min_lg {
-            border-radius: 0;    
+            border-radius: 0;  
+       
         }
     }
     a {
@@ -131,9 +132,7 @@
         left: 0;
         color: $white;
         position: absolute;
-        width: 0;
-        height: 0;
-        overflow: hidden;
+        display: none;
         border-bottom-left-radius: 25px;
         @include min_lg {
             padding: 0;
@@ -156,8 +155,7 @@
     width: 100%;
     opacity: 1;
     a {
-        width: initial;
-        height: initial;
+       display: block;
     }
 }
 
