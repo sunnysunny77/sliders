@@ -390,7 +390,7 @@
 
 		</div>
 
-		<div class="slider_5-site-container site-container d-flex align-items-start">
+		<div class="slider_5-site-container site-container">
 
 			<div id="site-1" class="slider_5-site site-img d-has-display">
 
