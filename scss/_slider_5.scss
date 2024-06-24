@@ -97,6 +97,7 @@
     width: 95%;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
+    position: relative;
     @include min_lg {
         height: 35vh;
         max-height: 388px;
@@ -106,6 +107,7 @@
         border-bottom-left-radius: 0;
         border-top-right-radius: 25px;
         border-bottom-right-radius: 25px;
+        position: static;
     }
     @include landscape {
         height: 35vh;
@@ -180,13 +182,15 @@
     border: none;
     color: $white;
     @include min_lg {
-        top: 7.5px;
-        right: 10px;
+        top: -17.5px;
+        right: -16px;
         bottom: initial;
         border-radius: 100%;
         border: 1px solid;
         padding: 4px 5px;
         font-size: 10px;
         line-height: 10px;
+        position: relative;
+        opacity: 0.5;
     }
 }

@@ -6,12 +6,15 @@
   width: 100%;
   margin: auto;
   @include min-lg {
-    width: 80%;
+    width: 90%;
     padding: 10px;
     border-top-right-radius: 25px;
     border-top-left-radius: 5px;
     border-bottom-right-radius: 25px;
     border-bottom-left-radius: 25px;
+  }
+  @include min-xl {
+    width: 66%;
   }
 }
 
