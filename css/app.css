@@ -823,9 +823,7 @@ body {
 @media only screen and (min-width: 992px) {
   .slider_5-list-container {
     border: none;
-    height: 35vh;
-    max-height: 388px;
-    min-height: 205px;
+    height: clamp(205px, 35vh, 340px);
     width: calc(100% - 300px);
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -841,8 +839,7 @@ body {
 }
 @media only screen and (min-width: 992px) {
   .slider_5-scroll {
-    height: calc(35vh - 60px);
-    min-height: 145px;
+    height: calc(clamp(205px, 35vh, 340px) - 60px);
     width: calc(100% + 300px);
     left: 0;
   }
@@ -922,9 +919,7 @@ body {
 }
 @media only screen and (min-width: 992px) {
   .slider_5-site-container {
-    height: 35vh;
-    max-height: 388px;
-    min-height: 205px;
+    height: clamp(205px, 35vh, 340px);
     width: 300px;
     padding: 0;
     border-bottom-left-radius: 0;

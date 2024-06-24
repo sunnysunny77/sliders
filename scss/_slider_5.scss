@@ -6,9 +6,7 @@
     border-bottom: 3px solid $color_4;
     @include min_lg {
         border: none;
-        height: 35vh;
-        max-height: 388px;
-        min-height: 205px;
+        height: clamp(205px, 35vh, 340px);
         width: calc(100% - 300px);
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
@@ -22,8 +20,7 @@
     scrollbar-color: $color_4 transparent;
     overflow-y: scroll;
     @include min_lg {
-        height: calc(35vh - 60px);
-        min-height: 145px;
+        height: calc(clamp(205px, 35vh, 340px) - 60px);
         width: calc(100% + 300px);
         left: 0;
     }
@@ -98,9 +95,7 @@
     border-bottom-right-radius: 25px;
     position: relative;
     @include min_lg {
-        height: 35vh;
-        max-height: 388px;
-        min-height: 205px;
+        height: clamp(205px, 35vh, 340px);
         width: 300px;
         padding: 0;
         border-bottom-left-radius: 0;
