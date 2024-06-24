@@ -29,7 +29,7 @@
 
 	<h2 class="text-center my-5"> Slider 1 </h2>
 
-	<div class="position-relative">
+	<div class="slider__1-outer position-relative">
 
 		<button class="c-custom-1 position-absolute slider__1-button slider-next slider-next-md d-none d-lg-flex"><i class="fa-solid fa-arrow-right"></i></button>
 
@@ -58,8 +58,13 @@
 									<b> Integer id suscipit </b>
 
 									<p class="slider__1-item-content pt-2 pb-5">
-
-										<?php echo str_repeat("Quisque in tellus lorem. Donec at elementum est. Integer id suscipit felis", $index * 2); ?>
+										
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+										eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+										ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+										aliquip ex ea commodo consequat. Duis aute irure dolor in
+										reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+										pariatur.
 
 									</p>
 

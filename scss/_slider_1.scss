@@ -1,5 +1,19 @@
+.slider__1-outer {
+    @include min_lg {
+        width: calc(100% - 52px);
+        margin: auto;
+    }
+}
+
 .slider__1-row {
     overflow: hidden;
+}
+
+.slider__1-item-padding {
+    padding: 0 40px;
+    @include min_lg {
+        padding: 0 34px 0 0;
+    }
 }
 
 .slider__1-item {
@@ -10,16 +24,17 @@
     }
 }
 
-.slider__1-item-padding {
-    padding: 0 40px;
-    @include min_lg {
-        padding: 0 34px 0 0;
-    }
-}
-
 .slider__1-item-body {
     border: 1px solid $color_5;
     background-color: $white;
+    width: 90%;
+    margin: auto;
+    @include min_sm {
+        width: 75%;
+    }
+    @include min_lg {
+        width: 100%;
+    }
 }
 
 .slider__1-item-body:after {
