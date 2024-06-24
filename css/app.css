@@ -53,53 +53,58 @@ body {
 }
 
 @media only screen and (min-width: 992px) {
-  .slider__1-outer {
-    width: calc(100% - 52px);
+  .slider_1-outer {
+    width: calc(100% - 104px);
     margin: auto;
   }
 }
 
-.slider__1-row {
+.slider_1-row {
   overflow: hidden;
 }
 
-.slider__1-item-padding {
-  padding: 0 40px;
-}
-@media only screen and (min-width: 992px) {
-  .slider__1-item-padding {
-    padding: 0 34px 0 0;
-  }
-}
-
-.slider__1-item {
+.slider_1-item {
   position: absolute;
   will-change: transform;
 }
 @media only screen and (min-width: 992px) {
-  .slider__1-item {
+  .slider_1-item {
     width: calc((100% + 34px) / 3);
   }
 }
 
-.slider__1-item-body {
-  border: 1px solid #2f4f4f;
-  background-color: #ffffff;
-  width: 90%;
-  margin: auto;
-}
-@media only screen and (min-width: 576px) {
-  .slider__1-item-body {
-    width: 75%;
-  }
-}
 @media only screen and (min-width: 992px) {
-  .slider__1-item-body {
-    width: 100%;
+  .slider_1-item-padding {
+    padding: 0 34px 0 0;
   }
 }
 
-.slider__1-item-body:after {
+.slider_1-item-body {
+  border: 1px solid #2f4f4f;
+  background-color: #ffffff;
+  width: calc(100% - 104px);
+  margin: auto;
+  padding: 22px 33px 20% 33px;
+}
+@media only screen and (min-width: 576px) {
+  .slider_1-item-body {
+    width: calc(75% - 104px);
+  }
+}
+@media only screen and (min-width: 992px) {
+  .slider_1-item-body {
+    width: 100%;
+    padding: 22px 33px 104px 33px;
+  }
+}
+.slider_1-item-body h3 {
+  font-size: clamp(22px, 2.75vw, 28px);
+}
+.slider_1-item-body p, .slider_1-item-body b {
+  font-size: 14.5px;
+}
+
+.slider_1-item-body:after {
   position: absolute;
   content: " ";
   bottom: 0;
@@ -112,35 +117,25 @@ body {
   background-size: cover;
 }
 
-.slider__1-item-heading,
-.slider__1-item-content {
+.slider_1-item-heading,
+.slider_1-item-content {
   transition: opacity 0.25s ease-in-out;
   will-change: opacity;
   opacity: 1;
 }
 
-.slider__1-item-has-opacity .slider__1-item-heading,
-.slider__1-item-has-opacity .slider__1-item-content {
+.slider_1-item-has-opacity .slider_1-item-heading,
+.slider_1-item-has-opacity .slider_1-item-content {
   opacity: 0.5;
 }
 
-.slider__1-img {
-  aspect-ratio: 16/9.6;
-  object-fit: cover;
-  object-position: center;
-  width: 100%;
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-.slider__1-button {
+.slider_1-button {
   top: calc(50% - 52px);
   right: -26px;
   transition: right 0.5s ease-in-out;
 }
 @media only screen and (min-width: 992px) {
-  .slider__1-button {
+  .slider_1-button {
     right: -26px;
     will-change: right;
   }

@@ -25,15 +25,15 @@
 
 <hr class="my-5">
 
-<div class="container-lg g-0">
+<div class="container-xl g-0">
 
 	<h2 class="text-center my-5"> Slider 1 </h2>
 
-	<div class="slider__1-outer position-relative">
+	<div class="slider_1-outer position-relative">
 
-		<button class="c-custom-1 position-absolute slider__1-button slider-next slider-next-md d-none d-lg-flex"><i class="fa-solid fa-arrow-right"></i></button>
+		<button class="c-custom-1 position-absolute slider_1-button slider-next slider-next-md d-none d-lg-flex"><i class="fa-solid fa-arrow-right"></i></button>
 
-		<div class="slider-container slider__1-row row d-flex align-items-start justify-content-center justify-content-lg-between position-relative g-0">
+		<div class="slider-container slider_1-row row d-flex align-items-start justify-content-center justify-content-lg-between position-relative g-0">
 			
 			<?php
 
@@ -43,32 +43,27 @@
 
 					?>
 
-						<div class="slider-item slider__1-item">
+						<div class="slider-item slider_1-item">
 
-							<div class="slider-padding slider__1-item-padding">
+							<div class="slider_1-item-padding slider-padding">
 
-								<div class="slider-body slider__1-item-body position-relative py-5 px-5">
+								<div class="slider-body slider_1-item-body position-relative">
 
-									<h3 class="slider__1-item-heading mb-4">
+									<h3 class="slider_1-item-heading mb-1">
 
 										Lorem ipsum 
 
 									</h3>
 
-									<b> Integer id suscipit </b>
+									<b class="d-block mb-3"> Integer id suscipit </b>
 
-									<p class="slider__1-item-content pt-2 pb-5">
+									<p class="slider_1-item-content mb-0">
 										
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-										eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-										ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-										aliquip ex ea commodo consequat. Duis aute irure dolor in
-										reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-										pariatur.
+										<?php echo str_repeat("Quisque in tellus lorem. Donec at elementum est. Integer id suscipit felis.", $index * 1.5); ?>
 
 									</p>
 
-									<button class="c-custom-1 position-absolute slider__1-button slider-next d-lg-none"><i class="fa-solid fa-arrow-right"></i></button>
+									<button class="c-custom-1 position-absolute slider_1-button slider-next d-lg-none"><i class="fa-solid fa-arrow-right"></i></button>
 
 								</div>
 

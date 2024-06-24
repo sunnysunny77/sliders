@@ -1,22 +1,15 @@
-.slider__1-outer {
+.slider_1-outer {
     @include min_lg {
-        width: calc(100% - 52px);
+        width: calc(100% - 104px);
         margin: auto;
     }
 }
 
-.slider__1-row {
+.slider_1-row {
     overflow: hidden;
 }
 
-.slider__1-item-padding {
-    padding: 0 40px;
-    @include min_lg {
-        padding: 0 34px 0 0;
-    }
-}
-
-.slider__1-item {
+.slider_1-item {
     position: absolute;
     will-change: transform;
     @include min_lg {
@@ -24,20 +17,36 @@
     }
 }
 
-.slider__1-item-body {
-    border: 1px solid $color_5;
-    background-color: $white;
-    width: 90%;
-    margin: auto;
-    @include min_sm {
-        width: 75%;
-    }
+.slider_1-item-padding {
     @include min_lg {
-        width: 100%;
+        padding: 0 34px 0 0;
     }
 }
 
-.slider__1-item-body:after {
+.slider_1-item-body {
+    border: 1px solid $color_5;
+    background-color: $white;
+    width: calc(100% - 104px);
+    margin: auto;
+    padding: 22px 33px 20% 33px;
+    @include min_sm {
+        width: calc(75% - 104px);
+     
+    }
+    @include min_lg {
+        width: 100%;
+        padding: 22px 33px 104px 33px;
+    }
+    h3 {
+        font-size: clamp(22px, 2.75vw , 28px);
+    }
+    p, b {
+       font-size: 14.5px;
+    }
+
+}
+
+.slider_1-item-body:after {
     position: absolute;
     content: " ";
     bottom: 0;
@@ -50,31 +59,21 @@
     background-size: cover;
 }
 
-.slider__1-item-heading,
-.slider__1-item-content {
+.slider_1-item-heading,
+.slider_1-item-content {
     transition: opacity 0.25s ease-in-out;
     will-change: opacity;
     opacity: 1;
 }
 
-.slider__1-item-has-opacity {
-    .slider__1-item-heading,
-    .slider__1-item-content {
+.slider_1-item-has-opacity {
+    .slider_1-item-heading,
+    .slider_1-item-content {
         opacity: 0.5;
     }
 }
 
-.slider__1-img {
-    aspect-ratio: 16 / 9.6;
-    object-fit: cover;
-    object-position: center;
-    width: 100%;
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-.slider__1-button {
+.slider_1-button {
     top: calc(50% - 52px);
     right: -26px;
     transition: right 0.5s ease-in-out;
