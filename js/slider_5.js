@@ -1,28 +1,25 @@
 const slider_5 = () => {
   const site_img = document.querySelectorAll(".site-img");
   const scroll_listener = document.querySelector(".scroll-listener");
-  const scroll_preview = document.querySelectorAll(".scroll-preview");
   const slider_close = document.querySelector(".slider-close");
-
-  if (scroll_preview .length === 0 || !scroll_listener|| !scroll_preview || !slider_close) {
+  if (site_img.length === 0 || !scroll_listener || !slider_close) {
     return;
   }
 
   let picture_id = [];
 
-  for (let index = 1; index <= site_img.length; index++) {
-    picture_id.push(`site-${index}`);
+  for (const index of site_img) {
+    picture_id.push(index.id);
   }
 
   const picture_display = (item) => {
-    for (const index of picture_id) {
-      const obj = document.querySelector(`#${index}`);
-      const bool = obj.id === item;
-      const contains = obj.classList.contains("d-has-display");
+    for (const index of site_img) {
+      const bool = index.id === item;
+      const contains = index.classList.contains("d-has-display");
       if (bool && !contains) {
-        obj.classList.add("d-has-display");
+        index.classList.add("d-has-display");
       } else if (!bool && contains) {
-        obj.classList.remove("d-has-display");
+        index.classList.remove("d-has-display");
       }
     }
   };
@@ -31,6 +28,10 @@ const slider_5 = () => {
     scroll_listener,
     "scroll",
     (event) => {
+      const scroll_preview = document.querySelectorAll(".scroll-preview");
+      if (scroll_preview.length === 0) {
+        return;
+      }
       const ranges = [...scroll_preview].map((item) => item.offsetTop);
       const scroll_pos = event.target.scrollTop;
 
@@ -53,7 +54,7 @@ const slider_5 = () => {
     { passive: true }
   );
 
-  events(slider_close, "click", () =>{
+  events(slider_close, "click", () => {
     scroll_listener.scroll(0, 0);
   });
 };

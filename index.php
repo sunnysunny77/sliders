@@ -190,7 +190,7 @@
 
 <h2 class="text-center my-5"> Slider 3 </h2>
 
-<div class="container-lg g-0">
+<div class="containe g-0">
 
 	<div class="slider_3-border-img">
 

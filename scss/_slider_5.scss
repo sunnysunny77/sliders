@@ -1,43 +1,44 @@
 .slider_5-list-container {
-    position: relative;
+
     width: 95%;
     height: min(40vh, 250px);
     background-color: $color_2;
-    overflow: hidden;
     border-top: 3px solid $color_4;
     border-bottom: 3px solid $color_4;
     @include min_lg {
         border: none;
-        height: 37vh;
-        max-height: 350px;
+        height: 35vh;
+        max-height: 388px;
         min-height: 205px;
-        width: calc(100% - 290px);
+        width: calc(100% - 300px);
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
     }
 }
 
 .slider_5-scroll {
-    height: calc(min(40vh, 250px) - 40px);
-    margin: 20px 0;
-    overflow-y: scroll;
+    position: relative;
+    height: calc(min(40vh, 250px) - 60px);
+    margin: 30px 0;
     scrollbar-color: $color_4 transparent;
+    overflow-y: scroll;
     @include min_lg {
-        height: calc(37vh - 40px);
-        max-height: 310px;
-        min-height: 165px;
+        height: calc(35vh - 60px);
+        min-height: 145px;
+        width: calc(100% + 300px);
+        left: 0;
     }
     &::-webkit-scrollbar {
-        width: 7px;
+        width: 15px;  
     }
     &::-webkit-scrollbar-track {
-        background: transparent;
+        background-color: $color_2;
     }
     &::-webkit-scrollbar-thumb {
         background: $color_4;
     }
     &::-webkit-scrollbar-thumb:hover {
-        background: transparent;
+        background-color: $color_2;
     }
 }
 
@@ -47,20 +48,21 @@
     padding: 0 20px;
     list-style-type: none;
     word-wrap: break-word;
-    @include min_lg {
-        padding: 0 7px 0 40px;
+    font-size: medium;
+    @include  min_lg {
+      padding: 0 7px 0 40px;
+      font-size: large;
+      width: calc(100% - 340px);
     }
     li img {
         display: block;
-        margin: 40px 0 min(10.5vh, 100px) 0;
-        width: 10.5vh;
-        height: 10.5vh;
-        min-width: 50px;
-        min-height: 50px;
-        max-width: 100px;
-        max-height: 100px;
+        margin: 40px 0 clamp(0px, 10.5vh, 100px) 0;
+        width: clamp(50px, 10.5vh, 75px);
+        height: clamp(50px, 10.5vh, 75px);
         @include min_lg {
-            margin: 40px 0 min(10.5vh, 100px) 4%;
+            margin: 40px 0 clamp(0px, 10.5vh, 100px) 4%;
+            width: clamp(50px, 10.5vh, 100px);
+            height: clamp(50px, 10.5vh, 100px);
         }
     }
     ol li {
@@ -68,10 +70,13 @@
             padding: 40px 0 7px 0;
             margin: 0;
             font-weight: normal;
+            font-size: large;
+            @include min_lg {
+              font-size: larger;
+            }
             a {
                 color: $color_6;
                 text-decoration: none;
-                font-size: x-large;
                 transition: text-decoration-color 0.2s ease;
                 text-decoration: underline;
                 text-decoration-color: transparent;
@@ -89,21 +94,22 @@
 
 .slider_5-site-container {
     background-color: $color_2;
-    height: 50vh;
     width: 95%;
-    position: relative;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
     @include min_lg {
-        height: 37vh;
-        max-height: 350px;
+        height: 35vh;
+        max-height: 388px;
         min-height: 205px;
-        width: 290px;
-        padding: 30px;
+        width: 300px;
+        padding: 30px 30px 30px 0;
         border-bottom-left-radius: 0;
         border-top-right-radius: 25px;
         border-bottom-right-radius: 25px;
     }
+    @include landscape {
+        height: 35vh;
+    } 
 }
 
 .slider_5-site {
@@ -112,33 +118,36 @@
     opacity: 0;
     transition: opacity 0.375s;
     will-change: opacity;
-    overflow: hidden;
+    position: relative;
     img {
         object-position: center;
-        object-fit: contain;
-        height: 100%;
+        object-fit: cover;
         width: 100%;
+        height: 100%;
         border-bottom-left-radius: 25px;
         border-bottom-right-radius: 25px;
         @include min_lg {
-            border-radius: 0;  
-       
-        }
+            border-radius: 0;
+        }  
+        @include landscape {
+            object-fit: contain;
+        } 
     }
     a {
         font-size: medium;
-        bottom: 3px;
-        padding: 3px 6px 3px 25px;
+        bottom: 0;
+        padding: 3px 25px 3px 25px;
         left: 0;
         color: $white;
         position: absolute;
         display: none;
         border-bottom-left-radius: 25px;
+        background-color: $color_2;
         @include min_lg {
+            background-color: initial;
             padding: 0;
-            top: 6.25px;
+            position: relative;
             font-size: 12.5px;
-            bottom: initial;
             font-size: small;
             text-decoration: underline;
             border-bottom-left-radius: initial;
@@ -155,13 +164,13 @@
     width: 100%;
     opacity: 1;
     a {
-       display: block;
+        display: block;
     }
 }
 
 .slider_5-close {
     position: absolute;
-    font-size: 17px;
+    font-size: medium;
     right: 25px;
     bottom: 3px;
     opacity: 1;
