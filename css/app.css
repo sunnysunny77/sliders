@@ -827,6 +827,7 @@ body {
     width: calc(100% - 300px);
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    position: relative;
   }
 }
 
@@ -842,6 +843,8 @@ body {
     height: calc(clamp(205px, 35vh, 340px) - 60px);
     width: calc(100% + 300px);
     left: 0;
+    position: absolute;
+    z-index: 1;
   }
 }
 .slider_5-scroll::-webkit-scrollbar {
@@ -1018,7 +1021,6 @@ body {
     padding: 4px 5px;
     font-size: 10px;
     line-height: 10px;
-    position: relative;
     opacity: 0.5;
   }
 }

@@ -10,6 +10,7 @@
         width: calc(100% - 300px);
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
+        position: relative;
     }
 }
 
@@ -23,6 +24,8 @@
         height: calc(clamp(205px, 35vh, 340px) - 60px);
         width: calc(100% + 300px);
         left: 0;
+        position: absolute;
+        z-index: 1;
     }
     &::-webkit-scrollbar {
         width: 15px;
@@ -186,7 +189,6 @@
         padding: 4px 5px;
         font-size: 10px;
         line-height: 10px;
-        position: relative;
         opacity: 0.5;
     }
 }
