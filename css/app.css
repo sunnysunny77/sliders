@@ -863,7 +863,6 @@ body {
 
 .slider_5-list {
   margin: 0;
-  width: 90%;
   padding: 0 20px;
   list-style-type: none;
   word-wrap: break-word;
@@ -888,6 +887,9 @@ body {
     width: clamp(50px, 10.5vh, 100px);
     height: clamp(50px, 10.5vh, 100px);
   }
+}
+.slider_5-list ol {
+  padding-left: 10px;
 }
 .slider_5-list ol li h3 {
   padding: 40px 0 7px 0;
@@ -1003,17 +1005,27 @@ body {
 .slider_5-close {
   position: absolute;
   font-size: medium;
-  right: 25px;
-  bottom: 3px;
+  right: 0;
+  bottom: 0;
   opacity: 1;
   cursor: pointer;
-  background: transparent;
+  background: #B0C4DE;
   outline: none;
   border: none;
   color: #ffffff;
+  border-bottom-right-radius: 25px;
+  height: 25px;
+  width: 25px;
+  font-size: 12.5px;
+  line-height: 12.5px;
+  text-align: left;
 }
 @media only screen and (min-width: 992px) {
   .slider_5-close {
+    border-bottom-right-radius: initial;
+    text-align: initial;
+    height: initial;
+    width: initial;
     top: 8px;
     right: 11px;
     bottom: initial;

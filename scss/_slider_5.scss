@@ -44,7 +44,6 @@
 
 .slider_5-list {
     margin: 0;
-    width: 90%;
     padding: 0 20px;
     list-style-type: none;
     word-wrap: break-word;
@@ -65,29 +64,32 @@
             height: clamp(50px, 10.5vh, 100px);
         }
     }
-    ol li {
-        h3 {
-            padding: 40px 0 7px 0;
-            margin: 0;
-            font-weight: normal;
-            font-size: large;
-            @include min_lg {
-                font-size: larger;
-            }
-            a {
-                color: $color_6;
-                text-decoration: none;
-                transition: text-decoration-color 0.2s ease;
-                text-decoration: underline;
-                text-decoration-color: transparent;
-                &:hover,
-                &:focus {
-                    text-decoration-color: $color_6;
+    ol {
+        padding-left: 10px;
+        li {
+            h3 {
+                padding: 40px 0 7px 0;
+                margin: 0;
+                font-weight: normal;
+                font-size: large;
+                @include min_lg {
+                    font-size: larger;
+                }
+                a {
+                    color: $color_6;
+                    text-decoration: none;
+                    transition: text-decoration-color 0.2s ease;
+                    text-decoration: underline;
+                    text-decoration-color: transparent;
+                    &:hover,
+                    &:focus {
+                        text-decoration-color: $color_6;
+                    }
                 }
             }
-        }
-        &:last-child {
-            min-height: calc(45vh - 40px);
+            &:last-child {
+                min-height: calc(45vh - 40px);
+            }
         }
     }
 }
@@ -173,15 +175,25 @@
 .slider_5-close {
     position: absolute;
     font-size: medium;
-    right: 25px;
-    bottom: 3px;
+    right: 0;
+    bottom: 0;
     opacity: 1;
     cursor: pointer;
-    background: transparent;
+    background: $color_2;
     outline: none;
     border: none;
     color: $white;
+    border-bottom-right-radius: 25px;
+    height: 25px;
+    width: 25px;
+    font-size: 12.5px;
+    line-height: 12.5px;
+    text-align: left;
     @include min_lg {
+        border-bottom-right-radius: initial;
+        text-align: initial;
+        height: initial;
+        width: initial;
         top: 8px;
         right: 11px;
         bottom: initial;
