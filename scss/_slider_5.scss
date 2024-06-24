@@ -101,7 +101,6 @@
         border-bottom-left-radius: 0;
         border-top-right-radius: 25px;
         border-bottom-right-radius: 25px;
-        position: static;
         display: flex;
         align-items: flex-start;
         box-sizing: border-box;
@@ -159,12 +158,11 @@
     height: 100%;
     width: 100%;
     opacity: 1;
-    display: flex;
     max-height: 50vh;
-    box-sizing: border-box;
-    @include min_lg {
-        padding: 30px 10px 30px 0;
-        flex-wrap: wrap;
+    display: flex;
+    @include nine_92_min {
+        padding: 35px 0;
+        justify-content: center;
     }
 }
 
