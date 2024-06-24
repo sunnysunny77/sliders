@@ -67,7 +67,7 @@ body {
 }
 
 .slider__1-item-padding {
-  padding: 0 14%;
+  padding: 0 40px;
 }
 @media only screen and (min-width: 992px) {
   .slider__1-item-padding {
@@ -992,8 +992,13 @@ body {
   height: 100%;
   width: 100%;
   opacity: 1;
-  max-height: 50vh;
   display: flex;
+  max-height: 50vh;
+}
+@media only screen and (max-width: 720px) and (orientation: portrait) {
+  .d-has-display {
+    max-height: initial;
+  }
 }
 @media only screen and (min-width: 992px) {
   .d-has-display {
@@ -1017,13 +1022,14 @@ body {
   height: 25px;
   width: 25px;
   font-size: 12.5px;
-  line-height: 12.5px;
-  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
 }
 @media only screen and (min-width: 992px) {
   .slider_5-close {
     border-bottom-right-radius: initial;
-    text-align: initial;
     height: initial;
     width: initial;
     top: 8px;
