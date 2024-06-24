@@ -160,7 +160,7 @@
     opacity: 1;
     max-height: 50vh;
     display: flex;
-    @include nine_92_min {
+    @include min_lg {
         padding: 35px 0;
         justify-content: center;
     }
