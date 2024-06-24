@@ -988,7 +988,7 @@ body {
   width: 100%;
   opacity: 1;
   display: flex;
-  max-height: 60vh;
+  max-height: 50vh;
   box-sizing: border-box;
 }
 @media only screen and (min-width: 992px) {
