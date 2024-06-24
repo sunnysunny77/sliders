@@ -400,21 +400,21 @@
 
 			<div id="site-2" class="slider_5-site site-img">
 
-				<img src="https://placehold.co/400x400/3708090/708090" alt="Placehold"/>
-
 				<a target="lorem" href="https://google.com/">
-					lorem commodo 
+						lorem commodo 
 				</a>
+
+				<img src="https://placehold.co/400x400/3708090/708090" alt="Placehold"/>
 
 			</div>
 
 			<div id="site-3" class="slider_5-site site-img">
 
-				<img src="https://placehold.co/400x400/31343C/B0C4DE" alt="Placehold" />
-
 				<a target="dolor" href="https://google.com/">
 					ex ea commodo 
 				</a>
+
+				<img src="https://placehold.co/400x400/31343C/B0C4DE" alt="Placehold" />
 
 			</div>
 
