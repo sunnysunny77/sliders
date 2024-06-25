@@ -1069,7 +1069,7 @@ body {
   border: none;
   color: #708090;
 }
-.slider_6-button-group:hover {
+.slider_6-button-group:hover, .slider_6-button-group:focus {
   color: #CD853F;
 }
 .slider_6-button-group:disabled {

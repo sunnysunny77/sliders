@@ -41,6 +41,7 @@ const slider_6 = () => {
         action_aside[i].classList.add("has-animation");
         setTimeout(() => {
           disabled(false);
+          index.focus();
         }, 3000);
 
         return;
@@ -60,6 +61,7 @@ const slider_6 = () => {
 
       setTimeout(() => {
         disabled(false);
+        index.focus();
       }, 3000);
     });
   }

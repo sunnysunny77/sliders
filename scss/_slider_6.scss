@@ -2,7 +2,8 @@
     background-color: transparent;
     border: none;
     color: $color_7;
-    &:hover {
+    &:hover,
+    &:focus {
         color: $color_4;
     }
     &:disabled {
