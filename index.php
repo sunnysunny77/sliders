@@ -15,7 +15,7 @@
 
 <body>
 
-<h1 class="w-100 d-flex align-items-end p-5 m-0"> 
+<h1 class="w-100 d-flex align-items-end px-4 pt-4 ps-md-5 m-0"> 
 	
 	<i class="fa-brands fa-android pe-3"></i>  
 
@@ -439,9 +439,90 @@
 
 </div>
 
-<footer class="d-flex flex-wrap justify-content-center align-items-center pb-5">
 
-	<hr class="w-100 my-5">
+<hr class="my-5">
+
+<h2 class="text-center my-5"> Slider 6 </h2>
+
+<div class="slider_6-container row pb-md-5 g-0">
+
+	<div class="d-none d-md-flex col-12 mb-3 ms-sm-5 row g-0 col-sm-9 col-xxl-6 justify-content-between">
+
+		<button class="col-6 col-sm-3 slider_6-button-group button-group" id="paragraphone">Dolore</button>
+
+		<button class="col-6 col-sm-3 slider_6-button-group button-group" id="paragraphtwo">Fugiat</button>
+
+		<button class="col-6 col-sm-3 slider_6-button-group button-group" id="paragraphthree">Occaecat</button>
+
+		<button class="col-6 col-sm-3 slider_6-button-group button-group" id="paragraphfour">Excepteur </button>
+
+	</div>
+
+	<div class="slider_6-action-container col-12 col-md-10 col-xxl-8">
+
+		<div class="slider_6-image-container col-12 pb-4 pb-md-0 row g-0">
+
+			<div class="slider_6-strip col-3"></div>
+
+			<img class="col-9" src="https://placehold.co/950x574/B0C4DE/B0C4DE" alt="Placeholder">
+
+		</div>
+
+		<aside class="slider_6-action-aside action-aside">
+
+			<h3 class="m-md-0">Dolore<i class="fa-solid fa-paperclip"></i></h3>
+
+			<p class="m-md-0">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
+				odio velit, et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
+				Mauris suscipit et sem vel auctor. Duis dapibus arcu sem, a porttitor massa vulputate sed.
+			</p>
+
+		</aside>
+
+		<aside class="slider_6-action-aside action-aside">
+
+			<h3 class="m-md-0">Fugiat<i class="fa-solid fa-phone"></i></h3>
+
+			<p class="m-md-0">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
+				odio velit, et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
+				Mauris suscipit et sem vel auctor. Duis dapibus arcu sem, a porttitor massa vulputate sed.
+			</p>
+
+		</aside>
+
+		<aside class="slider_6-action-aside action-aside">
+
+			<h3 class="m-md-0">Occaecat<i class="fa-solid fa-envelope"></i></h3>
+
+			<p class="m-md-0">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
+				odio velit, et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
+				Mauris suscipit et sem vel auctor. Duis dapibus arcu sem, a porttitor massa vulputate sed.
+			</p>
+
+		</aside>
+
+		<aside class="slider_6-action-aside action-aside">
+
+			<h3 class="m-md-0">Excepteur<i class="fa-solid fa-circle-user"></i></h3>
+
+			<p class="m-md-0">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
+				odio velit, et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
+				Mauris suscipit et sem vel auctor. Duis dapibus arcu sem, a porttitor masssed.
+			</p>
+
+		</aside>
+
+	</div>
+
+</div>
+
+<footer class="d-flex flex-wrap justify-content-center align-items-center py-5 pt-md-0">
+
+	<hr class="d-none d-md-block w-100 mb-5">
 
 	<p class="m-0"><i class="fa-regular fa-copyright pe-3"></i></p>
 
@@ -450,6 +531,7 @@
 <script src="./js/bootstrap.min.js"></script>
 <script src="./js/fontawsome.min.js"></script>
 <script src="./js/utillites.js"></script>
+<script src="./js/slider_6.js"></script>
 <script src="./js/slider_5.js"></script>
 <script src="./js/slider_4.js"></script>
 <script src="./js/slider_3.js"></script>

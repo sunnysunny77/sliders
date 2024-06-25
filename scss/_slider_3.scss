@@ -5,16 +5,13 @@
   border-radius: 0;
   width: 100%;
   margin: auto;
-  @include min-lg {
-    width: 90%;
+  @include min-xl {
+    width: 57.5%;
     padding: 10px;
     border-top-right-radius: 25px;
     border-top-left-radius: 5px;
     border-bottom-right-radius: 25px;
     border-bottom-left-radius: 25px;
-  }
-  @include min-xxl {
-    width: 57.5%;
   }
 }
 
@@ -25,14 +22,11 @@
   box-sizing: border-box;
   border-radius: 0;
   padding: 30%;
-  @include min-lg {
+  @include min-xl {
     border-top-right-radius: 17px;
     border-top-left-radius: 2.5px;
     border-bottom-right-radius: 17px;
     border-bottom-left-radius: 17px;
-  }
-  @include min-xxl {
-    padding: 30%;
   }
 }
 
