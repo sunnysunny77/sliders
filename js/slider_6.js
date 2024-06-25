@@ -5,29 +5,34 @@ const slider_6 = () => {
   if (button_group.length === 0 || action_aside.length === 0) {
     return;
   }
- 
+
   let current;
   let count;
+  let nIntervId;
 
   const disabled = (bool) => {
     for (const index of button_group) {
       index.disabled = bool;
     }
-  }
+  };
 
-  setInterval(() => {
+  const interval = () => {
     count--;
 
     if (count === 0) {
-      action_aside[current].classList.replace("has-animation", "has-animation-out");
+      clearInterval(nIntervId);  
+      action_aside[current].classList.replace(
+        "has-animation",
+        "has-animation-out"
+      );
     }
-  }, 1000);
+  };
 
   for (const [i, index] of button_group.entries()) {
     events(index, "click", () => {
-
-      count = 17;
-
+      
+      count = 10;
+      nIntervId = setInterval(interval, 1000);
       disabled(true);
 
       if (current === undefined) {
@@ -41,7 +46,10 @@ const slider_6 = () => {
         return;
       }
 
-      action_aside[current].classList.replace("has-animation", "has-animation-out");
+      action_aside[current].classList.replace(
+        "has-animation",
+        "has-animation-out"
+      );
 
       setTimeout(() => {
         action_aside[i].classList.add("has-animation");
