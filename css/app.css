@@ -301,7 +301,7 @@ body {
     border-bottom-left-radius: 25px;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1400px) {
   .slider_3-border-img {
     width: 57.5%;
   }
@@ -323,7 +323,7 @@ body {
     border-bottom-left-radius: 17px;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1400px) {
   .slider_3-background {
     padding: 30%;
   }
@@ -623,7 +623,7 @@ body {
     border-bottom-left-radius: 25px;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1400px) {
   .slider_3-border-img {
     width: 57.5%;
   }
@@ -645,7 +645,7 @@ body {
     border-bottom-left-radius: 17px;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1400px) {
   .slider_3-background {
     padding: 30%;
   }

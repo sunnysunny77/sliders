@@ -13,7 +13,7 @@
     border-bottom-right-radius: 25px;
     border-bottom-left-radius: 25px;
   }
-  @include min-xl {
+  @include min-xxl {
     width: 57.5%;
   }
 }
@@ -31,7 +31,7 @@
     border-bottom-right-radius: 17px;
     border-bottom-left-radius: 17px;
   }
-  @include min-xl {
+  @include min-xxl {
     padding: 30%;
   }
 }
