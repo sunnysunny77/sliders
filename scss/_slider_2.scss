@@ -67,7 +67,7 @@
     }
 }
 
-.slider_2-heading {
+.slider_2-heading-container {
     text-transform: uppercase;
     transform: rotate(-3deg);
     font-size: larger;
@@ -76,16 +76,26 @@
     @include min_lg {
         transform: rotate(-3deg) translateY(-13px) translatex(-25px);
     }
-    .mw-lg-355 {
-        border-radius: 5px;
-        @include min_lg {
-            max-width: 355px;
-        }
+}
+
+.slider_2-heading {
+    border-radius: 5px;
+}
+
+.mw-lg-355 {    
+    @include min_lg {
+        max-width: 355px;
     }
 }
 
 .slider_2-image {
     width: 100%;
+}
+
+.slider_2-content {
+    @include min_xl {
+        padding-bottom: 200px;
+    } 
 }
 
 .slider_2-button-container {

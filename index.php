@@ -157,9 +157,9 @@
 
 						<div class="row justify-content-center <?php echo $justify_odd; ?> g-0">
 
-							<div class="slider_2-heading col-11 col-sm-10 col-md-12 col-lg-11 d-flex justify-content-start mb-4">
+							<div class="slider_2-heading-container col-11 col-sm-10 col-md-12 col-lg-11 d-flex justify-content-start mb-4">
 
-								<h3 class="mw-lg-355 text-center text-lg-start border <?php echo $color_array[$count] ?> p-2 mb-3">
+								<h3 class="lider_2-heading mw-lg-355 text-center text-lg-start border <?php echo $color_array[$count] ?> p-2 mb-3">
 
 									Donec dui quam, et pellentesque
 
@@ -167,7 +167,7 @@
 
 							</div>
 
-							<div class="col-12 col-md-11 text-center text-md-start">
+							<div class="slider_2-content col-12 col-md-11 text-center text-md-start">
 							
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies lectus augue, ut commodo mi sagittis ut. Morbi tellus nunc, facilisis eu mi sed, ullamcorper congue tellus. In quam ex, accumsan ut varius ut, vestibulum nec nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tortor est, commodo vel quam eget, placerat viverra arcu. Nam eu laoreet lorem. Aliquam facilisis elementum risus, ut suscipit massa finibus et. Curabitur rutrum sapien eget fermentum dignissim. Curabitur pulvinar arcu urna, at rutrum urna molestie vel. Cras hendrerit sit amet ipsum in dignissim. Nam aliquam, purus a vulputate tempus, mauris ante auctor turpis, condimentum semper augue eros sit amet tellus. Maecenas augue lorem, condimentum sed viverra eget, pulvinar eget augue. Sed a metus eros. Donec vel felis et magna porta mollis. Maecenas vehicula quam sit amet ligula euismod, et pretium lacus dignissim.
 
