@@ -439,86 +439,95 @@
 
 </div>
 
+<section class="row justify-content-center">
 
-<hr class="my-5">
+	<hr class="my-5">
 
-<h2 class="text-center my-5"> Slider 6 </h2>
+	<h2 class="text-center my-5"> Slider 6 </h2>
 
-<div class="slider_6-container row pb-md-5 g-0">
+	<p class="col-11 col-lg-8 col-xl-6 text-center mb-5">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
+		odio velit, et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
+		Mauris suscipit et sem vel auctor. Duis dapibus arcu sem, a porttitor massa vulputate sed.
+	</p>
 
-	<div class="d-none d-md-flex col-12 mb-3 ms-sm-5 row g-0 col-sm-9 col-xxl-6 justify-content-between">
+	<div class="slider_6-container row pb-md-5 g-0">
 
-		<button class="col-6 col-sm-3 slider_6-button-group button-group" id="paragraphone">Dolore</button>
+		<div class="d-none d-md-flex col-12 mb-3 ms-sm-5 row g-0 col-sm-9 col-xxl-6 justify-content-between">
 
-		<button class="col-6 col-sm-3 slider_6-button-group button-group" id="paragraphtwo">Fugiat</button>
+			<button class="col-6 col-sm-3 slider_6-button-group button-group" id="paragraphone">Dolore</button>
 
-		<button class="col-6 col-sm-3 slider_6-button-group button-group" id="paragraphthree">Occaecat</button>
+			<button class="col-6 col-sm-3 slider_6-button-group button-group" id="paragraphtwo">Fugiat</button>
 
-		<button class="col-6 col-sm-3 slider_6-button-group button-group" id="paragraphfour">Excepteur </button>
+			<button class="col-6 col-sm-3 slider_6-button-group button-group" id="paragraphthree">Occaecat</button>
 
-	</div>
-
-	<div class="slider_6-action-container col-12 col-md-10 col-xxl-8">
-
-		<div class="slider_6-image-container col-12 pb-4 pb-md-0 row g-0">
-
-			<div class="slider_6-strip col-3"></div>
-
-			<img class="col-9" src="https://placehold.co/950x574/B0C4DE/B0C4DE" alt="Placeholder">
+			<button class="col-6 col-sm-3 slider_6-button-group button-group" id="paragraphfour">Excepteur </button>
 
 		</div>
 
-		<aside class="slider_6-action-aside action-aside">
+		<div class="slider_6-action-container col-12 col-md-10 col-xxl-8">
 
-			<h3 class="m-md-0">Dolore<i class="fa-solid fa-paperclip"></i></h3>
+			<div class="slider_6-image-container col-12 pb-4 pb-md-0 row g-0">
 
-			<p class="m-md-0">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
-				odio velit, et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
-				Mauris suscipit et sem vel auctor. Duis dapibus arcu sem, a porttitor massa vulputate sed.
-			</p>
+				<div class="slider_6-strip col-3"></div>
 
-		</aside>
+				<img class="col-9" src="https://placehold.co/950x574/B0C4DE/31343C" alt="Placeholder">
 
-		<aside class="slider_6-action-aside action-aside">
+			</div>
 
-			<h3 class="m-md-0">Fugiat<i class="fa-solid fa-phone"></i></h3>
+			<aside class="slider_6-action-aside action-aside">
 
-			<p class="m-md-0">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
-				odio velit, et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
-				Mauris suscipit et sem vel auctor. Duis dapibus arcu sem, a porttitor massa vulputate sed.
-			</p>
+				<h3 class="m-md-0">Dolore<i class="fa-solid fa-paperclip"></i></h3>
 
-		</aside>
+				<p class="m-md-0">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
+					odio velit, et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
+					Mauris suscipit et sem vel auctor. Duis dapibus arcu sem, a porttitor massa vulputate sed.
+				</p>
 
-		<aside class="slider_6-action-aside action-aside">
+			</aside>
 
-			<h3 class="m-md-0">Occaecat<i class="fa-solid fa-envelope"></i></h3>
+			<aside class="slider_6-action-aside action-aside">
 
-			<p class="m-md-0">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
-				odio velit, et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
-				Mauris suscipit et sem vel auctor. Duis dapibus arcu sem, a porttitor massa vulputate sed.
-			</p>
+				<h3 class="m-md-0">Fugiat<i class="fa-solid fa-phone"></i></h3>
 
-		</aside>
+				<p class="m-md-0">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
+					odio velit, et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
+					Mauris suscipit et sem vel auctor. Duis dapibus arcu sem, a porttitor massa vulputate sed.
+				</p>
 
-		<aside class="slider_6-action-aside action-aside">
+			</aside>
 
-			<h3 class="m-md-0">Excepteur<i class="fa-solid fa-circle-user"></i></h3>
+			<aside class="slider_6-action-aside action-aside">
 
-			<p class="m-md-0">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
-				odio velit, et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
-				Mauris suscipit et sem vel auctor. Duis dapibus arcu sem, a porttitor masssed.
-			</p>
+				<h3 class="m-md-0">Occaecat<i class="fa-solid fa-envelope"></i></h3>
 
-		</aside>
+				<p class="m-md-0">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
+					odio velit, et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
+					Mauris suscipit et sem vel auctor. Duis dapibus arcu sem, a porttitor massa vulputate sed.
+				</p>
+
+			</aside>
+
+			<aside class="slider_6-action-aside action-aside">
+
+				<h3 class="m-md-0">Excepteur<i class="fa-solid fa-circle-user"></i></h3>
+
+				<p class="m-md-0">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
+					odio velit, et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
+					Mauris suscipit et sem vel auctor. Duis dapibus arcu sem, a porttitor masssed.
+				</p>
+
+			</aside>
+
+		</div>
 
 	</div>
 
-</div>
+</section>
 
 <footer class="d-flex flex-wrap justify-content-center align-items-center py-5 pt-md-0">
 

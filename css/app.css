@@ -1116,7 +1116,7 @@ body {
   margin: 0;
   padding: 2.5%;
   color: #ffffff;
-  background-color: #B0C4DE;
+  background-color: #008B8B;
   opacity: 1;
 }
 @media only screen and (min-width: 576px) {
@@ -1142,7 +1142,7 @@ body {
     position: absolute;
     content: "";
     top: 7.5%;
-    right: 1%;
+    right: 4%;
     bottom: 50%;
     width: 2px;
     background-color: #ffffff;
@@ -1151,7 +1151,7 @@ body {
     position: absolute;
     content: "";
     top: 60%;
-    right: 1%;
+    right: 4%;
     bottom: 7.5%;
     width: 2px;
     background-color: #ffffff;
