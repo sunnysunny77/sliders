@@ -1,10 +1,10 @@
 @font-face {
-  font-family: Poppins;
-  src: url(./Poppins-Regular.ttf);
+  font-family: Montserrat;
+  src: url(./Montserrat-VariableFont_wght.ttf);
   font-display: swap;
 }
 body {
-  font-family: Poppins;
+  font-family: Montserrat;
 }
 
 .c-custom-1 {
@@ -100,6 +100,9 @@ body {
 .slider_1-item-body h3 {
   font-size: clamp(22px, 2.75vw, 28px);
 }
+.slider_1-item-body b {
+  font-weight: 600;
+}
 .slider_1-item-body p, .slider_1-item-body b {
   font-size: 14.5px;
 }
@@ -147,16 +150,16 @@ body {
 }
 
 .slider_2-padding {
-  padding-bottom: 200px;
+  padding: 0 0 200px 0;
 }
 @media only screen and (min-width: 768px) {
   .slider_2-padding {
-    margin: 0 25px;
+    padding: 0 3px 200px 3px;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   .slider_2-padding {
-    margin: 0 50px;
+    padding: 0 28px 200px 28px;
   }
 }
 
@@ -180,7 +183,7 @@ body {
   }
 }
 @media only screen and (min-width: 768px) {
-  .slider_2-date-line.slider_2-date-line-lg:after {
+  .slider_2-date-line.slider_2-date-line-md:after {
     top: 55px;
   }
 }
@@ -221,18 +224,22 @@ body {
   font-weight: bold;
   font-style: oblique;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 992px) {
   .slider_2-heading {
     transform: rotate(-3deg) translateY(-13px) translatex(-25px);
   }
 }
-@media only screen and (min-width: 1200px) {
-  .slider_2-heading {
-    transform: rotate(-3deg) translateY(-13px) translatex(-50px);
+.slider_2-heading .mw-lg-355 {
+  border-radius: 5px;
+}
+@media only screen and (min-width: 992px) {
+  .slider_2-heading .mw-lg-355 {
+    max-width: 355px;
   }
 }
-.slider_2-heading .text-content {
-  border-radius: 25px;
+
+.slider_2-image {
+  width: 100%;
 }
 
 .slider_2-button-container {
@@ -518,6 +525,8 @@ body {
   .slider_4-height-container {
     height: 100vh;
     position: relative;
+    padding: 12.5vh 0;
+    box-sizing: content-box;
   }
 }
 
@@ -525,7 +534,6 @@ body {
   .slider_4-figure-container {
     position: sticky;
     top: 25vh;
-    margin-top: 25vh;
   }
 }
 

@@ -4,12 +4,12 @@
 }
 
 .slider_2-padding {
-    padding-bottom: 200px;
+    padding: 0 0 200px 0;
     @include min_md {
-        margin: 0 25px;
+        padding: 0 3px 200px 3px;
     }
-    @include min_xl {
-        margin: 0 50px;
+    @include min_lg {
+        padding: 0 28px 200px 28px;
     }
 }
 
@@ -31,7 +31,7 @@
             bottom: -200px;
         }
     }
-    &.slider_2-date-line-lg {
+    &.slider_2-date-line-md {
         &:after {
             @include min_md {
                 top: 55px;
@@ -73,15 +73,19 @@
     font-size: larger;
     font-weight: bold;
     font-style: oblique;
-    @include min_md {
+    @include min_lg {
         transform: rotate(-3deg) translateY(-13px) translatex(-25px);
     }
-    @include min_xl {
-        transform: rotate(-3deg) translateY(-13px) translatex(-50px);
+    .mw-lg-355 {
+        border-radius: 5px;
+        @include min_lg {
+            max-width: 355px;
+        }
     }
-    .text-content {
-        border-radius: 25px;
-    }
+}
+
+.slider_2-image {
+    width: 100%;
 }
 
 .slider_2-button-container {

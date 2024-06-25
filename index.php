@@ -102,8 +102,9 @@
 		while ($index < 5) {
 
 			$direction = $index % 2 === 1 ? "flex-row" : "flex-row-reverse";
-			$justify_image = $index % 2 === 1 ? "justify-content-md-start" : "justify-content-md-end";
-			$justify_content = $index % 2 === 1 ? "justify-content-md-end" : "justify-content-md-start";
+			$justify_even = $index % 2 === 1 ? "justify-content-md-start" : "justify-content-md-end";
+			$justify_odd = $index % 2 === 1 ? "justify-content-md-end" : "justify-content-md-start";
+			$justify_even = $index % 2 === 1 ? "justify-content-md-start" : "justify-content-md-end";
 			$display = "d-none";
 			$date_line_md = "";
 
@@ -122,13 +123,25 @@
 
 		?>
 
-			<div class="slider_2-item timeline-item  <?php echo $display; ?>  g-0">
+			<div class="slider_2-item timeline-item <?php echo $display; ?> g-0">
 
 				<div class="slider_2-padding row justify-content-center justify-content-md-between <?php echo $direction; ?> g-0">
 
-					<img class="col-12 col-md-4 col-xl-4 slider_2-img <?php echo $pad_image; ?>" src="https://placehold.co/400x400/EEE/31343C"  alt="Placehold">
+					<div class="col-12 col-sm-8 col-md-5">
+
+						<div class="row h-100 align-items-md-center <?php echo $justify_even; ?> g-0">
+
+							<div class="col-12 col-md-11">
+						
+								<img class="slider_2-image <?php echo $pad_image; ?>" src="https://placehold.co/400x400/EEE/31343C"  alt="Placehold">
+
+							</div>
+
+						</div>
+
+					</div>
 			
-					<div class="slider_2-date-line col-2 col-xl-4 <?php echo $date_line_md; ?> position-relative d-flex justify-content-center align-items-md-center py-5 py-md-0">
+					<div class="slider_2-date-line col-12 col-md-1 <?php echo $date_line_md; ?> position-relative d-flex justify-content-center align-items-md-center py-5 py-md-0">
 
 						<div class="slider_2-date position-relative">
 
@@ -140,21 +153,21 @@
 
 					</div>
 
-					<div class="col-12 col-md-4 col-xl-4">
+					<div class="col-11 col-md-5 pt-md-5">
 
-						<div class="row <?php echo $justify_content; ?> g-0">
+						<div class="row justify-content-center <?php echo $justify_odd; ?> g-0">
 
-							<div class="slider_2-heading col-12 d-flex justify-content-center justify-content-md-start px-5 px-md-0 pb-4 py-md-5">
+							<div class="slider_2-heading col-11 col-sm-10 col-md-12 col-lg-11 d-flex justify-content-start mb-4">
 
-								<div class="text-content text-center border <?php echo $color_array[$count] ?> py-2 px-4 px-md-3 py-md-3 mb-4 mb-md-0">
+								<h3 class="mw-lg-355 text-center text-lg-start border <?php echo $color_array[$count] ?> p-2 mb-3">
 
 									Donec dui quam, et pellentesque
 
-								</div>
+								</h3>	
 
 							</div>
 
-							<div class="col-12 text-center text-md-start px-4 px-md-0">
+							<div class="col-12 col-md-11 text-center text-md-start">
 							
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies lectus augue, ut commodo mi sagittis ut. Morbi tellus nunc, facilisis eu mi sed, ullamcorper congue tellus. In quam ex, accumsan ut varius ut, vestibulum nec nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tortor est, commodo vel quam eget, placerat viverra arcu. Nam eu laoreet lorem. Aliquam facilisis elementum risus, ut suscipit massa finibus et. Curabitur rutrum sapien eget fermentum dignissim. Curabitur pulvinar arcu urna, at rutrum urna molestie vel. Cras hendrerit sit amet ipsum in dignissim. Nam aliquam, purus a vulputate tempus, mauris ante auctor turpis, condimentum semper augue eros sit amet tellus. Maecenas augue lorem, condimentum sed viverra eget, pulvinar eget augue. Sed a metus eros. Donec vel felis et magna porta mollis. Maecenas vehicula quam sit amet ligula euismod, et pretium lacus dignissim.
 
@@ -273,9 +286,9 @@
 
 <div class="container g-0">
 
-	<div class="row slider_4-height-container height-container d-flex flex-column flex-lg-row align-items-lg-start justify-content-lg-between g-0">
+	<div class="slider_4-height-container height-container row d-flex flex-column flex-lg-row align-items-center align-items-lg-start justify-content-lg-around g-0">
 
-        <p class="col-12 col-lg-7 d-flex h-100 align-items-lg-center px-4 px-lg-0 m-0">
+        <p class="col-11 col-lg-6 d-flex h-100 align-items-lg-center m-0">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
           ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
