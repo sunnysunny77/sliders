@@ -22,16 +22,12 @@ const slider_4 = () => {
         (figure_two.getBoundingClientRect().height / 2);
       let scrollY = window.scrollY;
       if (scrollY < line) {
-        figure_two.classList.remove("d-lg-has-height");
-        figure_two.classList.add("d-lg-0-height");
-        figure_one.classList.remove("d-lg-0-height");
-        figure_one.classList.add("d-lg-has-height");
+        figure_two.classList.replace("d-lg-has-height", "d-lg-0-height");
+        figure_one.classList.replace("d-lg-0-height", "d-lg-has-height");
       }
       if (scrollY > line) {
-        figure_one.classList.remove("d-lg-has-height");
-        figure_one.classList.add("d-lg-0-height");
-        figure_two.classList.remove("d-lg-0-height");
-        figure_two.classList.add("d-lg-has-height");
+        figure_one.classList.replace("d-lg-has-height", "d-lg-0-height");
+        figure_two.classList.replace("d-lg-0-height", "d-lg-has-height");
       }
     },
     { passive: true }

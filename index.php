@@ -123,7 +123,7 @@
 
 		?>
 
-			<div class="slider_2-item timeline-item <?php echo $display; ?> g-0">
+			<div class="slider_2-item timeline-item  <?php echo $display; ?> g-0">
 
 				<div class="slider_2-padding row justify-content-center justify-content-md-between <?php echo $direction; ?> g-0">
 

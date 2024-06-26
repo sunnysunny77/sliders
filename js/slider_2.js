@@ -28,8 +28,7 @@ const slider_2 = () => {
         setTimeout(() => {
           for (const [i, item] of timeline_items.entries()) {
             if (i > 0) {
-              item.classList.remove("d-flex");
-              item.classList.add("d-none");
+              item.classList.replace("d-flex", "d-none");
             }
           }
 
@@ -44,8 +43,7 @@ const slider_2 = () => {
       timeline_container.getBoundingClientRect().height
     }}px`;
     timeline_container.style.transition = "max-height 1s";
-    timeline_items[count].classList.remove("d-none");
-    timeline_items[count].classList.add("d-flex");
+    timeline_items[count].classList.replace("d-none", "d-flex");
     timeline_button.disabled = "true";
     timeline_container.style.maxHeight = `${
       timeline_container.getBoundingClientRect().height +

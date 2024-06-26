@@ -3,3 +3,12 @@ const events = (obj, type, callback, opt) => {
     obj.addEventListener(type, callback, opt);
   }
 };
+
+const get_position = (element) => {
+  let y_position = 0;
+  while (element) {
+    y_position += element.offsetTop - element.scrollTop;
+    element = element.offsetParent;
+  }
+  return y_position;
+};
