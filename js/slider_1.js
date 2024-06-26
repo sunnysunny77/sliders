@@ -41,7 +41,6 @@ const slider_1 = () => {
   }
 
   const reset = () => {
-
     for (const [i, index] of slider_items.entries()) {
       index.style.transition = "transform 0.5s ease-in-out";
       index.style.transform = `translateX(${i * 100}%)`;
@@ -83,7 +82,7 @@ const slider_1 = () => {
       }
 
       if (count === slider_items.length) {
-        slider_next_sm.style.transitionDuration = "0.25s";
+        slider_next_sm.style.transitionDuration = "0.375s";
         slider_next_sm.style.right = "-26px";
         slider_next_xl.style.transitionDuration = "0.425s";
         slider_next_xl.style.right = "-26px";
