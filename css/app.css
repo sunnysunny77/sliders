@@ -72,7 +72,7 @@ body {
     width: calc((100% + 34px) / 2);
   }
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1200px) {
   .slider_1-item {
     width: calc((100% + 34px) / 3);
   }
@@ -143,7 +143,7 @@ body {
   right: -26px;
   transition: right 0.5s ease-in-out;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1200px) {
   .slider_1-button {
     right: -26px;
     will-change: right;

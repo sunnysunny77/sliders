@@ -15,7 +15,7 @@
     @include min_md {
         width: calc((100% + 34px) / 2);
     }
-    @include min_lg {
+    @include min_xl {
         width: calc((100% + 34px) / 3);
     }
 }
@@ -82,7 +82,7 @@
     top: calc(50% - 52px);
     right: -26px;
     transition: right 0.5s ease-in-out;
-    @include min_lg {
+    @include min_xl {
         right: -26px;
         will-change: right;
     }
