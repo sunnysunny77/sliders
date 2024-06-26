@@ -441,7 +441,7 @@
 
 </div>
 
-<section class="row justify-content-center">
+<section class="row w-100 justify-content-center">
 
 	<hr class="my-5">
 
@@ -531,9 +531,37 @@
 
 </section>
 
-<footer class="d-flex flex-wrap justify-content-center align-items-center py-5 pt-md-0">
+<hr class="my-5">
 
-	<hr class="d-none d-md-block w-100 mb-5">
+<h2 class="text-center my-5"> Overlay </h2>
+
+<div class="overflow-hidden">
+
+	<div id="overlay_body-one" class="overlay_body overlay_body-one row align-items-center justify-content-center">
+
+		<img class="col-12 col-md-6" src="https://placehold.co/950x574/B0C4DE/31343C" alt="Placeholder">
+
+		<div class="col-12 d-flex align-items-center justify-content-center">
+
+			<button id="overlay_close-one" class="c-custom-1 overlay_close overlay-close"><i class="fa-solid fa-computer-mouse"></i></button>
+
+		</div>
+
+	</div>
+
+</div>
+
+<div class="container d-flex justify-content-center pb-5">
+
+	<button id="overlay_open-one" class="c-custom-1 overlay_open overlay-open"><i class="fa-solid fa-computer-mouse"></i></button>
+
+</div>
+
+</div>
+
+<footer class="d-flex flex-wrap justify-content-center align-items-center pb-5">
+
+	<hr class="w-100 mb-5">
 
 	<p class="m-0"><i class="fa-regular fa-copyright pe-3"></i></p>
 
@@ -542,6 +570,7 @@
 <script src="./js/bootstrap.min.js"></script>
 <script src="./js/fontawsome.min.js"></script>
 <script src="./js/utillites.js"></script>
+<script src="./js/overlay.js"></script>
 <script src="./js/slider_6.js"></script>
 <script src="./js/slider_5.js"></script>
 <script src="./js/slider_4.js"></script>
