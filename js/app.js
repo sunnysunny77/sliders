@@ -1,5 +1,6 @@
 events(window, "load", () => {
-  overlay();
+  slider_8();
+  slider_7();
   slider_6();
   slider_5();
   slider_4();

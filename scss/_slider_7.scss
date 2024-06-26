@@ -1,5 +1,5 @@
 
-.overlay_body {
+.slider_7-overlay_body {
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -23,6 +23,10 @@
 	}
 }
 
-.overlay_body-one {
+.slider_7-overlay-body-one {
     background-color: $color_1;
+}
+
+.overflow-hidden {
+    overflow: hidden;
 }
