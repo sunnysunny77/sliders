@@ -33,15 +33,6 @@ const slider_4 = () => {
     { passive: true }
   );
 
-  const get_position = (element) => {
-    let y_position = 0;
-    while (element) {
-      y_position += element.offsetTop - element.scrollTop;
-      element = element.offsetParent;
-    }
-    return y_position;
-  };
-
   const handle_scroll_animation_desktop = () => {
     if (window.innerWidth < 992) {
       return;
