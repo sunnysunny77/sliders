@@ -1128,7 +1128,6 @@ body {
   color: #ffffff;
   background-color: #008B8B;
   opacity: 1;
-  position: absolute;
 }
 @media only screen and (min-width: 576px) {
   .slider_6-action-aside {
@@ -1143,7 +1142,6 @@ body {
     position: absolute;
     align-items: unset;
     border-radius: 5px;
-    transition: top 1s, right 1s, bottom 1s, left 1s, opacity 1s;
     top: 2.5%;
     right: 2.5%;
     bottom: 2.5%;
@@ -1197,13 +1195,45 @@ body {
   }
 }
 
-@media only screen and (min-width: 768px) {
-  .has-animation {
+@keyframes slidein {
+  from {
+    opacity: 0;
+    top: 2.5%;
+    right: 2.5%;
+    bottom: 2.5%;
+    left: 27.5%;
+  }
+  to {
     top: 5%;
     right: 5%;
     bottom: 5%;
     left: 30%;
     opacity: 1;
+  }
+}
+@keyframes slideout {
+  from {
+    top: 5%;
+    right: 5%;
+    bottom: 5%;
+    left: 30%;
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    top: 2.5%;
+    right: 2.5%;
+    bottom: 2.5%;
+    left: 27.5%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .has-animation {
+    animation: slidein 1s;
+    animation-fill-mode: forwards;
+  }
+  .has-animation-out {
+    animation: slideout 1s;
   }
 }
 .slider_7-overlay_body {
