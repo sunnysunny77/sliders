@@ -475,7 +475,7 @@
 
 			</div>
 
-			<aside class="slider_6-action-aside action-aside">
+			<aside class="slider_6-action-aside action-aside ">
 
 				<h3 class="m-md-0">Dolore<i class="fa-solid fa-paperclip"></i></h3>
 

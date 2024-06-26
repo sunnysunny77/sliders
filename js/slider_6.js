@@ -8,7 +8,7 @@ const slider_6 = () => {
 
   let current;
   let count;
-  let nIntervId;
+  let inter_id;
 
   const disabled = (bool) => {
     for (const index of button_group) {
@@ -20,7 +20,7 @@ const slider_6 = () => {
     count--;
 
     if (count === 0) {
-      clearInterval(nIntervId);  
+      clearInterval(inter_id);
       action_aside[current].classList.replace(
         "has-animation",
         "has-animation-out"
@@ -30,32 +30,23 @@ const slider_6 = () => {
 
   for (const [i, index] of button_group.entries()) {
     events(index, "click", () => {
-      
       count = 10;
-      nIntervId = setInterval(interval, 1000);
+      clearInterval(inter_id);
+      inter_id = setInterval(interval, 1000);
       disabled(true);
 
-      if (current === undefined) {
-        current = i;
-
-        action_aside[i].classList.add("has-animation");
-        setTimeout(() => {
-          disabled(false);
-          index.focus();
-        }, 3000);
-
-        return;
-      }
-
-      action_aside[current].classList.replace(
-        "has-animation",
-        "has-animation-out"
-      );
-
-      setTimeout(() => {
-        action_aside[i].classList.add("has-animation");
-        action_aside[i].classList.remove("has-animation-out");
-      }, 1000);
+      current === undefined
+        ? action_aside[i].classList.add("has-animation")
+        : (action_aside[current].classList.replace(
+            "has-animation",
+            "has-animation-out"
+          ),
+          setTimeout(() => {
+            action_aside[i].classList.replace(
+              "has-animation-out",
+              "has-animation"
+            ) || action_aside[i].classList.add("has-animation");
+          }, 1000));
 
       current = i;
 
