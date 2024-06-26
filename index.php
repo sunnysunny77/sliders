@@ -57,7 +57,7 @@
 
 									</h3>
 
-									<b class="d-block mb-3"> Integer id suscipit </b>
+									<b class="slider_1-item-bold d-block mb-3"> Integer id suscipit </b>
 
 									<p class="slider_1-item-content mb-0">
 										

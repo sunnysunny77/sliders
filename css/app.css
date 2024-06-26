@@ -127,6 +127,7 @@ body {
 }
 
 .slider_1-item-heading,
+.slider_1-item-bold,
 .slider_1-item-content {
   transition: opacity 0.25s ease-in-out;
   will-change: opacity;
@@ -134,6 +135,7 @@ body {
 }
 
 .slider_1-item-has-opacity .slider_1-item-heading,
+.slider_1-item-has-opacity .slider_1-item-bold,
 .slider_1-item-has-opacity .slider_1-item-content {
   opacity: 0.5;
 }
