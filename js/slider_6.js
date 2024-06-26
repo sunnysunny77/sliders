@@ -34,26 +34,28 @@ const slider_6 = () => {
       clearInterval(inter_id);
       inter_id = setInterval(interval, 1000);
       disabled(true);
-
-      current === undefined
-        ? action_aside[i].classList.add("has-animation")
-        : (action_aside[current].classList.replace(
-            "has-animation",
-            "has-animation-out"
-          ),
-          setTimeout(() => {
-            action_aside[i].classList.replace(
-              "has-animation-out",
-              "has-animation"
-            ) || action_aside[i].classList.add("has-animation");
-          }, 1000));
-
-      current = i;
-
       setTimeout(() => {
         disabled(false);
         index.focus();
       }, 3000);
+
+      if (current === undefined) {
+        return (action_aside[i].classList.add("has-animation"), current = i);
+      }
+ 
+      action_aside[current].classList.replace(
+        "has-animation",
+        "has-animation-out"
+      );
+
+      current = i;
+
+      setTimeout(() => {
+        action_aside[i].classList.replace(
+          "has-animation-out",
+          "has-animation"
+        ) || action_aside[i].classList.add("has-animation");
+      }, 1000);
     });
   }
 };
