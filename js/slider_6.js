@@ -21,16 +21,13 @@ const slider_6 = () => {
 
     if (count === 0) {
       clearInterval(inter_id);
-      action_aside[current].classList.replace(
-        "has-animation",
-        "has-animation-out"
-      );
+      action_aside[current].classList.remove("has-animation");
     }
   };
 
   for (const [i, index] of button_group.entries()) {
     events(index, "click", () => {
-      count = 10;
+      count = 12;
       clearInterval(inter_id);
       inter_id = setInterval(interval, 1000);
       disabled(true);
@@ -43,18 +40,13 @@ const slider_6 = () => {
         return (action_aside[i].classList.add("has-animation"), current = i);
       }
  
-      action_aside[current].classList.replace(
-        "has-animation",
-        "has-animation-out"
-      );
+      action_aside[current].classList.remove("has-animation");
 
       current = i;
 
       setTimeout(() => {
-        action_aside[i].classList.replace(
-          "has-animation-out",
-          "has-animation"
-        ) || action_aside[i].classList.add("has-animation");
+        action_aside[i].classList.add("has-animation")
+
       }, 1000);
     });
   }

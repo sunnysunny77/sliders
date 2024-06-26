@@ -51,6 +51,7 @@
     color: $white;
     background-color: $color_1;
     opacity: 1;
+    position: absolute;
     @include min_sm {
         display: flex;
         justify-content: space-between;
@@ -61,6 +62,12 @@
         position: absolute;
         align-items: unset;
         border-radius: 5px;
+        transition:
+            top 1s,
+            right 1s,
+            bottom 1s,
+            left 1s,
+            opacity 1s;
         top: 2.5%;
         right: 2.5%;
         bottom: 2.5%;
@@ -108,46 +115,12 @@
     }
 }
 
-@keyframes slidein {
-    from {
-        opacity: 0;
-        top: 2.5%;
-        right: 2.5%;
-        bottom: 2.5%;
-        left: 27.5%;
-    }
-    to {
-        top: 5%;
-        right: 5%;
-        bottom: 5%;
-        left: 30%;
-        opacity: 1;
-    }
-}
-
-@keyframes slideout {
-    from {
-        top: 5%;
-        right: 5%;
-        bottom: 5%;
-        left: 30%;
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-        top: 2.5%;
-        right: 2.5%;
-        bottom: 2.5%;
-        left: 27.5%;
-    }
-}
-
 @include min_md {
     .has-animation {
-        animation: slidein 1s;
-        animation-fill-mode: forwards;
-    }
-    .has-animation-out {
-        animation: slideout 1s;
+        top: 5%;
+        right: 5%;
+        bottom: 5%;
+        left: 30%;
+        opacity: 1;
     }
 }
