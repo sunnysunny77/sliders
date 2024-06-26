@@ -53,13 +53,18 @@ const slider_1 = () => {
         index.classList.add("slider__1-item-has-opacity");
         index.style.transform = `translateX(${100 * (i - count)}%)`;
 
-        if (count === slider_items.length - 2) {
+        if (count === slider_items.length - 2 && window.innerWidth > 992) {
           slider_next_md.style.transitionDuration = "0.5s";
           slider_next_md.style.right = "calc(((100% + 34px) / 3) - 26px)";
         }
 
         if (count === slider_items.length - 1) {
-          slider_next_md.style.right = "calc(((100% + 34px) / 1.5) - 26px)";
+          if (window.innerWidth > 992){
+            slider_next_md.style.right = "calc(((100% + 34px) / 1.5) - 26px)";
+          } else {
+              slider_next_md.style.transitionDuration = "0.5s";
+            slider_next_md.style.right = "calc(((100% + 34px) / 2) - 26px)";
+          }
         }
 
         setTimeout(() => {
