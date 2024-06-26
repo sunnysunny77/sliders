@@ -142,12 +142,12 @@
     }
 }
 
-@include min_md {
-    .has-animation {
-        animation: slidein 1s;
-        animation-fill-mode: forwards;
-    }
-    .has-animation-out {
-        animation: slideout 1s;
-    }
+.has-animation {
+    animation: slidein 1s;
+    animation-fill-mode: forwards;
 }
+
+.has-animation-out {
+    animation: slideout 1s;
+}
+

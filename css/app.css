@@ -1227,15 +1227,15 @@ body {
     left: 27.5%;
   }
 }
-@media only screen and (min-width: 768px) {
-  .has-animation {
-    animation: slidein 1s;
-    animation-fill-mode: forwards;
-  }
-  .has-animation-out {
-    animation: slideout 1s;
-  }
+.has-animation {
+  animation: slidein 1s;
+  animation-fill-mode: forwards;
 }
+
+.has-animation-out {
+  animation: slideout 1s;
+}
+
 .slider_7-overlay_body {
   position: fixed;
   top: 0;

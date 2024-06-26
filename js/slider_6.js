@@ -30,7 +30,7 @@ const slider_6 = () => {
 
   for (const [i, index] of button_group.entries()) {
     events(index, "click", () => {
-      count = 10;
+      count = 12;
       clearInterval(inter_id);
       inter_id = setInterval(interval, 1000);
       disabled(true);
