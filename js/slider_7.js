@@ -3,8 +3,9 @@ import { events } from "./utillites.js";
 export const slider_7 = () => {
   const overlay_open = document.querySelectorAll(".overlay-open");
   const overlay_body = document.querySelectorAll(".overlay_body");
+  const overlay_backdrop = document.querySelectorAll(".overlay-backdrop");
 
-  if (overlay_open.length === 0 || overlay_body.length === 0) {
+  if (overlay_open.length === 0 || overlay_body.length === 0 || overlay_backdrop.length === 0) {
     return;
   }
 
@@ -37,14 +38,19 @@ export const slider_7 = () => {
         overlay_body[i].classList.remove("overlay-fixed") ||
           overlay_body[i].classList.remove("overlay-fixed-delay");
         document.body.classList.remove("overflow-hidden");
+        overlay_backdrop[i].classList.remove("overlay-transition");
         overlay_body[i].setAttribute("aria-expanded", false);
         overlay_open[i].setAttribute("aria-expanded", false);
+        for (const item of overlay_backdrop) {
+          item.classList.remove("overlay-transition");
+        }
       }
     );
 
     events(item, "click", (event) => {
       event.preventDefault();
       overlay_body[i].classList.add("overlay-fixed");
+      overlay_backdrop[i].classList.add("overlay-transition");
       overlay_body[i].setAttribute("aria-expanded", true);
       overlay_open[i].setAttribute("aria-expanded", true);
       document.body.style.paddingRight = `${

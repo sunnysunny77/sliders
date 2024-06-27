@@ -583,7 +583,7 @@
 
 				<div class="overflow-hidden">
 
-					<div id="overlay_body-<?php echo $index; ?>" class="slider_7-overlay_body slider_7-overlay-body-<?php echo $index; ?> overlay_body row align-items-center justify-content-center">
+					<div id="overlay_body-<?php echo $index; ?>" class="slider_7-overlay-body slider_7-overlay-body-<?php echo $index; ?> overlay_body row align-items-center justify-content-center">
 
 						<img class="col-12 col-md-6" src="https://placehold.co/950x574/B0C4DE/31343C" alt="Placeholder">
 
@@ -608,6 +608,8 @@
 						</div>
 
 					</div>
+
+					<div class="slider_7-overlay-backdrop overlay-backdrop"></div>
 
 				</div>
 
