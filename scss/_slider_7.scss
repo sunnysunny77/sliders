@@ -21,9 +21,17 @@
 			opacity: 1;
 		}
 	}
+	&.overlay-fixed-delay {
+		transition-delay: 0.5s;
+		transform: translateX(0);
+		> * {
+			opacity: 1;
+		}
+	}
 }
 
-.slider_7-overlay-body-one {
+// slider_7-overlay_body-index
+.slider_7-overlay_body {
     background-color: $color_1;
 }
 

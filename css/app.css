@@ -1227,8 +1227,15 @@ body {
 .slider_7-overlay_body.overlay-fixed > * {
   opacity: 1;
 }
+.slider_7-overlay_body.overlay-fixed-delay {
+  transition-delay: 0.5s;
+  transform: translateX(0);
+}
+.slider_7-overlay_body.overlay-fixed-delay > * {
+  opacity: 1;
+}
 
-.slider_7-overlay-body-one {
+.slider_7-overlay_body {
   background-color: #008B8B;
 }
 

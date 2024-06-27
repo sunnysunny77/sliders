@@ -565,27 +565,64 @@
 
 	<h2 class="text-center my-5"> Slider 7 </h2>
 
-	<div class="overflow-hidden">
+	<?php 
 
-		<div id="overlay_body-one" class="slider_7-overlay_body slider_7-overlay-body-one row align-items-center justify-content-center">
+		$index = 1;
+		$count = 5;
 
-			<img class="col-12 col-md-6" src="https://placehold.co/950x574/B0C4DE/31343C" alt="Placeholder">
+		while ($index < 5) {
 
-			<div class="col-12 d-flex align-items-center justify-content-center">
+			$next_button_bool = true;
 
-				<button id="overlay_close-one" class="c-custom-1 overlay_close overlay-close"><i class="fa-solid fa-computer-mouse"></i></button>
+			if ($index === $count - 1) {
 
-			</div>
+				$next_button_bool = false; 
+			}
 
-		</div>
+			?>
 
-	</div>
+				<div class="overflow-hidden">
 
-	<div class="container d-flex justify-content-center pb-5">
+					<div id="overlay_body-<?php echo $index; ?>" class="slider_7-overlay_body slider_7-overlay-body-<?php echo $index; ?> overlay_body row align-items-center justify-content-center">
 
-		<button id="overlay_open-one" class="c-custom-1 overlay_open overlay-open"><i class="fa-solid fa-computer-mouse"></i></button>
+						<img class="col-12 col-md-6" src="https://placehold.co/950x574/B0C4DE/31343C" alt="Placeholder">
 
-	</div>
+						<div class="col-12 d-flex align-items-center justify-content-center">
+
+							<button class="c-custom-1 overlay-close"><i class="fa-solid fa-xmark"></i></button>
+
+							<?php 
+								
+								if ($next_button_bool) { 
+
+								?>
+
+									<button destination="overlay_body-<?php echo $index + 1; ?>"class="c-custom-1 overlay-next ms-5"><i class="fa-solid fa-circle-chevron-right"></i></button>
+
+								<?php
+
+								}
+
+							?>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="container d-flex justify-content-center pb-5">
+
+					<button class="c-custom-1 overlay-open"><i class="fa-solid fa-computer-mouse"></i></button>
+
+				</div>
+
+			<?php
+
+		$index++;
+
+		}
+	?>
 
 </main>
 
