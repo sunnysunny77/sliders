@@ -17,6 +17,8 @@ header {
     }
     .navbar-collapse {
         background-color: inherit;
+        transition: height 0.4s;
+        will-change: height;
     }
     &.navigation_fixed {
         position: fixed;

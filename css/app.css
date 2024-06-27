@@ -1260,6 +1260,8 @@ header {
 }
 .slider_8-navigation .navbar-collapse {
   background-color: inherit;
+  transition: height 0.4s;
+  will-change: height;
 }
 .slider_8-navigation.navigation_fixed {
   position: fixed;

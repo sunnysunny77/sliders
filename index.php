@@ -38,9 +38,9 @@
 			</div>
 		</button>
 
-		<div class="col-12 collapse navbar-collapse pb-3 pb-sm-0" id="navbarNav">
+		<div class="col-12 collapse navbar-collapse" id="navbarNav">
 
-			<ul class="navbar-nav">
+			<ul class="navbar-nav pb-3 pb-sm-0">
 
 				<li class="nav-item">
 
