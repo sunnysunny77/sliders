@@ -1130,6 +1130,7 @@ body {
 }
 @media only screen and (min-width: 768px) {
   .slider_6-action-aside {
+    font-size: clamp(10px, 1.75vw, 16px);
     position: absolute;
     flex-direction: column;
     align-items: flex-start;
@@ -1160,6 +1161,11 @@ body {
     background-color: #ffffff;
   }
 }
+@media only screen and (min-width: 1200px) {
+  .slider_6-action-aside {
+    font-size: clamp(16px, 1.25vw, 24px);
+  }
+}
 .slider_6-action-aside h3 svg {
   font-size: 12px;
   vertical-align: top;
@@ -1183,8 +1189,7 @@ body {
 }
 @media only screen and (min-width: 768px) {
   .slider_6-action-aside p {
-    width: 100%;
-    max-width: 350px;
+    width: 88%;
   }
 }
 

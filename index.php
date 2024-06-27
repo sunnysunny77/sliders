@@ -490,13 +490,13 @@
 
 			<div class="col-md-10 d-none d-md-flex row justify-content-between mb-md-3 ms-md-5 g-0">
 
-				<button class="col-6 col-sm-3 slider_6-button-group button-group" id="paragraphone">Dolore</button>
+				<button class="col-md-3 slider_6-button-group button-group">Dolore</button>
 
-				<button class="col-6 col-sm-3 slider_6-button-group button-group" id="paragraphtwo">Fugiat</button>
+				<button class="col-md-3 slider_6-button-group button-group">Fugiat</button>
 
-				<button class="col-6 col-sm-3 slider_6-button-group button-group" id="paragraphthree">Occaecat</button>
+				<button class="col-md-3 slider_6-button-group button-group">Occaecat</button>
 
-				<button class="col-6 col-sm-3 slider_6-button-group button-group" id="paragraphfour">Excepteur </button>
+				<button class="col-md-3 slider_6-button-group button-group">Excepteur </button>
 
 			</div>
 
@@ -510,7 +510,7 @@
 
 					<h3 class="m-md-0">Dolore<i class="fa-solid fa-paperclip"></i></h3>
 
-					<p class="m-md-0">
+					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
 						odio velit, et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
 						Mauris suscipit et sem vel auctor. Duis dapibus arcu sem, a porttitor massa vulputate sed.
@@ -522,7 +522,7 @@
 
 					<h3 class="m-md-0">Fugiat<i class="fa-solid fa-phone"></i></h3>
 
-					<p class="m-md-0">
+					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
 						odio velit, et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
 						Mauris suscipit et sem vel auctor. Duis dapibus arcu sem, a porttitor massa vulputate sed.
@@ -534,7 +534,7 @@
 
 					<h3 class="m-md-0">Occaecat<i class="fa-solid fa-envelope"></i></h3>
 
-					<p class="m-md-0">
+					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
 						odio velit, et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
 						Mauris suscipit et sem vel auctor. Duis dapibus arcu sem, a porttitor massa vulputate sed.
@@ -546,10 +546,10 @@
 
 					<h3 class="m-md-0">Excepteur<i class="fa-solid fa-circle-user"></i></h3>
 
-					<p class="m-md-0">
+					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
 						odio velit, et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
-						Mauris suscipit et sem vel auctor. Duis dapibus arcu sem, a porttitor masssed.
+						Mauris suscipit et sem vel auctor. Duis dapibus arcu sem, a porttitor massa vulputate sed.
 					</p>
 
 				</aside>

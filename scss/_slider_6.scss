@@ -49,6 +49,7 @@
         align-items: center;
     }
     @include min_md {
+        font-size: clamp(10px, 1.75vw, 16px);
         position: absolute;
         flex-direction: column;
         align-items: flex-start;
@@ -78,6 +79,9 @@
             background-color: $white;
         }
     }
+    @include min_xl {
+        font-size: clamp(16px, 1.25vw, 24px);
+    }
     h3 svg {
         font-size: 12px;
         vertical-align: top;
@@ -95,8 +99,8 @@
             width: 67.5%;
         }
         @include min_md {
-            width: 100%;
-            max-width: 350px;
+            width: 88%;
+
         }
     }
 }
