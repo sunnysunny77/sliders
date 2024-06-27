@@ -474,21 +474,21 @@
 
 	</div>
 
-	<section class="container-fluid row justify-content-center g-0">
+	<section class="container-fluid row g-0">
 
 		<hr class="my-5">
 
 		<h2 class="text-center my-5"> Slider 6 </h2>
 
-		<p class="col-11 col-lg-8 col-xl-6 text-center mb-5">
+		<p class="col-11 col-lg-8 col-xl-6 text-center mx-auto mb-5">
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
 			odio velit, et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
 			Mauris suscipit et sem vel auctor. Duis dapibus arcu sem, a porttitor massa vulputate sed.
 		</p>
 
-		<div class="slider_6-container row pb-md-5 g-0">
+		<div class="slider_6-container col-12 col-md-10 col-xl-8 row pb-md-5 g-0">
 
-			<div class="d-none d-md-flex mb-3 ms-sm-5 row g-0 col-sm-9 col-xxl-6 justify-content-between">
+			<div class="col-md-10 d-none d-md-flex row justify-content-between mb-md-3 ms-md-5 g-0">
 
 				<button class="col-6 col-sm-3 slider_6-button-group button-group" id="paragraphone">Dolore</button>
 
@@ -500,7 +500,7 @@
 
 			</div>
 
-			<div class="slider_6-action-container col-12 col-md-10 col-xxl-8 row g-0">
+			<div class="slider_6-action-container col-12 col-md-11 row g-0">
 
 				<div class="slider_6-strip col-3"></div>
 
