@@ -15,7 +15,7 @@
 
 <body>
 
-<header class="d-flex flex-column justify-content-end justify-content-sm-center align-items-start flex-wrap">
+<header class="container-fluid d-flex flex-column justify-content-end justify-content-sm-center align-items-start flex-wrap">
 
 	<h1 class="d-flex align-items-end px-4 pb-3 pe-md-5 m-0"> 
 		
@@ -26,31 +26,33 @@
 
 </header>
 
-<nav class="navbar navbar-expand-sm slider_8-navigation navigation row p-0">
+<nav class="container-fluid navbar navbar-expand-sm slider_8-navigation navigation border-bottom p-0">
 
-    <button class="navbar-toggler px-4 pb-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-  		<div>
-			<div class="slider_8-bar1"></div>
-			<div class="slider_8-bar2"></div>
-			<div class="slider_8-bar3"></div>
+	<div class="row m-0 p-0">
+
+		<button class="col-auto navbar-toggler px-4 pb-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<div>
+				<div class="slider_8-bar1"></div>
+				<div class="slider_8-bar2"></div>
+				<div class="slider_8-bar3"></div>
+			</div>
+		</button>
+
+		<div class="col-12 collapse navbar-collapse pb-3 pb-sm-0" id="navbarNav">
+
+			<ul class="navbar-nav">
+
+				<li class="nav-item">
+
+					<a class="nav-link active p-3" aria-current="page" href="#">SLIDER 8</a>
+
+				</li>
+		
+			</ul>
+
 		</div>
-    </button>
 
-    <div class="col-auto collapse navbar-collapse pb-3 pb-sm-0" id="navbarNav">
-
-		<ul class="navbar-nav">
-
-			<li class="nav-item">
-
-				<a class="nav-link active p-3" aria-current="page" href="#">SLIDER 8</a>
-
-			</li>
-	
-		</ul>
-
-    </div>
-
-	<hr class="m-0 w-100">
+	</div>
 
 </nav>
 
@@ -472,7 +474,7 @@
 
 	</div>
 
-	<section class="row w-100 justify-content-center">
+	<section class="container-fluid row justify-content-center g-0">
 
 		<hr class="my-5">
 
@@ -484,7 +486,7 @@
 			Mauris suscipit et sem vel auctor. Duis dapibus arcu sem, a porttitor massa vulputate sed.
 		</p>
 
-		<div class="slider_6-container row pb-md-5 g-0">
+		<div class="container-fluid slider_6-container row pb-md-5 g-0">
 
 			<div class="d-none d-md-flex col-12 mb-3 ms-sm-5 row g-0 col-sm-9 col-xxl-6 justify-content-between">
 
@@ -498,17 +500,13 @@
 
 			</div>
 
-			<div class="slider_6-action-container col-12 col-md-10 col-xxl-8">
+			<div class="slider_6-action-container col-12 col-md-10 col-xxl-8 row g-0">
 
-				<div class="slider_6-image-container col-12 pb-4 pb-md-0 row g-0">
+				<div class="slider_6-strip col-3"></div>
 
-					<div class="slider_6-strip col-3"></div>
+				<img class="col-9" src="https://placehold.co/950x574/B0C4DE/31343C" alt="Placeholder">
 
-					<img class="col-9" src="https://placehold.co/950x574/B0C4DE/31343C" alt="Placeholder">
-
-				</div>
-
-				<aside class="slider_6-action-aside action-aside ">
+				<aside class="slider_6-action-aside action-aside">
 
 					<h3 class="m-md-0">Dolore<i class="fa-solid fa-paperclip"></i></h3>
 

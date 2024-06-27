@@ -6,7 +6,7 @@ const slider_6 = () => {
     return;
   }
 
-  let current;
+  let previous;
   let count;
   let inter_id;
 
@@ -21,10 +21,12 @@ const slider_6 = () => {
 
     if (count === 0) {
       clearInterval(inter_id);
-      action_aside[current].classList.replace(
-        "has-animation",
-        "has-animation-out"
-      );
+      action_aside[previous].style.transition =
+        "opacity 0.75s, top 0.75s, right 0.75s, bottom 0.75s, left 0.75s";
+      action_aside[previous].classList.remove("has-animation");
+      setTimeout(() => {
+        action_aside[previous].style.transition = "none";
+      }, 750);
     }
   };
 
@@ -38,24 +40,29 @@ const slider_6 = () => {
         disabled(false);
         index.focus();
       }, 3000);
-
-      if (current === undefined) {
-        return (action_aside[i].classList.add("has-animation"), current = i);
+      if (previous === undefined) {
+        previous = i;
+        action_aside[i].style.transition =
+          "opacity 0.75s, top 0.75s, right 0.75s, bottom 0.75s, left 0.75s";
+        action_aside[i].classList.add("has-animation");
+        setTimeout(() => {
+          action_aside[i].style.transition = "none";
+        }, 750);
+        return;
       }
- 
-      action_aside[current].classList.replace(
-        "has-animation",
-        "has-animation-out"
-      );
-
-      current = i;
-
+      action_aside[previous].style.transition =
+        "opacity 0.75s, top 0.75s, right 0.75s, bottom 0.75s, left 0.75s";
+      action_aside[previous].classList.remove("has-animation");
       setTimeout(() => {
-        action_aside[i].classList.replace(
-          "has-animation-out",
-          "has-animation"
-        ) || action_aside[i].classList.add("has-animation");
-      }, 1000);
+        action_aside[previous].style.transition = "none";
+        action_aside[i].style.transition =
+          "opacity 0.75s, top 0.75s, right 0.75s, bottom 0.75s, left 0.75s";
+        action_aside[i].classList.add("has-animation");
+        setTimeout(() => {
+          action_aside[i].style.transition = "none";
+          previous = i;
+        }, 750);
+      }, 750);
     });
   }
 };
