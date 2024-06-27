@@ -486,9 +486,9 @@
 			Mauris suscipit et sem vel auctor. Duis dapibus arcu sem, a porttitor massa vulputate sed.
 		</p>
 
-		<div class="container-fluid slider_6-container row pb-md-5 g-0">
+		<div class="slider_6-container row pb-md-5 g-0">
 
-			<div class="d-none d-md-flex col-12 mb-3 ms-sm-5 row g-0 col-sm-9 col-xxl-6 justify-content-between">
+			<div class="d-none d-md-flex mb-3 ms-sm-5 row g-0 col-sm-9 col-xxl-6 justify-content-between">
 
 				<button class="col-6 col-sm-3 slider_6-button-group button-group" id="paragraphone">Dolore</button>
 
