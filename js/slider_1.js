@@ -1,4 +1,6 @@
-const slider_1 = () => {
+import { events } from "./utillites.js";
+
+export const slider_1 = () => {
   const slider_items = document.querySelectorAll(".slider-item");
   const slider_next = document.querySelectorAll(".slider-next");
   const slider_next_sm = document.querySelector(".slider-next-md");

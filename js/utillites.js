@@ -1,10 +1,10 @@
-const events = (obj, type, callback, opt) => {
+export const events = (obj, type, callback, opt) => {
   if (obj) {
     obj.addEventListener(type, callback, opt);
   }
 };
 
-const get_position = (element) => {
+export const get_position = (element) => {
   let y_position = 0;
   while (element) {
     y_position += element.offsetTop - element.scrollTop;
@@ -12,3 +12,8 @@ const get_position = (element) => {
   }
   return y_position;
 };
+
+export const preloadImage = (url) => {
+  var img = new Image();
+  img.src = url;
+}

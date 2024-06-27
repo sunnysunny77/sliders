@@ -15,9 +15,9 @@
 
 <body>
 
-<header class="container-fluid d-flex flex-column justify-content-end justify-content-sm-center align-items-start flex-wrap">
+<header class="container-fluid d-flex flex-column justify-content-end align-items-start flex-wrap">
 
-	<h1 class="d-flex align-items-end px-4 pb-3 pe-md-5 m-0"> 
+	<h1 class="d-flex align-items-end px-4 pt-5 pb-3 p-sm-5 m-0 mt-sm-5"> 
 		
 		Sliders
 		<i class="fa-brands fa-android ps-3"></i>  
@@ -26,11 +26,13 @@
 
 </header>
 
-<nav class="container-fluid navbar navbar-expand-sm slider_8-navigation navigation border-bottom p-0">
+<hr id="slider_2-top" class="d-none d-sm-block m-0">
 
-	<div class="row m-0 p-0">
+<nav class="container-fluid slider_8-navigation navigation d-flex align-items-center border-bottom p-0">
 
-		<button class="col-auto navbar-toggler px-4 pb-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	<div class="row m-0 g-0">
+
+		<button class="col-auto d-sm-none slider_8-navbar-toggler navbar-toggler has-collapsed p-3 mb-4">
 			<div>
 				<div class="slider_8-bar1"></div>
 				<div class="slider_8-bar2"></div>
@@ -38,13 +40,13 @@
 			</div>
 		</button>
 
-		<div class="col-12 collapse navbar-collapse" id="navbarNav">
+		<div class="col-12 slider_8-navbar-collapse navbar-collapse">
 
-			<ul class="navbar-nav pb-3 pb-sm-0">
+			<ul class="list-unstyled my-4 my-sm-0">
 
-				<li class="nav-item">
+				<li>
 
-					<a class="nav-link active p-3" aria-current="page" href="#">SLIDER 8</a>
+					<a class="mx-4 active" href="#">SLIDER 8</a>
 
 				</li>
 		
@@ -598,16 +600,7 @@
 
 <script src="./js/bootstrap.min.js"></script>
 <script src="./js/fontawsome.min.js"></script>
-<script src="./js/utillites.js"></script>
-<script src="./js/slider_8.js"></script>
-<script src="./js/slider_7.js"></script>
-<script src="./js/slider_6.js"></script>
-<script src="./js/slider_5.js"></script>
-<script src="./js/slider_4.js"></script>
-<script src="./js/slider_3.js"></script>
-<script src="./js/slider_2.js"></script>
-<script src="./js/slider_1.js"></script>
-<script src="./js/app.js"></script>
+<script src="./js/app.js" type="module"></script>
 </body>
 
 </html>

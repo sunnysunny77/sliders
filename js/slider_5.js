@@ -1,7 +1,10 @@
-const slider_5 = () => {
+import { events } from "./utillites.js";
+
+export const slider_5 = () => {
   const site_img = document.querySelectorAll(".site-img");
   const scroll_listener = document.querySelector(".scroll-listener");
   const slider_close = document.querySelector(".slider-close");
+
   if (site_img.length === 0 || !scroll_listener || !slider_close) {
     return;
   }
@@ -16,6 +19,7 @@ const slider_5 = () => {
     for (const index of site_img) {
       const bool = index.id === item;
       const contains = index.classList.contains("d-has-display");
+
       if (bool && !contains) {
         index.classList.add("d-has-display");
       } else if (!bool && contains) {
@@ -29,15 +33,18 @@ const slider_5 = () => {
     "scroll",
     (event) => {
       const scroll_preview = document.querySelectorAll(".scroll-preview");
+
       if (scroll_preview.length === 0) {
         return;
       }
+
       const ranges = [...scroll_preview].map((item) => item.offsetTop);
       const scroll_pos = event.target.scrollTop;
 
       if (scroll_pos < ranges[0]) {
         picture_display(picture_id[0]);
       }
+
       for (const [i, index] of ranges.entries()) {
         if (
           i !== ranges.length &&
@@ -47,6 +54,7 @@ const slider_5 = () => {
           picture_display(picture_id[i + 1]);
         }
       }
+
       if (scroll_pos > ranges.at(-1)) {
         picture_display(picture_id.at(-1));
       }

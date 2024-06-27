@@ -1,4 +1,6 @@
-const slider_4 = () => {
+import { events, get_position } from "./utillites.js";
+
+export const slider_4 = () => {
   const figure_one = document.querySelector(".figure-one");
   const figure_two = document.querySelector(".figure-two");
   const height_container = document.querySelector(".height-container");
@@ -15,16 +17,19 @@ const slider_4 = () => {
       if (window.innerWidth < 992) {
         return;
       }
+
       const line =
         height_container.offsetTop +
-        (height_container.getBoundingClientRect().height * 0.25) -
-        (figure_one.getBoundingClientRect().height / 2) -
-        (figure_two.getBoundingClientRect().height / 2);
+        height_container.getBoundingClientRect().height * 0.25 -
+        figure_one.getBoundingClientRect().height / 2 -
+        figure_two.getBoundingClientRect().height / 2;
       let scrollY = window.scrollY;
+
       if (scrollY < line) {
         figure_two.classList.replace("d-lg-has-height", "d-lg-0-height");
         figure_one.classList.replace("d-lg-0-height", "d-lg-has-height");
       }
+
       if (scrollY > line) {
         figure_one.classList.replace("d-lg-has-height", "d-lg-0-height");
         figure_two.classList.replace("d-lg-0-height", "d-lg-has-height");
@@ -37,6 +42,7 @@ const slider_4 = () => {
     if (window.innerWidth < 992) {
       return;
     }
+
     const position = get_position(height_container);
     const contains = height_container.classList.contains(
       "scroll-animation-desktop"
@@ -44,7 +50,7 @@ const slider_4 = () => {
     const height = height_container.getBoundingClientRect().height;
     const scroll_desktop = window.scrollY;
     const top = position;
-    const bottom = position + (height / 2.5);
+    const bottom = position + height / 2.5;
 
     if (scroll_desktop < top && contains) {
       height_container.classList.remove("scroll-animation-desktop");
@@ -63,12 +69,13 @@ const slider_4 = () => {
     if (window.innerWidth > 991) {
       return;
     }
+
     for (const index of scroll) {
       const position = get_position(index);
       const contains = index.classList.contains("scroll-animation-mobile");
       const height = index.getBoundingClientRect().height;
       const scroll_mobile =
-        window.scrollY + window.innerHeight - height - (height / 6);
+        window.scrollY + window.innerHeight - height - height / 6;
 
       if (scroll_mobile > position && !contains) {
         index.classList.add("scroll-animation-mobile");

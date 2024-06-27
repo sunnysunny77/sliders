@@ -1,4 +1,6 @@
-const slider_6 = () => {
+import { events } from "./utillites.js";
+
+export const slider_6 = () => {
   const button_group = document.querySelectorAll(".button-group");
   const action_aside = document.querySelectorAll(".action-aside");
 
@@ -21,9 +23,11 @@ const slider_6 = () => {
 
     if (count === 0) {
       clearInterval(inter_id);
+
       action_aside[previous].style.transition =
         "opacity 0.75s, top 0.75s, right 0.75s, bottom 0.75s, left 0.75s";
       action_aside[previous].classList.remove("has-animation");
+
       setTimeout(() => {
         action_aside[previous].style.transition = "none";
       }, 750);
@@ -33,18 +37,24 @@ const slider_6 = () => {
   for (const [i, index] of button_group.entries()) {
     events(index, "click", () => {
       count = 12;
+
       clearInterval(inter_id);
+
       inter_id = setInterval(interval, 1000);
+
       disabled(true);
+
       setTimeout(() => {
         disabled(false);
         index.focus();
       }, 3000);
+
       if (previous === undefined) {
         previous = i;
         action_aside[i].style.transition =
           "opacity 0.75s, top 0.75s, right 0.75s, bottom 0.75s, left 0.75s";
         action_aside[i].classList.add("has-animation");
+
         setTimeout(() => {
           action_aside[i].style.transition = "none";
         }, 750);
@@ -53,11 +63,13 @@ const slider_6 = () => {
       action_aside[previous].style.transition =
         "opacity 0.75s, top 0.75s, right 0.75s, bottom 0.75s, left 0.75s";
       action_aside[previous].classList.remove("has-animation");
+
       setTimeout(() => {
         action_aside[previous].style.transition = "none";
         action_aside[i].style.transition =
           "opacity 0.75s, top 0.75s, right 0.75s, bottom 0.75s, left 0.75s";
         action_aside[i].classList.add("has-animation");
+
         setTimeout(() => {
           action_aside[i].style.transition = "none";
           previous = i;

@@ -1,4 +1,6 @@
-const slider_2 = () => {
+import { events } from "./utillites.js";
+
+export const slider_2 = () => {
   const timeline_items = document.querySelectorAll(".timeline-item");
   const timeline_button = document.querySelector(".timeline-button");
   const timeline_container = document.querySelector(".timeline-container");
@@ -8,6 +10,7 @@ const slider_2 = () => {
   }
 
   let count = 0;
+
   timeline_container.style.maxHeight = `${
     timeline_container.getBoundingClientRect().height
   }px`;
@@ -17,7 +20,6 @@ const slider_2 = () => {
 
     if (count === timeline_items.length) {
       count = 0;
-
       document.querySelector("#slider_2-top").scrollIntoView();
 
       setTimeout(() => {
@@ -25,6 +27,7 @@ const slider_2 = () => {
         timeline_container.style.maxHeight = `${
           timeline_items[count].getBoundingClientRect().height
         }px`;
+        
         setTimeout(() => {
           for (const [i, item] of timeline_items.entries()) {
             if (i > 0) {
