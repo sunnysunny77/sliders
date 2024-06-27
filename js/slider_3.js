@@ -148,7 +148,7 @@ export const slider_3 = () => {
   width = percent;
   percentage.style.width = `${width}%`;
 
-  events(button_toggle, "click", (event) => {
+  events(button_toggle, "click", () => {
     const obj = document.querySelector(".shrink-container");
     obj.classList.toggle("has-shrink");
   });

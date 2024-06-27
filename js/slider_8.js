@@ -12,7 +12,7 @@ export const slider_8 = () => {
 
   let cached = null;
 
-  const handle_navigationigation = (event) => {
+  const handle_navigationigation = () => {
     if (!cached) {
       setTimeout(() => {
         const scroll_top = window.scrollY;
@@ -43,7 +43,7 @@ export const slider_8 = () => {
     }
   };
 
-  const handle_toggle = (event) => {
+  const handle_toggle = () => {
     let max_height;
     navbar_toggler.classList.toggle("has-collapsed");
 

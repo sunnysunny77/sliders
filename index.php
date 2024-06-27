@@ -240,7 +240,7 @@
 
 	<h2 class="text-center my-5"> Slider 3 </h2>
 
-	<div class="containe g-0">
+	<div class="container-xl g-0">
 
 		<div class="slider_3-border-img">
 
@@ -301,7 +301,6 @@
 					<div class="percentage-change"></div>
 
 				</div>
-
 
 				<div class="d-flex p-2">
 
