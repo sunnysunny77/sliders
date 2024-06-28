@@ -8,8 +8,6 @@
     <meta name="author" content="D.C">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Sliders </title>
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="css/fontawesome.min.css" rel="stylesheet" type="text/css">
     <link href="css/app.min.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -636,9 +634,8 @@
 
 </footer>
 
-<script src="./js/bootstrap.min.js"></script>
-<script src="./js/fontawsome.min.js"></script>
 <script src="./js/app.min.js" type="module"></script>
+
 </body>
 
 </html>

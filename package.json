@@ -23,15 +23,17 @@
   },
   "homepage": "https://github.com/sunnysunny77/slider#readme",
   "dependencies": {
-    "@babel/preset-env": "^7.24.7",
-    "babelify": "^10.0.0",
-    "browserify": "^17.0.0",
-    "concurrently": "^8.2.2",
-    "eslint": "^9.5.0",
-    "globals": "^15.6.0",
+    "@babel/preset-env": "latest",
+    "@fortawesome/fontawesome-free": "latest",
+    "babelify": "latest",
+    "bootstrap": "latest",
+    "browserify": "latest",
+    "concurrently": "latest",
+    "eslint": "latest",
+    "globals": "latest",
     "sass": "latest",
-    "uglify-js": "^3.18.0",
-    "watchify": "^4.0.0"
+    "uglify-js": "latest",
+    "watchify": "latest"
   },
   "browserify": {
     "transform": [
