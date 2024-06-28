@@ -1,11 +1,16 @@
 {
-  "name": "template",
+  "name": "sliders",
+  "type": "module",
   "version": "1.0.0",
   "description": "sliders",
   "main": "./js/app.js",
   "scripts": {
-    "build": "node ./node_modules/sass/sass.js ./scss:./css",
-    "watch": "node ./node_modules/sass/sass.js ./scss:./css -w"
+    "watch-css": "node ./node_modules/sass/sass.js ./scss/app.scss:./css/app.min.css --style compressed -w",
+    "build-css": "node ./node_modules/sass/sass.js ./scss/app.scss:./css/app.min.css --style compressed",
+    "watch-js": "node ./node_modules/watchify/bin/cmd.js --debug ./js/app.js -o ./js/app.min.js -v",
+    "build-js": "node ./node_modules/uglify-js/bin/uglifyjs ./js/app.js -o ./js/app.min.js --source-map",
+    "dev": "concurrently \"npm run watch-css\" \"npm run watch-js\"",
+    "build": "concurrently \"npm run build-css\" \"npm run build-js\""
   },
   "repository": {
     "type": "git",
@@ -18,11 +23,26 @@
   },
   "homepage": "https://github.com/sunnysunny77/template#readme",
   "dependencies": {
-    "sass": "latest"
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.5.0",
+    "@babel/preset-env": "^7.24.7",
+    "babelify": "^10.0.0",
+    "browserify": "^17.0.0",
+    "concurrently": "^8.2.2",
     "eslint": "^9.5.0",
-    "globals": "^15.6.0"
+    "globals": "^15.6.0",
+    "sass": "latest",
+    "uglify-js": "^3.18.0",
+    "watchify": "^4.0.0"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "@babel/preset-env"
+          ]
+        }
+      ]
+    ]
   }
 }

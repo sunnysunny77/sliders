@@ -10,7 +10,7 @@
     <title> Sliders </title>
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/fontawesome.min.css" rel="stylesheet" type="text/css">
-    <link href="css/app.css" rel="stylesheet" type="text/css">
+    <link href="css/app.min.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -638,7 +638,7 @@
 
 <script src="./js/bootstrap.min.js"></script>
 <script src="./js/fontawsome.min.js"></script>
-<script src="./js/app.js" type="module"></script>
+<script src="./js/app.min.js" type="module"></script>
 </body>
 
 </html>

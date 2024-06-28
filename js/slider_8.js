@@ -54,7 +54,7 @@ export const slider_8 = () => {
     }
 
     navbar_collapse.style.maxHeight = `${max_height}px`;
-  }
+  };
 
   events(window, "resize", handle_toggle_breakpoint, { passive: true });
   events(navbar_toggler, "click", handle_toggle);
