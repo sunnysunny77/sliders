@@ -18,19 +18,23 @@
             max-height: initial;
         }
     }
-    &.navigation_fixed {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 999;
-        height: 65px;
+    &.navigation-other {
+        @include min_sm {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+        }
     }
-    &.navigation_other {
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
+    &.navigation-fixed {
+        @include min_sm {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 999;
+            height: 65px;
+        }
     }
     a.active {
         color: $color_5;

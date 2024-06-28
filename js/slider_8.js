@@ -16,18 +16,14 @@ export const slider_8 = () => {
     if (!cached) {
       setTimeout(() => {
         const scroll_top = window.scrollY;
-        const navigation_height = navigation.getBoundingClientRect().height;
         const line = main.offsetTop;
 
-        if (scroll_top >= line - navigation_height && window.innerWidth > 576) {
-          navigation.classList.add("navigation_fixed");
-          navigation.classList.remove("navigation_other");
+        if (scroll_top >= line - navigation.getBoundingClientRect().height && window.innerWidth > 576) {
+          navigation.classList.add("navigation-fixed");
+          navigation.classList.remove("navigation-other");
         } else if (window.innerWidth > 576) {
-          navigation.classList.add("navigation_other");
-          navigation.classList.remove("navigation_fixed");
-        } else if (window.innerWidth <= 576) {
-          navigation.classList.remove("navigation_fixed");
-          navigation.classList.remove("navigation_other");
+          navigation.classList.add("navigation-other");
+          navigation.classList.remove("navigation-fixed");
         }
         cached = null;
       }, 150);
