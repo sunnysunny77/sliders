@@ -1,4 +1,4 @@
-import "../node_modules/bootstrap/dist/js/bootstrap.bundle.js";
+//import "../node_modules/bootstrap/dist/js/bootstrap.bundle.js";
 import "../node_modules/@fortawesome/fontawesome-free/js/all.js";
 import { events } from "./utillites.js";
 import { slider_8 } from "./slider_8.js";
