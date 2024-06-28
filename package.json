@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sunnysunny77/template.git"
+    "url": "git+https://github.com/sunnysunny77/slider.git"
   },
   "author": "D.C",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sunnysunny77/template/issues"
+    "url": "https://github.com/sunnysunny77/slider/issues"
   },
-  "homepage": "https://github.com/sunnysunny77/template#readme",
+  "homepage": "https://github.com/sunnysunny77/slider#readme",
   "dependencies": {
     "@babel/preset-env": "^7.24.7",
     "babelify": "^10.0.0",
