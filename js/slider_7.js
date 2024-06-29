@@ -10,6 +10,7 @@ export const slider_7 = () => {
   }
 
   for (const [i, item] of overlay_open.entries()) {
+    item.setAttribute("aria-label", `${overlay_body[i].id}`);
     item.setAttribute("aria-expanded", false);
     item.setAttribute("aria-controls", `${overlay_body[i].id}`);
 

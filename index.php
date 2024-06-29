@@ -64,9 +64,9 @@
 
 		<div class="slider_1-outer position-relative">
 
-			<button class="c-custom-1 position-absolute slider_1-button slider-next slider-next-md d-none d-md-flex d-xl-none"><i class="fa-solid fa-arrow-right"></i></button>
+			<button aria-label="next" class="c-custom-1 position-absolute slider_1-button slider-next slider-next-md d-none d-md-flex d-xl-none"><i class="fa-solid fa-arrow-right"></i></button>
 
-			<button class="c-custom-1 position-absolute slider_1-button slider-next slider-next-lg d-none d-xl-flex"><i class="fa-solid fa-arrow-right"></i></button>
+			<button aria-label="next" class="c-custom-1 position-absolute slider_1-button slider-next slider-next-lg d-none d-xl-flex"><i class="fa-solid fa-arrow-right"></i></button>
 
 			<div class="slider-container slider_1-row row d-flex align-items-start justify-content-center justify-content-sm-between position-relative g-0">
 				
@@ -98,7 +98,7 @@
 
 										</p>
 
-										<button class="c-custom-1 position-absolute slider_1-button slider-next d-md-none"><i class="fa-solid fa-arrow-right"></i></button>
+										<button aria-label="next" class="c-custom-1 position-absolute slider_1-button slider-next d-md-none"><i class="fa-solid fa-arrow-right"></i></button>
 
 									</div>
 
@@ -168,7 +168,7 @@
 
 								<div class="col-12 col-md-11">
 							
-									<img class="slider_2-image <?php echo $pad_image; ?>" src="https://placehold.co/400x400/EEE/31343C"  alt="Placehold">
+									<img class="slider_2-image <?php echo $pad_image; ?>" src="./images/400x400.svg" width="400" height="400"  alt="Placehold">
 
 								</div>
 
@@ -226,7 +226,7 @@
 
 			<div class="slider_2-button-container position-absolute d-flex justify-content-center pt-5 pt-md-0">
 
-				<button class="c-custom-1 timeline-button"><i class="fa-solid fa-arrow-down"></i></button>
+				<button aria-label="see more" class="c-custom-1 timeline-button"><i class="fa-solid fa-arrow-down"></i></button>
 
 			</div>
 
@@ -249,16 +249,16 @@
 				<div class="slider_3-container slider-container">
 
 					<button aria-label="open-left" class="slider_3-button-next open-left"></button>
-					<a href="mailto:user@gmail.com" rel="noreferrer" target="_blank" class="slider_3-a image-1"><span class='hidden'>dolor sit amet</span></a>
-					<a href="mailto:user@gmail.com" rel="noreferrer" target="_blank" class="slider_3-a image-fill-right"><span class='hidden'>dolor sit amet</span></a>
+					<a href="mailto:user@gmail.com" rel="noreferrer" target="_blank" class="slider_3-a image-1"></a>
+					<a href="mailto:user@gmail.com" rel="noreferrer" target="_blank" class="slider_3-a image-fill-right"></a>
 					<div class="slider_3-inner inner"></div>
-					<a href="tel:0419-777-066" rel="noreferrer" target="_blank" class="slider_3-a image-2"><span class='hidden'>dolor sit</span></a>
-					<a href="tel:0419-777-066" rel="noreferrer" target="_blank" class="slider_3-a image-fill-left"><span class='hidden'>dolor sit</span></a>
+					<a href="tel:0419-777-066" rel="noreferrer" target="_blank" class="slider_3-a image-2"></a>
+					<a href="tel:0419-777-066" rel="noreferrer" target="_blank" class="slider_3-a image-fill-left"></a>
 					<button aria-label="open-right" class="slider_3-button-next open-right"></button>
 
 					<div class="static-count d-none">
 
-						<img class="slider_3-img" src="https://placehold.co/150x150/3708090/708090" alt="mail" />
+						<img class="slider_3-img" src="./images/150x150-grey.svg" width="150" height="150" alt="mail" />
 
 						<div>
 
@@ -270,7 +270,7 @@
 
 					<div class="static-count d-none">
 
-						<img class="slider_3-img" src="https://placehold.co/150x150/FFC0CB/31343C" alt="telephone" />
+						<img class="slider_3-img" src="./images/150x150-pink.svg" width="150" height="150" alt="telephone" />
 
 						<div>
 
@@ -282,7 +282,7 @@
 
 					<div class="static-count  d-none">
 
-						<img class="slider_3-img" src="https://placehold.co/150x150/EEE/31343C" alt="LinkedIn" />
+						<img class="slider_3-img" src="./images/150x150-light.svg" width="150" height="150" alt="LinkedIn" />
 
 						<div>
 
@@ -302,7 +302,7 @@
 
 				<div class="d-flex p-2">
 
-					<button class="c-custom-1 slider_3-button-toggle button-toggle"><i class="fa-solid fa-computer-mouse"></i></i></button>
+					<button aria-label="open" class="c-custom-1 slider_3-button-toggle button-toggle"><i class="fa-solid fa-computer-mouse"></i></i></button>
 
 				</div>
 					
@@ -351,7 +351,7 @@
 
 				<a class="slider_4-figure figure-one scroll d-lg-has-height w-100 d-flex justify-content-center mb-sm-5 mb-lg-0" href="#">
 
-					<img src="https://placehold.co/440x293/B0C4DE/31343C"  alt="Placehold"/>
+					<img src="./images/440x293-light.svg" width="440" height="293" alt="Placehold"/>
 
 					<p class="d-flex justify-content-center align-items-end text-center m-0 px-3 pb-3">
 						dolor sit lorem ipsum amet.
@@ -361,7 +361,7 @@
 
 				<a class="slider_4-figure figure-two scroll d-lg-0-height w-100 d-flex justify-content-center" href="#">
 
-					<img src="https://placehold.co/440x293/31343C/B0C4DE"  alt="Placehold"/>
+					<img src="./images/440x293-dark.svg" width="440" height="293"  alt="Placehold"/>
 					
 					<p class="d-flex justify-content-center align-items-end text-center m-0 px-3 pb-3">
 						dolor sit lorem ipsum amet.
@@ -393,7 +393,7 @@
 
 							Scroll preview
 
-							<img src="https://placehold.co/100x100/31343C/B0C4DE"  alt="Placehold"/>
+							<img src="./images/100x100.svg" width="100" height="100"  alt="Placehold"/>
 
 							<ol>
 
@@ -441,7 +441,7 @@
 
 				<div id="site-1" class="slider_5-site site-img d-has-display">
 
-					<img src="https://placehold.co/400x400/B0C4DE/31343C" alt="Placehold"/>
+					<img src="./images/400x400-blue.svg" width="400" height="400" alt="Placehold"/>
 
 				</div>
 
@@ -451,7 +451,7 @@
 							lorem commodo 
 					</a>
 
-					<img src="https://placehold.co/400x400/3708090/708090" alt="Placehold"/>
+					<img src="./images/400x400.svg" width="400" height="400" alt="Placehold"/>
 
 				</div>
 
@@ -461,7 +461,7 @@
 						ex ea commodo 
 					</a>
 
-					<img src="https://placehold.co/400x400/31343C/B0C4DE" alt="Placehold" />
+					<img src="./images/400x400-dark.svg" width="400" height="400" alt="Placehold" />
 
 				</div>
 
@@ -503,7 +503,7 @@
 
 				<div class="slider_6-strip col-3"></div>
 
-				<img class="col-9" src="https://placehold.co/950x574/B0C4DE/31343C" alt="Placeholder">
+				<img class="col-9" src="./images/950x574.svg" width="950" height="574" alt="Placeholder">
 
 				<aside class="slider_6-action-aside action-aside">
 
@@ -583,11 +583,11 @@
 
 					<div id="overlay_body-<?php echo $index; ?>" class="slider_7-overlay-body slider_7-overlay-body-<?php echo $index; ?> overlay_body row align-items-center justify-content-center">
 
-						<img class="col-12 col-md-6" src="https://placehold.co/950x574/B0C4DE/31343C" alt="Placeholder">
+						<img class="col-12 col-md-6" src="./images/950x574.svg" width="950" height="574"  alt="Placeholder">
 
 						<div class="col-12 d-flex align-items-center justify-content-center">
 
-							<button class="c-custom-1 overlay-close"><i class="fa-solid fa-xmark"></i></button>
+							<button aria-label="close" class="c-custom-1 overlay-close"><i class="fa-solid fa-xmark"></i></button>
 
 							<?php 
 								
@@ -595,7 +595,7 @@
 
 								?>
 
-									<button destination="overlay_body-<?php echo $index + 1; ?>"class="c-custom-1 overlay-next ms-5"><i class="fa-solid fa-circle-chevron-right"></i></button>
+									<button aria-label="next" class="c-custom-1 overlay-next ms-5"><i class="fa-solid fa-circle-chevron-right"></i></button>
 
 								<?php
 
