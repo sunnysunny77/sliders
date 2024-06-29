@@ -634,7 +634,7 @@
 
 </footer>
 
-<script src="./js/app.min.js" type="module"></script>
+<script src="./js/app.js" type="module" defer></script>
 
 </body>
 
