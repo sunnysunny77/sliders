@@ -632,7 +632,7 @@
 
 	<hr class="w-100 mb-5">
 
-	<p class="m-0"><i class="fa-regular fa-copyright pe-3"></i></p>
+	<p class="m-0"><i class="fa-regular fa-copyright"></i></p>
 
 </footer>
 
