@@ -53,7 +53,7 @@
             @include min_md {
                 width: 13px;
                 height: 13px;
-                right: calc(50% - 7px);
+                right: calc(50% - 8px);
                 bottom: -7px;
             }
         }
@@ -61,7 +61,7 @@
             width: 70px;
             height: 70px;
             border-radius: 50%;
-            background-color: $color_7;
+            background-color: darken(#708090, 15%);;
             color: $white;
         }
     }
