@@ -1,7 +1,10 @@
 
 <br>
 <br>
-“npm run dev” to watch
+“npm run watch” to watch
 <br>
 <br>
-or “npm run build” to compile
+or “npm run build” to test
+<br>
+<br>
+or “npm run production” for production
