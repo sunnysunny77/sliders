@@ -1,52 +1,44 @@
 {
-  "name": "sliders",
+  "name": "template",
   "type": "module",
-  "version": "1.1.0",
-  "description": "sliders",
+  "version": "1.0.0",
+  "description": "template",
   "main": "./js/app.js",
   "scripts": {
     "watch-css": "sass ./scss/app.scss:./css/app.min.css --style compressed -w",
     "static-css": "sass ./scss/app.scss:./css/app.min.css --style compressed",
-    "watch-js": "watchify --debug ./js/index.js -o ./js/app.js -v",
-    "build-js": "browserify ./js/index.js  -d | uglifyjs -cm -o ./js/app.js --source-map 'content=inline,filename='app.js',url='app.js.map''",
-    "production-js": "browserify ./js/index.js | uglifyjs > ./js/app.js",
-    "watch": "concurrently \"npm run watch-css\" \"npm run watch-js\"",
+    "watch-js": "rollup -c ./rollup.config-watch.js -w",
+    "build-js": "rollup -c ./rollup.config-build.js",
+    "production-js": "rollup -c ./rollup.config-production.js",
+    "serve": "php -S 127.0.0.1:3000",
+    "open": "open http:localhost:3000",
+    "watch": "concurrently \"npm run watch-css\" \"npm run watch-js\" \"npm run serve\" \"npm run open\"",
     "build": "concurrently \"npm run static-css\" \"npm run build-js\"",
     "production": "concurrently \"npm run static-css\" \"npm run production-js\""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sunnysunny77/slider.git"
+    "url": "git+https://github.com/sunnysunny77/template.git"
   },
   "author": "D.C",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sunnysunny77/slider/issues"
+    "url": "https://github.com/sunnysunny77/template/issues"
   },
-  "homepage": "https://github.com/sunnysunny77/slider#readme",
+  "homepage": "https://github.com/sunnysunny77/template#readme",
   "dependencies": {
-    "@babel/preset-env": "latest",
     "@fortawesome/fontawesome-free": "latest",
-    "babelify": "latest",
-    "bootstrap": "latest",
-    "browserify": "latest",
+    "@rollup/plugin-babel": "latest",
+    "@rollup/plugin-commonjs": "latest",
+    "@rollup/plugin-terser": "latest",
+    "bootstrap": "^5.3.3",
     "concurrently": "latest",
     "eslint": "latest",
     "globals": "latest",
-    "sass": "latest",
-    "uglify-js": "latest",
-    "watchify": "latest"
-  },
-  "browserify": {
-    "transform": [
-      [
-        "babelify",
-        {
-          "presets": [
-            "@babel/preset-env"
-          ]
-        }
-      ]
-    ]
+    "open": "latest",
+    "rollup": "latest",
+    "rollup-plugin-livereload": "latest",
+    "rollup-plugin-sourcemaps": "latest",
+    "sass": "latest"
   }
 }

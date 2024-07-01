@@ -17,7 +17,7 @@ self.addEventListener("install", (event) => {
           "/images/100x100.svg", 
           "/images/400x400-dark.svg",
           "/images/950x574.svg",
-          "/js/app.js"
+          "/js/app.min.js"
         ])
       )
   );

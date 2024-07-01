@@ -46,7 +46,7 @@
 
 				<li>
 
-					<a class="mx-4 active" href="#">SLIDER 8</a>
+					<a class="mx-4 active" href="./a.html">SLIDER 8</a>
 
 				</li>
 		
@@ -636,7 +636,7 @@
 
 </footer>
 
-<script src="./js/app.js" type="module" defer></script>
+<script src="./js/app.min.js" defer></script>
 
 </body>
 
