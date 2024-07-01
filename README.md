@@ -1,7 +1,6 @@
-
 <br>
 <br>
-“npm run watch” to watch
+“npm run watch” to watch and load live
 <br>
 <br>
 or “npm run build” to test
