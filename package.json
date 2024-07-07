@@ -1,44 +1,62 @@
 {
-  "name": "template",
+  "name": "slider",
   "type": "module",
-  "version": "1.0.0",
-  "description": "template",
+  "version": "3.0.0",
+  "description": "slider",
   "main": "./js/app.js",
   "scripts": {
-    "watch-css": "sass ./scss/app.scss:./css/app.min.css --style compressed -w",
-    "static-css": "sass ./scss/app.scss:./css/app.min.css --style compressed",
-    "watch-js": "rollup -c ./rollup.config-watch.js -w",
-    "build-js": "rollup -c ./rollup.config-build.js",
-    "production-js": "rollup -c ./rollup.config-production.js",
-    "serve": "php -S 127.0.0.1:3000",
-    "open": "open http:localhost:3000",
-    "watch": "concurrently \"npm run watch-css\" \"npm run watch-js\" \"npm run serve\" \"npm run open\"",
-    "build": "concurrently \"npm run static-css\" \"npm run build-js\"",
-    "production": "concurrently \"npm run static-css\" \"npm run production-js\""
+    "install": "run-script-os",
+    "install:default": "sh install.sh",
+    "install:win32": "bash install.sh",
+    "mkcert": "run-script-os",
+    "mkcert:default": "sh mkcert.sh",
+    "mkcert:win32": "bash mkcert.sh",
+    "install-cert": "run-script-os",
+    "install-cert:default": "sudo cp server.crt /usr/local/share/ca-certificates/ && sudo update-ca-certificates",
+    "install-cert:macos": "sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain server.crt",
+    "install-cert:win32": "powershell Import-Certificate -FilePath %INIT_CWD%\\server.crt -CertStoreLocation cert:\\CurrentUser\\Root",
+    "caddy-server": "cross-env-shell $INIT_CWD/caddy run --config $INIT_CWD/Caddyfile",
+    "caddy-config": "cross-env-shell $INIT_CWD/caddy adapt run --config $INIT_CWD/Caddyfile",
+    "caddy-format": "cross-env-shell $INIT_CWD/caddy fmt $INIT_CWD/Caddyfile --overwrite",
+    "php-server": "node php-server.js",
+    "open-server": "node open.js",
+    "watch-css": "sass ./scss/app.scss:./site/css/app.min.css --style compressed -w",
+    "build-css": "sass ./scss/app.scss:./site/css/app.min.css --style compressed",
+    "production-css": "sass ./scss/app.scss:./site/css/app.min.css --style compressed --no-source-map",
+    "watch-js": "rollup -c ./rollup.config-watch.mjs -w --sourcemap",
+    "build-js": "rollup -c ./rollup.config.mjs --sourcemap",
+    "production-js": "rollup -c ./rollup.config.mjs",
+    "watch": "concurrently --hide \"caddy-server\" \"npm:caddy-server\" \"npm:php-server\" \"npm:watch-css\" \"npm:watch-js\" \"npm:open-server\"",
+    "build": "concurrently \"npm:build-css\" \"npm:build-js\"",
+    "production": "concurrently \"npm:production-css\" \"npm:production-js\""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sunnysunny77/template.git"
+    "url": "git+https://github.com/sunnysunny77/slider.git"
   },
   "author": "D.C",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sunnysunny77/template/issues"
+    "url": "https://github.com/sunnysunny77/slider/issues"
   },
-  "homepage": "https://github.com/sunnysunny77/template#readme",
-  "dependencies": {
+  "homepage": "https://github.com/sunnysunny77/slider#readme",
+  "devDependencies": {
     "@fortawesome/fontawesome-free": "latest",
     "@rollup/plugin-babel": "latest",
     "@rollup/plugin-commonjs": "latest",
     "@rollup/plugin-terser": "latest",
     "bootstrap": "^5.3.3",
     "concurrently": "latest",
+    "cross-env": "latest",
     "eslint": "latest",
+    "fs": "latest",
     "globals": "latest",
     "open": "latest",
+    "php-server": "latest",
     "rollup": "latest",
     "rollup-plugin-livereload": "latest",
     "rollup-plugin-sourcemaps": "latest",
+    "run-script-os": "latest",
     "sass": "latest"
   }
 }

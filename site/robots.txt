@@ -1,0 +1,2 @@
+User-agent: * 
+Sitemap: https://sliders.sunnyhome.site/sitemap.xml
