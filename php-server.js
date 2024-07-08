@@ -1,4 +1,4 @@
-import phpServer from 'php-server';
+import phpServer from "php-server";
 
 const server = await phpServer({
     port: 3001,
