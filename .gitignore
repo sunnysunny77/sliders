@@ -10,4 +10,3 @@ site/css/app.min.css.map
 site/js/app.min.js
 site/js/app.min.js.map
 caddy
-ssl.conf
