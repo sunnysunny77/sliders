@@ -7,7 +7,7 @@
   "scripts": {
     "install": "run-script-os",
     "install:default": "sh install.sh",
-    "install:win32": "bash install.sh",
+    "install:win32": "bash install-win32.sh",
     "mkcert": "run-script-os",
     "mkcert:default": "sh mkcert.sh",
     "mkcert:win32": "bash mkcert.sh",
