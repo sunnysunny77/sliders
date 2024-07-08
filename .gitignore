@@ -2,6 +2,10 @@ node_modules
 package-lock.json
 server.key
 server.crt
+server.csr
+ca.srl
+ca.key
+ca.cert
 site/css/app.min.css
 site/css/app.min.css.map
 site/js/app.min.js
