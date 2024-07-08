@@ -31,5 +31,5 @@ events(window, "load", () => {
   slider_3();
   slider_2();
   slider_1();
-  service_worker();
+  //service_worker();
 });
