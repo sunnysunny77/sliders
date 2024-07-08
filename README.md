@@ -13,7 +13,10 @@
     <br>
     https://go.dev/doc/install
     <br>
+    <br>
+    <br>
     For Debian, Ubuntu, and Raspbian, an xcaddy package is available
+    <br>
     <br>
     sudo apt install -y debian-keyring debian-archive-keyring apt-transport-https
     <br>
@@ -25,7 +28,15 @@
     <br>
     sudo apt install xcaddy
     <br>
-    <br>      
+    <br>
+    and from in the root directory
+    <br>
+    sudo setcap CAP_NET_BIND_SERVICE=+eip caddy
+    <br>
+    <br>
+    <br>  
+    <br>
+    <br>
     npm i "install app"
     <br>
     <br>
