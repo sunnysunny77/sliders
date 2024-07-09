@@ -1,8 +1,5 @@
 node_modules
 package-lock.json
-ca.crt
-ca.key
-ca.srl
 server.csr
 server.key
 server.crt
