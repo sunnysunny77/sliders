@@ -3,6 +3,7 @@ package-lock.json
 server.csr
 server.key
 server.crt
+server.pass.key
 site/css/app.min.css
 site/css/app.min.css.map
 site/js/app.min.js
