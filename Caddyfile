@@ -1,6 +1,6 @@
 dev.localhost {
 	root ./site/
-	tls ./server.crt ./private.key
+	tls ./server.crt ./server.key
 	encode zstd gzip
 	templates
 	file_server browse

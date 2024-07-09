@@ -1,9 +1,11 @@
 node_modules
 package-lock.json
-private.key
+ca.crt
+ca.key
+ca.srl
+server.csr
+server.key
 server.crt
-ca.csr
-private.key
 site/css/app.min.css
 site/css/app.min.css.map
 site/js/app.min.js
