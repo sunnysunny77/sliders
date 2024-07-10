@@ -28,6 +28,8 @@
     <br>
     sudo apt install xcaddy
     <br>
+    sudo apt install libnss3-tools
+    <br>
     <br>
     and from in the root directory
     <br>
