@@ -16,6 +16,8 @@
     "install-cert:macos": "sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain ca.crt",
     "install-cert:win32": "powershell Import-Certificate -FilePath %INIT_CWD%\\ca.crt -CertStoreLocation cert:\\CurrentUser\\Root",
     "caddy-server": "run-script-os",
+    "caddy-configr": "run-script-os",
+    "caddy-format": "run-script-os",
     "caddy-server:darwin:linux": "cross-env-shell sudo $INIT_CWD/caddy run --config $INIT_CWD/Caddyfile",
     "caddy-config:darwin:linux": "cross-env-shell sudo $INIT_CWD/caddy adapt run --config $INIT_CWD/Caddyfile",
     "caddy-format:darwin:linux": "cross-env-shell sudo $INIT_CWD/caddy fmt $INIT_CWD/Caddyfile --overwrite",
