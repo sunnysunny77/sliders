@@ -1,6 +1,15 @@
-dev.localhost:3000, dev.localhost {
+dev.localhost:3002 {
 	root ./site/
 	tls ./server.crt ./server.key
+	encode zstd gzip
+	templates
+	file_server browse
+	reverse_proxy :3001
+	reverse_proxy :3000
+}
+
+:3003 {
+	root ./site/
 	encode zstd gzip
 	templates
 	file_server browse

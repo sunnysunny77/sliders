@@ -1,3 +1,3 @@
 import open from "open";
-await open("https://dev.localhost:3000");
-console.log("running on https://dev.localhost:3000");
+await open("http://localhost:3003");
+console.log("running on http://localhost:3003");
