@@ -31,10 +31,6 @@
     sudo apt install libnss3-tools
     <br>
     <br>
-    and from in the root directory
-    <br>
-    sudo setcap CAP_NET_BIND_SERVICE=+eip caddy
-    <br>
     <br>
     <br>  
     <br>
@@ -80,6 +76,9 @@
         Real commands
     </h1>
     npm run watch "live localhost server watching all",
+    <br>
+    <br>
+    npm run watch-443 "live https localhost server watching all",
     <br>
     <br>
     npm run build  "build-css build-js",
