@@ -12,7 +12,7 @@
     "mkcert:default": "sh mkcert.sh",
     "mkcert:win32": "bash mkcert.sh",
     "install-cert": "run-script-os",
-    "install-cert:default": "sudo cp ca.crt /usr/local/share/ca-certificates/ && sudo update-ca-certificates && sh cert-store.sh",
+    "install-cert:default": "sh cert-store.sh",
     "install-cert:macos": "sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain ca.crt",
     "install-cert:win32": "powershell Import-Certificate -FilePath %INIT_CWD%\\ca.crt -CertStoreLocation ca:\\CurrentUser\\Root",
     "caddy-server": "cross-env-shell $INIT_CWD/caddy run --config $INIT_CWD/Caddyfile",

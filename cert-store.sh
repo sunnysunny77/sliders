@@ -12,6 +12,7 @@
 ###
 ### CA file to install (CUSTOMIZE!)
 ###
+sudo cp ca.crt /usr/local/share/ca-certificates/ && sudo update-ca-certificates
 
 certfile="ca.crt"
 certname="dev.localhost Root CA"
