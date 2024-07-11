@@ -41,7 +41,7 @@ echo | openssl req \
 -nodes \
 -key ca.key \
 -passin pass:developemnt \
--subj "/CN=$FQDN Root CA/C=AU/ST=Western Australia/L=Perth/O=Web Developers/OU=Dev"
+-subj "//CN=$FQDN Root CA/C=AU/ST=Western Australia/L=Perth/O=Web Developers/OU=Dev"
 
 openssl req \
 -new \
