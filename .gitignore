@@ -6,6 +6,8 @@ server.crt
 ca.crt
 ca.key
 ca.srl
+cert.conf
+csr.conf
 server.pass.key
 site/css/app.min.css
 site/css/app.min.css.map

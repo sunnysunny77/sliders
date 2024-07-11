@@ -18,7 +18,7 @@ export default {
     babel({ babelHelpers: "bundled" }),
     livereload({
       watch: "./site",
-      port: 3000,
+      port: 3003,
       https: {
         key: fs.readFileSync("./server.key"),
         cert: fs.readFileSync("./server.crt")

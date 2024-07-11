@@ -1,18 +1,18 @@
-dev.localhost:3002 {
+{$FQDN}:3000 {
 	root ./site/
 	tls ./server.crt ./server.key
 	encode zstd gzip
 	templates
 	file_server browse
-	reverse_proxy :3001
-	reverse_proxy :3000
+	reverse_proxy :3002
+	reverse_proxy :3003
 }
 
-:3003 {
+:3001 {
 	root ./site/
 	encode zstd gzip
 	templates
 	file_server browse
-	reverse_proxy :3001
-	reverse_proxy :3000
+	reverse_proxy :3002
+	reverse_proxy :3003
 }

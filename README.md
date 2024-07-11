@@ -58,6 +58,9 @@
     npm run open-server "open browser",
     <br>
     <br>
+    npm run open-server-ssl "open ssl browser",
+    <br>
+    <br>
     npm run watch-css "watch-css" 
     <br>
     npm run build-css "build-css"
@@ -78,7 +81,7 @@
     npm run watch "live localhost server watching all",
     <br>
     <br>
-    npm run watch-443 "live https localhost server watching all",
+    npm run watch-ssl "live https localhost server watching all",
     <br>
     <br>
     npm run build  "build-css build-js",
