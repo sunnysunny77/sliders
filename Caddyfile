@@ -1,15 +1,6 @@
-{$FQDN}:3000 {
+{$FQDN}:{$PORT} {
 	root ./site/
 	tls ./server.crt ./server.key
-	encode zstd gzip
-	templates
-	file_server browse
-	reverse_proxy :3002
-	reverse_proxy :3003
-}
-
-:3001 {
-	root ./site/
 	encode zstd gzip
 	templates
 	file_server browse
