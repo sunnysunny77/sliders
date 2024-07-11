@@ -18,16 +18,14 @@ CN = $FQDN\n\
 [ req_ext ]\n\
 subjectAltName = @alt_names\n\
 [ alt_names ]\n\
-DNS.1 = $FQDN\n\
-DNS.2 = localhost" > csr.conf
+DNS.1 = $FQDN" > csr.conf
 
 echo -e "authorityKeyIdentifier=keyid,issuer\n\
 basicConstraints=CA:FALSE\n\
 keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment\n\
 subjectAltName = @alt_names\n\
 [alt_names]\n\
-DNS.1 = $FQDN\n\
-DNS.2 = localhost" > cert.conf
+DNS.1 = $FQDN" > cert.conf
 
 openssl genrsa \
 -des3 \
