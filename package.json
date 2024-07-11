@@ -3,7 +3,8 @@
   "type": "module",
   "version": "5.5.5",
   "description": "slider",
-  "main": "./js/app.js", "scripts": {
+  "main": "./js/app.js",
+   "scripts": {
     "install": "cross-env-shell bash install.sh",
     "mkcert": "cross-env-shell bash mkcert.sh",
     "install-cert": "run-script-os",
