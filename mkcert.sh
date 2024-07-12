@@ -2,16 +2,22 @@
 
 source $INIT_CWD/.env
 
-echo -e "[ req ]\n\
+echo -e "[ req ]
 prompt = no\n\
-distinguished_name  = dn\n\
+distinguished_name = dn\n\
+x509_extensions = v3_ca\n\
 [ dn ]\n\
 C = AU\n\
 ST = Western Australia\n\
 L = Perth\n\
 O = Web Developers\n\
 OU = Dev\n\
-CN = $FQDN Root Ca" > ca.conf 
+CN = $FQDN Root CA\n\
+[ v3_ca ]\n\
+subjectKeyIdentifier=hash\n\
+authorityKeyIdentifier=keyid:always,issuer:always\n\
+#basicConstraints = critical,CA:true\n\
+basicConstraints = CA:true" > ca.conf 
 
 echo -e "[ req ]\n\
 prompt = no\n\
