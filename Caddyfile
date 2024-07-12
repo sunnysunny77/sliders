@@ -4,6 +4,6 @@
 	encode zstd gzip
 	templates
 	file_server browse
-	reverse_proxy :3002
-	reverse_proxy :3003
+	reverse_proxy :4000
+	reverse_proxy :4001
 }
