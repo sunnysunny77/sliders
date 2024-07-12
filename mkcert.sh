@@ -17,7 +17,7 @@ CN = $FQDN Root CA\n\
 subjectKeyIdentifier=hash\n\
 authorityKeyIdentifier=keyid:always,issuer:always\n\
 #basicConstraints = critical,CA:true\n\
-basicConstraints = CA:true" > ca.conf 
+basicConstraints = CA:true" > $INIT_CWD/conf/ca.conf 
 
 echo -e "[ req ]\n\
 prompt = no\n\
@@ -33,50 +33,50 @@ CN = $FQDN\n\
 [ req_ext ]\n\
 subjectAltName = @alt_names\n\
 [ alt_names ]\n\
-DNS.1 = $FQDN" > csr.conf 
+DNS.1 = $FQDN" > $INIT_CWD/conf/csr.conf 
 
 echo -e "authorityKeyIdentifier=keyid,issuer\n\
 basicConstraints=CA:FALSE\n\
 keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment\n\
 subjectAltName = @alt_names\n\
 [alt_names]\n\
-DNS.1 = $FQDN" > cert.conf 
+DNS.1 = $FQDN" > $INIT_CWD/conf/cert.conf 
 
 openssl genrsa \
 -des3 \
 -passout pass:developemnt \
--out ca.key 2048
+-out $INIT_CWD/certs/ca.key 2048
 
 openssl req \
 -x509 \
 -new \
 -sha256 \
 -days 1024 \
--out ca.crt \
+-out $INIT_CWD/certs/ca.crt \
 -nodes  \
--key ca.key \
+-key $INIT_CWD/certs/ca.key \
 -passin pass:developemnt  \
--config ca.conf 
+-config $INIT_CWD/conf/ca.conf 
 
 openssl req \
 -new \
 -sha256 \
 -nodes \
--out server.csr \
+-out $INIT_CWD/certs/server.csr \
 -newkey rsa:2048 \
--keyout server.key \
--config csr.conf 
+-keyout $INIT_CWD/certs/server.key \
+-config $INIT_CWD/conf/csr.conf 
 
 openssl x509 \
 -req \
--in server.csr \
--CA ca.crt \
--CAkey ca.key \
+-in $INIT_CWD/certs/server.csr \
+-CA $INIT_CWD/certs/ca.crt \
+-CAkey $INIT_CWD/certs/ca.key \
 -passin pass:developemnt \
 -CAcreateserial \
--out server.crt \
+-out $INIT_CWD/certs/server.crt \
 -days 500 \
 -sha256 \
--extfile cert.conf
+-extfile $INIT_CWD/conf/cert.conf
 
 npm run install-cert

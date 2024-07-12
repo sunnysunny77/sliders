@@ -14,9 +14,9 @@ source $INIT_CWD/.env
 ###
 ### CA file to install (CUSTOMIZE!)
 ###
-sudo cp ca.crt /usr/local/share/ca-certificates/$FQDN.crt && sudo update-ca-certificates
+sudo cp $INIT_CWD/certs/ca.crt /usr/local/share/ca-certificates/$FQDN.crt && sudo update-ca-certificates
 
-certfile="ca.crt"
+certfile="$INIT_CWD/certs/ca.crt"
 certname= echo "$FQDN Root CA"
 
 
