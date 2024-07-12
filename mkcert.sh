@@ -33,14 +33,20 @@ CN = $FQDN\n\
 [ req_ext ]\n\
 subjectAltName = @alt_names\n\
 [ alt_names ]\n\
-DNS.1 = $FQDN" > $INIT_CWD/conf/csr.conf 
+DNS.1 = $FQDN\n\
+DNS.2 = localhost\n\
+IP.1 = 127.0.0.1"> $INIT_CWD/conf/csr.conf
+ 
 
 echo -e "authorityKeyIdentifier=keyid,issuer\n\
 basicConstraints=CA:FALSE\n\
 keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment\n\
 subjectAltName = @alt_names\n\
 [alt_names]\n\
-DNS.1 = $FQDN" > $INIT_CWD/conf/cert.conf 
+DNS.1 = $FQDN\n\
+DNS.2 = localhost\n\
+IP.1 = 127.0.0.1"> $INIT_CWD/conf/cert.conf
+
 
 openssl genrsa \
 -des3 \
@@ -56,7 +62,7 @@ openssl req \
 -nodes  \
 -key $INIT_CWD/certs/ca.key \
 -passin pass:developemnt  \
--config $INIT_CWD/conf/ca.conf 
+-config $INIT_CWD/conf/ca.conf \
 
 openssl req \
 -new \

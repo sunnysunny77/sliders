@@ -1,6 +1,6 @@
-{$FQDN}:{$PORT} {
+{$FQDN:localhost}:{$PORT} {
+	tls ./certs/server.crt ./certs/server.key
 	root ./site/
-	tls ./server.crt ./server.key
 	encode zstd gzip
 	templates
 	file_server browse

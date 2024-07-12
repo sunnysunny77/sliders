@@ -20,8 +20,8 @@ export default {
       watch: "./site",
       port: 2999,
       https: {
-        key: fs.readFileSync("./server.key"),
-        cert: fs.readFileSync("./server.crt")
+        key: fs.readFileSync("./certs/server.key"),
+        cert: fs.readFileSync("./certs/server.crt")
       }
     })
   ]
