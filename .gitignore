@@ -8,6 +8,7 @@ ca.key
 ca.srl
 cert.conf
 csr.conf
+ca.conf
 server.pass.key
 site/css/app.min.css
 site/css/app.min.css.map
