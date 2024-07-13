@@ -12,7 +12,7 @@
     https://nodejs.org/en/download/package-manager
     <br>
     <br>
-    For Debian, Ubuntu, and Raspbian, an xcaddy package is available
+    For Debian, Ubuntu
     <br>
     sudo apt install libnss3-tools
     <br>
@@ -29,7 +29,12 @@
     </h1>
     <br>
     <br>
-    npm run serve "start server",
+    npm run serve "start node server",
+    <br>
+    npm run php-server "start php server",
+    <br>
+    npm run open-server "open the browser",
+    <br>
     <br>
     npm run watch-css "watch-css" 
     <br>
