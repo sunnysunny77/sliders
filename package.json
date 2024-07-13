@@ -50,7 +50,7 @@
     "express": "latest",
     "fs": "latest",
     "globals": "latest",
-    "http-proxy": "latest",
+    "http": "latest",
     "https": "latest",
     "open": "latest",
     "php-server": "latest",
