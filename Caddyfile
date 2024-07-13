@@ -1,9 +1,0 @@
-{$FQDN:localhost}:{$PORT} {
-	tls ./certs/server.crt ./certs/server.key
-	root ./site/
-	encode zstd gzip
-	templates
-	file_server browse
-	reverse_proxy :2998
-	reverse_proxy :2999
-}
