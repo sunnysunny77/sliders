@@ -22,7 +22,7 @@
     "watch-js": "rollup -c ./rollup.config-watch.mjs -w --sourcemap",
     "build-js": "rollup -c ./rollup.config.mjs --sourcemap",
     "production-js": "rollup -c ./rollup.config.mjs",
-    "watch": "concurrently \"npm:php-server\" \"npm:watch-css\" \"npm:watch-js\" \"npm:serve\"  \"npm:open-server\"",
+    "watch": "concurrently \"npm:php-server\" \"npm:watch-css\" \"npm:watch-js\" \"npm:serve\" \"npm:open-server\"",
     "build": "concurrently \"npm:build-css\" \"npm:build-js\"",
     "production": "concurrently \"npm:production-css\" \"npm:production-js\""
   },

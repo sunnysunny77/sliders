@@ -2,6 +2,8 @@
 
 source $INIT_CWD/.env
 
+sudo cp $INIT_CWD/certs/ca.crt /usr/local/share/ca-certificates/$CN.crt && sudo update-ca-certificates
+
 ### Script installs root.cert.pem to certificate trust store of applications using NSS
 ### (e.g. Firefox, Thunderbird, Chromium)
 ### Mozilla uses cert8, Chromium and Chrome use cert9
@@ -14,10 +16,9 @@ source $INIT_CWD/.env
 ###
 ### CA file to install (CUSTOMIZE!)
 ###
-sudo cp $INIT_CWD/certs/ca.crt /usr/local/share/ca-certificates/$FQDN.crt && sudo update-ca-certificates
 
 certfile="$INIT_CWD/certs/ca.crt"
-certname= echo "$FQDN Root CA"
+certname= echo "$CN Root CA"
 
 
 ###

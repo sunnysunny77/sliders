@@ -9,12 +9,12 @@ prompt = no\n\
 distinguished_name = dn\n\
 x509_extensions = v3_ca\n\
 [ dn ]\n\
-C = AU\n\
-ST = Western Australia\n\
-L = Perth\n\
-O = Web Developers\n\
-OU = Dev\n\
-CN = $FQDN Root CA\n\
+C = $C\n\
+ST = $ST\n\
+L = $L\n\
+O = $O\n\
+OU = $OU\n\
+CN = $CN Root CA\n\
 [ v3_ca ]\n\
 subjectKeyIdentifier=hash\n\
 authorityKeyIdentifier=keyid:always,issuer:always\n\
@@ -26,16 +26,16 @@ prompt = no\n\
 req_extensions = req_ext\n\
 distinguished_name = dn\n\
 [ dn ]\n\
-C = AU\n\
-ST = Western Australia\n\
-L = Perth\n\
-O = Web Developers\n\
-OU = Dev\n\
-CN = $FQDN\n\
+C = $C\n\
+ST = $ST\n\
+L = $L\n\
+O = $O\n\
+OU = $OU\n\
+CN = $CN\n\
 [ req_ext ]\n\
 subjectAltName = @alt_names\n\
 [ alt_names ]\n\
-DNS.1 = $FQDN\n\
+DNS.1 = $CN\n\
 DNS.2 = localhost\n\
 IP.1 = 127.0.0.1"> $INIT_CWD/conf/csr.conf
  
@@ -44,7 +44,7 @@ basicConstraints=CA:FALSE\n\
 keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment\n\
 subjectAltName = @alt_names\n\
 [alt_names]\n\
-DNS.1 = $FQDN\n\
+DNS.1 = $CN\n\
 DNS.2 = localhost\n\
 IP.1 = 127.0.0.1"> $INIT_CWD/conf/cert.conf
 
