@@ -50,7 +50,7 @@ IP.1 = 127.0.0.1"> $INIT_CWD/conf/cert.conf
 
 openssl genrsa \
 -des3 \
--passout pass:developemnt \
+-passout pass:$PASSWORD \
 -out $INIT_CWD/certs/ca.key 2048
 
 openssl req \
@@ -61,7 +61,7 @@ openssl req \
 -out $INIT_CWD/certs/ca.crt \
 -nodes  \
 -key $INIT_CWD/certs/ca.key \
--passin pass:developemnt  \
+-passin pass:$PASSWORD  \
 -config $INIT_CWD/conf/ca.conf \
 
 openssl req \
@@ -78,7 +78,7 @@ openssl x509 \
 -in $INIT_CWD/certs/server.csr \
 -CA $INIT_CWD/certs/ca.crt \
 -CAkey $INIT_CWD/certs/ca.key \
--passin pass:developemnt \
+-passin pass:$PASSWORD \
 -CAcreateserial \
 -out $INIT_CWD/certs/server.crt \
 -days 500 \
