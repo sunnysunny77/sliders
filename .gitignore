@@ -9,9 +9,7 @@ certs/ca.srl
 conf/cert.conf
 conf/csr.conf
 conf/ca.conf
-server.pass.key
 site/css/app.min.css
 site/css/app.min.css.map
 site/js/app.min.js
 site/js/app.min.js.map
-caddy
