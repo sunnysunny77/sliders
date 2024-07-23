@@ -50,10 +50,10 @@
   will-change: background-color, top, right, bottom, left;
   &.has-shrink {
     background-color: $color_2;
-    top: 8%;
-    right: 5%;
-    bottom: 8%;
-    left: 5%;
+    top: 6%;
+    right: 3.25%;
+    bottom: 6%;
+    left: 3.25%;
     .slider-container,
     .percentage {
       opacity: 1;
@@ -63,7 +63,7 @@
 
 .slider_3-a {
   border-radius: 100%;
-  padding: 75px 75px;
+  padding: 8.5%;
   background-size: cover;
 }
 
@@ -81,90 +81,56 @@
 }
 
 .image-fill-right {
-  display: none;
-  @include min-md {
-    display: block;
-    left: 0;
-    position: absolute;
-    &.has-right {
-      transition: 0.75s left cubic-bezier(0.215, 0.61, 0.355, 1);
-      will-change: left;
-      left: calc(100% - 150px);
-      z-index: 1;
-    }
-  }
+  left: 0;
+  position: absolute;
+  &.has-right {
+    transition: 0.75s left cubic-bezier(0.215, 0.61, 0.355, 1);
+    will-change: left;
+    left: 83%;
+    z-index: 1;
+  } 
 }
 
 .image-fill-left {
-  display: none;
-  @include min-md {
-    display: block;
     right: 0;
     position: absolute;
     &.has-left {
       transition: 0.75s right cubic-bezier(0.215, 0.61, 0.355, 1);
       will-change: right;
-      right: calc(100% - 150px);
+      right: 83%;
       z-index: 1;
     }
-  }
 }
 
 .image-1 {
-  position: relative;
-  margin: auto 12.5% auto 12.5%;
-  padding: 14%;
-  height: initial;
-  @include min-md {
-    margin: initial;
-    padding: 75px 75px;
-    transition: opacity 0.375s ease-in;
-    will-change: opacity;
-    opacity: 1;
-  }
+  transition: opacity 0.375s ease-in;
+  will-change: opacity;
+  opacity: 1;
   &.has-opacity-image {
-    opacity: 1;
-    @include min-md {
-      opacity: 0;
-    }
+    opacity: 0;
   }
 }
 
 .image-2 {
-  display: none;
-  @include min-md {
-    display: block;
-    right: 0;
-    position: absolute;
-    transition: opacity 0.375s ease-in;
-    will-change: opacity;
-    opacity: 1;
-  }
+  right: 0;
+  position: absolute;
+  transition: opacity 0.375s ease-in;
+  will-change: opacity;
+  opacity: 1;
   &.has-opacity-image {
-    opacity: 1;
-    @include min-md {
-      opacity: 0;
-    }
+    opacity: 0;
   }
 }
 
 .slider_3-inner {
-  margin: auto;
-  width: 50%;
-  transition: opacity 0.375s ease-out;
   will-change: opacity;
   opacity: 1;
   font-size: large;
-  @include min-md {
-    transition: opacity 0.375s ease-in;
-    width: 100%;
-    margin: auto auto auto 2%;
-  }
+  transition: opacity 0.375s ease-in;
+  width: 100%;
+  margin: auto auto auto 2%;
   &.has-opacity-inner {
-    opacity: 0.0375;
-    @include min-md {
-      opacity: 0;
-    }
+    opacity: 0;
   }
   a {
     transition: color 0.2s ease;
@@ -209,9 +175,7 @@
   will-change: opacity;
   border-radius: 50%;
   &:hover {
-    @include min-md {
-      opacity: 0.5;
-    }
+    opacity: 0.5;
   }
   &.open-left {
     left: 2%;

@@ -6,8 +6,8 @@
     border-bottom: 3px solid $color_4;
     @include min_lg {
         border: none;
-        height: clamp(205px, 35vh, 340px);
-        width: calc(100% - 300px);
+        height: clamp(205px, 40vh, 430px);
+        width: calc(100% - 380px);
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
         position: relative;
@@ -22,8 +22,8 @@
     overflow-y: scroll;
     @include min_lg {
         margin: 30px 0;
-        height: calc(clamp(205px, 35vh, 340px) - 60px);
-        width: calc(100% + 300px);
+        height: calc(clamp(205px, 40vh, 430px) - 60px);
+        width: calc(100% + 380px);
         left: 0;
         position: absolute;
         z-index: 1;
@@ -51,7 +51,7 @@
     @include min_lg {
         padding: 0 7px 0 40px;
         font-size: large;
-        width: calc(100% - 340px);
+        width: calc(100% - 380px);
     }
     li img {
         display: block;
@@ -59,7 +59,7 @@
         width: clamp(50px, 10.5vh, 75px);
         height: clamp(50px, 10.5vh, 75px);
         @include min_lg {
-            margin: 40px 0 clamp(0px, 10.5vh, 100px) 4%;
+            margin: 40px 0 clamp(0px, 15vh, 155px) 4%;
             width: clamp(50px, 10.5vh, 100px);
             height: clamp(50px, 10.5vh, 100px);
         }
@@ -101,14 +101,13 @@
     border-bottom-right-radius: 25px;
     position: relative;
     @include min_lg {
-        height: clamp(205px, 35vh, 340px);
-        width: 300px;
+        height: clamp(205px, 40vh, 430px);
+        width: 380px;
         padding: 0;
         border-bottom-left-radius: 0;
         border-top-right-radius: 25px;
         border-bottom-right-radius: 25px;
         display: flex;
-        align-items: flex-start;
         box-sizing: border-box;
     }
 }
@@ -131,6 +130,7 @@
         border-bottom-right-radius: 25px;
         @include min_lg {
             border-radius: 0;
+            object-position: right;
         }
     }
     a {
@@ -145,13 +145,13 @@
         @include min_lg {
             background-color: initial;
             padding: 0;
-            right: 0;
+            right: 25px;
             bottom: 8px;
             font-size: 12.5px;
             font-size: small;
             text-decoration: underline;
             border-bottom-left-radius: initial;
-            text-align: center;
+            text-align: right;
         }
         &:hover {
             color: $white;
@@ -170,7 +170,7 @@
       max-height: initial;
     }
     @include min_lg {
-        padding: 35px 0;
+        padding: 35px 25px 35px 0;
         justify-content: center;
     }
 }
