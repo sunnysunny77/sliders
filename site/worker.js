@@ -1,11 +1,11 @@
-const version = 'v1';
+const version = "v1";
 
 const addResourcesToCache = async (resources) => {
   const cache = await caches.open(version);
   await cache.addAll(resources);
 };
 
-self.addEventListener('install', (event) => {
+self.addEventListener("install", (event) => {
   console.log(`${version} installing...`);
   event.waitUntil(
     addResourcesToCache([
@@ -47,7 +47,7 @@ async function fetchAndCacheIfOk(event) {
 async function fetchWithCache(event) {
   const cache = await caches.open(version);
   const response = await cache.match(event.request);
-  if (!!response) {
+  if (response) {
 
     fetchAndCacheIfOk(event);
 
