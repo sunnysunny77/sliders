@@ -1,7 +1,7 @@
 {
     "name": "Sliders",
     "short_name": "Sliders",
-    "start_url": ".",
+    "start_url": "/",
     "background_color": "#FFC0CB",
     "theme_color": "#FFC0CB",
     "display": "standalone",
