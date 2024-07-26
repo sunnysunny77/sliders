@@ -26,7 +26,7 @@
 
 </header>
 
-<hr id="slider_2-top" class="d-none d-sm-block m-0">
+<hr class="d-none d-sm-block m-0">
 
 <nav class="container-fluid slider_8-navigation navigation d-flex align-items-center border-bottom p-0">
 
@@ -304,7 +304,7 @@
 
 				<div class="d-flex p-2">
 
-					<button aria-label="open" class="c-custom-1 slider_3-button-toggle button-toggle"><i class="fa-solid fa-computer-mouse"></i></i></button>
+					<button aria-label="open" class="c-custom-1 slider_3-button-toggle button-toggle"><i class="fa-solid fa-computer-mouse"></i></button>
 
 				</div>
 					
