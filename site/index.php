@@ -32,7 +32,7 @@
 
 	<div class="row m-0 g-0">
 
-		<div class="col-auto d-sm-none slider_8-navbar-toggler navbar-toggler has-collapsed p-3 mb-4">
+		<div role="button" class="col-auto d-sm-none slider_8-navbar-toggler navbar-toggler has-collapsed p-3 mb-4">
 			<div>
 				<div class="slider_8-bar1"></div>
 				<div class="slider_8-bar2"></div>
