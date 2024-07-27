@@ -54,6 +54,7 @@
     right: 3.25%;
     bottom: 6%;
     left: 3.25%;
+    .button-container,
     .slider-container,
     .percentage {
       opacity: 1;
@@ -129,6 +130,7 @@
   transition: opacity 0.375s ease-in;
   width: 100%;
   margin: auto auto auto 2%;
+  font-size: clamp(12px, 2.5vw, 16px);
   &.has-opacity-inner {
     opacity: 0;
   }
@@ -162,14 +164,20 @@
   }
 }
 
+.slider_3-button-next-container {
+  display: flex;
+  justify-content: space-between;
+  will-change: opacity;
+  opacity: 0;
+  transition: opacity 0.5s linear;
+}
+
 .slider_3-button-next {
-  position: absolute;
-  background: radial-gradient($color_6, $color_7, $color_5);
   outline: none;
   border: none;
-  top: 7.5%;
   cursor: pointer;
-  padding: clamp(6px, 3%, 10px);
+  padding: clamp(4px, 1.5vw, 10px);
+  font-size: clamp(12px, 5vw, 25px);
   opacity: 1;
   transition: opacity 0.2s ease;
   will-change: opacity;
@@ -184,3 +192,9 @@
     right: 2%;
   }
 }
+
+.slider_3-button-toggle {
+  width: 40px;
+  height: 40px;
+}
+

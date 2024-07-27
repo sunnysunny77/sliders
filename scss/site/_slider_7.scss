@@ -54,6 +54,10 @@
 
 .slider_7-overlay-body {
 	background-color: $color_1;
+	img {
+		height: calc(100% - 84px);
+		padding-top: 84px;
+	}
 }
 
 .overflow-hidden {

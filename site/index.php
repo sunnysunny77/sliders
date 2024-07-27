@@ -248,15 +248,21 @@
 
 			<div class="slider_3-shrink-container shrink-container">
 
+				<div class="slider_3-button-next-container button-container">
+
+					<button aria-label="open-left" class="slider_3-button-next open-left fas fa-arrow-alt-circle-left"></button>
+					<button aria-label="open-right" class="slider_3-button-next open-right fas fa-arrow-alt-circle-right"></button>
+
+				</div>
+
 				<div class="slider_3-container slider-container">
 
-					<button aria-label="open-left" class="slider_3-button-next open-left"></button>
 					<a href="mailto:user@gmail.com" rel="noreferrer" target="_blank" class="slider_3-a image-1"></a>
 					<a href="mailto:user@gmail.com" rel="noreferrer" target="_blank" class="slider_3-a image-fill-right"></a>
 					<div class="slider_3-inner inner"></div>
 					<a href="tel:0419-777-066" rel="noreferrer" target="_blank" class="slider_3-a image-2"></a>
 					<a href="tel:0419-777-066" rel="noreferrer" target="_blank" class="slider_3-a image-fill-left"></a>
-					<button aria-label="open-right" class="slider_3-button-next open-right"></button>
+				
 
 					<div class="static-count d-none">
 
@@ -587,7 +593,7 @@
 
 						<img class="col-12 col-md-6" src="./images/950x574.svg" width="950" height="574"  alt="Placeholder">
 
-						<div class="col-12 d-flex align-items-center justify-content-center">
+						<div class="col-12 d-flex align-items-center justify-content-center py-3">
 
 							<button aria-label="close" class="c-custom-1 overlay-close"><i class="fa-solid fa-xmark"></i></button>
 
