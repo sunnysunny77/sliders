@@ -176,8 +176,8 @@
   outline: none;
   border: none;
   cursor: pointer;
+  background-color: transparent;
   padding: clamp(4px, 1.5vw, 10px);
-  font-size: clamp(12px, 5vw, 25px);
   opacity: 1;
   transition: opacity 0.2s ease;
   will-change: opacity;
@@ -186,10 +186,14 @@
     opacity: 0.5;
   }
   &.open-left {
-    left: 2%;
+    margin: 2.5% 0 0 4%;
   }
   &.open-right {
-    right: 2%;
+    margin: 2.5% 4% 0 0;
+  }
+  svg {
+    font-size: clamp(12px, 5vw, 25px);
+    color: $white;
   }
 }
 

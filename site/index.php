@@ -250,8 +250,8 @@
 
 				<div class="slider_3-button-next-container button-container">
 
-					<button aria-label="open-left" class="slider_3-button-next open-left fas fa-arrow-alt-circle-left"></button>
-					<button aria-label="open-right" class="slider_3-button-next open-right fas fa-arrow-alt-circle-right"></button>
+					<button aria-label="open-left" class="slider_3-button-next open-left"><i class="fa-solid fa-circle-arrow-left"></i></button>
+					<button aria-label="open-right" class="slider_3-button-next open-right"><i class="fa-solid fa-circle-arrow-right"></i></button>
 
 				</div>
 

@@ -12,7 +12,6 @@ self.addEventListener("install", (event) => {
       "/",
       "/index.php",
       "/css/app.min.css",
-      "/font/OpenSans.ttf",
       "/images/400x400.svg",    
       "/images/150x150-grey.svg", 
       "/images/150x150-pink.svg", 
