@@ -96,7 +96,7 @@
 
 										<p class="slider_1-item-content mb-0">
 											
-											<?php echo str_repeat("Quisque in tellus lorem. Donec at elementum est. Integer id suscipit felis.", $index * 1.5); ?>
+											<?php echo str_repeat("Quisque in tellus lorem. Donec at elementum est. Integer id suscipit felis.", $index); ?>
 
 										</p>
 
