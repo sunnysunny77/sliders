@@ -2,7 +2,7 @@
   "name": "sliders",
   "type": "module",
   "version": "6.0.0",
-  "description": "slider",
+  "description": "sliders",
   "main": "./js/index.js",
   "scripts": {
     "install": "cross-env-shell bash install.sh",
