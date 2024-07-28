@@ -619,9 +619,53 @@
 
 				</div>
 
-				<div class="container d-flex justify-content-center pb-5">
+				<div class="container slider_7-container mb-5 g-0">
 
-					<button class="c-custom-1 overlay-open"><i class="fa-solid fa-computer-mouse"></i></button>
+					<div class="row g-0">
+
+						<div class="col-md-5 max-thumbnail-image position-relative">
+
+							<img class="thumbnail-image" src="./images/400x400-blue.svg" width="400" height="400" alt="Placehold"/>
+
+							<h3 class="thumbnail-title position-absolute text-center px-5 py-3">Lorem</h3>
+
+						</div>
+
+						<div class="col-md-7 flex-fill">
+
+							<h3 class="post-title p-5">
+
+								Lorem Ipsum
+
+							</h3>
+
+				
+							<p class="pb-1 px-5">
+
+								<span>Client:</span> Lorem dolor sit
+
+							</p>
+
+							
+							<p class="pb-1 px-5">
+
+								<span>Location:</span> Dorat sit lore
+
+							</p>
+
+				
+
+							<div class="px-5 pb-5">
+
+								<span>Lorem:</span> <?php echo substr("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at bibendum felis. In convallis odio velit, et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula. Mauris suscipit et sem vel auctor. Duis dapibus arcu sem, a porttitor massa vulputate sed.", 0, 90); ?>...
+
+							</div>
+
+							<button class="c-custom-1 overlay-open ms-5 mb-5"><i class="fa-solid fa-computer-mouse"></i></button>
+
+						</div>
+
+					</div>
 
 				</div>
 

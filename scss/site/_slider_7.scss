@@ -63,3 +63,22 @@
 .overflow-hidden {
 	overflow: hidden;
 }
+
+
+.slider_7-container {
+	background-color: $color_1;
+	.thumbnail-image {
+		width: 100%;
+		height: 100%;
+		@include min_md {
+			object-fit: cover;
+			max-width: 465px;
+			position: absolute;
+		}
+	}
+	.thumbnail-title {
+		top: 0;
+		left: 0;
+		background-color: $white;
+	}
+}
