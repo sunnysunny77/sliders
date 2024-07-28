@@ -1,5 +1,5 @@
 {
-  "name": "slider",
+  "name": "sliders",
   "type": "module",
   "version": "6.0.0",
   "description": "slider",
@@ -28,14 +28,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sunnysunny77/slider.git"
+    "url": "git+https://github.com/sunnysunny77/sliders.git"
   },
   "author": "D.C",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sunnysunny77/slider/issues"
+    "url": "https://github.com/sunnysunny77/sliders/issues"
   },
-  "homepage": "https://github.com/sunnysunny77/slider#readme",
+  "homepage": "https://github.com/sunnysunny77/sliders#readme",
   "devDependencies": {
     "@fortawesome/fontawesome-free": "latest",
     "@rollup/plugin-babel": "latest",
