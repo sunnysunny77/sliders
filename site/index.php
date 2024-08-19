@@ -573,16 +573,16 @@
 
 	<?php 
 
-		$index = 1;
-		$count = 5;
+		$index = 0;
+		$count = 4;
 
-		while ($index < 5) {
+		while ($index < 4) {
 
-			$next_button_bool = true;
+			$next_button = "d-flex";
 
 			if ($index === $count - 1) {
 
-				$next_button_bool = false; 
+				$next_button = "d-none";
 			}
 
 			?>
@@ -595,27 +595,15 @@
 
 						<div class="col-12 d-flex align-items-center justify-content-center py-3">
 
-							<button aria-label="close" class="c-custom-1 overlay-close"><i class="fa-solid fa-xmark"></i></button>
+							<button aria-label="close" class="c-custom-1 overlay-close"><i class="fa-solid fa-xmark"></i></button>	
 
-							<?php 
-								
-								if ($next_button_bool) { 
-
-								?>
-
-									<button aria-label="next" class="c-custom-1 overlay-next ms-5"><i class="fa-solid fa-circle-chevron-right"></i></button>
-
-								<?php
-
-								}
-
-							?>
+							<button aria-label="next" class="c-custom-1 overlay-next <?php echo $next_button; ?>  ms-5"><i class="fa-solid fa-circle-chevron-right"></i></button>
 
 						</div>
 
 					</div>
 
-					<div class="slider_7-overlay-backdrop overlay-backdrop"></div>
+					<div id="overlay_backdrop-<?php echo $index; ?>" class="slider_7-overlay-backdrop overlay-backdrop"></div>
 
 				</div>
 
@@ -661,7 +649,7 @@
 
 							</div>
 
-							<button class="c-custom-1 overlay-open ms-5 mb-5"><i class="fa-solid fa-computer-mouse"></i></button>
+							<button id="overlay_open-<?php echo $index; ?>" aria-label="open" class="c-custom-1 overlay-open ms-5 mb-5"><i class="fa-solid fa-computer-mouse"></i></button>
 
 						</div>
 
