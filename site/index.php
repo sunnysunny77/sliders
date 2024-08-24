@@ -520,7 +520,7 @@
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
 						odio velit, et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
-						Mauris suscipit et sem vel auctor. Duis dapibus arcu sem, a porttitor massa vulputate sed.
+						Mauris suscipit et sem vel.
 					</p>
 
 				</aside>
@@ -532,7 +532,7 @@
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
 						odio velit, et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
-						Mauris suscipit et sem vel auctor. Duis dapibus arcu sem, a porttitor massa vulputate sed.
+						Mauris suscipit et sem vel.
 					</p>
 
 				</aside>
@@ -544,7 +544,7 @@
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
 						odio velit, et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
-						Mauris suscipit et sem vel auctor. Duis dapibus arcu sem, a porttitor massa vulputate sed.
+						Mauris suscipit et sem vel.
 					</p>
 
 				</aside>
@@ -556,7 +556,7 @@
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
 						odio velit, et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
-						Mauris suscipit et sem vel auctor. Duis dapibus arcu sem, a porttitor massa vulputate sed.
+						Mauris suscipit et sem vel.
 					</p>
 
 				</aside>
