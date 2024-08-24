@@ -518,7 +518,7 @@
 					<h3 class="m-md-0">Dolore<i class="fa-solid fa-paperclip"></i></h3>
 
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
+						Lorem ipsum dolor sit amet consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
 						odio velit, et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
 						Mauris suscipit et sem vel.
 					</p>
@@ -530,7 +530,7 @@
 					<h3 class="m-md-0">Fugiat<i class="fa-solid fa-phone"></i></h3>
 
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
+						Lorem ipsum dolor sit amet consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
 						odio velit, et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
 						Mauris suscipit et sem vel.
 					</p>
@@ -542,7 +542,7 @@
 					<h3 class="m-md-0">Occaecat<i class="fa-solid fa-envelope"></i></h3>
 
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
+						Lorem ipsum dolor sit amet consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
 						odio velit, et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
 						Mauris suscipit et sem vel.
 					</p>
@@ -554,7 +554,7 @@
 					<h3 class="m-md-0">Excepteur<i class="fa-solid fa-circle-user"></i></h3>
 
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
+						Lorem ipsum dolor sit amet consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
 						odio velit, et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
 						Mauris suscipit et sem vel.
 					</p>
