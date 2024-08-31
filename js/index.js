@@ -10,7 +10,7 @@
 //import "../node_modules/bootstrap/js/dist/tab";
 ///import "../node_modules/bootstrap/js/dist/toast";
 //import "../node_modules/bootstrap/js/dist/tooltip";
-import "../node_modules/@fortawesome/fontawesome-free/js/all.js";
+import "../node_modules/@fortawesome/fontawesome-free/js/all.min.js";
 import { events } from "./utillites.js";
 import { slider_8 } from "./slider_8.js";
 import { slider_7 } from "./slider_7.js";
