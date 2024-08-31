@@ -1,5 +1,10 @@
 .slider_8-navigation {
     background-color: $white;
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
     @include min_sm {
         position: absolute;
         top: 0;
@@ -22,7 +27,6 @@
         top: 0;
         right: 0;
         left: 0;
-        z-index: 999;
         height: 65px;
         transition: top 0.375s, height 1s;
         will-change: top, height; 
