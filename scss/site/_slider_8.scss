@@ -1,11 +1,15 @@
+header {
+    padding: 74px 0 0 0;
+}
+
 .slider_8-navigation {
     background-color: $white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
     @include min_sm {
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        height: 55px;
+        height: 65px;
     }
     .navbar-collapse {
         background-color: inherit;
@@ -23,15 +27,24 @@
         right: 0;
         left: 0;
         z-index: 999;
-        height: 65px;
-        transition: top 0.375s, height 1s;
-        will-change: top, height; 
+        transition: top 0.375s;
+        will-change: top;
+        @include min_sm {
+            height: 65px;
+            transition:
+            top 0.375s,
+            height 1s;
+            will-change: top, height;
+        }
     }
-    &.navigation-top { 
-        top: -65px;
+    &.navigation-top {
+        top: -74px;
         right: 0;
         left: 0;
-        height: 0;
+        @include min_sm {
+            height: 0;
+            top: -65px;
+        }
     }
     a.active {
         color: $color_5;

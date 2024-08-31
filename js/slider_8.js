@@ -16,13 +16,6 @@ export const slider_8 = () => {
     
         let positive = false;
 
-        if (window.innerWidth <= 576) {
-  
-          navigation.classList.remove("navigation-top");
-          navigation.classList.remove("navigation-fixed");
-          return;
-        }
-  
         if (window.scrollY > scrollY) {
   
           positive = true;
@@ -53,7 +46,7 @@ export const slider_8 = () => {
 
   const handle_toggle_breakpoint = () => {
     
-    if (window.innerWidth > 576 && !navbar_toggler.classList.contains("has-collapsed") || navbar_collapse.style.maxHeight) {
+    if (window.innerWidth > 576 && !navbar_toggler.classList.contains("has-collapsed")) {
       navbar_collapse.style.maxHeight = "";
       navbar_toggler.classList.toggle("has-collapsed");
     }
