@@ -32,7 +32,7 @@
 
 	<div class="row m-0 g-0">
 
-		<div role="button" class="col-auto d-sm-none slider_8-navbar-toggler navbar-toggler has-collapsed px-3 py-4">
+		<div role="button" class="col-auto d-sm-none slider_8-navbar-toggler navbar-toggler has-collapsed p-3 mb-4">
 			<div>
 				<div class="slider_8-bar1"></div>
 				<div class="slider_8-bar2"></div>
@@ -46,7 +46,7 @@
 
 				<li>
 
-					<a class="mx-4 active" href="./">SLIDER 8</a>
+					<a class="mx-4 active" href="./a.html">SLIDER 8</a>
 
 				</li>
 		
@@ -58,7 +58,7 @@
 
 </nav>
 
-<main class="d-flex flex-column">
+<main>
 
 	<div class="container-xl g-0">
 
