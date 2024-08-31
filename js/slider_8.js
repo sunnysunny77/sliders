@@ -10,25 +10,45 @@ export const slider_8 = () => {
     return;
   }
 
-  let cached = null;
+  let scrollY = 0;
 
   const handle_navigationigation = () => {
-    if (!cached) {
-      setTimeout(() => {
-        const scroll_top = window.scrollY;
-        const line = main.offsetTop;
+    
+        let positive = false;
 
-        if (scroll_top >= line - navigation.getBoundingClientRect().height && window.innerWidth > 576) {
+        if (window.innerWidth <= 576) {
+  
+          navigation.classList.remove("navigation-top");
+          navigation.classList.remove("navigation-fixed");
+          return;
+        }
+  
+        if (window.scrollY > scrollY) {
+  
+          positive = true;
+        } else if (window.scrollY < scrollY)  {
+  
+          positive = false;
+        }
+  
+        scrollY = window.scrollY;
+  
+        if (scrollY < main.offsetTop + navigation.offsetHeight && scrollY > main.offsetTop && !positive) {
+  
+          navigation.classList.add("navigation-top");
+        } else if (scrollY > main.offsetTop && !positive) {
+    
+          navigation.classList.remove("navigation-top");
           navigation.classList.add("navigation-fixed");
-          navigation.classList.remove("navigation-other");
-        } else if (window.innerWidth > 576) {
-          navigation.classList.add("navigation-other");
+        } else if (scrollY > main.offsetTop && positive) {
+  
+          navigation.classList.add("navigation-top");
+        } else if (navigation.classList.contains("navigation-top") || navigation.classList.contains("navigation-fixed")) {
+  
+          navigation.classList.remove("navigation-top");
           navigation.classList.remove("navigation-fixed");
         }
-        cached = null;
-      }, 150);
-    }
-    cached = true;
+  
   };
 
   const handle_toggle_breakpoint = () => {

@@ -6,7 +6,6 @@
         right: 0;
         left: 0;
         height: 55px;
-        transition: height 0.4s;
     }
     .navbar-collapse {
         background-color: inherit;
@@ -18,23 +17,21 @@
             max-height: initial;
         }
     }
-    &.navigation-other {
-        @include min_sm {
-            position: absolute;
-            top: 0;
-            right: 0;
-            left: 0;
-        }
-    }
     &.navigation-fixed {
-        @include min_sm {
-            position: fixed;
-            top: 0;
-            right: 0;
-            left: 0;
-            z-index: 999;
-            height: 65px;
-        }
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 999;
+        height: 65px;
+        transition: top 0.375s, height 1s;
+        will-change: top, height; 
+    }
+    &.navigation-top { 
+        top: -65px;
+        right: 0;
+        left: 0;
+        height: 0;
     }
     a.active {
         color: $color_5;
