@@ -5,8 +5,9 @@ export const slider_8 = () => {
   const navbar_collapse = document.querySelector(".navbar-collapse");
   const navigation = document.querySelector(".navigation");
   const main = document.querySelector("main");
+  const header = document.querySelector("header");
 
-  if (!navigation || !main || !navbar_toggler) {
+  if (!navigation || !main || !navbar_toggler || !header) {
     return;
   }
 
@@ -35,9 +36,12 @@ export const slider_8 = () => {
           navigation.classList.add("navigation-fixed");
         } else if (scrollY > main.offsetTop && positive) {
   
+          header.style.paddingTop = window.innerWidth > 576 ? "65px" : "74px";
           navigation.classList.add("navigation-top");
         } else if (navigation.classList.contains("navigation-top") || navigation.classList.contains("navigation-fixed")) {
   
+
+          header.style.paddingTop = 0;
           navigation.classList.remove("navigation-top");
           navigation.classList.remove("navigation-fixed");
         }

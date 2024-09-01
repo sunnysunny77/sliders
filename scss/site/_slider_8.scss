@@ -20,8 +20,6 @@
         right: 0;
         left: 0;
         z-index: 999;
-        transition: top 0.375s;
-        will-change: top;
         transition:
         top 0.375s,
         min-height 1s;
@@ -32,6 +30,7 @@
         }
     }
     &.navigation-top {
+        position: fixed;
         top: -74px;
         right: 0;
         left: 0;
