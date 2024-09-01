@@ -46,9 +46,9 @@ export const slider_8 = () => {
 
   const handle_toggle_breakpoint = () => {
     
-    if (window.innerWidth > 576 && !navbar_toggler.classList.contains("has-collapsed")) {
+    if (window.innerWidth > 576) {
       navbar_collapse.style.maxHeight = "";
-      navbar_toggler.classList.toggle("has-collapsed");
+      navbar_toggler.classList.add("has-collapsed");
     }
   };
 

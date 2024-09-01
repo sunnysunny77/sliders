@@ -15,19 +15,6 @@
 
 <body>
 
-<header class="container-fluid d-flex flex-column justify-content-end align-items-start flex-wrap">
-
-	<h1 class="d-flex align-items-end px-4 pt-5 pb-5 m-0 mt-sm-5"> 
-		
-		Sliders
-		<i class="fa-brands fa-android ps-3"></i>  
-
-	</h1>
-
-</header>
-
-<hr class="m-0">
-
 <nav class="container-fluid slider_8-navigation navigation d-flex align-items-center border-bottom p-0">
 
 	<div class="row m-0 g-0">
@@ -57,6 +44,19 @@
 	</div>
 
 </nav>
+
+<header class="container-fluid d-flex flex-column justify-content-end align-items-start flex-wrap">
+
+	<h1 class="d-flex align-items-end px-4 pt-5 pb-5 m-0"> 
+		
+		Sliders
+		<i class="fa-brands fa-android ps-3"></i>  
+
+	</h1>
+
+</header>
+
+<hr class="m-0">
 
 <main class="d-flex flex-column">
 
