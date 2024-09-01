@@ -12,6 +12,8 @@
 .slider_1-item {
     position: absolute;
     will-change: transform;
+    right: 0;
+    left: 0;
     @include min_md {
         width: calc((100% + 34px) / 2);
     }
