@@ -337,9 +337,9 @@
 
 	<div class="container g-0">
 
-		<div class="slider_4-height-container height-container row d-flex flex-column flex-lg-row align-items-center align-items-lg-start justify-content-lg-around g-0">
+		<div class="slider_4-height-container height-container row d-flex flex-column flex-md-row align-items-center align-items-md-start justify-content-md-around g-0">
 
-			<p class="col-11 col-lg-6 d-flex h-100 align-items-lg-center m-0">
+			<p class="col-11 col-md-5 d-flex h-100 align-items-md-center m-0">
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 			eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
 			ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -364,11 +364,12 @@
 			pariatur.
 			</p>
 
-			<div class="col-12 col-lg-4 slider_4-figure-container pt-5 pt-lg-0">
+			<div class="col-12 col-md-6 slider_4-figure-container pt-5 pt-md-0">
 
-				<a class="slider_4-figure figure-one scroll d-lg-has-height w-100 d-flex justify-content-center mb-sm-5 mb-lg-0" href="#">
+				<a class="slider_4-figure figure-one scroll d-md-has-height w-100 d-flex justify-content-center mb-sm-5 mb-md-0" href="#">
 
-					<img src="./images/440x293-light.svg" width="440" height="293" alt="Placehold"/>
+				
+					<img src="./images/660x445-light.svg" width="440" height="293" alt="Placehold"/>
 
 					<p class="d-flex justify-content-center align-items-end text-center m-0 px-3 pb-3">
 						dolor sit lorem ipsum amet.
@@ -376,9 +377,9 @@
 
 				</a>
 
-				<a class="slider_4-figure figure-two scroll d-lg-0-height w-100 d-flex justify-content-center" href="#">
+				<a class="slider_4-figure figure-two scroll d-md-0-height w-100 d-flex justify-content-center" href="#">
 
-					<img src="./images/440x293-dark.svg" width="440" height="293"  alt="Placehold"/>
+					<img src="./images/660x445-dark.svg" width="440" height="293"  alt="Placehold"/>
 					
 					<p class="d-flex justify-content-center align-items-end text-center m-0 px-3 pb-3">
 						dolor sit lorem ipsum amet.

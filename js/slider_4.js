@@ -14,7 +14,7 @@ export const slider_4 = () => {
     window,
     "scroll",
     () => {
-      if (window.innerWidth < 992) {
+      if (window.innerWidth < 768) {
         return;
       }
 
@@ -26,20 +26,20 @@ export const slider_4 = () => {
       let scrollY = window.scrollY;
 
       if (scrollY < line) {
-        figure_two.classList.replace("d-lg-has-height", "d-lg-0-height");
-        figure_one.classList.replace("d-lg-0-height", "d-lg-has-height");
+        figure_two.classList.replace("d-md-has-height", "d-md-0-height");
+        figure_one.classList.replace("d-md-0-height", "d-md-has-height");
       }
 
       if (scrollY > line) {
-        figure_one.classList.replace("d-lg-has-height", "d-lg-0-height");
-        figure_two.classList.replace("d-lg-0-height", "d-lg-has-height");
+        figure_one.classList.replace("d-md-has-height", "d-md-0-height");
+        figure_two.classList.replace("d-md-0-height", "d-md-has-height");
       }
     },
     { passive: true }
   );
 
   const handle_scroll_animation_desktop = () => {
-    if (window.innerWidth < 992) {
+    if (window.innerWidth < 768) {
       return;
     }
 
@@ -66,7 +66,7 @@ export const slider_4 = () => {
   };
 
   const handle_scroll_animation_mobile = () => {
-    if (window.innerWidth > 991) {
+    if (window.innerWidth > 768) {
       return;
     }
 

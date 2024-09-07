@@ -1,15 +1,18 @@
 .slider_4-height-container {
-    height: unset;
-    @include min_lg {
-        height: 100vh;
+  
+    @include min_md {
         position: relative;
-        padding: 12.5vh 0;
+        padding: 25% 0;
         box-sizing: content-box;
+    }
+    @include min_xxl {
+        height: 100vh;
+        padding: 12.5vh 0;
     }
 }
 
 .slider_4-figure-container {
-    @include min_lg {
+    @include min_md {
         position: sticky;
         top: 25vh;
     }
@@ -45,26 +48,26 @@
 
 .scroll-animation-mobile img {
     transform: scale(1.2);
-    @include min_lg {
+    @include min_md {
         transform: scale(1);
     }
 }
 
 .scroll-animation-desktop img {
-    @include min_lg {
+    @include min_md {
         transform: scale(1.2);
     }
 }
 
-.d-lg-has-height {
-    @include min_lg {
+.d-md-has-height {
+    @include min_md {
         height: initial;
         width: inherit;
     }
 }
 
-.d-lg-0-height {
-    @include min_lg {
+.d-md-0-height {
+    @include min_md {
         height: 0;
         width: 0;
     }
