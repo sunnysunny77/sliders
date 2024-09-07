@@ -12,6 +12,7 @@
 //import "../node_modules/bootstrap/js/dist/tooltip";
 import "../node_modules/@fortawesome/fontawesome-free/js/all.min.js";
 import { events } from "./utillites.js";
+import { slider_nav } from "./slider_nav.js";
 import { slider_8 } from "./slider_8.js";
 import { slider_7 } from "./slider_7.js";
 import { slider_6 } from "./slider_6.js";
@@ -23,6 +24,7 @@ import { slider_1 } from "./slider_1.js";
 import { service_worker } from "./service_worker.js";
 
 events(window, "load", () => {
+  slider_nav();
   slider_8();
   slider_7();
   slider_6();

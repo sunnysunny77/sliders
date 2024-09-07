@@ -24,25 +24,25 @@
 
 <body>
 
-<nav class="container-fluid slider_8-navigation navigation d-flex align-items-center border-bottom p-0">
+<nav class="container-fluid slider_nav-navigation navigation d-flex align-items-center border-bottom p-0">
 
 	<div class="row m-0 g-0">
 
-		<div role="button" class="col-auto d-sm-none slider_8-navbar-toggler navbar-toggler has-collapsed px-3 py-4">
+		<div role="button" class="col-auto d-sm-none slider_nav-navbar-toggler navbar-toggler has-collapsed px-3 py-4">
 			<div>
-				<div class="slider_8-bar1"></div>
-				<div class="slider_8-bar2"></div>
-				<div class="slider_8-bar3"></div>
+				<div class="slider_nav-bar1"></div>
+				<div class="slider_nav-bar2"></div>
+				<div class="slider_nav-bar3"></div>
 			</div>
 		</div>
 
-		<div class="col-12 slider_8-navbar-collapse navbar-collapse">
+		<div class="col-12 slider_nav-navbar-collapse navbar-collapse">
 
 			<ul class="list-unstyled my-4 my-sm-0">
 
 				<li>
 
-					<a class="mx-4 active" href="./">SLIDER 8</a>
+					<a class="mx-4 active" href="./">SLIDER NAV</a>
 
 				</li>
 		
@@ -672,6 +672,63 @@
 
 		}
 	?>
+
+
+	<hr class="my-5">
+
+	<h2 class="text-center my-5"> Slider 8 </h2>
+
+	<div class="container slider_8-container d-flex flex-wrap justify-content-center">
+
+		<?php 
+
+			$index = 0;
+
+			while ($index < 4) {
+
+				$index++;
+
+				?>
+
+					<div class="slider_8-item has-test row w-100 justify-content-md-between">
+
+						<div class="col-12 col-md-4">
+
+							<h2 class="mb-3">
+								
+								Google
+
+							</h2>
+
+							<hr class="mb-5 mb-md-2">
+							
+							<p class="mb-1">
+								
+								Homepage
+								<br>
+								For searching
+
+							</p> 
+
+							<a class="d-inline-block mb-6" target="Google" href="https://google.com/">Visit</a>
+
+						</div>
+
+						<div class="col-12 col-md-7">
+
+							<img src="./images/400x400-blue.svg" width="760" height="475" alt="Placehold"/>
+
+						</div>
+
+					</div>
+
+
+				<?php 
+
+			}
+		?>
+
+	</div>
 
 </main>
 
