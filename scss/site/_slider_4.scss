@@ -1,5 +1,6 @@
 .slider_4-height-container {
-  
+    max-height: 1350px;
+    max-width: 1680px;
     @include min_md {
         position: relative;
         padding: 25% 0;
@@ -7,7 +8,7 @@
     }
     @include min_xxl {
         height: 100vh;
-        padding: 12.5vh 0;
+        padding: min(12.5vh, 270px) 0;
     }
 }
 
