@@ -75,7 +75,7 @@ export const slider_4 = () => {
       const contains = index.classList.contains("scroll-animation-mobile");
       const height = index.getBoundingClientRect().height;
       const scroll_mobile =
-        window.scrollY + window.innerHeight - height - height / 6;
+        window.scrollY + window.innerHeight - height;
 
       if (scroll_mobile > position && !contains) {
         index.classList.add("scroll-animation-mobile");

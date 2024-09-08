@@ -49,6 +49,7 @@
 
 .scroll-animation-mobile img {
     transform: scale(1.2);
+    transition-delay: 0.5s;
     @include min_md {
         transform: scale(1);
     }
