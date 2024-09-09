@@ -12,10 +12,10 @@ self.addEventListener("install", (event) => {
 
   event.waitUntil(
     addResourcesToCache([
-      "/",
-      "/index.php",
-      "/css/app.min.css",
-      "/js/app.min.js"
+      "./",
+      "./index.php",
+      "./css/app.min.css",
+      "./js/app.min.js"
     ])
   );
 });
