@@ -15,16 +15,6 @@ self.addEventListener("install", (event) => {
       "/",
       "/index.php",
       "/css/app.min.css",
-      "/images/400x400.svg",    
-      "/images/150x150-grey.svg", 
-      "/images/150x150-pink.svg", 
-      "/images/150x150-light.svg", 
-      "/images/440x293-light.svg", 
-      "/images/440x293-dark.svg", 
-      "/images/400x400-blue.svg", 
-      "/images/100x100.svg", 
-      "/images/400x400-dark.svg",
-      "/images/950x574.svg",
       "/js/app.min.js"
     ])
   );

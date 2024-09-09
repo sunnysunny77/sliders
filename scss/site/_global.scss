@@ -22,7 +22,7 @@ h1, h2, h3, h4, h5, h6 {
     outline: none;
     border: none;
     background-color: transparent;
-    svg {
+    i {
         position: relative;
         z-index: 1;
         color: $white;
@@ -52,7 +52,7 @@ h1, h2, h3, h4, h5, h6 {
         &::after {
             transform: scale(0.95);
         }
-        svg {
+        i {
             transform: scale(0.95);
             opacity: 0.75;
         }
