@@ -9,32 +9,34 @@ const cacheAssets = [
 ];
 
 self.addEventListener("install", (event) => {
+
   console.log("Service worker is installed");
 
-  event.waitUntil(
-    caches
-      .open(cacheName)
-      .then((cache) => {
-        console.log("Caching assets");
-        cache.addAll(cacheAssets);
-      })
-      .then(() => self.skipWaiting())
-  );
+  event.waitUntil(caches.open(cacheName).then((cache) => {
+
+    console.log("Caching assets");
+    cache.addAll(cacheAssets);
+  }).then(() => {
+
+    self.skipWaiting();
+  }));
 });
 
+self.addEventListener("fetch", event => {
 
-self.addEventListener("fetch", (event) => {
   console.log("Fetching via Service worker");
+  
+  event.respondWith(caches.match(event.request).then(cachedResponse => {
 
-  event.respondWith(caches.open(cacheName).then((cache) => {
-    return cache.match(event.request).then((cachedResponse) => {
-      const fetchedResponse = fetch(event.request).then((networkResponse) => {
-        cache.put(event.request, networkResponse.clone());
+    const networkUpdate = fetch(event.request).then(networkResponse => {
 
-        return networkResponse;
-      });
+      caches.open(cacheName).then(cache => cache.put(event.request, networkResponse));
+      return networkResponse.clone();
+    }).catch(() => {
 
-      return cachedResponse || fetchedResponse;
+      return false;
     });
+
+    return cachedResponse || networkUpdate;
   }));
 });
