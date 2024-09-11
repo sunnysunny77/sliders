@@ -1,7 +1,7 @@
 const version = 1;
 const cacheName = `sliders-v${version}`;
 
-const cacheAssets = [
+const resources = [
   "./",
   "./index.php",
   "./favicon.ico",
@@ -35,35 +35,65 @@ const cacheAssets = [
   "./images/950x574.svg"
 ];
 
+const installResources = async (resources) => {
+
+  const cache = await caches.open(cacheName);
+  await cache.addAll(resources);
+};
+
 self.addEventListener("install", (event) => {
 
   console.log("Service worker is installed");
+  
+  self.skipWaiting();
 
-  event.waitUntil(caches.open(cacheName).then((cache) => {
-
-    console.log("Caching assets");
-    cache.addAll(cacheAssets);
-  }).then(() => {
-
-    self.skipWaiting();
-  }));
+  event.waitUntil(installResources(resources));
 });
 
-self.addEventListener("fetch", event => {
+const stale = async (req) => {
+
+  try {
+
+    const cache = await caches.open(cacheName);
+
+    if (cache) {
+
+      const match = await cache.match(req);
+
+      if (match) {
+
+        const res = await fetch(req);
+
+        if (res) {
+
+          await cache.put(req, res.clone());
+        }
+
+        return  match || res;
+      }
+    }
+
+  } catch (error) {
+
+    console.log(error);
+
+    const cache = await caches.match(req);
+      
+    if (cache) {
+
+      return cache;
+    }
+
+    return new Response("Network error happened", {
+      status: 408,
+      headers: { "Content-Type": "text/plain" },
+    });
+  }
+};
+
+self.addEventListener("fetch", (event) => {
 
   console.log("Fetching via Service worker");
-  
-  event.respondWith(caches.match(event.request).then(cachedResponse => {
 
-    const networkUpdate = fetch(event.request).then(networkResponse => {
-
-      caches.open(cacheName).then(cache => cache.put(event.request, networkResponse));
-      return networkResponse.clone();
-    }).catch(() => {
-
-      return false;
-    });
-
-    return cachedResponse || networkUpdate;
-  }));
+  event.respondWith(stale(event.request));
 });
