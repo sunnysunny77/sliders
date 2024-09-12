@@ -32,7 +32,8 @@ const resources = [
   "./images/400x400.svg",
   "./images/660x445-dark.svg",
   "./images/660x445-light.svg",
-  "./images/950x574.svg"
+  "./images/950x574.svg",
+  "./fallback.php"
 ];
 
 const installResources = async (resources) => {
