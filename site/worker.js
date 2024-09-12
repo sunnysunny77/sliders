@@ -60,28 +60,33 @@ const stale = async (req) => {
 
       const match = await cache.match(req);
 
-      if (match) {
+      const res = await fetch(req);
 
-        const res = await fetch(req);
+      if (res && match) {
 
-        if (res) {
-
-          await cache.put(req, res.clone());
-        }
-
-        return  match || res;
+        await cache.put(req, res.clone());
       }
+
+      return  match || res;
+      
     }
 
   } catch (error) {
 
     console.log(error);
-
+    
     const cache = await caches.match(req);
-      
+        
     if (cache) {
 
       return cache;
+    }
+
+    const fallback = await caches.match("./fallback.php");
+      
+    if (fallback) {
+
+      return fallback;
     }
 
     return new Response("Network error happened", {
