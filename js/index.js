@@ -21,6 +21,7 @@ import { slider_3 } from "./slider_3.js";
 import { slider_2 } from "./slider_2.js";
 import { slider_1 } from "./slider_1.js";
 import { service_worker } from "./service_worker.js";
+import { fallback } from "./fallback.js";
 
 events(window, "load", () => {
   slider_nav();
@@ -33,4 +34,5 @@ events(window, "load", () => {
   slider_2();
   slider_1();
   service_worker();
+  fallback();
 });
