@@ -51,26 +51,27 @@ self.addEventListener("install", (event) => {
   event.waitUntil(installResources(resources));
 });
 
-const cache = async (req, res) => {
+const cache = async (req) => {
 
+  const res = await fetch(req);
   const cache = await caches.open(cacheName);
-  await cache.put(req, res);
+  await cache.put(req, res.clone());
 };
 
 const stale = async (req) => {
 
   try {
 
-    const res = await fetch(req);
-
     const match = await caches.match(req);
 
     if (match) {
 
-      cache(req, res.clone());
+      cache(req);
 
       return match;
     }
+
+    const res = await fetch(req);
 
     return res;
       
