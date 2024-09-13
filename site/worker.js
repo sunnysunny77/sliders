@@ -53,9 +53,21 @@ self.addEventListener("install", (event) => {
 
 const cache = async (req) => {
 
+  try {
+
   const res = await fetch(req);
   const cache = await caches.open(cacheName);
   await cache.put(req, res.clone());
+
+  } catch (error) {
+
+    console.log(error);
+
+    return new Response("Network error happened", {
+      status: 408,
+      headers: { "Content-Type": "text/plain" },
+    });
+  }
 };
 
 const stale = async (req) => {
