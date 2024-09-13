@@ -90,13 +90,6 @@ const stale = async (req) => {
   } catch (error) {
 
     console.log(error);
-    
-    const cache = await caches.match(req);
-        
-    if (cache) {
-
-      return cache;
-    }
 
     const fallback = await caches.match("./fallback.php");
       
