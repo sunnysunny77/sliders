@@ -63,11 +63,11 @@ const stale = async (req) => {
 
     const res = await fetch(req);
 
-    cache(req, res.clone());
-
     const match = await caches.match(req);
 
     if (match) {
+
+      cache(req, res.clone());
 
       return match;
     }
