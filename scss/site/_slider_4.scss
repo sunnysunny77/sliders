@@ -1,10 +1,10 @@
 .slider_4-height-container {
-    max-height: 1350px;
-    max-width: 1680px;
     @include min_md {
         position: relative;
         padding: 25% 0;
         box-sizing: content-box;
+        max-height: 1350px;
+        max-width: 1680px;
     }
     @include min_xxl {
         height: 100vh;

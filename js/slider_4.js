@@ -18,12 +18,8 @@ export const slider_4 = () => {
         return;
       }
 
-      const line =
-        height_container.offsetTop +
-        height_container.getBoundingClientRect().height * 0.25 -
-        figure_one.getBoundingClientRect().height / 2 -
-        figure_two.getBoundingClientRect().height / 2;
-      let scrollY = window.scrollY;
+      const line = get_position(height_container) + height_container.getBoundingClientRect().height / 2;
+      let scrollY = window.scrollY + window.innerHeight / 2;
 
       if (scrollY < line) {
         figure_two.classList.replace("d-md-has-height", "d-md-0-height");
