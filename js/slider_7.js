@@ -36,7 +36,6 @@ const next = (event) => {
   const controllsCurrent = event.currentTarget.getAttribute("controlls_current");
   const objPrevious = document.querySelector(`#${controllsPrevious}`);
   const objCurrent = document.querySelector(`#${controllsCurrent}`);
-  document.body.style.paddingRight = 0;
   objPrevious.classList.remove("overlay-fixed") ||
   objPrevious.classList.remove("overlay-fixed-delay");
   document.body.classList.remove("overflow-hidden");
