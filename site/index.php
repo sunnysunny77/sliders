@@ -723,6 +723,40 @@
 
 	</div>
 
+	<hr class="my-5">
+
+	<h2 class="text-center my-5"> Slider 9 </h2>
+
+	<div class="container slider_9-container">
+
+		<div class="row justify-content-between align-items-center g-0">
+
+			<div class="col-2 d-flex justify-content-center">
+
+				<button aria-label="prev" class="slider_9-button button-prev"><i class="fa-solid fa-circle-arrow-left"></i></button>
+
+			</div>
+
+			<div class="col-7 slider_9-inner inner-swap position-relative">
+
+				<img class="has-current counters" src="./images/400x400.svg" width="950" height="574" alt="Placeholder">
+
+				<img class="counters" src="./images/400x400-blue.svg" width="950" height="574" alt="Placeholder">
+
+				<img class="counters" src="./images/400x400-dark.svg" width="950" height="574" alt="Placeholder">
+				
+			</div>
+
+			<div class="col-2 d-flex justify-content-center">
+
+				<button aria-label="next" class="slider_9-button button-next"><i class="fa-solid fa-circle-arrow-right"></i></button>
+
+			</div>
+
+		</div>
+
+	</div>
+
 </main>
 
 <footer class="d-flex flex-wrap justify-content-center align-items-center pb-5">

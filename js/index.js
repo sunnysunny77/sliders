@@ -12,6 +12,7 @@
 //import "../node_modules/bootstrap/js/dist/tooltip";
 import { events } from "./utillites.js";
 import { slider_nav } from "./slider_nav.js";
+import { slider_9 } from "./slider_9.js";
 import { slider_8 } from "./slider_8.js";
 import { slider_7 } from "./slider_7.js";
 import { slider_6 } from "./slider_6.js";
@@ -25,6 +26,7 @@ import { fallback } from "./fallback.js";
 
 events(window, "load", () => {
   slider_nav();
+  slider_9();
   slider_8();
   slider_7();
   slider_6();
