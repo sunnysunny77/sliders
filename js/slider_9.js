@@ -45,9 +45,13 @@ export const slider_9 = () => {
 
     first(index);
 
-    if (index === - 1) {
+    if (index === 0) {
 
       index = length - 1;
+
+      last(index);
+
+      return;
     } else {
 
       index--;
@@ -60,9 +64,13 @@ export const slider_9 = () => {
 
     first(index);
 
-    if (index === length) {
+    if (index === length - 1) {
 
       index = 0;
+
+      last(index);
+
+      return;
     } else {
 
       index++;
