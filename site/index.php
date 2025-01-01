@@ -483,85 +483,121 @@
 
 	</div>
 
-	<section class="container-fluid row g-0">
+	<section class="container-fluid g-0">
 
-		<hr class="my-5">
+		<div class="row g-0">
 
-		<h2 class="text-center my-5"> Slider 6 </h2>
+			<hr class="my-5">
 
-		<p class="col-11 col-lg-8 col-xl-6 text-center mx-auto mb-5">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
-			odio velit, et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
-			Mauris suscipit et sem vel auctor. Duis dapibus arcu sem, a porttitor massa vulputate sed.
-		</p>
+			<h2 class="text-center my-5"> Slider 6 </h2>
 
-		<div class="slider_6-container col-12 col-md-10 col-xl-8 row pb-md-5 g-0">
+			<div class="col-11 col-lg-8 col-xl-6 ">
 
-			<div class="col-md-10 d-none d-md-flex row justify-content-between mb-md-3 ms-md-5 g-0">
-
-				<button class="col-md-3 slider_6-button-group button-group">Dolore</button>
-
-				<button class="col-md-3 slider_6-button-group button-group">Fugiat</button>
-
-				<button class="col-md-3 slider_6-button-group button-group">Occaecat</button>
-
-				<button class="col-md-3 slider_6-button-group button-group">Excepteur </button>
+				<p class="text-center mx-auto mb-5">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
+					odio velit, et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
+					Mauris suscipit et sem vel auctor. Duis dapibus arcu sem, a porttitor massa vulputate sed.
+				</p>
 
 			</div>
 
-			<div class="slider_6-action-container col-12 col-md-11 row g-0">
+			<div class="slider_6-container col-12 col-md-10 col-xl-8 pb-md-5">
 
-				<div class="slider_6-strip col-3"></div>
+				<div class="row g-0">
 
-				<img class="col-9" src="./images/950x574.svg" width="950" height="574" alt="Placeholder">
+					<div class="col-md-10 mb-md-3 ms-md-5">
 
-				<aside class="slider_6-action-aside action-aside">
+						<div class="row d-none d-md-flex justify-content-between g-0">
 
-					<h3 class="m-md-0">Dolore<i class="fa-solid fa-paperclip"></i></h3>
+							<div class="col-md-3">
 
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
-						odio velit, et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
-						Mauris suscipit et sem vel.
-					</p>
+								<button class="col-md-3 slider_6-button-group button-group">Dolore</button>
 
-				</aside>
+							</div>
 
-				<aside class="slider_6-action-aside action-aside">
+							<div class="col-md-3">
 
-					<h3 class="m-md-0">Fugiat<i class="fa-solid fa-phone"></i></h3>
+								<button class="col-md-3 slider_6-button-group button-group">Fugiat</button>
 
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
-						odio velit, et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
-						Mauris suscipit et sem vel.
-					</p>
+							</div>
 
-				</aside>
+							<div class="col-md-3">
 
-				<aside class="slider_6-action-aside action-aside">
+								<button class="col-md-3 slider_6-button-group button-group">Occaecat</button>
 
-					<h3 class="m-md-0">Occaecat<i class="fa-solid fa-envelope"></i></h3>
+							</div>
 
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
-						odio velit, et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
-						Mauris suscipit et sem vel.
-					</p>
+							<div class="col-md-3">
 
-				</aside>
+								<button class="col-md-3 slider_6-button-group button-group">Excepteur </button>
 
-				<aside class="slider_6-action-aside action-aside">
+							</div>
 
-					<h3 class="m-md-0">Excepteur<i class="fa-solid fa-circle-user"></i></h3>
+						</div>
 
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
-						odio velit, et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
-						Mauris suscipit et sem vel.
-					</p>
+					</div>
 
-				</aside>
+					<div class="slider_6-action-container col-12 col-md-11">
+
+						<div class="row g-0">
+
+							<div class="slider_6-strip col-3"></div>
+
+							<img class="col-9" src="./images/950x574.svg" width="950" height="574" alt="Placeholder">
+
+							<aside class="slider_6-action-aside action-aside">
+
+								<h3 class="m-md-0">Dolore<i class="fa-solid fa-paperclip"></i></h3>
+
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
+									odio velit, et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
+									Mauris suscipit et sem vel.
+								</p>
+
+							</aside>
+
+							<aside class="slider_6-action-aside action-aside">
+
+								<h3 class="m-md-0">Fugiat<i class="fa-solid fa-phone"></i></h3>
+
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
+									odio velit, et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
+									Mauris suscipit et sem vel.
+								</p>
+
+							</aside>
+
+							<aside class="slider_6-action-aside action-aside">
+
+								<h3 class="m-md-0">Occaecat<i class="fa-solid fa-envelope"></i></h3>
+
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
+									odio velit, et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
+									Mauris suscipit et sem vel.
+								</p>
+
+							</aside>
+
+							<aside class="slider_6-action-aside action-aside">
+
+								<h3 class="m-md-0">Excepteur<i class="fa-solid fa-circle-user"></i></h3>
+
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
+									odio velit, et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
+									Mauris suscipit et sem vel.
+								</p>
+
+							</aside>
+
+						</div>
+
+					</div>
+
+				</div>
 
 			</div>
 

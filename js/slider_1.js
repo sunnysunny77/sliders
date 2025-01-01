@@ -50,24 +50,19 @@ export const slider_1 = () => {
       count++;
 
       for (const [i, index] of slider_items.entries()) {
-        if (!index.style.transition) {
-          index.style.transition = "transform 0.5s ease-in-out";
-        }
-
-        index.classList.add("slider_1-item-has-opacity");
-        index.style.transform = `translateX(${100 * (i - count)}%)`;
 
         if (count === slider_items.length - 2) {
-          slider_next_xl.style.transitionDuration = "0.5s";
-          slider_next_xl.style.right = "calc(((100% + 34px) / 3) - 26px)";
+
+          Object.assign(slider_next_xl.style,{ transitionDuration: "0.5s", right: "calc(((100% + 34px) / 3) - 26px)"});
         }
 
         if (count === slider_items.length - 1) {
-          slider_next_xl.style.right = "calc(((100% + 34px) / 1.5) - 26px)";
-          slider_next_sm.style.transitionDuration = "0.5s";
-          slider_next_sm.style.right = "calc(((100% + 34px) / 2) - 26px)";
-        }
 
+          Object.assign(slider_next_sm.style,{ transitionDuration: "0.5s", right: "calc(((100% + 34px) / 2) - 26px)"});
+          Object.assign(slider_next_xl.style,{ transitionDuration: "0.5s", right: "calc(((100% + 34px) / 1.5) - 26px)"});
+        }
+        index.classList.add("slider_1-item-has-opacity");
+        Object.assign(index.style,{ transition: "transform 0.5s ease-in-out", transform: `translateX(${100 * (i - count)}%)`});
         setTimeout(() => {
           index.classList.remove("slider_1-item-has-opacity");
           event.target.disabled = "";
@@ -75,13 +70,11 @@ export const slider_1 = () => {
       }
 
       if (count === slider_items.length) {
-        slider_next_sm.style.transitionDuration = "0.375s";
-        slider_next_sm.style.right = "-26px";
-        slider_next_xl.style.transitionDuration = "0.425s";
-        slider_next_xl.style.right = "-26px";
+
+        Object.assign(slider_next_sm.style,{ transitionDuration: "0.375s", right: "-26px"});
+        Object.assign(slider_next_xl.style,{ transitionDuration: "0.425s", right: "-26px"});
         for (const [i, index] of slider_items.entries()) {
-          index.style.transition = "transform 0.5s ease-in-out";
-          index.style.transform = `translateX(${i * 100}%)`;
+          Object.assign(index.style,{ transition: "transform 0.5s ease-in-out", transform: `translateX(${i * 100}%)`});
         }
     
         count = 0;
