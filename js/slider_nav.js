@@ -13,7 +13,14 @@ export const slider_nav = () => {
 
   let scrollY = 0;
 
-  let height = navigation.scrollHeight;
+  let height;
+
+  const handle_height = () => {
+
+    height = window.innerWidth >= 576 ? 57 : 74;
+  }
+
+  handle_height();
 
   const handle_navigationigation = () => {
 
@@ -71,7 +78,7 @@ export const slider_nav = () => {
     Object.assign(navbar_collapse.style,{ transition: "max-height 0.5s", maxHeight: `${max_height}px`});
   };
 
-  events(window, "resize", () => height = navigation.scrollHeight, { passive: true });
+  events(window, "resize", handle_height, { passive: true });
   events(window, "resize", handle_toggle_breakpoint, { passive: true });
   events(navbar_toggler, "click", handle_toggle);
   events(window, "scroll", handle_navigationigation, { passive: true });
