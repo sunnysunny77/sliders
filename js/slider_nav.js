@@ -13,7 +13,7 @@ export const slider_nav = () => {
 
   let scrollY = 0;
 
- let height = navigation.scrollHeight;
+  let height = navigation.scrollHeight;
 
   const handle_navigationigation = () => {
 
