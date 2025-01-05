@@ -1,6 +1,7 @@
 .slider_nav-navigation {
     background-color: $white;
     min-height: 74px;
+    overflow: hidden;
     @include min_sm {
         min-height: 65px;
     }

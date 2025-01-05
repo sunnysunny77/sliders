@@ -17,7 +17,7 @@ export const slider_nav = () => {
     
         let positive = false;
 
-        if (window.scrollY > scrollY) {
+        if (window.scrollY >= scrollY) {
   
           positive = true;
         } else if (window.scrollY < scrollY)  {
@@ -27,25 +27,22 @@ export const slider_nav = () => {
   
         scrollY = window.scrollY;
   
-        if (scrollY < main.offsetTop + navigation.offsetHeight && scrollY > main.offsetTop && !positive) {
+        if (scrollY < main.offsetTop + navigation.scrollHeight && scrollY > main.offsetTop && !positive) {
   
-          navigation.classList.add("navigation-top");
+          navigation.classList.add("navigation-top", "navigation-fixed");
         } else if (scrollY > main.offsetTop && !positive) {
     
-          navigation.classList.remove("navigation-top");
-          navigation.classList.add("navigation-fixed");
+          navigation.classList.replace("navigation-top", "navigation-fixed");
         } else if (scrollY > main.offsetTop && positive) {
   
-          header.style.paddingTop = window.innerWidth > 576 ? "65px" : "74px";
-          navigation.classList.add("navigation-top");
-        } else if (navigation.classList.contains("navigation-top") || navigation.classList.contains("navigation-fixed")) {
+          header.style.paddingTop = window.innerWidth > 576 ? "65px" : "74px"; 
+          navigation.classList.add("navigation-top", "navigation-fixed");
+          
+        }  else {
   
-
           header.style.paddingTop = 0;
-          navigation.classList.remove("navigation-top");
-          navigation.classList.remove("navigation-fixed");
+          navigation.classList.remove("navigation-top", "navigation-fixed");
         }
-  
   };
 
   const handle_toggle_breakpoint = () => {

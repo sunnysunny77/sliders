@@ -23,10 +23,10 @@ export const slider_2 = () => {
       document.querySelector("#slider_2-top").scrollIntoView();
 
       setTimeout(() => {
-        timeline_container.style.transition = "max-height 1s";
-        timeline_container.style.maxHeight = `${
+        
+        Object.assign(timeline_container.style,{ transition: "max-height 1s", maxHeight: `${
           timeline_items[count].getBoundingClientRect().height
-        }px`;
+        }px`});
         
         setTimeout(() => {
           for (const [i, item] of timeline_items.entries()) {
@@ -45,13 +45,13 @@ export const slider_2 = () => {
     timeline_container.style.maxHeight = `${
       timeline_container.getBoundingClientRect().height
     }}px`;
-    timeline_container.style.transition = "max-height 1s";
+
     timeline_items[count].classList.replace("d-none", "d-flex");
     timeline_button.disabled = "true";
-    timeline_container.style.maxHeight = `${
+    Object.assign(timeline_container.style,{ transition: "max-height 1s", maxHeight: `${
       timeline_container.getBoundingClientRect().height +
       timeline_items[count].getBoundingClientRect().height
-    }px`;
+    }px`});
 
     setTimeout(() => {
       timeline_button.disabled = "";
@@ -62,11 +62,7 @@ export const slider_2 = () => {
     window,
     "resize",
     () => {
-      timeline_container.style.transition = "none";
-      timeline_container.style.maxHeight = "";
-      timeline_container.style.maxHeight = `${
-        timeline_container.getBoundingClientRect().height
-      }px`;
+      Object.assign(timeline_container.style,{ transition: "none", maxHeight: `${timeline_container.scrollHeight}px`});
     },
     { passive: true }
   );
