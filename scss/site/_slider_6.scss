@@ -58,10 +58,11 @@
         align-items: flex-start;
         border-radius: 5px;
         opacity: 0;
-        top: 4%;
-        bottom: 4%;
-        left: 27%;
-        right: 2%;
+        will-change: opacity;
+        top: 6%;
+        right: 3%;
+        bottom: 6%;
+        left: 28%;
         width: initial;
         &::before {
             position: absolute;
@@ -102,30 +103,15 @@
             width: 67.5%;
         }
         @include min_md {
-            max-width: 340px;
-            width: 92%;
             height: 100%;
             display: flex;
             align-items: center;
-        }
-        @include min_lg {
-            max-width: 435px;
-        }
-        @include min_xl {
-            max-width: 415px;
-        }
-        @include min_xxl {
-            max-width: 478px;
         }
     }
 }
 
 .has-animation {
     @include min_md {
-        top: 6%;
-        right: 3%;
-        bottom: 6%;
-        left: 28%;
         opacity: 1;
     }
 }
