@@ -30,7 +30,7 @@
 
 		<div class="col-12 slider_nav-navbar-collapse navbar-collapse">
 
-			<ul class="list-unstyled my-4 my-sm-0">
+			<ul class="list-unstyled my-4 my-sm-0 py-3">
 
 				<li>
 

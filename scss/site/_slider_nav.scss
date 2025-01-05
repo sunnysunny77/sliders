@@ -1,44 +1,17 @@
 .slider_nav-navigation {
     background-color: $white;
-    min-height: 74px;
+    will-change: top, max-height;
+    z-index: 999;
+    right: 0;
+    left: 0;
     overflow: hidden;
-    @include min_sm {
-        min-height: 65px;
-    }
     .navbar-collapse {
         background-color: inherit;
-        transition: max-height 0.4s;
         will-change: max-height;
         overflow: hidden;
         max-height: 0;
         @include min_sm {
             max-height: initial;
-        }
-    }
-    &.navigation-fixed {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 999;
-        transition:
-        top 0.375s,
-        min-height 1s;
-        will-change: top, min-height;
-        min-height: 74px;
-        @include min_sm {
-            min-height: 65px; 
-        }
-    }
-    &.navigation-top {
-        position: fixed;
-        top: -74px;
-        right: 0;
-        left: 0;
-        min-height: 0;
-        height: 0;
-        @include min_sm {
-            top: -65px;
         }
     }
     a.active {
