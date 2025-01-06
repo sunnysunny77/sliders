@@ -30,12 +30,5 @@ export const slider_8 = () => {
 
           has_move_init(index);
         });
-
-        events(window, "resize", () => {
-
-          index.classList.remove("has-move");
-          index.classList.remove("has-bottom");
-          has_move_init(index);
-        });
     }
 };
