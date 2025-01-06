@@ -41,15 +41,16 @@ export const slider_nav = () => {
       Object.assign(navigation.style,{ position: "fixed", top: `-${height}px`, transition: "top 0.375s, max-height 1s", maxHeight: 0 });
     } else if (scrollY > main.offsetTop && !positive) {
 
+      header.style.paddingTop = `${height}px`;
       Object.assign(navigation.style,{ position: "fixed", top: 0, transition: "top 0.375s, max-height 1s", maxHeight:  navbar_toggler.classList.contains("has-collapsed") ? `${height}px` : `${height +  navbar_collapse.scrollHeight}px`});
     } else if (scrollY > main.offsetTop && positive) {
 
-      Object.assign(navigation.style,{ position: "fixed", top: `-${height}px`, transition: "top 0.375s, max-height 1s", maxHeight: 0 });
       header.style.paddingTop = `${height}px`;
+      Object.assign(navigation.style,{ position: "fixed", top: `-${height}px`, transition: "top 0.375s, max-height 1s", maxHeight: 0 });
     }  else {
 
+      header.style.paddingTop = "";
       Object.assign(navigation.style,{ position: "static", transition: "none", maxHeight: "" });
-      header.style.paddingTop = 0;
     }
   };
 
