@@ -25,6 +25,7 @@ export const slider_nav = () => {
   const handle_navigationigation = () => {
 
     let positive = false;
+    let obj = {};
 
     if (window.scrollY > scrollY) {
 
@@ -38,19 +39,34 @@ export const slider_nav = () => {
 
     if (scrollY < main.offsetTop + navigation.scrollHeight && scrollY > main.offsetTop && !positive) {
 
-      Object.assign(navigation.style,{ position: "fixed", top: `-${height}px`, transition: "top 0.375s, max-height 1s", maxHeight: 0 });
+      obj.position = "fixed";
+      obj.top = `-${height}px`;
+      obj.transition = "top 0.375s, max-height 1s";
+      obj.maxHeight = "0px";
+      Object.assign(navigation.style, obj);
     } else if (scrollY > main.offsetTop && !positive) {
 
       header.style.paddingTop = `${height}px`;
-      Object.assign(navigation.style,{ position: "fixed", top: 0, transition: "top 0.375s, max-height 1s", maxHeight:  navbar_toggler.classList.contains("has-collapsed") ? `${height}px` : `${height +  navbar_collapse.scrollHeight}px`});
+      obj.position = "fixed";
+      obj.top = "0px";
+      obj.transition = "top 0.375s, max-height 1s";
+      obj.maxHeight = navbar_toggler.classList.contains("has-collapsed") ? `${height}px` : `${height +  navbar_collapse.scrollHeight}px`;
+      Object.assign(navigation.style, obj);
     } else if (scrollY > main.offsetTop && positive) {
 
       header.style.paddingTop = `${height}px`;
-      Object.assign(navigation.style,{ position: "fixed", top: `-${height}px`, transition: "top 0.375s, max-height 1s", maxHeight: 0 });
+      obj.position = "fixed";
+      obj.top = `-${height}px`;
+      obj.transition = "top 0.375s, max-height 1s";
+      obj.maxHeight = "0px";
+      Object.assign(navigation.style, obj);
     }  else {
 
       header.style.paddingTop = "";
-      Object.assign(navigation.style,{ position: "static", transition: "none", maxHeight: "" });
+      obj.position = "static";
+      obj.transition = "none";
+      obj.maxHeight = "";
+      Object.assign(navigation.style, obj);
     }
   };
 
@@ -68,6 +84,8 @@ export const slider_nav = () => {
     navbar_toggler.classList.toggle("has-collapsed");
     const contains = navbar_toggler.classList.contains("has-collapsed");
     const collapse = navbar_collapse.scrollHeight;
+    let navigation_obj = {};
+    let navbar_collapse_obj = {};
 
     if (contains) {
       max_height = 0;
@@ -75,8 +93,12 @@ export const slider_nav = () => {
       max_height = collapse;
     }
 
-    Object.assign(navigation.style,{ transition: contains ? "max-height 1s" : "max-height 0.5s", maxHeight: contains ? `${height}px` : `${height +  collapse}px`});
-    Object.assign(navbar_collapse.style,{ transition: "max-height 0.5s", maxHeight: `${max_height}px`});
+    navigation_obj.transition = contains ? "max-height 1s" : "max-height 0.5s";
+    navigation_obj.maxHeight = contains ? `${height}px` : `${height + collapse}px`;
+    navbar_collapse_obj.transition = "max-height 0.5s"; 
+    navbar_collapse_obj.maxHeight = `${max_height}px`;
+    Object.assign(navigation.style, navigation_obj);
+    Object.assign(navbar_collapse.style, navbar_collapse_obj);
   };
 
   events(window, "resize", handle_height, { passive: true });
