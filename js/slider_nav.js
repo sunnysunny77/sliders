@@ -5,9 +5,10 @@ export const slider_nav = () => {
   const navbar_collapse = document.querySelector(".navbar-collapse");
   const navigation = document.querySelector(".navigation");
   const main = document.querySelector("main");
-  const header = document.querySelector("header");
+  const body = document.querySelector("body");
 
-  if (!navigation || !main || !navbar_toggler || !header) {
+  if (!navigation || !main || !navbar_toggler || !body) {
+    
     return;
   }
 
@@ -28,53 +29,58 @@ export const slider_nav = () => {
 
     let positive = false;
 
+    let scroll_pos =  window.scrollY;
+
     const collapse = navbar_toggler.classList.contains("has-collapsed") ? height : height + navbar_collapse.offsetHeight;
 
-    if (window.scrollY > scrollY) {
+    const main_top = main.offsetTop;
+
+    if (scroll_pos > scrollY) {
 
       positive = true;
-    } else if (window.scrollY < scrollY)  {
+    } 
+    
+    if (scroll_pos < scrollY)  {
 
       positive = false;
     }
 
-    if (window.scrollY  < main.offsetTop + navigation.offsetHeight && window.scrollY  > main.offsetTop && !positive) {
+    if (scroll_pos < main_top) {
+
+      obj.position = "static";
+      obj.top = "initial";
+      obj.transition = "none";
+      obj.maxHeight = `${collapse}px`;
+      body.style.paddingTop = "";
+    } 
+
+    if ((scroll_pos > main_top && positive) || (scroll_pos > main_top && scroll_pos < main_top + collapse && !positive)) {
 
       obj.position = "fixed";
       obj.top = `-${collapse}px`;
       obj.transition = "top 0.375s, max-height 1s";
       obj.maxHeight = "0px";
-    } else if (window.scrollY  > main.offsetTop && !positive) {
+      body.style.paddingTop = `${collapse}px`;
+    } 
+    
+    if (scroll_pos > main_top + collapse && !positive) {
 
       obj.position = "fixed";
       obj.top = "0px";
       obj.transition = "top 0.375s, max-height 1s";
       obj.maxHeight = `${collapse}px`;
-
-    } else if (window.scrollY  > main.offsetTop && positive) {
-
-      header.style.paddingTop = `${collapse}px`;
-      obj.position = "fixed";
-      obj.top = `-${collapse}px`;
-      obj.transition = "top 0.375s, max-height 1s";
-      obj.maxHeight = "0px";
-    }  else {
-
-      header.style.paddingTop = "";
-      obj.position = "static";
-      obj.top = "initial";
-      obj.transition = "max-height 1s";
-      obj.maxHeight = `${collapse}px`;
-    }
+      body.style.paddingTop = `${collapse}px`;
+    } 
 
     Object.assign(navigation.style, obj);
 
-    scrollY = window.scrollY;
+    scrollY = scroll_pos;
   };
 
   const handle_toggle_breakpoint = () => {
     
     if (window.innerWidth > 576) {
+
       navbar_collapse.style.maxHeight = "";
       navbar_toggler.classList.add("has-collapsed");
     }
@@ -83,15 +89,17 @@ export const slider_nav = () => {
   const handle_toggle = () => {
 
     let max_height;
+    let navigation_obj = {};
+    let navbar_collapse_obj = {};
     navbar_toggler.classList.toggle("has-collapsed");
     const contains = navbar_toggler.classList.contains("has-collapsed");
     const collapse = navbar_collapse.scrollHeight;
-    let navigation_obj = {};
-    let navbar_collapse_obj = {};
 
     if (contains) {
+
       max_height = 0;
     }  else {
+
       max_height = collapse;
     }
 

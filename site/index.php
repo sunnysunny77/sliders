@@ -46,7 +46,7 @@
 
 </nav>
 
-<header class="container-fluid d-flex flex-column justify-content-end align-items-start flex-wrap">
+<header class="container-fluid d-flex flex-column justify-content-end align-items-start flex-wrap g-0">
 
 	<h1 class="d-flex align-items-end px-4 pt-5 pb-5 m-0"> 
 		
@@ -55,9 +55,9 @@
 
 	</h1>
 
-</header>
+	<hr class="m-0 w-100">
 
-<hr class="m-0">
+</header>
 
 <main class="d-flex flex-column">
 
