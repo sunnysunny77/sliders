@@ -15,17 +15,20 @@ export const slider_nav = () => {
 
   let height;
 
+  let obj = {};
+
   const handle_height = () => {
 
     height = window.innerWidth >= 576 ? 57 : 74;
-  }
+  };
 
   handle_height();
 
   const handle_navigationigation = () => {
 
     let positive = false;
-    let obj = {};
+
+    const collapse = navbar_toggler.classList.contains("has-collapsed") ? height : height + navbar_collapse.offsetHeight;
 
     if (window.scrollY > scrollY) {
 
@@ -35,39 +38,38 @@ export const slider_nav = () => {
       positive = false;
     }
 
-    scrollY = window.scrollY;
-
-    if (scrollY < main.offsetTop + navigation.scrollHeight && scrollY > main.offsetTop && !positive) {
+    if (window.scrollY  < main.offsetTop + navigation.offsetHeight && window.scrollY  > main.offsetTop && !positive) {
 
       obj.position = "fixed";
-      obj.top = `-${height}px`;
+      obj.top = `-${collapse}px`;
       obj.transition = "top 0.375s, max-height 1s";
       obj.maxHeight = "0px";
-      Object.assign(navigation.style, obj);
-    } else if (scrollY > main.offsetTop && !positive) {
+    } else if (window.scrollY  > main.offsetTop && !positive) {
 
-      header.style.paddingTop = `${height}px`;
       obj.position = "fixed";
       obj.top = "0px";
       obj.transition = "top 0.375s, max-height 1s";
-      obj.maxHeight = navbar_toggler.classList.contains("has-collapsed") ? `${height}px` : `${height +  navbar_collapse.scrollHeight}px`;
-      Object.assign(navigation.style, obj);
-    } else if (scrollY > main.offsetTop && positive) {
+      obj.maxHeight = `${collapse}px`;
 
-      header.style.paddingTop = `${height}px`;
+    } else if (window.scrollY  > main.offsetTop && positive) {
+
+      header.style.paddingTop = `${collapse}px`;
       obj.position = "fixed";
-      obj.top = `-${height}px`;
+      obj.top = `-${collapse}px`;
       obj.transition = "top 0.375s, max-height 1s";
       obj.maxHeight = "0px";
-      Object.assign(navigation.style, obj);
     }  else {
 
       header.style.paddingTop = "";
       obj.position = "static";
+      obj.top = "initial";
       obj.transition = "max-height 1s";
-      obj.maxHeight = `${height + navbar_collapse.scrollHeight}px`;
-      Object.assign(navigation.style, obj);
+      obj.maxHeight = `${collapse}px`;
     }
+
+    Object.assign(navigation.style, obj);
+
+    scrollY = window.scrollY;
   };
 
   const handle_toggle_breakpoint = () => {
