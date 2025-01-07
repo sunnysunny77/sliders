@@ -64,8 +64,8 @@ export const slider_nav = () => {
 
       header.style.paddingTop = "";
       obj.position = "static";
-      obj.transition = "none";
-      obj.maxHeight = "";
+      obj.transition = "max-height 1s";
+      obj.maxHeight = `${height + navbar_collapse.scrollHeight}px`;
       Object.assign(navigation.style, obj);
     }
   };
