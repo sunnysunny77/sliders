@@ -1,14 +1,14 @@
 .slider_nav-navigation {
     background-color: $white;
-    will-change: top, height;
+    will-change: top, max-height;
     z-index: 999;
     right: 0;
     left: 0;
     overflow: hidden;
-    height: 74px;
-    transition: height 0.75s;
+    max-height: 74px;
+    transition: max-height 0.75s;
     @include min_sm {
-        height: 57px;
+        max-height: 57px;
     }
     .navbar-collapse {
         background-color: inherit;
