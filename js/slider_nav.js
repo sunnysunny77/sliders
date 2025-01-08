@@ -26,9 +26,20 @@ export const slider_nav = () => {
 
   let navbar_collapse_obj = {};
 
+  const handle_collapse = () => {
+
+    navbar_toggler.classList.add("has-collapsed");
+    max_height = window.innerWidth >= 576 ? height : 0;
+    max_height_collapse = height;
+    navbar_collapse_obj.transition = window.innerWidth >= 576 ? "none" : "max-height 0.5s"; 
+    navbar_collapse_obj.maxHeight = `${max_height}px`;
+    Object.assign(navbar_collapse.style, navbar_collapse_obj);
+  };
+
   const handle_height = () => {
 
-    height = window.innerWidth >= 576 ? 57 : 74;
+    height = window.innerWidth >= 576 ? 74 : 57;
+    handle_collapse();
   };
 
   handle_height();
@@ -68,27 +79,17 @@ export const slider_nav = () => {
       obj.top = "initial";
       obj.transition = "max-height 0.5s";
       obj.maxHeight = `${height}px`;
-      navbar_toggler.classList.add("has-collapsed");
-      max_height = 0;
-      max_height_collapse = height;
-      navbar_collapse_obj.transition = "max-height 0.5s"; 
-      navbar_collapse_obj.maxHeight = `${max_height}px`;
-      Object.assign(navbar_collapse.style, navbar_collapse_obj);
+      handle_collapse();
       body.style.paddingTop = "";
     } 
 
     if ((scroll_pos > main_top + height && positive) || (scroll_pos > main_top && scroll_pos < main_top + height)) {
 
       obj.position = "fixed";
-      obj.top = `-${collapse}px`;
+      obj.top = `-${height}px`;
       obj.transition = "top 1s, max-height 1s";
       obj.maxHeight = "0px";
-      navbar_toggler.classList.add("has-collapsed");
-      max_height = 0;
-      max_height_collapse = height;
-      navbar_collapse_obj.transition = "max-height 0.5s"; 
-      navbar_collapse_obj.maxHeight = `${max_height}px`;
-      Object.assign(navbar_collapse.style, navbar_collapse_obj);
+      handle_collapse();
       body.style.paddingTop = `${height}px`;
     }
     
@@ -104,15 +105,6 @@ export const slider_nav = () => {
     Object.assign(navigation.style, obj);
 
     scrollY = scroll_pos;
-  };
-
-  const handle_toggle_breakpoint = () => {
-    
-    if (window.innerWidth > 576) {
-
-      navbar_collapse.style.maxHeight = "";
-      navbar_toggler.classList.add("has-collapsed");
-    }
   };
 
   const handle_toggle = () => {
@@ -141,7 +133,6 @@ export const slider_nav = () => {
   };
 
   events(window, "resize", handle_height, { passive: true });
-  events(window, "resize", handle_toggle_breakpoint, { passive: true });
   events(navbar_toggler, "click", handle_toggle);
   events(window, "scroll", handle_navigationigation, { passive: true });
   events(window, "resize", handle_navigationigation, { passive: true });
