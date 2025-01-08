@@ -26,20 +26,20 @@ export const slider_nav = () => {
 
   let navbar_collapse_obj = {};
 
-  const handle_collapse = () => {
+  const handle_collapse = (transition) => {
 
     navbar_toggler.classList.add("has-collapsed");
     max_height = window.innerWidth >= 576 ? height : 0;
     max_height_collapse = height;
-    navbar_collapse_obj.transition = window.innerWidth >= 576 ? "none" : "max-height 0.5s"; 
+    navbar_collapse_obj.transition = transition; 
     navbar_collapse_obj.maxHeight = `${max_height}px`;
     Object.assign(navbar_collapse.style, navbar_collapse_obj);
   };
 
   const handle_height = () => {
 
-    height = window.innerWidth >= 576 ? 74 : 57;
-    handle_collapse();
+    height = window.innerWidth >= 576 ? 57 : 74;
+    handle_collapse("none");
   };
 
   handle_height();
@@ -79,7 +79,7 @@ export const slider_nav = () => {
       obj.top = "initial";
       obj.transition = "max-height 0.5s";
       obj.maxHeight = `${height}px`;
-      handle_collapse();
+      handle_collapse("max-height 0.5s");
       body.style.paddingTop = "";
     } 
 
@@ -89,7 +89,7 @@ export const slider_nav = () => {
       obj.top = `-${height}px`;
       obj.transition = "top 1s, max-height 1s";
       obj.maxHeight = "0px";
-      handle_collapse();
+      handle_collapse("max-height 0.5s");
       body.style.paddingTop = `${height}px`;
     }
     
