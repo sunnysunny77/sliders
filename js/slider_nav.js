@@ -56,11 +56,21 @@ export const slider_nav = () => {
       positive = false;
     }
 
-    if (scroll_pos < main_top) {  
+    if (scroll_pos < main_top && positive) {  
 
       obj.position = "static";
       obj.top = "initial";
       obj.transition = "max-height 0.75s";
+      obj.maxHeight = `${collapse}px`;
+      body.style.paddingTop = "";
+      handle_collapse("max-height 0.75s");
+    } 
+
+    if (scroll_pos < main_top && !positive) {  
+
+      obj.position = "static";
+      obj.top = "initial";
+      obj.transition = "none";
       obj.maxHeight = `${collapse}px`;
       body.style.paddingTop = "";
     } 
