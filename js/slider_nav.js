@@ -14,7 +14,7 @@ export const slider_nav = () => {
 
   let scrollY = 0;
 
-  let height;
+  let height = window.innerWidth >= 576 ? 57 : 74;
 
   let max_height;
   
@@ -25,6 +25,8 @@ export const slider_nav = () => {
   let navigation_obj = {};
 
   let navbar_collapse_obj = {};
+  
+  let width;
 
   const handle_collapse = (transition) => {
 
@@ -38,11 +40,17 @@ export const slider_nav = () => {
 
   const handle_height = () => {
 
-    height = window.innerWidth >= 576 ? 57 : 74;
-    handle_collapse("none");
-  };
+    let inner_width = window.innerWidth;
 
-  handle_height();
+    if (width !== inner_width) {
+
+      height = window.innerWidth >= 576 ? 57 : 74;
+
+      handle_collapse("none");
+    };
+
+    width = inner_width;
+  };
 
   const handle_navigationigation = () => {
 
