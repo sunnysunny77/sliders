@@ -70,7 +70,7 @@ export const slider_nav = () => {
 
       obj.position = "static";
       obj.top = "initial";
-      obj.transition = "none";
+      obj.transition = "max-height 0.75s";
       obj.maxHeight = `${collapse}px`;
       body.style.paddingTop = "";
     } 
