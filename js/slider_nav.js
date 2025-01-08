@@ -45,9 +45,7 @@ export const slider_nav = () => {
     if (scroll_pos > scrollY) {
 
       positive = true;
-    } 
-    
-    if (scroll_pos < scrollY)  {
+    } else if (scroll_pos < scrollY) {
 
       positive = false;
     }
