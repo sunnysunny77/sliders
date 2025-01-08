@@ -53,22 +53,13 @@ export const slider_nav = () => {
       positive = false;
     }
 
-    if (scroll_pos < main_top && positive) {  
+    if (scroll_pos < main_top) {  
 
       obj.position = "static";
       obj.top = "initial";
       body.style.paddingTop = "";
       handle_collapse("height 0.75s");
     } 
-
-    if (scroll_pos < main_top && !positive) {
-
-      obj.position = "static";
-      obj.top = "initial";
-      obj.transition = "none";
-      obj.height = `${collapse}px`;
-      body.style.paddingTop = "";
-    }
 
     if (scroll_pos > main_top && scroll_pos < main_top + height && positive) {
 
@@ -90,8 +81,7 @@ export const slider_nav = () => {
 
       obj.position = "fixed";
       obj.top = `-${height}px`;
-      obj.transition = "top 0.75s, height 0.75s";
-      obj.height = "0px";
+      handle_collapse("top 0.75s, height 0.75s");
       body.style.paddingTop = `${height}px`;
     }
     
@@ -125,10 +115,6 @@ export const slider_nav = () => {
     obj.height = `${collapse_height}px`;
     Object.assign(navigation.style, obj);
   };
-
-  obj.transition = "height 0.75s";
-  obj.height = `${height}px`;
-  Object.assign(navigation.style, obj);
 
   events(window, "resize", handle_height, { passive: true });
   events(navbar_toggler, "click", handle_toggle);
