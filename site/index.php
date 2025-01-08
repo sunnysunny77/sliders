@@ -16,7 +16,7 @@
 
 <body>
 
-<nav class="container-fluid slider_nav-navigation navigation d-flex align-items-center border-bottom p-0">
+<nav class="container-fluid slider_nav-navigation navigation d-flex align-items-start border-bottom p-0">
 
 	<div class="row m-0 g-0">
 
