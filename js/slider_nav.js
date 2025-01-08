@@ -18,6 +18,8 @@ export const slider_nav = () => {
 
   let max_height;
 
+  let collapse_height;
+
   let obj = {};
 
   let navbar_collapse_obj = {};
@@ -25,11 +27,10 @@ export const slider_nav = () => {
   const handle_collapse = (transition) => {
 
     navbar_toggler.classList.add("has-collapsed");
-    max_height = window.innerWidth >= 576 ? height : 0;
     navbar_collapse_obj.transition = transition; 
-    navbar_collapse_obj.maxHeight = `${max_height}px`;
-    obj.transition = "max-height 0.75s";
-    obj.maxHeight = `${height + navbar_collapse.scrollHeight}px`;
+    navbar_collapse_obj.maxHeight = "0px";
+    obj.transition = transition;
+    obj.maxHeight = `${height}px`;
     Object.assign(navigation.style, obj);
     Object.assign(navbar_collapse.style, navbar_collapse_obj);
   };
@@ -63,7 +64,6 @@ export const slider_nav = () => {
 
       obj.position = "static";
       obj.top = "initial";
-      obj.transition = "none";
       obj.maxHeight = `${collapse}px`;
       body.style.paddingTop = "";
       handle_collapse("max-height 0.75s");
@@ -82,7 +82,6 @@ export const slider_nav = () => {
 
       obj.position = "fixed";
       obj.top = `-${height}px`;
-      obj.transition = "none";
       obj.maxHeight = "0px";
       body.style.paddingTop = `${height}px`;
       handle_collapse("none");
@@ -92,10 +91,9 @@ export const slider_nav = () => {
 
       obj.position = "fixed";
       obj.top = `-${height}px`;
-      obj.transition = "top 0.75s, max-height 0.75s";
       obj.maxHeight = "0px";
       body.style.paddingTop = `${height}px`;
-      handle_collapse("max-height 0.75s");
+      handle_collapse("top 0.75s, max-height 0.75s");
     }
 
     if (scroll_pos > main_top + height && positive) {
@@ -128,15 +126,17 @@ export const slider_nav = () => {
     if (navbar_toggler.classList.contains("has-collapsed")) {
 
       max_height = 0;
+      collapse_height = height;
     }  else {
 
       max_height = navbar_collapse.scrollHeight;
+      collapse_height = height + navbar_collapse.scrollHeight;
     }
 
     navbar_collapse_obj.transition = "max-height 0.75s"; 
     navbar_collapse_obj.maxHeight = `${max_height}px`;
     obj.transition = "max-height 0.75s";
-    obj.maxHeight = `${height + navbar_collapse.scrollHeight}px`;
+    obj.maxHeight = `${collapse_height}px`;
     Object.assign(navigation.style, obj);
     Object.assign(navbar_collapse.style, navbar_collapse_obj);
   };
