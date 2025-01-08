@@ -43,7 +43,6 @@ export const slider_nav = () => {
 
     const main_top = main.offsetTop;
 
-
     if (scroll_pos > scrollY) {
 
       positive = true;
