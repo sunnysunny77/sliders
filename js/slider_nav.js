@@ -66,14 +66,14 @@ export const slider_nav = () => {
       handle_collapse("max-height 0.75s");
     } 
 
-    if (scroll_pos < main_top && !positive) {  
+    if (scroll_pos < main_top && !positive) {
 
       obj.position = "static";
       obj.top = "initial";
-      obj.transition = "max-height 0.75s";
+      obj.transition = "none";
       obj.maxHeight = `${collapse}px`;
       body.style.paddingTop = "";
-    } 
+    }
 
     if (scroll_pos > main_top && scroll_pos < main_top + height && positive) {
 
@@ -134,10 +134,9 @@ export const slider_nav = () => {
 
     navbar_collapse_obj.transition = "max-height 0.75s"; 
     navbar_collapse_obj.maxHeight = `${max_height}px`;
-
+    obj.maxHeight = `${height + navbar_collapse.scrollHeight}px`;
+    Object.assign(navigation.style, obj);
     Object.assign(navbar_collapse.style, navbar_collapse_obj);
-
-    handle_navigationigation();
   };
 
   events(window, "resize", handle_height, { passive: true });
