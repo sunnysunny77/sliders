@@ -24,7 +24,7 @@
 
 .slider_1-item-padding  {
     @include min_md {
-        padding: 0 0 0 26px;
+        padding: 0 13px;
     }
 }
 
@@ -87,4 +87,7 @@
     top: calc(50% - 52px);
     right: 0;
     transform: translateX(26px);
+    @include min_md {
+        transform: translateX(13px);  
+    }
 }
