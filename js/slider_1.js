@@ -48,7 +48,7 @@ export const slider_1 = () => {
 
   calc_min_height();
 
-  const transform = () => {
+  const transform_item = () => {
 
     for (const [i, index] of slider_items.entries()) {
 
@@ -67,7 +67,25 @@ export const slider_1 = () => {
     }
   };
 
-  const transform_end = () => {
+  const reset_item = () => {
+
+    let width = window.innerWidth;
+
+    if (width >= 1200) { 
+        
+      Object.assign(slider_next_lg.style,{ 
+
+        transition: "right 0.425s", 
+        right: "0"
+      });
+    } else if (width >= 768 && width <= 1200) { 
+      
+      Object.assign(slider_next_md.style,{ 
+          
+        transition: "right 0.37s", 
+        right: "0"
+      });
+    }
 
     for (const [i, index] of slider_items.entries()) {
       
@@ -77,103 +95,88 @@ export const slider_1 = () => {
         transform: `translateX(${i * 100}%)`
       });
     }
+
+    count = 0;
   };
 
-  events(slider_next_lg, "click", (event) => {
+  const transform_button = () => {
 
-    event.target.disabled = "true";
+    let width = window.innerWidth;
 
-    setTimeout(() => {
-      
-      event.target.disabled = "";
-    }, 500);
-
-    count++;
-
-    if (count === slider_items.length - 2) {
+    if (count === slider_items.length - 2 && width >= 1200)  {
 
       Object.assign(slider_next_lg.style,{ 
         
         transition: "right 0.5s",
-        right: "33.333%"
+        right: "calc(((100% + 26px) / 3))"
       });
     } else if (count === slider_items.length - 1) {
 
-      Object.assign(slider_next_lg.style,{ 
+      if (width >= 1200) {
+        
+        Object.assign(slider_next_lg.style,{ 
 
-        transition: "right 0.5s",
-        right: "66.666%"
-      });
+          transition: "right 0.5s",
+          right: "calc(((100% + 26px) / 1.5))"
+        });
+      } else if (width >= 768 && width <= 1200) {
+        
+        Object.assign(slider_next_md.style,{ 
+
+          transition: "right 0.5s",
+          right: "calc(((100% + 26px) / 2))"
+        });
+      }
     } else if (count === slider_items.length) {
 
-      Object.assign(slider_next_lg.style,{ 
-  
-        transition: "right 0.425s", 
-        right: "0"
-      });
-  
-      transform_end();
-
-      count = 0;
+      reset_item();
     }
-    transform();
-  });
+    transform_item();
+  };
 
-  events(slider_next_md, "click", (event) => {
+  const disabled = (event) => {
 
     event.target.disabled = "true";
 
     setTimeout(() => {
-      
+
       event.target.disabled = "";
     }, 500);
+  };
+
+  events(slider_next_lg, "click", (event) => {
 
     count++;
 
-    if (count === slider_items.length - 1) {
+    disabled(event);
 
-      Object.assign(slider_next_md.style,{ 
+    transform_button();
+  });
 
-        transition: "right 0.5s",
-        right: "50%"
-      });
-    } else if (count === slider_items.length) {
+  events(slider_next_md, "click", (event) => {
 
-      Object.assign(slider_next_md.style,{ 
-            
-        transition: "right 0.37s", 
-        right: "0"
-      });
-  
-      transform_end();
+    count++;
 
-      count = 0;
-    }
-    transform();
+    disabled(event);
+
+    transform_button();
   });
 
   for (const index of slider_next_sm) {
 
     events(index, "click", (event) => {
 
-      event.target.disabled = "true";
-
-      setTimeout(() => {
-
-        event.target.disabled = "";
-      }, 500);
-
       count++;
 
-      if (count === slider_items.length) {
+      disabled(event);
 
-        transform_end();
-
-        count = 0;
-      }
-      transform();
+      transform_button();
     });
   }
 
-  events(window, "resize", calc_min_height, { passive: true });
+  events(window, "resize", () => {
+
+    calc_min_height();
+    reset_item();
+  }, { passive: true });
 };

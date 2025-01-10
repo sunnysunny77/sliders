@@ -15,16 +15,16 @@
     right: 0;
     left: 0;
     @include min_md {
-        width: 50%;
+        width: calc(50% + 13px);
     }
     @include min_xl {
-        width: 33.333%;
+        width: calc(33.333% + 8px);
     }
 }
 
 .slider_1-item-padding  {
     @include min_md {
-        padding: 0 13px;
+        padding: 0 26px 0 0;
     }
 }
 
@@ -87,7 +87,4 @@
     top: calc(50% - 52px);
     right: 0;
     transform: translateX(26px);
-    @include min_md {
-        transform: translateX(13px);  
-    }
 }
