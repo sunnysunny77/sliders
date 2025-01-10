@@ -50,13 +50,19 @@ export const slider_nav = () => {
       positive = false;
     }
 
-    if (scroll_pos < main_top) {  
+    if (scroll_pos < main_top && scroll_pos > collapse && positive) {
+
+      obj.position = "fixed";
+      obj.top = `-${height}px`;
+      main.style.marginTop = "";
+      handle_collapse("none");
+    } else if (scroll_pos < main_top) {  
 
       obj.position = "static";
       obj.top = "initial";
       main.style.marginTop = "";
       handle_collapse("max-height 0.375s");
-    } else if (scroll_pos > collapse && positive) {
+    } else if (scroll_pos > main_top && scroll_pos < main_top + height && positive) {
 
       obj.position = "fixed";
       obj.top = `-${height}px`;
