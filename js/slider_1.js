@@ -175,5 +175,5 @@ export const slider_1 = () => {
     });
   }
 
-  events(window, "resize", calc_min_height(), { passive: true });
+  events(window, "resize", calc_min_height, { passive: true });
 };
