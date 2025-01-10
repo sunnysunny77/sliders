@@ -43,11 +43,7 @@ export const slider_2 = () => {
 
       return;
     }
-
-    timeline_container.style.maxHeight = `${
-      timeline_container.getBoundingClientRect().height
-    }}px`;
-
+    
     timeline_items[count].classList.replace("d-none", "d-flex");
     timeline_button.disabled = "true";
     Object.assign(timeline_container.style,{ 
