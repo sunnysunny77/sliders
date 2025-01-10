@@ -15,17 +15,14 @@ export const slider_5 = () => {
     picture_id.push(index.id);
   }
 
-  const picture_display = (item) => {
-    for (const index of site_img) {
-      const bool = index.id === item;
-      const contains = index.classList.contains("d-has-display");
+  const picture_display = (id) => {
 
-      if (bool && !contains) {
-        index.classList.add("d-has-display");
-      } else if (!bool && contains) {
-        index.classList.remove("d-has-display");
-      }
-    }
+    const item = document.querySelector(`#site-${id +1}`);
+    const item_minus = document.querySelector(`#site-${id}`);
+    const item_plus = document.querySelector(`#site-${id + 2}`);
+    if (item_minus) item_minus.classList.remove("d-has-display");
+    if (item_plus) item_plus.classList.remove("d-has-display");
+    item.classList.add("d-has-display");
   };
 
   events(
@@ -38,31 +35,28 @@ export const slider_5 = () => {
         return;
       }
 
-      const ranges = [...scroll_preview].map((item) => item.offsetTop);
-      const scroll_pos = event.target.scrollTop;
+      const scrollY = event.target.scrollTop;
 
-      if (scroll_pos < ranges[0]) {
-        picture_display(picture_id[0]);
-      }
+      for (const [i, index] of scroll_preview.entries()) {
 
-      for (const [i, index] of ranges.entries()) {
-        if (
-          i !== ranges.length &&
-          scroll_pos > index &&
-          scroll_pos < ranges[i + 1]
-        ) {
-          picture_display(picture_id[i + 1]);
+        if (scrollY > index.offsetTop && scrollY < index.offsetTop + index.getBoundingClientRect().height) {
+
+          picture_display(i + 1);
+        } else if ( scrollY < scroll_preview[0].offsetTop) {
+
+          picture_display(0);
         }
-      }
-
-      if (scroll_pos > ranges.at(-1)) {
-        picture_display(picture_id.at(-1));
       }
     },
     { passive: true }
   );
 
   events(slider_close, "click", () => {
+
+    for (const index of site_img) {
+
+      index.classList.remove("d-has-display");
+    }
     scroll_listener.scroll(0, 0);
   });
 };
