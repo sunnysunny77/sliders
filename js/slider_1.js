@@ -82,8 +82,6 @@ export const slider_1 = () => {
           transition: "right 0.5s",
           right: "33.333%"
         });
-        
-        if (slider_next_xl.style.transition) return transform(event.target);
       } else if (count === slider_items.length - 1) {
 
         Object.assign(slider_next_xl.style,{ 
