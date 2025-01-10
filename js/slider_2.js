@@ -24,7 +24,9 @@ export const slider_2 = () => {
 
       setTimeout(() => {
         
-        Object.assign(timeline_container.style,{ transition: "max-height 1s", maxHeight: `${
+        Object.assign(timeline_container.style,{ 
+          transition: "max-height 1s", 
+          maxHeight: `${
           timeline_items[count].getBoundingClientRect().height
         }px`});
         
@@ -48,7 +50,9 @@ export const slider_2 = () => {
 
     timeline_items[count].classList.replace("d-none", "d-flex");
     timeline_button.disabled = "true";
-    Object.assign(timeline_container.style,{ transition: "max-height 1s", maxHeight: `${
+    Object.assign(timeline_container.style,{ 
+      transition: "max-height 1s", 
+      maxHeight: `${
       timeline_container.getBoundingClientRect().height +
       timeline_items[count].getBoundingClientRect().height
     }px`});

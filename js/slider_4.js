@@ -24,9 +24,7 @@ export const slider_4 = () => {
       if (scrollY < line) {
         figure_two.classList.replace("d-md-has-height", "d-md-0-height");
         figure_one.classList.replace("d-md-0-height", "d-md-has-height");
-      }
-
-      if (scrollY > line) {
+      } else if (scrollY > line) {
         figure_one.classList.replace("d-md-has-height", "d-md-0-height");
         figure_two.classList.replace("d-md-0-height", "d-md-has-height");
       }
@@ -50,13 +48,9 @@ export const slider_4 = () => {
 
     if (scroll_desktop < top && contains) {
       height_container.classList.remove("scroll-animation-desktop");
-    }
-
-    if (scroll_desktop > top && scroll_desktop < bottom && !contains) {
+    } else if (scroll_desktop > top && scroll_desktop < bottom && !contains) {
       height_container.classList.add("scroll-animation-desktop");
-    }
-
-    if (scroll_desktop > bottom && contains) {
+    } else if (scroll_desktop > bottom && contains) {
       height_container.classList.remove("scroll-animation-desktop");
     }
   };
@@ -75,9 +69,7 @@ export const slider_4 = () => {
 
       if (scroll_mobile > position && !contains) {
         index.classList.add("scroll-animation-mobile");
-      }
-
-      if (scroll_mobile < position && contains) {
+      } else if (scroll_mobile < position && contains) {
         index.classList.remove("scroll-animation-mobile");
       }
     }
