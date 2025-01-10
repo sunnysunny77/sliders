@@ -23,7 +23,9 @@
 }
 
 .slider_1-item-padding  {
-    padding: 0 26px 0 0;
+    @include min_md {
+        padding: 0 0 0 26px;
+    }
 }
 
 
@@ -83,9 +85,6 @@
 
 .slider_1-button {
     top: calc(50% - 52px);
-    right: -26px;
-    @include min_md {
-        right: 0;
-        will-change: right;
-    }
+    right: 0;
+    transform: translateX(26px);
 }
