@@ -15,18 +15,17 @@
     right: 0;
     left: 0;
     @include min_md {
-        width: calc((100% + 34px) / 2);
+        width: 50%;
     }
     @include min_xl {
-        width: calc((100% + 34px) / 3);
+        width: 33.333%;
     }
 }
 
-.slider_1-item-padding {
-    @include min_md {
-        padding: 0 34px 0 0;
-    }
+.slider_1-item-padding  {
+    padding: 0 26px 0 0;
 }
+
 
 .slider_1-item-body {
     border: 1px solid $color_5;
@@ -85,9 +84,8 @@
 .slider_1-button {
     top: calc(50% - 52px);
     right: -26px;
-    transition: right 0.5s ease-in-out;
-    @include min_xl {
-        right: -26px;
+    @include min_md {
+        right: 0;
         will-change: right;
     }
 }

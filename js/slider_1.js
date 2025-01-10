@@ -61,58 +61,60 @@ export const slider_1 = () => {
 
           Object.assign(slider_next_xl.style,{ 
             
-            transitionDuration: "0.5s", 
-            right: "calc(((100% + 34px) / 3) - 26px)"
+            transition: "right 0.5s",
+            right: "33.333%"
           });
+
+          
         } else if (count === slider_items.length - 1) {
 
-          Object.assign(slider_next_sm.style,{ 
+          Object.assign(slider_next_xl.style,{ 
 
-            transitionDuration: "0.5s", 
-            right: "calc(((100% + 34px) / 2) - 26px)"
+            transition: "right 0.5s",
+            right: "66.666%"
           });
 
-          Object.assign(slider_next_xl.style,{ 
-            
-            transitionDuration: "0.5s", 
-            right: "calc(((100% + 34px) / 1.5) - 26px)"
+          Object.assign(slider_next_sm.style,{
+
+            transition: "right 0.5s",
+            right: "50%"
           });
         }
 
         index.classList.add("slider_1-item-has-opacity");
-
-        Object.assign(index.style,{ 
-          
-          transition: "transform 0.5s ease-in-out", 
-          transform: `translateX(${100 * (i - count)}%)`
-        });
 
         setTimeout(() => {
 
           index.classList.remove("slider_1-item-has-opacity");
           event.target.disabled = "";
         }, 500);
+
+        Object.assign(index.style,{ 
+            
+          transition: "transform 0.5s", 
+          transform: `translateX(${100 * (i - count)}%)`
+        });
       }
       
       if (count === slider_items.length) {
 
-        Object.assign(slider_next_sm.style,{ 
-          
-          transitionDuration: "0.375s", 
-          right: "-26px"
+        Object.assign(slider_next_xl.style,{ 
+
+          transition: "right 0.425s", 
+          right: "0"
         });
 
-        Object.assign(slider_next_xl.style,{ 
-          
-          transitionDuration: "0.425s", 
-          right: "-26px"
+        Object.assign(slider_next_sm.style,{ 
+                    
+          transition: "right 0.37s", 
+          right: "0"
         });
 
         for (const [i, index] of slider_items.entries()) {
           
           Object.assign(index.style,{ 
             
-            transition: "transform 0.5s ease-in-out", 
+            transition: "transform 0.5s", 
             transform: `translateX(${i * 100}%)`
           });
         }
