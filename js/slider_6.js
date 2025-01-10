@@ -25,7 +25,7 @@ export const slider_6 = () => {
       clearInterval(inter_id);
 
       action_aside[previous].style.transition =
-        "opacity 0.75s ease-in";
+        "opacity 0.5s ease-in";
       action_aside[previous].classList.remove("has-animation");
 
       setTimeout(() => {
@@ -46,12 +46,12 @@ export const slider_6 = () => {
 
       setTimeout(() => {
         disabled(false);
-      }, 3000);
+      }, 1500);
 
       if (previous === undefined) {
         previous = i;
         action_aside[i].style.transition =
-          "opacity 0.75s ease-in";
+          "opacity 0.5s ease-in";
         action_aside[i].classList.add("has-animation");
 
         setTimeout(() => {
@@ -60,13 +60,13 @@ export const slider_6 = () => {
         return;
       }
       action_aside[previous].style.transition =
-        "opacity 0.75s ease-in";
+        "opacity 0.5s ease-in";
       action_aside[previous].classList.remove("has-animation");
 
       setTimeout(() => {
         action_aside[previous].style.transition = "none";
         action_aside[i].style.transition =
-          "opacity 0.75s ease-in";
+          "opacity 0.5s ease-in";
         action_aside[i].classList.add("has-animation");
 
         setTimeout(() => {
