@@ -48,6 +48,26 @@ export const slider_1 = () => {
 
   calc_min_height();
 
+  const transform = (target) => {
+
+    for (const [i, index] of slider_items.entries()) {
+
+      index.classList.add("slider_1-item-has-opacity");
+
+      setTimeout(() => {
+
+        index.classList.remove("slider_1-item-has-opacity");
+        target.disabled = "";
+      }, 500);
+
+      Object.assign(index.style,{ 
+          
+        transition: "transform 0.5s", 
+        transform: `translateX(${100 * (i - count)}%)`
+      });
+    }
+  };
+
   for (const index of slider_next) {
 
     events(index, "click", (event) => {
@@ -55,47 +75,29 @@ export const slider_1 = () => {
       event.target.disabled = "true";
       count++;
 
-      for (const [i, index] of slider_items.entries()) {
+      if (count === slider_items.length - 2) {
 
-        if (count === slider_items.length - 2) {
-
-          Object.assign(slider_next_xl.style,{ 
-            
-            transition: "right 0.5s",
-            right: "33.333%"
-          });
+        Object.assign(slider_next_xl.style,{ 
           
-        } else if (count === slider_items.length - 1) {
+          transition: "right 0.5s",
+          right: "33.333%"
+        });
+        
+        if (slider_next_xl.style.transition) return transform(event.target);
+      } else if (count === slider_items.length - 1) {
 
-          Object.assign(slider_next_xl.style,{ 
+        Object.assign(slider_next_xl.style,{ 
 
-            transition: "right 0.5s",
-            right: "66.666%"
-          });
-
-          Object.assign(slider_next_sm.style,{
-
-            transition: "right 0.5s",
-            right: "50%"
-          });
-        }
-
-        Object.assign(index.style,{ 
-            
-          transition: "transform 0.5s", 
-          transform: `translateX(${100 * (i - count)}%)`
+          transition: "right 0.5s",
+          right: "66.666%"
         });
 
-        index.classList.add("slider_1-item-has-opacity");
+        Object.assign(slider_next_sm.style,{
 
-        setTimeout(() => {
-
-          index.classList.remove("slider_1-item-has-opacity");
-          event.target.disabled = "";
-        }, 500);
-      }
-      
-      if (count === slider_items.length) {
+          transition: "right 0.5s",
+          right: "50%"
+        });
+      } else if (count === slider_items.length) {
 
         Object.assign(slider_next_xl.style,{ 
 
@@ -120,15 +122,10 @@ export const slider_1 = () => {
     
         count = 0;
       }
+ 
+      transform(event.target);
     });
   }
 
-  events(
-    window,
-    "resize",
-    () => {
-      calc_min_height();
-    },
-    { passive: true }
-  );
+  events(window, "resize", calc_min_height(), { passive: true });
 };
