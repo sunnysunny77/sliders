@@ -54,7 +54,7 @@ export const slider_nav = () => {
 
       obj.position = "fixed";
       obj.top = `-${height}px`;
-      main.style.marginTop = "";
+      main.style.marginTop = `${height}px`;
       handle_collapse("none");
     } else if (scroll_pos < main_top) {  
 
