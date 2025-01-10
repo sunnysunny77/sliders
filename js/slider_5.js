@@ -9,17 +9,11 @@ export const slider_5 = () => {
     return;
   }
 
-  let picture_id = [];
+  const picture_display = (index) => {
 
-  for (const index of site_img) {
-    picture_id.push(index.id);
-  }
-
-  const picture_display = (id) => {
-
-    const item = document.querySelector(`#site-${id +1}`);
-    const item_minus = document.querySelector(`#site-${id}`);
-    const item_plus = document.querySelector(`#site-${id + 2}`);
+    const item = site_img[index];
+    const item_minus = site_img[index - 1];
+    const item_plus = site_img[index + 1];
     if (item_minus) item_minus.classList.remove("d-has-display");
     if (item_plus) item_plus.classList.remove("d-has-display");
     item.classList.add("d-has-display");
