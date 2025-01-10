@@ -64,7 +64,6 @@ export const slider_1 = () => {
             transition: "right 0.5s",
             right: "33.333%"
           });
-
           
         } else if (count === slider_items.length - 1) {
 
@@ -81,6 +80,12 @@ export const slider_1 = () => {
           });
         }
 
+        Object.assign(index.style,{ 
+            
+          transition: "transform 0.5s", 
+          transform: `translateX(${100 * (i - count)}%)`
+        });
+
         index.classList.add("slider_1-item-has-opacity");
 
         setTimeout(() => {
@@ -88,12 +93,6 @@ export const slider_1 = () => {
           index.classList.remove("slider_1-item-has-opacity");
           event.target.disabled = "";
         }, 500);
-
-        Object.assign(index.style,{ 
-            
-          transition: "transform 0.5s", 
-          transform: `translateX(${100 * (i - count)}%)`
-        });
       }
       
       if (count === slider_items.length) {

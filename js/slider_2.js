@@ -62,7 +62,10 @@ export const slider_2 = () => {
     window,
     "resize",
     () => {
-      Object.assign(timeline_container.style,{ transition: "none", maxHeight: `${timeline_container.scrollHeight}px`});
+      Object.assign(timeline_container.style,{ 
+        transition: "none", 
+        maxHeight: `${timeline_container.scrollHeight}px`
+      });
     },
     { passive: true }
   );
