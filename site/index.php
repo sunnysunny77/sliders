@@ -101,7 +101,7 @@
 
 										</p>
 
-										<button aria-label="next" class="c-custom-1 position-absolute slider_1-button slider-next d-md-none"><i class="fa-solid fa-arrow-right"></i></button>
+										<button aria-label="next" class="c-custom-1 position-absolute slider_1-button slider-next slider-next-sm d-md-none"><i class="fa-solid fa-arrow-right"></i></button>
 
 									</div>
 
