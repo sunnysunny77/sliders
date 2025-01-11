@@ -71,6 +71,15 @@
     transform: translateX(26px);
 }
 
+.slider_1-button-container {
+    pointer-events: none;
+}
+
+.slider-next-md,
+.slider-next-lg {
+    pointer-events: auto; 
+}
+
 .slider_1-button-container,
 .slider-next-sm {
     top: calc(50% - 52px);
