@@ -164,17 +164,33 @@ export const slider_1 = () => {
 
     let width = window.innerWidth;
 
-    count = 0;
+    if (width >= 768 && width < 1200) {
 
-    if (width < 768) {
+      if (count === length - 1) {
+        
+        Object.assign(slider_next_md.style,{
+          
+          transition: "none",
+          right: "calc(50% - 13px)"
+        });
+      }
+    } else if (width >= 1200) {
 
-      init();
-    } else if (width >= 768 && width < 1200) {
+      if (count === length - 2)  {
 
-      reset_item_md();
-    } else {
+        Object.assign(slider_next_lg.style,{ 
+          
+          transition: "none",
+          right: "calc(33.333% - 17.32px)"
+        });
+      } else if (count === length - 1) {
+          
+        Object.assign(slider_next_lg.style,{ 
 
-      reset_item_lg();
+          transition: "none",
+          right: "calc(66.666% - 8.666px)"
+        });
+      }
     }
   }, { passive: true });
 };
