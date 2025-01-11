@@ -9,7 +9,7 @@ export const slider_1 = () => {
   const slider_body = document.querySelectorAll(".slider-body");
 
   if (
-    length === 0 ||
+    slider_items.length === 0 ||
     slider_next_sm.length === 0 ||
     !slider_next_md ||
     !slider_next_lg ||
