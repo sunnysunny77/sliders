@@ -10,6 +10,7 @@
 
 .slider_1-item {
     flex-shrink: 0;
+    width: 100%;
     @include min_md {
         padding: 0 26px 0 0;
     }
