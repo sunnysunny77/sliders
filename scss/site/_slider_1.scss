@@ -65,22 +65,7 @@
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-.slider_1-item-heading,
-.slider_1-item-bold,
-.slider_1-item-content {
-    transition: opacity 0.25s ease-in-out;
-    will-change: opacity;
     opacity: 1;
-}
-
-.slider_1-item-has-opacity {
-    .slider_1-item-heading,
-    .slider_1-item-bold,
-    .slider_1-item-content {
-        opacity: 0.5;
-    }
 }
 
 .slider_1-button {

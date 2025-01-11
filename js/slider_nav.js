@@ -50,20 +50,13 @@ export const slider_nav = () => {
 
       positive = false;
     }
+    
+    if (scroll_pos < collapse) {  
 
-    if (scroll_pos > main_top + height && !positive) {
-
-      obj.position = "fixed";
-      obj.top = "0px";
-      obj.transition = "top 0.375s, max-height 0.375s";
-      obj.maxHeight = `${collapse}px`;
-      body.style.marginTop = `${height}px`;
-    } else if (scroll_pos > main_top + height && positive) {
-
-      obj.position = "fixed";
-      obj.top = `-${height}px`;
-      handle_collapse("top 0.375s, max-height 0.375s", height);
-      body.style.marginTop = `${height}px`;
+      obj.position = "static";
+      obj.top = "initial";
+      body.style.marginTop = "";
+      handle_collapse("max-height 0.375s", height);
     } else if (scroll_pos > main_top && scroll_pos < main_top + height && !positive) {
 
       obj.position = "fixed";
@@ -76,12 +69,19 @@ export const slider_nav = () => {
       obj.top = `-${height}px`;
       body.style.marginTop = `${height}px`;
       handle_collapse("none", height);
-    } else {  
+    } else if (scroll_pos > main_top + height && positive) {
 
-      obj.position = "static";
-      obj.top = "initial";
-      body.style.marginTop = "";
-      handle_collapse("max-height 0.375s", height);
+      obj.position = "fixed";
+      obj.top = `-${height}px`;
+      handle_collapse("top 0.375s, max-height 0.375s", height);
+      body.style.marginTop = `${height}px`;
+    } else if (scroll_pos > main_top + height && !positive) {
+
+      obj.position = "fixed";
+      obj.top = "0px";
+      obj.transition = "top 0.375s, max-height 0.375s";
+      obj.maxHeight = `${collapse}px`;
+      body.style.marginTop = `${height}px`;
     } 
 
     Object.assign(navigation.style, obj);
