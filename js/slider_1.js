@@ -169,9 +169,15 @@ export const slider_1 = () => {
       if (count === length - 1) {
         
         Object.assign(slider_next_md.style,{
-          
           transition: "none",
           right: "calc(50% - 13px)"
+        });
+      } else {
+        
+        Object.assign(slider_next_md.style,{ 
+
+          transition: "none",
+          right: "-26px"
         });
       }
     } else if (width >= 1200) {
@@ -189,6 +195,13 @@ export const slider_1 = () => {
 
           transition: "none",
           right: "calc(66.666% - 8.666px)"
+        });
+      } else {
+
+        Object.assign(slider_next_lg.style,{ 
+
+          transition: "none",
+          right: "-26px"
         });
       }
     }
