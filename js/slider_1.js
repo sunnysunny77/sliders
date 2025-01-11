@@ -25,44 +25,20 @@ export const slider_1 = () => {
 
   const init = () => {
 
-    for (const [i, index] of slider_items.entries()) {
+    for (const index of slider_items) {
 
-      index.style.transform = `translateX(${i * 100}%)`;
+      index.style.transform = "";
     }
   };
-
-  const calc_min_height = () => {
-
-    let min_height = [];
-
-    for (const index of slider_body) {
-
-      index.style.minHeight = "";
-      min_height.push(index.getBoundingClientRect().height + 1);
-    }
-
-    const largest = Math.round(Math.max(...min_height));
-
-    for (const index of slider_body) {
-
-      index.style.minHeight = `${largest}px`;
-    }
-
-    slider_container.style.minHeight = `${largest}px`;
-  };
-
-  init();
-
-  calc_min_height();
 
   const transform_item = () => {
 
-    for (const [i, index] of slider_items.entries()) {
+    for (const index of slider_items) {
 
       Object.assign(index.style,{ 
           
         transition: "transform 0.5s", 
-        transform: `translateX(${100 * (i - count)}%)`,
+        transform: `translateX(-${100 * count}%)`,
       });
     }
   };
@@ -72,7 +48,7 @@ export const slider_1 = () => {
     Object.assign(slider_next_lg.style,{ 
 
       transition: "right 0.425s", 
-      right: "0"
+      right: "-26px"
     });
   
     init();
@@ -83,7 +59,7 @@ export const slider_1 = () => {
     Object.assign(slider_next_md.style,{ 
         
       transition: "right 0.37s", 
-      right: "0"
+      right: "-26px"
     });
  
     init();
@@ -96,14 +72,14 @@ export const slider_1 = () => {
       Object.assign(slider_next_lg.style,{ 
         
         transition: "right 0.5s",
-        right: "calc(((100% + 26px) / 3))"
+        right: "calc(33.333% - 17.32px)"
       });
     } else if (count === length - 1) {
         
       Object.assign(slider_next_lg.style,{ 
 
         transition: "right 0.5s",
-        right: "calc(((100% + 26px) / 1.5))"
+        right: "calc(66.666% - 8.666px)"
       });
     }
   };
@@ -115,7 +91,7 @@ export const slider_1 = () => {
       Object.assign(slider_next_md.style,{ 
 
         transition: "right 0.5s",
-        right: "calc(((100% + 26px) / 2))"
+        right: "calc(50% - 13px)"
       });
     }
   };
@@ -189,8 +165,6 @@ export const slider_1 = () => {
     let width = window.innerWidth;
 
     count = 0;
-
-    calc_min_height();
 
     if (width < 768) {
 

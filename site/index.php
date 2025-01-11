@@ -65,13 +65,13 @@
 
 		<h2 class="text-center my-5"> Slider 1 </h2>
 
-		<div class="slider_1-outer position-relative">
+		<div class="slider_1-outer position-relative d-flex align-items-stretch">
 
 			<button aria-label="next" class="c-custom-1 position-absolute slider_1-button slider-next slider-next-md d-none d-md-flex d-xl-none"><i class="fa-solid fa-arrow-right"></i></button>
 
 			<button aria-label="next" class="c-custom-1 position-absolute slider_1-button slider-next slider-next-lg d-none d-xl-flex"><i class="fa-solid fa-arrow-right"></i></button>
 
-			<div class="slider-container slider_1-row row d-flex align-items-start justify-content-center justify-content-sm-between position-relative g-0">
+			<div class="slider-container slider_1-row row d-flex flex-nowrap justify-content-start g-0">
 				
 				<?php
 
@@ -83,9 +83,9 @@
 
 							<div class="slider-item slider_1-item">
 
-								<div class="slider_1-item-padding slider-padding">
+								<div class="slider_1-item-padding slider-padding h-100">
 
-									<div class="slider-body slider_1-item-body position-relative">
+									<div class="slider-body slider_1-item-body position-relative h-100">
 
 										<h3 class="slider_1-item-heading mb-1">
 
