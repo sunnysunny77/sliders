@@ -9,7 +9,7 @@ export const slider_1 = () => {
   const slider_body = document.querySelectorAll(".slider-body");
 
   if (
-    slider_items.length === 0 ||
+    length === 0 ||
     slider_next_sm.length === 0 ||
     !slider_next_md ||
     !slider_next_lg ||
@@ -20,6 +20,8 @@ export const slider_1 = () => {
   }
 
   let count = 0;
+
+  const length = slider_items.length; 
 
   const init = () => {
 
@@ -89,14 +91,14 @@ export const slider_1 = () => {
 
   const transform_button_lg = () => {
 
-    if (count === slider_items.length - 2)  {
+    if (count === length - 2)  {
 
       Object.assign(slider_next_lg.style,{ 
         
         transition: "right 0.5s",
         right: "calc(((100% + 26px) / 3))"
       });
-    } else if (count === slider_items.length - 1) {
+    } else if (count === length - 1) {
         
       Object.assign(slider_next_lg.style,{ 
 
@@ -108,7 +110,7 @@ export const slider_1 = () => {
 
   const transform_button_md = () => {
 
-    if (count === slider_items.length - 1) {
+    if (count === length - 1) {
         
       Object.assign(slider_next_md.style,{ 
 
@@ -136,7 +138,7 @@ export const slider_1 = () => {
 
     transform_button_lg();
 
-    if (count === slider_items.length) {
+    if (count === length) {
 
       count = 0;
       reset_item_lg();
@@ -153,7 +155,7 @@ export const slider_1 = () => {
 
     transform_button_md();
 
-    if (count === slider_items.length) {
+    if (count === length) {
 
       count = 0;
       reset_item_md();
@@ -172,7 +174,7 @@ export const slider_1 = () => {
       
       transform_item();
 
-      if (count === slider_items.length) {
+      if (count === length) {
 
         count = 0;
         init();
