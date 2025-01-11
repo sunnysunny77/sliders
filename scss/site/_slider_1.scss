@@ -9,6 +9,7 @@
 }
 
 .slider_1-item {
+    flex-shrink: 0;
     @include min_md {
         padding: 0 26px 0 0;
     }
@@ -85,3 +86,27 @@
     top: calc(50% - 52px);
     right: 0;
 }
+
+.slider-next-md.slider_1-button {
+    display: none;
+    @include min_md {
+      display: flex;
+    }
+    @include min_xl {
+      display: none;
+    }
+  }
+  
+  .slider-next-lg.slider_1-button {
+    display: none;
+    @include min_xl {
+      display: flex;
+    }
+  }
+  
+  .slider-next-sm.slider_1-button {
+    display: flex;
+    @include min_md {
+      display: none;
+    }
+  }
