@@ -35,16 +35,6 @@ export const slider_1 = () => {
     }
   };
 
-  const disabled = (event) => {
-
-    event.target.disabled = "true";
-
-    setTimeout(() => {
-
-      event.target.disabled = "";
-    }, 500);
-  };
-
   const transform_item = () => {
 
     for (const index of slider_items) {
@@ -57,7 +47,7 @@ export const slider_1 = () => {
     }
   };
 
-  const reset_item = () => {
+  const reset_item = (transition) => {
 
     Object.assign(slider_button_container.style,{ 
         
@@ -97,13 +87,14 @@ export const slider_1 = () => {
     }
   };
 
-  const transform_button_else = () => {
+  const disabled = (event) => {
 
-    Object.assign(slider_button_container.style,{ 
+    event.target.disabled = "true";
 
-      transition: "none",
-      transform:  "translateX(0)",
-    });
+    setTimeout(() => {
+
+      event.target.disabled = "";
+    }, 500);
   };
 
   const resize = () => {
@@ -117,7 +108,7 @@ export const slider_1 = () => {
         transform_button_lg("none");
       } else {
 
-        transform_button_else();
+        reset_item("none");
       }
     } else if (width >= 768 && width < 1200) {
 
@@ -126,11 +117,11 @@ export const slider_1 = () => {
         transform_button_md("none");
       } else {
 
-        transform_button_else();
+        reset_item("none");
       }
     } else {
 
-      transform_button_else();
+      reset_item("none");
     }
   };
 
@@ -145,7 +136,7 @@ export const slider_1 = () => {
     if (count === length) {
 
       count = 0;
-      reset_item();
+      reset_item(transition);
       init();
       return;
     }
@@ -164,7 +155,7 @@ export const slider_1 = () => {
     if (count === length) {
 
       count = 0;
-      reset_item();
+      reset_item(transition);
       init();
       return;
     }
