@@ -5,13 +5,20 @@
 }
 .slider_1-row {
     overflow: hidden;
+    padding: 0 2px;
 }
 
 .slider_1-item {
+    @include min_md {
+        padding: 0 26px 0 0;
+    }
+}
+
+.slider_1-item,
+.slider_1-button-container {
     will-change: transform;
     @include min_md {
         width: calc(50% + 13px);
-        padding: 0 26px 0 0;
     }
     @include min_xl {
         width: calc(33.333% + 8.666px);
@@ -61,7 +68,11 @@
 }
 
 .slider_1-button {
-    will-change: right;
+    transform: translateX(26px);
+}
+
+.slider_1-button-container,
+.slider-next-sm {
     top: calc(50% - 52px);
-    right: -26px;
+    right: 0;
 }

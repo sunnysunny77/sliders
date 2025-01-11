@@ -6,6 +6,7 @@ export const slider_1 = () => {
   const slider_next_md = document.querySelector(".slider-next-md");
   const slider_next_lg = document.querySelector(".slider-next-lg");
   const slider_container = document.querySelector(".slider-container");
+  const slider_button_container = document.querySelector(".slider-button-container");
   const slider_body = document.querySelectorAll(".slider-body");
 
   if (
@@ -14,6 +15,7 @@ export const slider_1 = () => {
     !slider_next_md ||
     !slider_next_lg ||
     !slider_container ||
+    !slider_button_container ||
     !slider_body
   ) {
     return;
@@ -43,56 +45,43 @@ export const slider_1 = () => {
     }
   };
 
-  const reset_item_lg = () => {
-        
-    Object.assign(slider_next_lg.style,{ 
+  const reset_item = () => {
 
-      transition: "right 0.425s", 
-      right: "-26px"
+    Object.assign(slider_button_container.style,{ 
+        
+      transition: "transform 0.5s",
+      transform:  "translateX(0)",
     });
-  
-    init();
   };
 
-  const reset_item_md = () => {
+  const transform_button = () => {
 
-    Object.assign(slider_next_md.style,{ 
-        
-      transition: "right 0.37s", 
-      right: "-26px"
-    });
- 
-    init();
-  };
+    let width = window.innerWidth;
 
-  const transform_button_lg = () => {
+    if (count === length - 2 && width >= 1200)  {
 
-    if (count === length - 2)  {
+      Object.assign(slider_button_container.style,{ 
 
-      Object.assign(slider_next_lg.style,{ 
-        
-        transition: "right 0.5s",
-        right: "calc(33.333% - 17.32px)"
+        transition: "transform 0.5s",
+        transform:  "translateX(-100%)",
       });
     } else if (count === length - 1) {
         
-      Object.assign(slider_next_lg.style,{ 
-
-        transition: "right 0.5s",
-        right: "calc(66.666% - 8.666px)"
-      });
-    }
-  };
-
-  const transform_button_md = () => {
-
-    if (count === length - 1) {
+     width >= 1200 ? (
         
-      Object.assign(slider_next_md.style,{ 
+        Object.assign(slider_button_container.style,{ 
 
-        transition: "right 0.5s",
-        right: "calc(50% - 13px)"
-      });
+          transition: "transform 0.5s",
+          transform:  "translateX(-200%)",
+        })
+      ) : (
+
+        Object.assign(slider_button_container.style,{ 
+
+          transition: "transform 0.5s",
+          transform:  "translateX(-100%)",
+        })
+      );
     }
   };
 
@@ -112,12 +101,14 @@ export const slider_1 = () => {
 
     disabled(event);
 
-    transform_button_lg();
+    transform_button();
 
     if (count === length) {
 
       count = 0;
-      reset_item_lg();
+      reset_item();
+      init();
+      return;
     }
 
     transform_item();
@@ -129,12 +120,14 @@ export const slider_1 = () => {
 
     disabled(event);
 
-    transform_button_md();
+    transform_button();
 
     if (count === length) {
 
       count = 0;
-      reset_item_md();
+      reset_item();
+      init();
+      return;
     }
 
     transform_item();
@@ -154,56 +147,50 @@ export const slider_1 = () => {
 
         count = 0;
         init();
+        return;
       }
       
       transform_item();
     });
   }
 
-  events(window, "resize", () => {
+  const resize = () => {
 
     let width = window.innerWidth;
 
-    if (width >= 768 && width < 1200) {
+    if (count === length - 2 && width >= 1200)  {
 
-      if (count === length - 1) {
+      Object.assign(slider_button_container.style,{ 
+
+        transition: "none",
+        transform:  "translateX(-100%)",
+      });
+    } else if (count === length - 1) {
         
-        Object.assign(slider_next_md.style,{
-          transition: "none",
-          right: "calc(50% - 13px)"
-        });
-      } else {
+     width >= 1200 ? (
         
-        Object.assign(slider_next_md.style,{ 
+        Object.assign(slider_button_container.style,{ 
 
           transition: "none",
-          right: "-26px"
-        });
-      }
-    } else if (width >= 1200) {
+          transform:  "translateX(-200%)",
+        })
+      ) : (
 
-      if (count === length - 2)  {
-
-        Object.assign(slider_next_lg.style,{ 
-          
-          transition: "none",
-          right: "calc(33.333% - 17.32px)"
-        });
-      } else if (count === length - 1) {
-          
-        Object.assign(slider_next_lg.style,{ 
+        Object.assign(slider_button_container.style,{ 
 
           transition: "none",
-          right: "calc(66.666% - 8.666px)"
-        });
-      } else {
+          transform:  "translateX(-100%)",
+        })
+      );
+    } else {
 
-        Object.assign(slider_next_lg.style,{ 
+      Object.assign(slider_button_container.style,{ 
 
-          transition: "none",
-          right: "-26px"
-        });
-      }
+        transition: "none",
+        transform:  "translateX(0)",
+      });
     }
-  }, { passive: true });
+  };
+
+  events(window, "resize", resize, { passive: true });
 };
