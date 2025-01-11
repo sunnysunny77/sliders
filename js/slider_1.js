@@ -23,6 +23,8 @@ export const slider_1 = () => {
 
   let count = 0;
 
+  const transition = "transform 0.5s"; 
+
   const length = slider_items.length; 
 
   const init = () => {
@@ -30,58 +32,6 @@ export const slider_1 = () => {
     for (const index of slider_items) {
 
       index.style.transform = "";
-    }
-  };
-
-  const transform_item = () => {
-
-    for (const index of slider_items) {
-
-      Object.assign(index.style,{ 
-          
-        transition: "transform 0.5s", 
-        transform: `translateX(-${100 * count}%)`,
-      });
-    }
-  };
-
-  const reset_item = () => {
-
-    Object.assign(slider_button_container.style,{ 
-        
-      transition: "transform 0.5s",
-      transform:  "translateX(0)",
-    });
-  };
-
-  const transform_button = () => {
-
-    let width = window.innerWidth;
-
-    if (count === length - 2 && width >= 1200)  {
-
-      Object.assign(slider_button_container.style,{ 
-
-        transition: "transform 0.5s",
-        transform:  "translateX(-100%)",
-      });
-    } else if (count === length - 1) {
-        
-     width >= 1200 ? (
-        
-        Object.assign(slider_button_container.style,{ 
-
-          transition: "transform 0.5s",
-          transform:  "translateX(-200%)",
-        })
-      ) : (
-
-        Object.assign(slider_button_container.style,{ 
-
-          transition: "transform 0.5s",
-          transform:  "translateX(-100%)",
-        })
-      );
     }
   };
 
@@ -95,13 +45,102 @@ export const slider_1 = () => {
     }, 500);
   };
 
+  const transform_item = () => {
+
+    for (const index of slider_items) {
+
+      Object.assign(index.style,{ 
+          
+        transition: transition, 
+        transform: `translateX(-${100 * count}%)`,
+      });
+    }
+  };
+
+  const reset_item = () => {
+
+    Object.assign(slider_button_container.style,{ 
+        
+      transition: transition,
+      transform:  "translateX(0)",
+    });
+  };
+
+  const transform_button_lg = (transition) => {
+
+    if (count === length - 2)  {
+
+      Object.assign(slider_button_container.style,{ 
+
+        transition: transition,
+        transform:  "translateX(-100%)",
+      });
+    } else if (count === length - 1) {
+           
+      Object.assign(slider_button_container.style,{ 
+
+        transition: transition,
+        transform:  "translateX(-200%)",
+      });
+    }
+  };
+
+  const transform_button_md = (transition) => {
+
+    if (count === length - 1) {
+        
+      Object.assign(slider_button_container.style,{ 
+
+        transition: transition,
+        transform:  "translateX(-100%)",
+      });
+    }
+  };
+
+  const transform_button_else = () => {
+
+    Object.assign(slider_button_container.style,{ 
+
+      transition: "none",
+      transform:  "translateX(0)",
+    });
+  };
+
+  const resize = () => {
+
+    const width = window.innerWidth;
+
+    if (width >= 1200) { 
+
+      if (count === length - 1 || count === length - 2) { 
+
+        transform_button_lg("none");
+      } else {
+
+        transform_button_else();
+      }
+    } else if (width >= 768 && width < 1200) {
+
+      if (count === length - 1) { 
+
+        transform_button_md("none");
+      } else {
+
+        transform_button_else();
+      }
+    } else {
+
+      transform_button_else();
+    }
+  };
+
   events(slider_next_lg, "click", (event) => {
 
     count++;
 
     disabled(event);
 
-    transform_button();
+    transform_button_lg(transition);
 
     if (count === length) {
 
@@ -120,7 +159,7 @@ export const slider_1 = () => {
 
     disabled(event);
 
-    transform_button();
+    transform_button_md(transition);
 
     if (count === length) {
 
@@ -140,8 +179,6 @@ export const slider_1 = () => {
       count++;
 
       disabled(event);
-      
-      transform_item();
 
       if (count === length) {
 
@@ -153,44 +190,6 @@ export const slider_1 = () => {
       transform_item();
     });
   }
-
-  const resize = () => {
-
-    let width = window.innerWidth;
-
-    if (count === length - 2 && width >= 1200)  {
-
-      Object.assign(slider_button_container.style,{ 
-
-        transition: "none",
-        transform:  "translateX(-100%)",
-      });
-    } else if (count === length - 1) {
-        
-     width >= 1200 ? (
-        
-        Object.assign(slider_button_container.style,{ 
-
-          transition: "none",
-          transform:  "translateX(-200%)",
-        })
-      ) : (
-
-        Object.assign(slider_button_container.style,{ 
-
-          transition: "none",
-          transform:  "translateX(-100%)",
-        })
-      );
-    } else {
-
-      Object.assign(slider_button_container.style,{ 
-
-        transition: "none",
-        transform:  "translateX(0)",
-      });
-    }
-  };
 
   events(window, "resize", resize, { passive: true });
 };
