@@ -72,6 +72,9 @@ export const slider_1 = () => {
         transition: transition,
         transform:  "translateX(-200%)",
       });
+    } else {
+
+      reset_item(transition);
     }
   };
 
@@ -84,6 +87,9 @@ export const slider_1 = () => {
         transition: transition,
         transform:  "translateX(-100%)",
       });
+    } else {
+
+      reset_item(transition);
     }
   };
 
@@ -102,23 +108,11 @@ export const slider_1 = () => {
     const width = window.innerWidth;
 
     if (width >= 1200) { 
-
-      if (count === length - 1 || count === length - 2) { 
-
-        transform_button_lg("none");
-      } else {
-
-        reset_item("none");
-      }
+      
+      transform_button_lg("none");
     } else if (width >= 768 && width < 1200) {
 
-      if (count === length - 1) { 
-
-        transform_button_md("none");
-      } else {
-
-        reset_item("none");
-      }
+      transform_button_md("none");
     } else {
 
       reset_item("none");
@@ -133,15 +127,14 @@ export const slider_1 = () => {
 
     transform_button_lg(transition);
 
-    if (count === length) {
+    count === length ? (
 
-      count = 0;
-      reset_item(transition);
-      init();
-      return;
-    }
+      count = 0,
+      init()
+    ) : (
 
-    transform_item();
+      transform_item()
+    );
   });
 
   events(slider_next_md, "click", (event) => {
@@ -152,15 +145,14 @@ export const slider_1 = () => {
 
     transform_button_md(transition);
 
-    if (count === length) {
+    count === length ? (
+      
+      count = 0,
+      init()
+    ) : (
 
-      count = 0;
-      reset_item(transition);
-      init();
-      return;
-    }
-
-    transform_item();
+      transform_item()
+    );
   });
 
   for (const index of slider_next_sm) {
@@ -171,14 +163,14 @@ export const slider_1 = () => {
 
       disabled(event);
 
-      if (count === length) {
-
-        count = 0;
-        init();
-        return;
-      }
+      count === length ? (
       
-      transform_item();
+        count = 0,
+        init()
+      ) : (
+  
+        transform_item()
+      );
     });
   }
 
