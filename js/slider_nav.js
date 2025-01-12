@@ -41,6 +41,7 @@ export const slider_nav = () => {
   const handle_height = () => {
 
     height = window.innerWidth >= 576 ? 57 : 74;
+    collapse = navbar_toggler.classList.contains("has-collapsed") ? height : navigation.scrollHeight;
   };
 
   const handle_navigationigation = () => {
