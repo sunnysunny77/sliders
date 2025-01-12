@@ -2,7 +2,6 @@ import { events } from "./utillites.js";
 
 export const slider_nav = () => {
   const navbar_toggler = document.querySelector(".navbar-toggler");
-  const navbar_collapse = document.querySelector(".navbar-collapse");
   const navigation = document.querySelector(".navigation");
   const main = document.querySelector("main");
   const body = document.querySelector("body");
