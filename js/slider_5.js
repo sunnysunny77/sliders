@@ -19,31 +19,28 @@ export const slider_5 = () => {
     item.classList.add("d-has-display");
   };
 
-  events(
-    scroll_listener,
-    "scroll",
-    (event) => {
-      const scroll_preview = document.querySelectorAll(".scroll-preview");
+  events(scroll_listener, "scroll", (event) => {
 
-      if (scroll_preview.length === 0) {
-        return;
+    const scroll_preview = document.querySelectorAll(".scroll-preview");
+
+    if (scroll_preview.length === 0) {
+
+      return;
+    }
+
+    const scrollY = event.target.scrollTop;
+
+    for (const [i, index] of scroll_preview.entries()) {
+
+      if (scrollY > index.offsetTop && scrollY < index.offsetTop + index.getBoundingClientRect().height) {
+
+        picture_display(i + 1);
+      } else if ( scrollY < scroll_preview[0].offsetTop) {
+
+        picture_display(0);
       }
-
-      const scrollY = event.target.scrollTop;
-
-      for (const [i, index] of scroll_preview.entries()) {
-
-        if (scrollY > index.offsetTop && scrollY < index.offsetTop + index.getBoundingClientRect().height) {
-
-          picture_display(i + 1);
-        } else if ( scrollY < scroll_preview[0].offsetTop) {
-
-          picture_display(0);
-        }
-      }
-    },
-    { passive: true }
-  );
+    }
+  }, { passive: true });
 
   events(slider_close, "click", () => {
 
@@ -51,6 +48,7 @@ export const slider_5 = () => {
 
       index.classList.remove("d-has-display");
     }
+    
     scroll_listener.scroll(0, 0);
   });
 };

@@ -13,29 +13,35 @@ export const slider_6 = () => {
   let inter_id;
 
   const disabled = (bool) => {
+
     for (const index of button_group) {
+
       index.disabled = bool;
     }
   };
 
   const interval = () => {
+
     count--;
 
     if (count === 0) {
+
       clearInterval(inter_id);
 
-      action_aside[previous].style.transition =
-        "opacity 0.5s ease-out";
+      action_aside[previous].style.transition = "opacity 0.5s ease-out";
       action_aside[previous].classList.remove("has-animation");
 
       setTimeout(() => {
+
         action_aside[previous].style.transition = "none";
       }, 750);
     }
   };
 
   for (const [i, index] of button_group.entries()) {
+
     events(index, "click", () => {
+
       count = 12;
 
       clearInterval(inter_id);
@@ -45,31 +51,35 @@ export const slider_6 = () => {
       disabled(true);
 
       setTimeout(() => {
+
         disabled(false);
       }, 1500);
 
       if (previous === undefined) {
+
         previous = i;
-        action_aside[i].style.transition =
-          "opacity 0.5s ease-out";
+        action_aside[i].style.transition = "opacity 0.5s ease-out";
         action_aside[i].classList.add("has-animation");
 
         setTimeout(() => {
+
           action_aside[i].style.transition = "none";
         }, 750);
+
         return;
       }
-      action_aside[previous].style.transition =
-        "opacity 0.5s ease-out";
+
+      action_aside[previous].style.transition = "opacity 0.5s ease-out";
       action_aside[previous].classList.remove("has-animation");
 
       setTimeout(() => {
+
         action_aside[previous].style.transition = "none";
-        action_aside[i].style.transition =
-          "opacity 0.5s ease-out";
+        action_aside[i].style.transition = "opacity 0.5s ease-out";
         action_aside[i].classList.add("has-animation");
 
         setTimeout(() => {
+          
           action_aside[i].style.transition = "none";
           previous = i;
         }, 750);

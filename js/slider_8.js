@@ -10,7 +10,6 @@ const has_move_init = (index) => {
   } else if (get_position(index) >  window.innerHeight) {
 
     index.classList.replace("has-bottom", "has-move") || index.classList.add("has-move");
-
   }
 };
 
@@ -23,13 +22,11 @@ export const slider_8 = () => {
       return;
     }
 
-
     events(window, "scroll", () => {
 
       for (const index of obj) {
 
           has_move_init(index);
       }
-  
     });
 };

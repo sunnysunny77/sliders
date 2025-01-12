@@ -37,6 +37,7 @@ export const slider_3 = () => {
   let interval_id;
 
   for (const item of static_count) {
+
     array_src.push(item.children[0].src);
     array_href.push(item.children[1].children[0].href);
     array_text.push(item.children[1].children[0].innerHTML);
@@ -44,21 +45,25 @@ export const slider_3 = () => {
   }
 
   const percent_clac = (counter) => {
+
     percent = Math.floor((((counter + 1) / static_count.length) * 100) / 1);
   };
 
   percent_clac(counter);
 
   const interval = () => {
+
     width = percent > width ? width + 1 : width - 1;
     percentage.style.width = `${width}%`;
 
     if (percent === width) {
+
       clearInterval(interval_id);
     }
   };
 
   const iteration_end = () => {
+
     const next = counter === static_count.length - 1 ? 0 : counter + 1;
     open_right.disabled = false;
     open_left.disabled = false;
@@ -73,6 +78,7 @@ export const slider_3 = () => {
   };
 
   const iteiteration_start = () => {
+
     const next = counter === static_count.length - 1 ? 0 : counter + 1;
     image1.classList.remove("has-opacity-image");
     image2.classList.remove("has-opacity-image");
@@ -86,51 +92,49 @@ export const slider_3 = () => {
     inner.innerHTML = array_anchor[counter];
   };
 
-  events(
-    open_left,
-    "click",
-    (event) => {
-      event.preventDefault();
-      counter--;
-      if (counter === -1) {
-        counter = static_count.length - 1;
-      }
-      percent_clac(counter);
-      open_right.disabled = true;
-      open_left.disabled = true;
-      inner.classList.add("has-opacity-inner");
-      image1.classList.add("has-opacity-image");
-      image2.classList.add("has-opacity-image");
-      image_fill_right.classList.add("has-right");
-      setTimeout(iteiteration_start, 750);
-      setTimeout(iteration_end, 1500);
-      interval_id = setInterval(interval, 20);
-    },
-    null
-  );
+  events( open_left, "click", (event) => {
 
-  events(
-    open_right,
-    "click",
-    (event) => {
-      event.preventDefault();
-      counter++;
-      if (counter === static_count.length) {
-        counter = 0;
-      }
-      percent_clac(counter);
-      open_right.disabled = true;
-      open_left.disabled = true;
-      inner.classList.add("has-opacity-inner");
-      image1.classList.add("has-opacity-image");
-      image2.classList.add("has-opacity-image");
-      image_fill_left.classList.add("has-left");
-      setTimeout(iteiteration_start, 750);
-      setTimeout(iteration_end, 1500);
-      interval_id = setInterval(interval, 20);
-    },
-    null
-  );
+    event.preventDefault();
+    counter--;
+
+    if (counter === -1) {
+
+      counter = static_count.length - 1;
+    }
+
+    percent_clac(counter);
+    open_right.disabled = true;
+    open_left.disabled = true;
+    inner.classList.add("has-opacity-inner");
+    image1.classList.add("has-opacity-image");
+    image2.classList.add("has-opacity-image");
+    image_fill_right.classList.add("has-right");
+    setTimeout(iteiteration_start, 750);
+    setTimeout(iteration_end, 1500);
+    interval_id = setInterval(interval, 20);
+  });
+
+  events(open_right, "click", (event) => {
+
+    event.preventDefault();
+    counter++;
+
+    if (counter === static_count.length) {
+
+      counter = 0;
+    }
+    
+    percent_clac(counter);
+    open_right.disabled = true;
+    open_left.disabled = true;
+    inner.classList.add("has-opacity-inner");
+    image1.classList.add("has-opacity-image");
+    image2.classList.add("has-opacity-image");
+    image_fill_left.classList.add("has-left");
+    setTimeout(iteiteration_start, 750);
+    setTimeout(iteration_end, 1500);
+    interval_id = setInterval(interval, 20);
+  });
 
   image1.style.backgroundImage = `url(${array_src[0]}`;
   image2.style.backgroundImage = `url(${array_src[1]}`;
@@ -149,6 +153,7 @@ export const slider_3 = () => {
   percentage.style.width = `${width}%`;
 
   events(button_toggle, "click", () => {
+    
     const obj = document.querySelector(".shrink-container");
     obj.classList.toggle("has-shrink");
   });

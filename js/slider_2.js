@@ -25,14 +25,17 @@ export const slider_2 = () => {
       setTimeout(() => {
         
         Object.assign(timeline_container.style,{ 
+
           transition: "max-height 1s", 
-          maxHeight: `${
-          timeline_items[count].getBoundingClientRect().height
-        }px`});
+          maxHeight: `${timeline_items[count].getBoundingClientRect().height}px`
+        });
         
         setTimeout(() => {
+          
           for (const [i, item] of timeline_items.entries()) {
+
             if (i > 0) {
+
               item.classList.replace("d-flex", "d-none");
             }
           }
@@ -46,27 +49,25 @@ export const slider_2 = () => {
     
     timeline_items[count].classList.replace("d-none", "d-flex");
     timeline_button.disabled = "true";
+
     Object.assign(timeline_container.style,{ 
+
       transition: "max-height 1s", 
-      maxHeight: `${
-      timeline_container.getBoundingClientRect().height +
-      timeline_items[count].getBoundingClientRect().height
-    }px`});
+      maxHeight: `${timeline_container.getBoundingClientRect().height + timeline_items[count].getBoundingClientRect().height}px`
+    });
 
     setTimeout(() => {
+
       timeline_button.disabled = "";
     }, 1000);
   });
 
-  events(
-    window,
-    "resize",
-    () => {
-      Object.assign(timeline_container.style,{ 
-        transition: "none", 
-        maxHeight: `${timeline_container.scrollHeight}px`
-      });
-    },
-    { passive: true }
-  );
+  events(window, "resize", () => {
+
+    Object.assign(timeline_container.style,{ 
+
+      transition: "none", 
+      maxHeight: `${timeline_container.scrollHeight}px`
+    });
+  }, { passive: true });
 };
