@@ -16,25 +16,26 @@ export const slider_nav = () => {
 
   let height = window.innerWidth >= 576 ? 57 : 74;
 
-  let collapse_height;
+  let collapse;
 
   let obj = {};
 
   const handle_toggle = () => {
 
     navbar_toggler.classList.toggle("has-collapsed");
-    collapse_height = navbar_toggler.classList.contains("has-collapsed") ? height : collapse_height = height + navbar_collapse.getBoundingClientRect().height;
+    collapse = navbar_toggler.classList.contains("has-collapsed") ? height : navigation.scrollHeight;
     obj.transition = "max-height 0.375s";
-    obj.maxHeight = `${collapse_height}px`;
+    obj.maxHeight = `${collapse}px`;
     Object.assign(navigation.style, obj);
   };
 
-  const handle_collapse = (transition, height) => {
+  const handle_collapse = (transition, height_param) => {
 
     navbar_toggler.classList.add("has-collapsed");
     obj.transition = transition;
-    obj.maxHeight = `${height}px`;
+    obj.maxHeight = `${height_param}px`;
     Object.assign(navigation.style, obj);
+    collapse = height;
   };
 
   const handle_height = () => {
@@ -46,9 +47,7 @@ export const slider_nav = () => {
 
     let positive = false;
 
-    let scroll_pos =  window.scrollY;
-
-    const collapse = navbar_toggler.classList.contains("has-collapsed") ? height : height + navbar_collapse.getBoundingClientRect().height;
+    let scroll_pos = window.scrollY;
 
     const main_top = main.offsetTop;
 
@@ -60,11 +59,11 @@ export const slider_nav = () => {
       positive = false;
     }
     
-    if (scroll_pos < collapse) {  
+    if (scroll_pos < height) {  
 
       obj.position = "static";
       obj.top = "initial";
-      handle_collapse("max-height 0.375s", collapse);
+      handle_collapse("max-height 0.375s", height);
       body.style.marginTop = "";
     } else if (scroll_pos > main_top && scroll_pos < main_top + height && !positive) {
 
@@ -72,7 +71,7 @@ export const slider_nav = () => {
       obj.top = `-${height}px`;
       handle_collapse("top 0.375s, max-height 0.375s", height);
       body.style.marginTop = `${height}px`;
-    } else if (scroll_pos > collapse && scroll_pos < main_top + height) {  
+    } else if (scroll_pos > height && scroll_pos < main_top + height) {  
 
       obj.position = "fixed";
       obj.top = `-${height}px`;
