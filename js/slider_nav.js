@@ -98,7 +98,6 @@ export const slider_nav = () => {
     scrollY = scroll_pos;
   };
 
-
   events(window, "resize", handle_height, { passive: true });
   events(navbar_toggler, "click", handle_toggle);
   events(window, "scroll", handle_navigationigation, { passive: true });
