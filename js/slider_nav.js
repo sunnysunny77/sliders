@@ -13,6 +13,10 @@ export const slider_nav = () => {
 
   let scrollY = 0;
 
+  let positive = false;
+
+  const main_top = main.offsetTop;
+
   let height = window.innerWidth >= 576 ? 57 : 74;
 
   let collapse;
@@ -45,20 +49,8 @@ export const slider_nav = () => {
 
   const handle_navigationigation = () => {
 
-    let positive = false;
-
     let scroll_pos = window.scrollY;
 
-    const main_top = main.offsetTop;
-
-    if (scroll_pos > scrollY) {
-
-      positive = true;
-    } else if (scroll_pos < scrollY) {
-
-      positive = false;
-    }
-    
     if (scroll_pos < height) {  
 
       obj.position = "static";
@@ -75,7 +67,7 @@ export const slider_nav = () => {
 
       obj.position = "fixed";
       obj.top = `-${height}px`;
-      handle_collapse("none", height);
+      handle_collapse(positive ? "none" : "top 0.375s, max-height 0.375s", height);
       body.style.marginTop = `${height}px`;
     } else if (scroll_pos > main_top + height && positive) {
 
@@ -92,8 +84,16 @@ export const slider_nav = () => {
       body.style.marginTop = `${height}px`;
     }
 
-    Object.assign(navigation.style, obj);
+    if (obj !== navigation.style) Object.assign(navigation.style, obj);
 
+    if (scroll_pos > scrollY) {
+
+      positive = true;
+    } else if (scroll_pos < scrollY) {
+
+      positive = false;
+    }
+    
     scrollY = scroll_pos;
   };
 
