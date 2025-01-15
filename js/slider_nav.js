@@ -21,7 +21,7 @@ export const slider_nav = () => {
 
   let collapse;
 
-  let obj = {};
+  let style = {};
 
   const handle_toggle = () => {
 
@@ -50,6 +50,8 @@ export const slider_nav = () => {
   const handle_navigationigation = () => {
 
     let scroll_pos = window.scrollY;
+
+    let obj = {};
 
     if (scroll_pos < height) {  
 
@@ -84,7 +86,7 @@ export const slider_nav = () => {
       body.style.marginTop = `${height}px`;
     }
 
-    if (obj !== navigation.style) Object.assign(navigation.style, obj);
+    if (obj !== style) Object.assign(navigation.style, obj);
 
     if (scroll_pos > scrollY) {
 
@@ -93,6 +95,8 @@ export const slider_nav = () => {
 
       positive = false;
     }
+
+    style = obj;
     
     scrollY = scroll_pos;
   };
