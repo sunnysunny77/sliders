@@ -25,6 +25,8 @@ export const slider_nav = () => {
 
   const handle_toggle = () => {
 
+    let obj = {};
+
     navbar_toggler.classList.toggle("has-collapsed");
     collapse = navbar_toggler.classList.contains("has-collapsed") ? height : navigation.scrollHeight;
     obj.transition = "max-height 0.375s";
@@ -33,6 +35,8 @@ export const slider_nav = () => {
   };
 
   const handle_collapse = (transition, height_param) => {
+
+    let obj = {};
 
     navbar_toggler.classList.add("has-collapsed");
     obj.transition = transition;
