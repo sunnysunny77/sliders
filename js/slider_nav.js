@@ -67,7 +67,7 @@ export const slider_nav = () => {
 
       obj.position = "fixed";
       obj.top = `-${height}px`;
-      handle_collapse(positive ? "none" : "top 0.375s, max-height 0.375s", height);
+      handle_collapse("none", height);
       body.style.marginTop = `${height}px`;
     } else if (scroll_pos > main_top + height && positive) {
 
