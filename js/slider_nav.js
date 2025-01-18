@@ -2,11 +2,12 @@ import { events } from "./utillites.js";
 
 export const slider_nav = () => {
   const navbar_toggler = document.querySelector(".navbar-toggler");
+  const navbar_collapse = document.querySelector(".navbar-collapse");
   const navigation = document.querySelector(".navigation");
   const main = document.querySelector("main");
   const body = document.querySelector("body");
 
-  if (!navigation || !main || !navbar_toggler || !body ) {
+  if (!navigation || ! navbar_collapse || !main || !navbar_toggler || !body ) {
     
     return;
   }
@@ -17,7 +18,7 @@ export const slider_nav = () => {
 
   const main_top = main.offsetTop;
 
-  let height = window.innerWidth >= 576 ? 57 : 74;
+  let height = window.innerWidth >= 576 ? navigation.scrollHeight : navigation.scrollHeight - navbar_collapse.scrollHeight;
 
   let collapse;
 
@@ -47,7 +48,7 @@ export const slider_nav = () => {
 
   const handle_height = () => {
 
-    height = window.innerWidth >= 576 ? 57 : 74;
+    height = window.innerWidth >= 576 ? navigation.scrollHeight : navigation.scrollHeight - navbar_collapse.scrollHeight;
     collapse = navbar_toggler.classList.contains("has-collapsed") ? height : navigation.scrollHeight;
   };
 

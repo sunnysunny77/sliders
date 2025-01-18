@@ -5,21 +5,17 @@ export const slider_1 = () => {
   const slider_next_sm = document.querySelectorAll(".slider-next-sm");
   const slider_next_md = document.querySelector(".slider-next-md");
   const slider_next_lg = document.querySelector(".slider-next-lg");
-  const slider_container = document.querySelector(".slider-container");
   const slider_button_container = document.querySelector(".slider-button-container");
-  const slider_body = document.querySelectorAll(".slider-body");
 
   if (
     slider_items.length === 0 ||
     slider_next_sm.length === 0 ||
     !slider_next_md ||
     !slider_next_lg ||
-    !slider_container ||
-    !slider_button_container ||
-    !slider_body
+    !slider_button_container
   ) {
     return;
-  }
+  };
 
   let count = 0;
 
@@ -32,7 +28,7 @@ export const slider_1 = () => {
     for (const index of slider_items) {
 
       index.style.transform = "";
-    }
+    };
   };
 
   const transform_item = () => {
@@ -44,7 +40,7 @@ export const slider_1 = () => {
         transition: transition, 
         transform: `translateX(-${100 * count}%)`,
       });
-    }
+    };
   };
 
   const reset_item = (transition) => {
@@ -75,7 +71,7 @@ export const slider_1 = () => {
     } else {
 
       reset_item(transition);
-    }
+    };
   };
 
   const transform_button_md = (transition) => {
@@ -90,7 +86,7 @@ export const slider_1 = () => {
     } else {
 
       reset_item(transition);
-    }
+    };
   };
 
   const disabled = (event) => {
@@ -116,7 +112,7 @@ export const slider_1 = () => {
     } else {
 
       reset_item("none");
-    }
+    };
   };
 
   events(slider_next_lg, "click", (event) => {
@@ -127,14 +123,14 @@ export const slider_1 = () => {
 
     transform_button_lg(transition);
 
-    count === length ? (
+    if (count === length) {
 
-      count = 0,
-      init()
-    ) : (
+      count = 0;
+      init();
+    } else {
 
-      transform_item()
-    );
+      transform_item();
+    };
   });
 
   events(slider_next_md, "click", (event) => {
@@ -145,14 +141,14 @@ export const slider_1 = () => {
 
     transform_button_md(transition);
 
-    count === length ? (
+    if (count === length) {
       
-      count = 0,
-      init()
-    ) : (
+      count = 0;
+      init();
+    } else {
 
-      transform_item()
-    );
+      transform_item();
+    };
   });
 
   for (const index of slider_next_sm) {
@@ -163,16 +159,16 @@ export const slider_1 = () => {
 
       disabled(event);
 
-      count === length ? (
+      if (count === length) {
       
-        count = 0,
-        init()
-      ) : (
+        count = 0;
+        init();
+      } else {
   
-        transform_item()
-      );
+        transform_item();
+      };
     });
-  }
+  };
 
   events(window, "resize", resize, { passive: true });
 };
