@@ -2,11 +2,8 @@
     background-color: transparent;
     border: none;
     color: $black;
-    &:disabled {
-        color: $black;
-    }
-    &:hover,
-    &:focus {
+    transition: color 0.2s;
+    &:hover {
         color: $color_4;
     }
 }
@@ -20,7 +17,6 @@
         border-right: 4px solid $color_7;
         border-bottom: 4px solid $color_7;
         border-left: none;
-        position: relative;
     }
     img {
         height: initial;
@@ -41,42 +37,31 @@
     }
 }
 
-.slider_6-action-aside {
-    margin: 0;
-    padding: 2.5%;
-    color: $white;
-    background-color: $color_1;
-    @include min_sm {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+.slider_6-outer {
     @include min_md {
-        font-size: clamp(10px, 1.75vw, 16px);
         position: absolute;
-        flex-direction: column;
-        align-items: flex-start;
-        border-radius: 5px;
-        top: 6%;
-        right: 3%;
-        bottom: 6%;
-        left: 28%;
-        width: initial;
+        height: 100%;
+        top: 0;
+        width: calc(100% - 48px);
+    }
+}
+
+.slider_6-action-aside {
+    background-color: $color_1;
+    @include min_md {
+        transform: translateX(100%);
         background-color: transparent;
-        will-change: background-color;
-        > * {
-            transition: opacity 0.5s ease;
-            opacity: 0;
-            will-change: opacity;
-        }
-        &.has-animation {
-            background-color: $color_1;
-            > * ,
-            &::before,
-            &::after {
-                opacity: 1;
-            }
-        }
+        width: 100%;
+    }
+}
+
+.slider_6-inner {
+    @include min_md {
+        background-color: $color_1;
+        position: relative;
+        border-radius: 5px;
+        height: 100%;
+        width: calc(100% - 16px);
         &::before {
             position: absolute;
             content: " ";
@@ -85,9 +70,6 @@
             top: 10%;
             right: 4%;
             background-color: $white;
-            transition: opacity 0.5s ease;
-            opacity: 0;
-            will-change: opacity;
         }
         &::after {
             position: absolute;
@@ -97,34 +79,36 @@
             right: 4%;
             bottom: 10%;
             background-color: $white;
-            transition: opacity 0.5s ease;
-            opacity: 0;
-            will-change: opacity;
         }
     }
-    @include min_xl {
-        font-size: clamp(16px, 1.25vw, 24px);
+    h3 {
+        color: $white;
+        @include min_md {
+            font-size: clamp(18px, 1.25vw, 25px);
+        }
     }
-    h3 i {
+    i {
         font-size: 12px;
+        color: inherit;
         vertical-align: top;
         margin-left: 12px;
         vertical-align: middle;
         @include min_md {
-            font-size: 17px;
+            font-size: clamp(15px, 1.25vw, 20px);
         }
     }
     p {
         color: $white;
-        border-bottom: 1px solid $white;
-        padding-bottom: 1%;
+        border-bottom: 1.5px solid $white;
+        width: 100%;
         @include min_sm {
             width: 67.5%;
         }
         @include min_md {
-            height: 100%;
-            display: flex;
-            align-items: center;
+            padding-bottom: initial;
+            font-size: clamp(11px, 1.25vw, 20px);
+            border: none;
+            width: 80%;
         }
     }
 }

@@ -1,89 +1,147 @@
 import { events } from "./utillites.js";
 
 export const slider_6 = () => {
-  const button_group = document.querySelectorAll(".button-group");
   const action_aside = document.querySelectorAll(".action-aside");
+  const button_group = document.querySelectorAll(".button-group");
 
-  if (button_group.length === 0 || action_aside.length === 0) {
+  if (
+    action_aside.length === 0 ||
+    button_group.length === 0 
+  ) {
     return;
-  }
+  };
 
-  let previous;
   let count;
+
+  let inter_count;
+
   let inter_id;
 
-  const disabled = (bool) => {
+  const transition = "transform 0.5s"; 
 
-    for (const index of button_group) {
+  const init = () => {
 
-      index.disabled = bool;
-    }
+    for (const index of action_aside) {
+
+      index.style.transform = "";
+    };
+  };
+
+  const init_sm = () => {
+
+    for (const index of action_aside) {
+
+      Object.assign(index.style,{ 
+          
+        transition: "none", 
+        transform: "translateX(0%)",
+      });
+    };
+  };
+
+  const transform_item = () => {
+
+    for (const index of action_aside) {
+
+      Object.assign(index.style,{ 
+          
+        transition: transition, 
+        transform: `translateX(-${100 * count}%)`,
+      });
+    };
   };
 
   const interval = () => {
 
-    count--;
+    inter_count--;
 
-    if (count === 0) {
+    if (inter_count === 0) {
 
-      clearInterval(inter_id);
-
-      action_aside[previous].style.transition = "background-color 0.5s ease-out";
-      action_aside[previous].classList.remove("has-animation");
-
-      setTimeout(() => {
-
-        action_aside[previous].style.transition = "none";
-      }, 500);
+        clearInterval(inter_id);
+        init();
     }
   };
 
-  for (const [i, index] of button_group.entries()) {
+  const disabled = (event) => {
 
-    events(index, "click", () => {
+    event.target.disabled = "true";
 
-      count = 9;
+    setTimeout(() => {
+
+      event.target.disabled = "";
+    }, 500);
+  };
+
+  events(button_group[0], "click", (event) => {
+
+      inter_count = 9;
 
       clearInterval(inter_id);
 
       inter_id = setInterval(interval, 1000);
 
-      disabled(true);
+      count = 0;
 
-      setTimeout(() => {
+      disabled(event);
 
-        disabled(false);
-      }, 500);
+      transform_item();
+  });
 
-      if (previous === undefined) {
+  events(button_group[1], "click", (event) => {
 
-        previous = i;
-        action_aside[i].style.transition = "background-color 0.5s ease-out";
-        action_aside[i].classList.add("has-animation");
+    inter_count = 9;
 
-        setTimeout(() => {
+    clearInterval(inter_id);
 
-          action_aside[i].style.transition = "none";
-        }, 500);
+    inter_id = setInterval(interval, 1000);
 
-        return;
-      }
+    count = 1;
+  
+    disabled(event);
+  
+    transform_item();
+  });
 
-      action_aside[previous].style.transition = "background-color 0.5s ease-out";
-      action_aside[previous].classList.remove("has-animation");
+  events(button_group[2], "click", (event) => {
 
-      setTimeout(() => {
+    inter_count = 9;
 
-        action_aside[previous].style.transition = "none";
-        action_aside[i].style.transition = "background-color 0.5s ease-out";
-        action_aside[i].classList.add("has-animation");
+    clearInterval(inter_id);
 
-        setTimeout(() => {
-          
-          action_aside[i].style.transition = "none";
-          previous = i;
-        }, 500);
-      }, 500);
-    });
-  }
+    inter_id = setInterval(interval, 1000);
+
+    count = 2;
+  
+    disabled(event);
+  
+    transform_item();
+  });
+
+  events(button_group[3], "click", (event) => {
+
+    inter_count = 9;
+
+    clearInterval(inter_id);
+
+    inter_id = setInterval(interval, 1000);
+
+    count = 3;
+  
+    disabled(event);
+  
+    transform_item();
+  });
+
+  events(window, "resize", () => {
+
+    clearInterval(inter_id);
+
+    if (window.innerWidth < 768) {
+
+      init_sm();
+    } else {
+
+      init();
+    }
+  });
 };

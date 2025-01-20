@@ -489,113 +489,127 @@
 
 	<section class="container-fluid g-0">
 
-		<div class="row g-0">
+		<hr class="my-5">
 
-			<hr class="my-5">
+		<h2 class="text-center my-5"> Slider 6 </h2>
 
-			<h2 class="text-center my-5"> Slider 6 </h2>
+		<div class="col-11 col-lg-8 col-xl-6 mx-auto">
 
-			<div class="col-11 col-lg-8 col-xl-6 ">
+			<p class="text-center mx-auto mb-5">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
+				odio velit, et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
+				Mauris suscipit et sem vel auctor. Duis dapibus arcu sem, a porttitor massa vulputate sed.
+			</p>
 
-				<p class="text-center mx-auto mb-5">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
-					odio velit, et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
-					Mauris suscipit et sem vel auctor. Duis dapibus arcu sem, a porttitor massa vulputate sed.
-				</p>
+		</div>
 
-			</div>
+		<div class="slider_6-container col-12 col-md-10 col-xl-8 pb-md-5">
 
-			<div class="slider_6-container col-12 col-md-10 col-xl-8 pb-md-5">
+			<div class="row g-0">
 
-				<div class="row g-0">
+				<div class="col-md-10 d-none d-md-flex justify-content-between mb-md-3 ms-md-5">
 
-					<div class="col-md-10 mb-md-3 ms-md-5">
+					<div class="row w-100 g-0">
 
-						<div class="row d-none d-md-flex justify-content-between g-0">
-
-							<div class="col-md-3">
-
-								<button class="col-md-3 slider_6-button-group button-group">Dolore</button>
-
-							</div>
-
-							<div class="col-md-3">
-
-								<button class="col-md-3 slider_6-button-group button-group">Fugiat</button>
-
-							</div>
-
-							<div class="col-md-3">
-
-								<button class="col-md-3 slider_6-button-group button-group">Occaecat</button>
-
-							</div>
-
-							<div class="col-md-3">
-
-								<button class="col-md-3 slider_6-button-group button-group">Excepteur </button>
-
-							</div>
-
+						<div class="col-md-3">
+							<button class="slider_6-button-group button-group">Dolore</button>
+						</div>
+						<div class="col-md-3">
+							<button class="slider_6-button-group button-group">Fugiat</button>
+						</div>
+						<div class="col-md-3">
+							<button class="slider_6-button-group button-group">Occaecat</button>
+						</div>  
+						<div class="col-md-3">
+							<button class="slider_6-button-group button-group">Excepteur </button>
 						</div>
 
 					</div>
 
-					<div class="slider_6-action-container col-12 col-md-11">
+				</div>
 
-						<div class="row g-0">
+				<div class="slider_6-action-container col-12 col-md-11">
 
-							<div class="slider_6-strip col-3"></div>
+					<div class="row g-0">
 
-							<img class="col-9" src="./images/950x574.svg" width="950" height="574" alt="Placeholder">
+						<div class="slider_6-strip col-3"></div>
 
-							<aside class="slider_6-action-aside action-aside">
+						<div class="col-9 d-md-none">
 
-								<h3 class="m-md-0">Dolore<i class="fa-solid fa-paperclip"></i></h3>
+							<img class="w-100" src="./images/950x574.svg" width="950" height="574" alt="Placeholder">
 
-								<p>
-									Lorem ipsum dolor sit amet consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
-									odio velit, et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
-									Mauris suscipit et sem vel.
-								</p>
+						</div>
 
-							</aside>
+						<div class="col-12 col-md-9 position-relative overflow-hidden">
 
-							<aside class="slider_6-action-aside action-aside">
+							<img class="w-100 d-none d-md-block" src="./images/950x574.svg" width="950" height="574" alt="Placeholder">
+				
+							<div class="d-flex slider_6-outer row overflow-hidden flex-md-nowrap py-md-4 mx-md-4 g-0">
+						
+								<aside class="h-100 slider_6-action-aside action-aside">
 
-								<h3 class="m-md-0">Fugiat<i class="fa-solid fa-phone"></i></h3>
+									<div class="slider_6-inner d-flex flex-column flex-sm-row flex-md-column justify-content-between align-items-start align-items-sm-center align-items-md-start p-3 px-md-5 py-md-4 mx-auto">
 
-								<p>
-									Lorem ipsum dolor sit amet consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
-									odio velit, et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
-									Mauris suscipit et sem vel.
-								</p>
+										<h3 class="m-md-0">Dolore<i class="fa-solid fa-paperclip"></i></h3>
 
-							</aside>
+										<p class="h-100 d-flex align-items-center pb-2 pb-md-0 mb-md-0">
+											Lorem ipsum dolor sit amet consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
+											odio velit et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
+										</p>
 
-							<aside class="slider_6-action-aside action-aside">
+									</div>
 
-								<h3 class="m-md-0">Occaecat<i class="fa-solid fa-envelope"></i></h3>
+								</aside>
 
-								<p>
-									Lorem ipsum dolor sit amet consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
-									odio velit, et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
-									Mauris suscipit et sem vel.
-								</p>
+								<aside class="h-100 slider_6-action-aside action-aside">
 
-							</aside>
+									<div class="slider_6-inner d-flex flex-column flex-sm-row flex-md-column justify-content-between align-items-start align-items-sm-center align-items-md-start p-3 px-md-5 py-md-4 mx-auto">
 
-							<aside class="slider_6-action-aside action-aside">
+										<h3 class="m-md-0">Fugiat<i class="fa-solid fa-phone"></i></h3>
 
-								<h3 class="m-md-0">Excepteur<i class="fa-solid fa-circle-user"></i></h3>
+										<p class="h-100 d-flex align-items-center pb-2 pb-md-0 mb-md-0">
+											Lorem ipsum dolor sit amet consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
+											odio velit et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
+											Mauris suscipit et sem vel auctor. 
+										</p>
 
-								<p>
-									Lorem ipsum dolor sit amet consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
-									odio velit, et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
-									Mauris suscipit et sem vel.
-								</p>
+									</div>
 
-							</aside>
+								</aside>
+
+								<aside class="h-100 slider_6-action-aside action-aside">
+
+									<div class="slider_6-inner d-flex flex-column flex-sm-row flex-md-column justify-content-between align-items-start align-items-sm-center align-items-md-start p-3 px-md-5 py-md-4 mx-auto">
+
+										<h3 class="m-md-0">Occaecat<i class="fa-solid fa-envelope"></i></h3>
+
+										<p class="h-100 d-flex align-items-center pb-2 pb-md-0 mb-md-0">
+											Lorem ipsum dolor sit amet consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
+											odio velit et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
+											Mauris suscipit et.
+										</p>
+
+									</div>
+
+								</aside>
+
+								<aside class="h-100 slider_6-action-aside action-aside">
+
+									<div class="slider_6-inner d-flex flex-column flex-sm-row flex-md-column justify-content-between align-items-start align-items-sm-center align-items-md-start p-3 px-md-5 py-md-4 mx-auto">
+
+										<h3 class="m-md-0">Excepteur<i class="fa-solid fa-circle-user"></i></h3>
+
+										<p class="h-100 d-flex align-items-center pb-2 pb-md-0 mb-md-0">
+											Lorem ipsum dolor sit amet consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
+											odio velit et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
+											Mauris suscipit.
+										</p>
+
+									</div>
+
+								</aside>
+
+							</div>
 
 						</div>
 
@@ -607,7 +621,7 @@
 
 		</div>
 
-	</section>
+		</section>
 
 	<hr class="my-5">
 
