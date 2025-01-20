@@ -548,7 +548,7 @@
 						
 								<aside class="h-100 slider_6-action-aside action-aside">
 
-									<div class="slider_6-inner d-flex flex-column flex-sm-row flex-md-column justify-content-between align-items-start align-items-sm-center align-items-md-start p-3 px-md-5 py-md-3 mx-auto">
+									<div class="slider_6-inner d-flex flex-column flex-sm-row flex-md-column justify-content-between align-items-start align-items-sm-center align-items-md-start p-3 p-xl-4 mx-auto">
 
 										<h3 class="m-md-0">Dolore<i class="fa-solid fa-paperclip"></i></h3>
 
@@ -563,7 +563,7 @@
 
 								<aside class="h-100 slider_6-action-aside action-aside">
 
-									<div class="slider_6-inner d-flex flex-column flex-sm-row flex-md-column justify-content-between align-items-start align-items-sm-center align-items-md-start p-3 px-md-5 py-md-3 mx-auto">
+									<div class="slider_6-inner d-flex flex-column flex-sm-row flex-md-column justify-content-between align-items-start align-items-sm-center align-items-md-start p-3 p-xl-4 mx-auto">
 
 										<h3 class="m-md-0">Fugiat<i class="fa-solid fa-phone"></i></h3>
 
@@ -579,7 +579,7 @@
 
 								<aside class="h-100 slider_6-action-aside action-aside">
 
-									<div class="slider_6-inner d-flex flex-column flex-sm-row flex-md-column justify-content-between align-items-start align-items-sm-center align-items-md-start p-3 px-md-5 py-md-3 mx-auto">
+									<div class="slider_6-inner d-flex flex-column flex-sm-row flex-md-column justify-content-between align-items-start align-items-sm-center align-items-md-start p-3 p-xl-4 mx-auto">
 
 										<h3 class="m-md-0">Occaecat<i class="fa-solid fa-envelope"></i></h3>
 
@@ -595,7 +595,7 @@
 
 								<aside class="h-100 slider_6-action-aside action-aside">
 
-									<div class="slider_6-inner d-flex flex-column flex-sm-row flex-md-column justify-content-between align-items-start align-items-sm-center align-items-md-start p-3 px-md-5 py-md-3 mx-auto">
+									<div class="slider_6-inner d-flex flex-column flex-sm-row flex-md-column justify-content-between align-items-start align-items-sm-center align-items-md-start p-3 p-xl-4 mx-auto">
 
 										<h3 class="m-md-0">Excepteur<i class="fa-solid fa-circle-user"></i></h3>
 
