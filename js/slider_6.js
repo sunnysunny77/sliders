@@ -28,13 +28,13 @@ export const slider_6 = () => {
 
       clearInterval(inter_id);
 
-      action_aside[previous].style.transition = "opacity 0.5s ease-out";
+      action_aside[previous].style.transition = "opacity 0.5s cubic-bezier(0,.67,.357,1)";
       action_aside[previous].classList.remove("has-animation");
 
       setTimeout(() => {
 
         action_aside[previous].style.transition = "none";
-      }, 750);
+      }, 500);
     }
   };
 
@@ -42,7 +42,7 @@ export const slider_6 = () => {
 
     events(index, "click", () => {
 
-      count = 12;
+      count = 9;
 
       clearInterval(inter_id);
 
@@ -53,37 +53,37 @@ export const slider_6 = () => {
       setTimeout(() => {
 
         disabled(false);
-      }, 1500);
+      }, 500);
 
       if (previous === undefined) {
 
         previous = i;
-        action_aside[i].style.transition = "opacity 0.5s ease-out";
+        action_aside[i].style.transition = "opacity 0.5s cubic-bezier(0,.67,.357,1)";
         action_aside[i].classList.add("has-animation");
 
         setTimeout(() => {
 
           action_aside[i].style.transition = "none";
-        }, 750);
+        }, 500);
 
         return;
       }
 
-      action_aside[previous].style.transition = "opacity 0.5s ease-out";
+      action_aside[previous].style.transition = "opacity 0.5s cubic-bezier(0,.67,.357,1)";
       action_aside[previous].classList.remove("has-animation");
 
       setTimeout(() => {
 
         action_aside[previous].style.transition = "none";
-        action_aside[i].style.transition = "opacity 0.5s ease-out";
+        action_aside[i].style.transition = "opacity 0.5s cubic-bezier(0,.67,.357,1)";
         action_aside[i].classList.add("has-animation");
 
         setTimeout(() => {
           
           action_aside[i].style.transition = "none";
           previous = i;
-        }, 750);
-      }, 750);
+        }, 500);
+      }, 500);
     });
   }
 };

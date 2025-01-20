@@ -2,11 +2,11 @@
     background-color: transparent;
     border: none;
     color: $black;
+    &:disabled {
+        color: $black;
+    }
     &:hover,
     &:focus {
-        color: $color_4;
-    }
-    &:disabled {
         color: $color_4;
     }
 }
@@ -66,20 +66,20 @@
         width: initial;
         &::before {
             position: absolute;
-            content: "";
-            top: 7.5%;
-            right: 4%;
-            bottom: 50%;
+            content: " ";
             width: 2px;
+            height: 40%;
+            top: 10%;
+            right: 4%;
             background-color: $white;
         }
         &::after {
             position: absolute;
-            content: "";
-            top: 60%;
-            right: 4%;
-            bottom: 7.5%;
+            content: " ";
             width: 2px;
+            height: 25%;
+            right: 4%;
+            bottom: 10%;
             background-color: $white;
         }
     }
