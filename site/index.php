@@ -503,7 +503,7 @@
 
 		</div>
 		
-		<div class="slider_6-container col-12 col-lg-10 col-xxl-12 pb-md-5">
+		<div class="slider_6-container col-12 col-lg-10 col-xxl-11 pb-md-5">
 
 			<div class="row g-0">
 
@@ -522,7 +522,7 @@
 
 				</div>
 
-				<div class="slider_6-action-container col-12 col-md-10 col-xxl-7">
+				<div class="slider_6-action-container col-12 col-md-10 col-xxl-9">
 
 					<div class="row g-0">
 
