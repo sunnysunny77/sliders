@@ -502,8 +502,8 @@
 			</p>
 
 		</div>
-
-		<div class="slider_6-container col-12 col-md-10 col-xl-8 pb-md-5">
+		
+		<div class="slider_6-container col-12 col-lg-10 col-xxl-12 pb-md-5">
 
 			<div class="row g-0">
 
@@ -515,14 +515,14 @@
 
 							<input class="slider_6-range" type="range" id="service" value="-1"  name="service" min="-1" max="3" />
 							<label class="hidden" for="service">Service</label>
-
+						
 						</div>
-
+			
 					</div>
 
 				</div>
 
-				<div class="slider_6-action-container col-12 col-md-11">
+				<div class="slider_6-action-container col-12 col-md-10 col-xxl-7">
 
 					<div class="row g-0">
 
@@ -534,19 +534,19 @@
 
 						</div>
 
-						<div class="col-12 col-md-9 position-relative overflow-hidden">
+						<div class="col-12 col-md-9 slider_6-outer">
 
 							<img class="w-100 d-none d-md-block" src="./images/950x574.svg" width="950" height="574" alt="Placeholder">
-				
-							<div class="d-flex slider_6-outer row overflow-hidden flex-md-nowrap py-md-4 mx-md-4 g-0">
+							
+							<div class="d-flex slider_6-inner-container row overflow-hidden flex-md-nowrap py-md-4 mx-md-4 g-0">
 						
 								<aside class="h-100 slider_6-action-aside action-aside">
 
-									<div class="slider_6-inner d-flex flex-column flex-sm-row flex-md-column justify-content-between align-items-start align-items-sm-center align-items-md-start p-3 p-xl-4 mx-auto">
+									<div class="slider_6-inner d-flex flex-column flex-sm-row flex-md-column justify-content-between align-items-start align-items-sm-center align-items-md-start p-3 p-xl-5 mx-auto">
 
 										<h3 class="m-md-0">Dolore<i class="fa-solid fa-paperclip"></i></h3>
 
-										<p class="h-100 d-flex align-items-center pb-2 pb-md-0 mb-md-0">
+										<p class="h-100 d-flex align-items-center">
 											Lorem ipsum dolor sit amet consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
 											odio velit et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
 										</p>
@@ -557,11 +557,11 @@
 
 								<aside class="h-100 slider_6-action-aside action-aside">
 
-									<div class="slider_6-inner d-flex flex-column flex-sm-row flex-md-column justify-content-between align-items-start align-items-sm-center align-items-md-start p-3 p-xl-4 mx-auto">
+									<div class="slider_6-inner d-flex flex-column flex-sm-row flex-md-column justify-content-between align-items-start align-items-sm-center align-items-md-start p-3 p-xl-5 mx-auto">
 
 										<h3 class="m-md-0">Fugiat<i class="fa-solid fa-phone"></i></h3>
 
-										<p class="h-100 d-flex align-items-center pb-2 pb-md-0 mb-md-0">
+										<p class="h-100 d-flex align-items-center ">
 											Lorem ipsum dolor sit amet consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
 											odio velit et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
 											Mauris suscipit et sem vel auctor. 
@@ -573,11 +573,11 @@
 
 								<aside class="h-100 slider_6-action-aside action-aside">
 
-									<div class="slider_6-inner d-flex flex-column flex-sm-row flex-md-column justify-content-between align-items-start align-items-sm-center align-items-md-start p-3 p-xl-4 mx-auto">
+									<div class="slider_6-inner d-flex flex-column flex-sm-row flex-md-column justify-content-between align-items-start align-items-sm-center align-items-md-start p-3 p-xl-5 mx-auto">
 
 										<h3 class="m-md-0">Occaecat<i class="fa-solid fa-envelope"></i></h3>
 
-										<p class="h-100 d-flex align-items-center pb-2 pb-md-0 mb-md-0">
+										<p class="h-100 d-flex align-items-center ">
 											Lorem ipsum dolor sit amet consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
 											odio velit et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
 											Mauris suscipit et.
@@ -589,11 +589,11 @@
 
 								<aside class="h-100 slider_6-action-aside action-aside">
 
-									<div class="slider_6-inner d-flex flex-column flex-sm-row flex-md-column justify-content-between align-items-start align-items-sm-center align-items-md-start p-3 p-xl-4 mx-auto">
+									<div class="slider_6-inner d-flex flex-column flex-sm-row flex-md-column justify-content-between align-items-start align-items-sm-center align-items-md-start p-3 p-xl-5 mx-auto">
 
 										<h3 class="m-md-0">Excepteur<i class="fa-solid fa-circle-user"></i></h3>
 
-										<p class="h-100 d-flex align-items-center pb-2 pb-md-0 mb-md-0">
+										<p class="h-100 d-flex align-items-center ">
 											Lorem ipsum dolor sit amet consectetur adipiscing elit. Vivamus at bibendum felis. In convallis
 											odio velit et porttitor sem accumsan sed. Aliquam ultrices quam nec purus dictum vehicula.
 											Mauris suscipit.
@@ -615,7 +615,7 @@
 
 		</div>
 
-		</section>
+	</section>
 
 	<hr class="my-5">
 

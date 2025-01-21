@@ -45,6 +45,18 @@
     }
     img {
         height: initial;
+        @include min_md { 
+            height: 100%;
+            position: absolute;
+            object-fit: cover;
+        }
+    }
+}
+
+.slider_6-outer {
+    @include min_md { 
+        position: relative;
+        overflow: hidden;
     }
 }
 
@@ -62,9 +74,9 @@
     }
 }
 
-.slider_6-outer {
+.slider_6-inner-container  {
     @include min_md {
-        position: absolute;
+        position: relative;
         height: 100%;
         top: 0;
         width: calc(100% - 48px);
@@ -127,10 +139,10 @@
             width: 67.5%;
         }
         @include min_md {
-            font-size: clamp(13px, 1.25vw, 19px);
+            font-size: clamp(14px, 1.25vw, 19px);
             border: none;
             width: 100%;
-            padding: 0 20% 0 0;
+            padding: 15% 25% 12.5% 0;
         }
     }
 }
