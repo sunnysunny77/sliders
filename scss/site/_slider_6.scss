@@ -51,6 +51,8 @@
     @include min_md {
         transform: translateX(100%);
         background-color: transparent;
+        transition: transform 0.5s;
+        will-change: transform;
     }
 }
 

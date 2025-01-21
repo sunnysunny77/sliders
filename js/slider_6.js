@@ -17,8 +17,6 @@ export const slider_6 = () => {
 
   let inter_id;
 
-  const transition = "transform 0.5s"; 
-
   const init = () => {
 
     for (const index of action_aside) {
@@ -27,27 +25,11 @@ export const slider_6 = () => {
     };
   };
 
-  const init_sm = () => {
-
-    for (const index of action_aside) {
-
-      Object.assign(index.style,{ 
-          
-        transition: "none", 
-        transform: "translateX(0%)",
-      });
-    };
-  };
-
   const transform_item = () => {
 
     for (const index of action_aside) {
 
-      Object.assign(index.style,{ 
-          
-        transition: transition, 
-        transform: `translateX(-${100 * count}%)`,
-      });
+      index.style.transform = `translateX(-${100 * count}%)`;
     };
   };
 
@@ -132,16 +114,5 @@ export const slider_6 = () => {
     transform_item();
   });
 
-  events(window, "resize", () => {
-
-    clearInterval(inter_id);
-
-    if (window.innerWidth < 768) {
-
-      init_sm();
-    } else {
-
-      init();
-    }
-  });
+  events(window, "resize", init, { passive: true });
 };
