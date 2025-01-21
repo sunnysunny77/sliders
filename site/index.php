@@ -512,16 +512,10 @@
 					<div class="row w-100 g-0">
 
 						<div class="col-md-3">
-							<button class="slider_6-button-group button-group">Dolore</button>
-						</div>
-						<div class="col-md-3">
-							<button class="slider_6-button-group button-group">Fugiat</button>
-						</div>
-						<div class="col-md-3">
-							<button class="slider_6-button-group button-group">Occaecat</button>
-						</div>  
-						<div class="col-md-3">
-							<button class="slider_6-button-group button-group">Excepteur </button>
+
+							<input class="slider_6-range" type="range" id="service" value="-1"  name="service" min="-1" max="3" />
+							<label class="hidden" for="service">Service</label>
+
 						</div>
 
 					</div>

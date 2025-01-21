@@ -2,11 +2,11 @@ import { events } from "./utillites.js";
 
 export const slider_6 = () => {
   const action_aside = document.querySelectorAll(".action-aside");
-  const button_group = document.querySelectorAll(".button-group");
+  const service = document.querySelector("#service");
 
   if (
     action_aside.length === 0 ||
-    button_group.length === 0 
+    !service 
   ) {
     return;
   };
@@ -18,6 +18,8 @@ export const slider_6 = () => {
   let inter_id;
 
   const init = () => {
+
+    service.value = -1;
 
     for (const index of action_aside) {
 
@@ -44,74 +46,23 @@ export const slider_6 = () => {
     }
   };
 
-  const disabled = (event) => {
+  events(service, "input", (event) => {
 
-    event.target.disabled = "true";
+    inter_count = 9;
 
-    setTimeout(() => {
+    clearInterval(inter_id);
 
-      event.target.disabled = "";
-    }, 500);
-  };
+    inter_id = setInterval(interval, 1000);
 
-  events(button_group[0], "click", (event) => {
+    count = event.target.value;
 
-      inter_count = 9;
-
-      clearInterval(inter_id);
-
-      inter_id = setInterval(interval, 1000);
-
-      count = 0;
-
-      disabled(event);
+    if (count == -1) {
+      
+      init();
+    } else {
 
       transform_item();
-  });
-
-  events(button_group[1], "click", (event) => {
-
-    inter_count = 9;
-
-    clearInterval(inter_id);
-
-    inter_id = setInterval(interval, 1000);
-
-    count = 1;
-  
-    disabled(event);
-  
-    transform_item();
-  });
-
-  events(button_group[2], "click", (event) => {
-
-    inter_count = 9;
-
-    clearInterval(inter_id);
-
-    inter_id = setInterval(interval, 1000);
-
-    count = 2;
-  
-    disabled(event);
-  
-    transform_item();
-  });
-
-  events(button_group[3], "click", (event) => {
-
-    inter_count = 9;
-
-    clearInterval(inter_id);
-
-    inter_id = setInterval(interval, 1000);
-
-    count = 3;
-  
-    disabled(event);
-  
-    transform_item();
+    }
   });
 
   events(window, "resize", init, { passive: true });
