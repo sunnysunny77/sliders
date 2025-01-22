@@ -17,21 +17,29 @@ export const slider_6 = () => {
 
   let inter_id;
 
-  const init = () => {
+  const transition = "transform 0.5s";
 
-    service.value = -1;
+  const init = (transition_param) => {
 
     for (const index of action_aside) {
 
-      index.style.transform = "";
+      Object.assign(index.style, {
+
+        transition: transition_param,
+        transform: "",
+      });
     };
   };
 
-  const transform_item = () => {
+  const transform_item = (transition_param) => {
 
     for (const index of action_aside) {
 
-      index.style.transform = `translateX(-${100 * count}%)`;
+      Object.assign(index.style, {
+
+        transition: transition_param,
+        transform: `translateX(-${100 * count}%)`,
+      });
     };
   };
 
@@ -41,8 +49,9 @@ export const slider_6 = () => {
 
     if (inter_count === 0) {
 
+        service.value = -1;
         clearInterval(inter_id);
-        init();
+        init(transition);
     }
   };
 
@@ -58,12 +67,22 @@ export const slider_6 = () => {
 
     if (count == -1) {
       
-      init();
+      init(transition);
     } else {
 
-      transform_item();
+      transform_item(transition);
     }
   });
 
-  events(window, "resize", init, { passive: true });
+  events(window, "resize", () => {
+
+    if (window.innerWidth < 768) {
+
+      init("none");
+    } else {
+
+      transform_item("none");
+    }
+
+  }, { passive: true });
 };
