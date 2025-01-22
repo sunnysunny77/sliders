@@ -81,6 +81,7 @@ export const slider_6 = () => {
       init("none");
     } else {
 
+      inter_count = 9;
       transform_item("none");
     }
 
