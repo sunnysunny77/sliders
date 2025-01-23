@@ -66,6 +66,7 @@
   border-radius: 100%;
   padding: 8.5%;
   background-size: cover;
+  cursor: pointer;
 }
 
 .slider_3-container {
@@ -134,11 +135,12 @@
   &.has-opacity-inner {
     opacity: 0;
   }
-  a {
+  .slider_3-innertext {
     transition: color 0.2s ease;
     will-change: color;
     color: $white;
     text-decoration: none;
+    cursor: pointer;
     &:hover,
     &:focus {
       color: $color_7;

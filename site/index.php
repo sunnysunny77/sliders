@@ -262,21 +262,21 @@
 
 				<div class="slider_3-container slider-container">
 
-					<a href="mailto:user@gmail.com" rel="noreferrer" target="_blank" class="slider_3-a image-1"></a>
-					<a href="mailto:user@gmail.com" rel="noreferrer" target="_blank" class="slider_3-a image-fill-right"></a>
-					<div class="slider_3-inner inner"></div>
-					<a href="tel:0419-777-066" rel="noreferrer" target="_blank" class="slider_3-a image-2"></a>
-					<a href="tel:0419-777-066" rel="noreferrer" target="_blank" class="slider_3-a image-fill-left"></a>
+					<a class="slider_3-a image-1"></a>
+					<a class="slider_3-a image-fill-right link-open"></a>
+					<div class="slider_3-inner inner"><div></div></div>
+					<a class="slider_3-a image-2"></a>
+					<a class="slider_3-a image-fill-left link-open"></a>
 				
 
 					<div class="static-count d-none">
 
 						<img class="slider_3-img" src="./images/150x150-grey.svg" width="150" height="150" alt="mail" />
 
-						<div>
-
-							<a href="mailto:user@gmail.com" rel="noreferrer" target="_blank">dolor sit amet</a>
-
+						<div class="slider_3-innertext link-open" data-href="mailto:what@google.com"> 
+							
+							Email 
+						
 						</div>
 
 					</div>
@@ -284,11 +284,11 @@
 					<div class="static-count d-none">
 
 						<img class="slider_3-img" src="./images/150x150-pink.svg" width="150" height="150" alt="telephone" />
-
-						<div>
-
-							<a href="tel:0419-777-066" rel="noreferrer" target="_blank">dolor sit</a>
-
+		
+						<div class="slider_3-innertext link-open" data-href="tel:+618888">
+     
+							Phone
+							
 						</div>
 
 					</div>
@@ -297,10 +297,10 @@
 
 						<img class="slider_3-img" src="./images/150x150-light.svg" width="150" height="150" alt="LinkedIn" />
 
-						<div>
-
-							<a href="https://www.linkedin.com/in/david-smith-572b10259/" rel="noreferrer" target="_blank">dolor</a>
-
+						<div class="slider_3-innertext link-open" data-href="https://www.linkedin.com/in/david-smith-572b10259/">
+     
+							Visit
+							
 						</div>
 
 					</div>
