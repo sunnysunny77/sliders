@@ -112,6 +112,15 @@
     width: fit-content;
     margin: auto;
     position: absolute;
+    &:before {
+        content: " ";
+        position: absolute;
+        width: 1px;
+        right: calc(50% - 1px);
+        top: 0;
+        bottom: 16.5px;
+        background-color: $color_1;
+    }
     .timeline-button {
         width: 33px;
         height: 33px;
