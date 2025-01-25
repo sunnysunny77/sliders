@@ -60,13 +60,7 @@ export const slider_nav = () => {
 
     const main_bottom = main.offsetTop + main.scrollHeight - collapse;
     
-    if (scroll_pos > main_bottom) {
-
-      obj.clipPath = "initial";
-      obj.position = "fixed";
-      obj.top = `-${height}px`;
-      obj.transition = "top 0.375s";   
-    } else if (scroll_pos < height) {  
+     if (scroll_pos < height) {  
 
       obj.position = "static";
       obj.top = "initial";
@@ -84,7 +78,7 @@ export const slider_nav = () => {
       obj.top = `-${height}px`;
       handle_collapse("none", height);
       body.style.marginTop = `${height}px`;
-    } else if (scroll_pos > main_top + height && positive) {
+    } else if ((scroll_pos > main_top + height && positive) || (scroll_pos > main_bottom)) {
 
       obj.position = "fixed";
       obj.top = `-${height}px`;
