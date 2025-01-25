@@ -1,109 +1,117 @@
+.slider_2-outer {
+    margin: 0;
+    padding:  52px 0;
+    overflow: hidden;
+}
+
 .slider_2-container {
-    overflow: hidden;
     will-change: max-height;
+    transition: max-height 1s;
+    position: relative;
 }
 
-.slider_2-padding {
-    padding: 0 0 200px 0;
+.slider_2-line-container {
+    position: relative;
+}
+
+.slider_2-line {
+    background: $white;
+    height: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
     @include min_md {
-        padding: 0 3px 200px 3px;
+        position: relative;
     }
-    @include min_lg {
-        padding: 0 28px 200px 28px;
-    }
-}
-
-.slider_2-item {
-    overflow: hidden;
-}
-
-.slider_2-date-line {
-    &:after {
-        content: " ";
-        position: absolute;
-        width: 1px;
-        right: calc(50% - 1px);
-        top: 0;
-        bottom: 0;
-        background-color: $color_7;
-        z-index: 1;
-        @include min_md {
-            bottom: -200px;
-        }
-    }
-    &.slider_2-date-line-md {
-        &:after {
-            @include min_md {
-                top: 55px;
-            }
-        }
-    }
-    .slider_2-date {
-        z-index: 2;
-        background: $white;
+    .slider_2-lineinner {
+        width: 100%;
+        height: 100%;
+        position: relative;
         &:before {
             content: " ";
             position: absolute;
-            width: 9px;
-            height: 9px;
-            background: $color_7;
-            border-radius: 50%;
-            right: calc(50% - 5px);
-            bottom: -5px;
+            width: 1px;
+            right: calc(50% - 1px);
+            top: 0;
+            bottom: 0;
+            background-color: $color_1;
             @include min_md {
-                width: 13px;
-                height: 13px;
-                right: calc(50% - 8px);
-                bottom: -7px;
+                bottom: -200px;
             }
         }
-        .slider_2-date-text {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            background-color: darken(#708090, 15%);;
-            color: $white;
+        &:after {
+            content: " ";
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: $white;
+            bottom: 0;
+            right: calc(50% - 25px);
+            @include min_md {
+                top: calc(50% - 25px);
+            }
+        }
+        .slider_2-linemid {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            &:before {
+                content: " ";
+                z-index: 1;
+                position: absolute;
+                height: 13px;
+                width: 13px;
+                background: $color_1;
+                border-radius: 50%;
+                right: calc(50% - 7px);
+                bottom: calc(0% + 17px);
+                @include min_md {
+                    top: calc(50% - 7px);
+                }
+            }
         }
     }
 }
 
-.slider_2-heading-container {
-    text-transform: uppercase;
-    transform: rotate(-3deg);
-    font-size: larger;
-    font-weight: bold;
-    font-style: oblique;
-    @include min_lg {
-        transform: rotate(-3deg) translateY(-13px) translatex(-25px);
-    }
-}
-
-.slider_2-heading {
-    border-radius: 5px;
-}
-
-.mw-lg-355 {    
-    @include min_lg {
-        max-width: 355px;
-    }
-}
-
-.slider_2-image {
+.slider_2-date {
     width: 100%;
+    p {
+        margin: 125px 0 100px 0;
+        @include min_md {
+            margin: initial;
+        }
+    }
 }
-
 .slider_2-content {
-    @include min_xl {
-        padding-bottom: 200px;
-    } 
+    p {
+        margin: 0 0 53px 0;
+        @include min_md {
+            margin: 26px 0;
+        }
+    }
+}
+.slider_2-content,
+.slider_2-date {
+    position: relative;
+    z-index: 1;
+    p {
+        line-height: 2;
+        color: $color_1;
+        font-size: clamp(14px, 1.6vw, 16px);
+        background-color: $white;
+        padding: 33px 0;
+    }
 }
 
 .slider_2-button-container {
     right: 0;
-    bottom: 0;
+    bottom: -52px;
     left: 0;
-    z-index: 3;
     background: $white;
+    width: fit-content;
+    margin: auto;
+    position: absolute;
     &:before {
         content: " ";
         position: absolute;
@@ -111,22 +119,6 @@
         right: calc(50% - 1px);
         top: 0;
         bottom: 44px;
-        background-color: $color_7;
+        background-color: $color_1;
     }
-}
-
-.color-1 {
-    color: $color_1;
-}
-
-.color-2 {
-    color: $color_2;
-}
-
-.color-3 {
-    color: $color_3;
-}
-
-.color-4 {
-    color: $color_4;
 }

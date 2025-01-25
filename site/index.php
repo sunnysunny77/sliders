@@ -131,97 +131,103 @@
 
 	<h2 class="text-center my-5"> Slider 2 </h2>
 
-	<div class="container g-0">
+    <div id="slider_2-top" class="slider_2-outer row g-0">
 
-		<div class="slider_2-container position-relative timeline-container">
+      <div class="slider_2-container timeline-container col-12 col-md-10 col-xl-8 mx-auto">
 
 			<?php
 
 			$index = 1;
 			$count = -1;
-			$color_array = array("color-1", "color-2", "color-3", "color-4");
+			$array = array("Duis aute irure", "Lorem ipsum dolor", "Dolore magna aliqu", "Voluptate velit esse");
 
 			while ($index < 5) {
 
-				$direction = $index % 2 === 1 ? "flex-row" : "flex-row-reverse";
-				$justify_even = $index % 2 === 1 ? "justify-content-md-start" : "justify-content-md-end";
-				$justify_odd = $index % 2 === 1 ? "justify-content-md-end" : "justify-content-md-start";
-				$justify_even = $index % 2 === 1 ? "justify-content-md-start" : "justify-content-md-end";
-				$display = "d-none";
-				$date_line_md = "";
+			$direction = $index % 2 === 1 ? "flex-row" : "flex-row-reverse";
+			$direction_even = $index % 2 === 1 ? "flex-row-reverse" : "flex-row";
+			$justify_odd = $index % 2 === 1 ? "justify-content-md-end" : "justify-content-md-start";
+			$text_direction = $index % 2 === 1 ? "text-center text-md-end" : "text-center text-md-start";
 
-				if ($index === 1) {
+			$display = "d-none";
 
-					$date_line_md = "slider_2-date-line-md";
-					$display = "d-flex";
-				}
+			if ($index === 1) {
 
-				$count++;
+				$display = "d-flex";
+			}
 
-				if ($count === count($color_array)) {
+			$count++;
 
-					$count = 0;
-				}
+			if ($count === count($array)) {
+
+				$count = 0;
+			}
 
 			?>
 
-				<div class="slider_2-item timeline-item <?php echo $display; ?> g-0">
+			<div class="slider_2-item timeline-item row <?php echo $direction; ?> justify-content-center <?php echo $display; ?> g-0">
+			
+				<div class="col-12 col-md-6 d-flex <?php echo $justify_odd; ?>">
 
-					<div class="slider_2-padding row justify-content-center justify-content-md-between <?php echo $direction; ?> g-0">
+				<div class="slider_2-line-container d-flex flex-fill <?php echo $direction_even; ?>"> 
 
-						<div class="col-12 col-sm-8 col-md-5">
+					<div class="slider_2-line">
 
-							<div class="row h-100 align-items-md-center <?php echo $justify_even; ?> g-0">
+					<div class="slider_2-lineinner d-flex align-items-center justify-content-center mx-auto"><div class="slider_2-linemid"></div></div>
 
-								<div class="col-12 col-md-11">
-							
-									<img class="slider_2-image <?php echo $pad_image; ?>" src="./images/400x400.svg" width="400" height="400"  alt="Placehold">
+					</div>   
 
-								</div>
+					<div class="slider_2-date d-flex justify-content-center align-items-center">
+										
+					<p class="text-center">
 
-							</div>
+						<?php echo $array[$count] ?>
 
-						</div>
-				
-						<div class="slider_2-date-line col-12 col-md-1 <?php echo $date_line_md; ?> position-relative d-flex justify-content-center align-items-md-center py-5 py-md-0">
+						<span class="d-block">
 
-							<div class="slider_2-date position-relative">
+						<?php 
 
-								<div class="slider_2-date-text d-flex align-items-center justify-content-center my-5 py-2 py-md-3 mx-auto">
-									<?php echo $index . "000"?>
-								</div>
+							echo date('Y', strtotime("200$index-01-01"));
 
-							</div>
+						?>
 
-						</div>
+						<span>
 
-						<div class="col-11 col-md-5 pt-md-5">
-
-							<div class="row justify-content-center <?php echo $justify_odd; ?> g-0">
-
-								<div class="slider_2-heading-container col-11 col-sm-10 col-md-12 col-lg-11 d-flex justify-content-start mb-4">
-
-									<h3 class="lider_2-heading mw-lg-355 text-center text-lg-start border <?php echo $color_array[$count] ?> p-2 mb-3">
-
-										Donec dui quam, et pellentesque
-
-									</h3>	
-
-								</div>
-
-								<div class="slider_2-content col-12 col-md-11 text-center text-md-start">
-								
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies lectus augue, ut commodo mi sagittis ut. Morbi tellus nunc, facilisis eu mi sed, ullamcorper congue tellus. In quam ex, accumsan ut varius ut, vestibulum nec nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tortor est, commodo vel quam eget, placerat viverra arcu. Nam eu laoreet lorem. Aliquam facilisis elementum risus, ut suscipit massa finibus et. Curabitur rutrum sapien eget fermentum dignissim. Curabitur pulvinar arcu urna, at rutrum urna molestie vel. Cras hendrerit sit amet ipsum in dignissim. Nam aliquam, purus a vulputate tempus, mauris ante auctor turpis, condimentum semper augue eros sit amet tellus. Maecenas augue lorem, condimentum sed viverra eget, pulvinar eget augue. Sed a metus eros. Donec vel felis et magna porta mollis. Maecenas vehicula quam sit amet ligula euismod, et pretium lacus dignissim.
-
-								</div>
-
-							</div>
-
-						</div>
+					</p>
 
 					</div>
 
 				</div>
+
+				</div>
+
+				<div class="slider_2-content col-12 col-md-6">
+
+				<div class="row justify-content-center <?php echo $justify_odd; ?> g-0">
+
+					<div class="col-9 col-md-10 <?php echo $text_direction; ?>">
+					
+					<p>
+
+						<?php 
+
+						echo str_repeat(
+							"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+							ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+							aliquip ex ea commodo consequat."
+						,$index);
+
+						?>
+
+					</p>
+
+					</div>
+
+				</div>
+
+				</div>
+
+			</div>
 
 			<?php
 
@@ -231,7 +237,7 @@
 
 			?>
 
-			<div class="slider_2-button-container position-absolute d-flex justify-content-center pt-5 pt-md-0">
+			<div class="slider_2-button-container d-flex justify-content-center pt-5 pt-md-0">
 
 				<button aria-label="see more" class="c-custom-1 timeline-button"><i class="fa-solid fa-arrow-down"></i></button>
 
