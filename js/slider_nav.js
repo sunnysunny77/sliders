@@ -16,8 +16,6 @@ export const slider_nav = () => {
 
   let positive = false;
 
-  const main_top = main.offsetTop;
-
   let height = window.innerWidth >= 576 ? navigation.scrollHeight : navigation.scrollHeight - navbar_collapse.scrollHeight;
 
   let collapse;
@@ -58,7 +56,17 @@ export const slider_nav = () => {
 
     let obj = {};
 
-    if (scroll_pos < height) {  
+    const main_top = main.offsetTop;
+
+    const main_bottom = main.offsetTop + main.scrollHeight - collapse;
+    
+    if (scroll_pos > main_bottom) {
+
+      obj.clipPath = "initial";
+      obj.position = "fixed";
+      obj.top = `-${height}px`;
+      obj.transition = "top 0.375s";   
+    } else if (scroll_pos < height) {  
 
       obj.position = "static";
       obj.top = "initial";
