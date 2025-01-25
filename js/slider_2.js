@@ -11,15 +11,7 @@ export const slider_2 = () => {
 
   let count = 0;
 
-  const transition = "max-height 1s"; 
-
-  timeline_container.style.maxHeight = `${timeline_container.getBoundingClientRect().height}px`;
-
-  Object.assign(timeline_container.style,{ 
-          
-    transition: "none", 
-    maxHeight: `${timeline_container.getBoundingClientRect().height}px`,
-  });
+  timeline_container.style.height = `${timeline_container.offsetHeight}px`;
 
   events(timeline_button, "click", () => {
 
@@ -32,12 +24,8 @@ export const slider_2 = () => {
       document.querySelector("#slider_2-top").scrollIntoView({ behavior: "smooth" });
 
       setTimeout(() => {
-        
-        Object.assign(timeline_container.style,{ 
-          
-          transition: transition, 
-          maxHeight: `${timeline_items[count].getBoundingClientRect().height}px`,
-        });
+      
+        timeline_container.style.height = `${timeline_items[count].offsetHeight}px`,
     
         setTimeout(() => {
           
@@ -58,12 +46,7 @@ export const slider_2 = () => {
     
     timeline_button.disabled = "true";
     timeline_items[count].classList.replace("d-none", "d-flex");
-
-    Object.assign(timeline_container.style,{ 
-          
-      transition: transition, 
-      maxHeight: `${timeline_container.getBoundingClientRect().height + timeline_items[count].getBoundingClientRect().height}px`,
-    });
+    timeline_container.style.height = `${timeline_container.offsetHeight + timeline_items[count].offsetHeight}px`,
 
     setTimeout(() => {
 
@@ -73,10 +56,7 @@ export const slider_2 = () => {
 
   events(window, "resize", () => {
 
-    Object.assign(timeline_container.style,{ 
-          
-      transition: "none", 
-      maxHeight: `${timeline_container.scrollHeight}px`,
-    });
+    timeline_container.style.height = "";
+    timeline_container.style.height = `${timeline_container.offsetHeight}px`;
   }, { passive: true });
 };
