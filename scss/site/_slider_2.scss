@@ -1,6 +1,6 @@
 .slider_2-outer {
     margin: 0;
-    padding:  52px 0;
+    padding:  33px 0;
     overflow: hidden;
 }
 
@@ -85,9 +85,9 @@
 }
 .slider_2-content {
     p {
-        margin: 0 0 53px 0;
+        margin: 0 0 33px 0;
         @include min_md {
-            margin: 26px 0;
+            margin: 33px 0;
         }
     }
 }
@@ -106,19 +106,14 @@
 
 .slider_2-button-container {
     right: 0;
-    bottom: -52px;
+    bottom: - 33PX;
     left: 0;
     background: $white;
     width: fit-content;
     margin: auto;
     position: absolute;
-    &:before {
-        content: " ";
-        position: absolute;
-        width: 1px;
-        right: calc(50% - 1px);
-        top: 0;
-        bottom: 44px;
-        background-color: $color_1;
+    .timeline-button {
+        width: 33px;
+        height: 33px;
     }
 }
