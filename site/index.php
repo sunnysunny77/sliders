@@ -811,13 +811,12 @@
 
 	</div>
 
+	<hr class="mb-0"/>
 </main>
 
-<footer class="d-flex flex-wrap justify-content-center align-items-center pb-5">
+<footer class="d-flex flex-wrap justify-content-center align-items-center py-5">
 
-	<hr class="w-100 mb-5">
-
-	<p class="m-0"><i class="fa-regular fa-copyright"></i></p>
+	<p class="my-5 py-5"><i class="fa-regular fa-copyright"></i></p>
 
 </footer>
 

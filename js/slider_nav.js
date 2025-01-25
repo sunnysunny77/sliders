@@ -58,7 +58,7 @@ export const slider_nav = () => {
 
     const main_top = main.offsetTop;
 
-    const main_bottom = main.offsetTop + main.scrollHeight - collapse;
+    const main_bottom = main.offsetTop + main.scrollHeight - height;
     
      if (scroll_pos < height) {  
 

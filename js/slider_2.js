@@ -11,9 +11,18 @@ export const slider_2 = () => {
 
   let count = 0;
 
+  const transition = "max-height 1s"; 
+
   timeline_container.style.maxHeight = `${timeline_container.getBoundingClientRect().height}px`;
 
+  Object.assign(timeline_container.style,{ 
+          
+    transition: "none", 
+    maxHeight: `${timeline_container.getBoundingClientRect().height}px`,
+  });
+
   events(timeline_button, "click", () => {
+
     count++;
 
     if (count === timeline_items.length) {
@@ -24,8 +33,12 @@ export const slider_2 = () => {
 
       setTimeout(() => {
         
-        timeline_container.style.maxHeight = `${timeline_items[count].getBoundingClientRect().height}px`;
-        
+        Object.assign(timeline_container.style,{ 
+          
+          transition: transition, 
+          maxHeight: `${timeline_items[count].getBoundingClientRect().height}px`,
+        });
+    
         setTimeout(() => {
           
           for (const [i, item] of timeline_items.entries()) {
@@ -43,9 +56,14 @@ export const slider_2 = () => {
       return;
     }
     
-    timeline_items[count].classList.replace("d-none", "d-flex");
     timeline_button.disabled = "true";
-    timeline_container.style.maxHeight = `${timeline_container.getBoundingClientRect().height + timeline_items[count].getBoundingClientRect().height}px`;
+    timeline_items[count].classList.replace("d-none", "d-flex");
+
+    Object.assign(timeline_container.style,{ 
+          
+      transition: transition, 
+      maxHeight: `${timeline_container.getBoundingClientRect().height + timeline_items[count].getBoundingClientRect().height}px`,
+    });
 
     setTimeout(() => {
 
@@ -55,7 +73,10 @@ export const slider_2 = () => {
 
   events(window, "resize", () => {
 
-    timeline_container.style.maxHeight = "";
-    timeline_container.style.maxHeight = `${timeline_container.getBoundingClientRect().height}px`;
+    Object.assign(timeline_container.style,{ 
+          
+      transition: "none", 
+      maxHeight: `${timeline_container.scrollHeight}px`,
+    });
   }, { passive: true });
 };
