@@ -45,6 +45,7 @@ export const slider_nav = () => {
 
     Object.assign(navbar_toggler.children[0].children[1].style, {
 
+      transition: wins ? "opacity 0.375s" : "none",
       opacity: has_collapsed ? 1 : 0,
     });
 
