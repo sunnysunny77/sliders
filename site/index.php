@@ -22,9 +22,9 @@
 
 		<div alria-label="menu" role="button" class="col-auto d-sm-none slider_nav-navbar-toggler navbar-toggler px-3 py-4">
 			<div>
-				<div class="slider_nav-bar slider_nav-bar1"></div>
-				<div class="slider_nav-bar slider_nav-bar2"></div>
-				<div class="slider_nav-bar slider_nav-bar3"></div>
+				<div class="slider_nav-bar"></div>
+				<div class="slider_nav-bar"></div>
+				<div class="slider_nav-bar"></div>
 			</div>
 		</div>
 
