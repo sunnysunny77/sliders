@@ -5,8 +5,8 @@
 }
 
 .slider_2-container {
-    will-change: height;
-    transition: height 1s;
+    will-change: max-height;
+    transition: max-height 1s;
     position: relative;
 }
 

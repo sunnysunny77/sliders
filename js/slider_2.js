@@ -11,7 +11,7 @@ export const slider_2 = () => {
 
   let count = 0;
 
-  timeline_container.style.height = `${timeline_container.offsetHeight}px`;
+  timeline_container.style.maxHeight = `${timeline_container.offsetHeight}px`;
 
   events(timeline_button, "click", () => {
 
@@ -25,7 +25,7 @@ export const slider_2 = () => {
 
       setTimeout(() => {
       
-        timeline_container.style.height = `${timeline_items[count].offsetHeight}px`,
+        timeline_container.style.maxHeight = `${timeline_items[count].offsetHeight}px`,
     
         setTimeout(() => {
           
@@ -46,7 +46,7 @@ export const slider_2 = () => {
     
     timeline_button.disabled = "true";
     timeline_items[count].classList.replace("d-none", "d-flex");
-    timeline_container.style.height = `${timeline_container.offsetHeight + timeline_items[count].offsetHeight}px`,
+    timeline_container.style.maxHeight = `${timeline_container.offsetHeight + timeline_items[count].offsetHeight}px`,
 
     setTimeout(() => {
 
@@ -56,7 +56,7 @@ export const slider_2 = () => {
 
   events(window, "resize", () => {
 
-    timeline_container.style.height = "";
-    timeline_container.style.height = `${timeline_container.offsetHeight}px`;
+    timeline_container.style.maxHeight = "";
+    timeline_container.style.maxHeight = `${timeline_container.offsetHeight}px`;
   }, { passive: true });
 };

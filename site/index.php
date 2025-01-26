@@ -20,11 +20,11 @@
 
 	<div class="row m-0 g-0">
 
-		<div alria-label="menu" role="button" class="col-auto d-sm-none slider_nav-navbar-toggler navbar-toggler has-collapsed px-3 py-4">
+		<div alria-label="menu" role="button" class="col-auto d-sm-none slider_nav-navbar-toggler navbar-toggler px-3 py-4">
 			<div>
-				<div class="slider_nav-bar1"></div>
-				<div class="slider_nav-bar2"></div>
-				<div class="slider_nav-bar3"></div>
+				<div class="slider_nav-bar slider_nav-bar1"></div>
+				<div class="slider_nav-bar slider_nav-bar2"></div>
+				<div class="slider_nav-bar slider_nav-bar3"></div>
 			</div>
 		</div>
 

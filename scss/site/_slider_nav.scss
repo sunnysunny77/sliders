@@ -12,6 +12,7 @@
     }
     .navbar-collapse {
         background-color: inherit;
+        overflow: hidden;
     }
     a.active {
         color: $color_5;
@@ -22,6 +23,9 @@
             opacity: 0.5;
         }
     }
+    li {
+        will-change: transform;
+    }
     button.navbar-toggler {
         outline: none;
         border: none;
@@ -31,33 +35,13 @@
 }
 
 .slider_nav-navbar-toggler {
-    &.has-collapsed {
-        .slider_nav-bar1,
-        .slider_nav-bar3 {
-            transform: none;
-        }
-        .slider_nav-bar2 {
-            opacity: 1;
-        }
-    }
-    .slider_nav-bar1,
-    .slider_nav-bar2,
-    .slider_nav-bar3 {
+    .slider_nav-bar {
         width: 24px;
         height: 3px;
         background-color: $color_1;
         margin: 4px 0;
         transition: 0.4s;
         border-radius: 1.5px;
-    }
-    .slider_nav-bar1 {
-        transform: translate(0, 7px) rotate(-45deg);
-    }
-    .slider_nav-bar2 {
-        opacity: 0;
-    }
-    .slider_nav-bar3 {
-        transform: translate(0, -7px) rotate(45deg);
     }
 }
 
