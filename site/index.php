@@ -621,6 +621,27 @@
 
 		</div>
 
+		<div class="col-12 mt-md-5 pt-md-5">
+
+			<div class="row flex-row-reverse mt-md-5 pt-md-5 g-0">
+			
+				<div class="col-12 col-md-6 mb-5 mt-md-5">
+
+					<div class="slider_6-bottom row pt-4 pt-md-0 g-0">
+
+						<div class="col-9">
+							<img class="w-100" src="./images/950x574.svg" width="950" height="574" alt="Placeholder">
+						</div>
+						<div class="bottom-col col-3"></div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
 	</section>
 
 	<hr class="my-5">
@@ -682,7 +703,6 @@
 								Lorem Ipsum
 
 							</h3>
-
 				
 							<p class="pb-1 px-5">
 
@@ -690,14 +710,11 @@
 
 							</p>
 
-							
 							<p class="pb-1 px-5">
 
 								<span>Location:</span> Dorat sit lore
 
 							</p>
-
-				
 
 							<div class="px-5 pb-5">
 
@@ -781,29 +798,109 @@
 
 	<h2 class="text-center my-5"> Slider 9 </h2>
 
-	<div class="container slider_9-container">
+	<div class="container slider_9-container g-0">
 
-		<div class="row justify-content-between align-items-center g-0">
+		<div class="d-flex flex-wrap-nowrap justify-content-center align-items-center">
 
-			<div class="col-2 d-flex justify-content-center">
+			<div class="d-flex justify-content-center">
 
-				<button aria-label="prev" class="slider_9-button button-prev"><i class="fa-solid fa-circle-arrow-left"></i></button>
+				<button aria-label="prev" class="slider_9-button button-prev">
+					
+					<i class="fa-solid fa-circle-arrow-left"></i>
+				
+				</button>
 
 			</div>
 
-			<div class="col-7 slider_9-inner inner-swap position-relative">
+			<div class="slider_9-inner inner-swap">
 
-				<img class="has-current counters" src="./images/400x400.svg" width="950" height="574" alt="Placeholder">
+				<img aria-label="open" class="has-current counters" src="./images/1920x1080-pink.svg" width="1920" height="1080" alt="Placeholder">
 
-				<img class="counters" src="./images/400x400-blue.svg" width="950" height="574" alt="Placeholder">
+				<img aria-label="open" class="counters"  src="./images/1920x1080-white.svg" width="1920" height="1080" alt="Placeholder">
 
-				<img class="counters" src="./images/400x400-dark.svg" width="950" height="574" alt="Placeholder">
+				<img caria-label="open" class="counters" src="./images/1920x1080-green.svg" width="1920" height="1080" alt="Placeholder">
 				
 			</div>
 
-			<div class="col-2 d-flex justify-content-center">
+			<div class="d-flex justify-content-center">
 
-				<button aria-label="next" class="slider_9-button button-next"><i class="fa-solid fa-circle-arrow-right"></i></button>
+				<button aria-label="next" class="slider_9-button button-next">
+						
+					<i class="fa-solid fa-circle-arrow-right"></i>
+				
+				</button>
+
+			</div>
+
+		</div>
+
+		<div class="overflow-hidden">
+
+			<div id="overlay-image-0" class="slider_9-overlay overlay-image d-flex flex-column align-items-center justify-content-center">
+
+				<div class="position-relative overlay-image-close">
+
+					<div class="button-container">
+
+						<button aria-label="close" class="c-custom-1">
+							
+							<i class="fa-solid fa-xmark"></i>
+						
+						</button>
+
+					</div>
+
+					<img class="w-100" src="./images/1920x1080-pink.svg" width="1920" height="1080" alt="Placeholder">
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="overflow-hidden">
+
+			<div id="overlay-image-1" class="slider_9-overlay overlay-image d-flex flex-column align-items-center justify-content-center">
+
+				<div class="position-relative overlay-image-close">
+
+					<div class="button-container">
+
+						<button aria-label="close" class="c-custom-1">
+							
+							<i class="fa-solid fa-xmark"></i>
+						
+						</button>
+
+					</div>
+
+					<img class="w-100" src="./images/1920x1080-white.svg" width="1920" height="1080" alt="Placeholder">
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="overflow-hidden">
+
+			<div id="overlay-image-2" class="slider_9-overlay overlay-image d-flex flex-column align-items-center justify-content-center">
+
+				<div class="position-relative overlay-image-close">
+
+					<div class="button-container">
+
+						<button aria-label="close" class="c-custom-1">
+							
+							<i class="fa-solid fa-xmark"></i>
+						
+						</button>
+
+					</div>
+
+					<img class="w-100" src="./images/1920x1080-green.svg" width="1920" height="1080" alt="Placeholder">
+
+				</div>
 
 			</div>
 
@@ -812,6 +909,7 @@
 	</div>
 
 	<hr class="mb-0"/>
+
 </main>
 
 <footer class="d-flex flex-wrap justify-content-center align-items-center py-5">
