@@ -268,13 +268,12 @@
 
 				<div class="slider_3-container slider-container">
 
-					<a class="slider_3-a image-1"></a>
-					<a class="slider_3-a image-fill-right link-open"></a>
-					<div class="slider_3-inner inner"><div></div></div>
-					<a class="slider_3-a image-2"></a>
-					<a class="slider_3-a image-fill-left link-open"></a>
+					<div role="link" class="slider_3-a image-1"></div>
+					<div role="link" class="slider_3-a image-fill-right link-open"></div>
+					<div class="slider_3-inner inner"><div></div role="link"></div>
+					<div role="link" class="slider_3-a image-2"></div>
+					<div role="link" class="slider_3-a image-fill-left link-open"></div>
 				
-
 					<div class="static-count d-none">
 
 						<img class="slider_3-img" src="./images/150x150-grey.svg" width="150" height="150" alt="mail" />
@@ -816,9 +815,9 @@
 
 				<img aria-label="open" class="has-current counters" src="./images/1920x1080-pink.svg" width="1920" height="1080" alt="Placeholder">
 
-				<img aria-label="open" class="counters"  src="./images/1920x1080-white.svg" width="1920" height="1080" alt="Placeholder">
+				<img  aria-label="open" class="counters"  src="./images/1920x1080-white.svg" width="1920" height="1080" alt="Placeholder">
 
-				<img caria-label="open" class="counters" src="./images/1920x1080-green.svg" width="1920" height="1080" alt="Placeholder">
+				<img aria-label="open" class="counters" src="./images/1920x1080-green.svg" width="1920" height="1080" alt="Placeholder">
 				
 			</div>
 

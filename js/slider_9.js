@@ -89,16 +89,17 @@ export const slider_9 = () => {
     events(index, "click", () => {
 
       overlay_image[i].classList.add("overlay-fixed");
-      overlay_image[i].setAttribute("aria-expanded", true);
+      index.setAttribute("aria-expanded", true);
     });
 
     events(overlay_image_close[i], "click", () => {
 
       overlay_image[i].classList.remove("overlay-fixed");
-      overlay_image[i].setAttribute("aria-expanded", false);
+      index.setAttribute("aria-expanded", false);
     });
 
-    overlay_image[i].setAttribute("aria-expanded", false);
     index.setAttribute("aria-controls", `${overlay_image[i].id}`);
+    index.setAttribute("aria-expanded", false);
+
   }
 };
