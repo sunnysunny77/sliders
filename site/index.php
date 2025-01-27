@@ -20,7 +20,7 @@
 
 	<div class="row m-0 g-0">
 
-		<div alria-label="menu" role="button" class="col-auto d-sm-none slider_nav-navbar-toggler navbar-toggler px-3 py-4">
+		<div role="button" class="col-auto d-sm-none slider_nav-navbar-toggler navbar-toggler px-3 py-4">
 			<div>
 				<div class="slider_nav-bar"></div>
 				<div class="slider_nav-bar"></div>
@@ -127,7 +127,7 @@
 
 	</div>
 
-	<hr id="slider_2-top" class="my-5">
+	<hr class="my-5">
 
 	<h2 class="text-center my-5"> Slider 2 </h2>
 
@@ -184,13 +184,13 @@
 
 						<span class="d-block">
 
-						<?php 
+							<?php 
 
-							echo date('Y', strtotime("200$index-01-01"));
+								echo date('Y', strtotime("200$index-01-01"));
 
-						?>
+							?>
 
-						<span>
+						</span>
 
 					</p>
 
@@ -270,7 +270,7 @@
 
 					<div role="link" class="slider_3-a image-1"></div>
 					<div role="link" class="slider_3-a image-fill-right link-open"></div>
-					<div class="slider_3-inner inner"><div></div role="link"></div>
+					<div class="slider_3-inner inner"><div role="link"></div></div>
 					<div role="link" class="slider_3-a image-2"></div>
 					<div role="link" class="slider_3-a image-fill-left link-open"></div>
 				
