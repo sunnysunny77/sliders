@@ -8,8 +8,9 @@
 //import "../node_modules/bootstrap/js/dist/popover";
 //import "../node_modules/bootstrap/js/dist/scrollspy";
 //import "../node_modules/bootstrap/js/dist/tab";
-///import "../node_modules/bootstrap/js/dist/toast";
+//import "../node_modules/bootstrap/js/dist/toast";
 //import "../node_modules/bootstrap/js/dist/tooltip";
+
 import { events } from "./utillites.js";
 import { slider_nav } from "./slider_nav.js";
 import { slider_9 } from "./slider_9.js";
