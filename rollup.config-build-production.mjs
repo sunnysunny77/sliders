@@ -13,10 +13,10 @@ export default {
     }
   ],
   plugins: [
-      commonjs({
-        include: /node_modules/,
-      }),
-      nodeResolve(),
+    commonjs({
+      include: /node_modules/,
+    }),
+    nodeResolve(),
     babel({ babelHelpers: "bundled" })
   ]
 };
