@@ -76,9 +76,14 @@ export const slider_nav = () => {
 
     collapse = has_collapsed ? height : navigation.scrollHeight;
 
-    let scroll_pos = window.scrollY;
+    const scroll_pos = window.scrollY;
 
-    let obj = {};
+    const obj = {
+      position: "static",
+      top: "initial",
+      transition: "max-height 0.375s",
+      maxHeight: `${height}px`,
+    };
 
     const main_top = main.offsetTop;
 
