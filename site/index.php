@@ -16,15 +16,16 @@
 
 <body>
 
+
 <nav class="container-fluid slider_nav-navigation navigation d-flex align-items-start border-bottom p-0">
 
 	<div class="row m-0 g-0">
 
 		<div role="button" class="col-auto d-sm-none slider_nav-navbar-toggler navbar-toggler px-3 py-4">
 			<div>
-				<div class="slider_nav-bar"></div>
-				<div class="slider_nav-bar"></div>
-				<div class="slider_nav-bar"></div>
+				<div class="slider_nav-bar slider_nav-bar-1"></div>
+				<div class="slider_nav-bar slider_nav-bar-2"></div>
+				<div class="slider_nav-bar slider_nav-bar-3"></div>
 			</div>
 		</div>
 
@@ -38,6 +39,36 @@
 
 				</li>
 		
+			</ul>
+
+		</div>
+
+	</div>
+
+</nav>
+
+<nav class="container-fluid slider_nav-navigation navigation navigation-fixed d-flex align-items-start border-bottom p-0">
+
+	<div class="row m-0 g-0">
+
+		<div role="button" class="col-auto d-sm-none slider_nav-navbar-toggler navbar-toggler px-3 py-4">
+			<div>
+				<div class="slider_nav-bar slider_nav-bar-1"></div>
+				<div class="slider_nav-bar slider_nav-bar-2"></div>
+				<div class="slider_nav-bar slider_nav-bar-3"></div>
+			</div>
+		</div>
+
+		<div class="col-12 slider_nav-navbar-collapse navbar-collapse">
+
+			<ul class="list-unstyled my-4 my-sm-0 py-3">
+
+				<li>
+
+					<a class="mx-4 active" href="./">SLIDER NAV</a>
+
+				</li>
+
 			</ul>
 
 		</div>

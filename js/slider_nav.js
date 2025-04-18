@@ -1,12 +1,14 @@
 import { events } from "./utillites.js";
 
 export const slider_nav = () => {
-  const navbar_toggler = document.querySelector(".navbar-toggler");
-  const navbar_collapse = document.querySelector(".navbar-collapse");
-  const navigation = document.querySelector(".navigation");
+  const navbar_toggler_0 = document.querySelectorAll(".navbar-toggler")[0];
+  const navbar_toggler_1 = document.querySelectorAll(".navbar-toggler")[1];
+  const navigation_0 = document.querySelectorAll(".navigation")[0];
+  const navigation_1 = document.querySelectorAll(".navigation")[1];
+  const footer = document.querySelector("footer");
   const main = document.querySelector("main");
 
-  if (!navigation || ! navbar_collapse || !main || !navbar_toggler ) {
+  if (!navigation_0 || !navigation_1 || !footer || !main || !navbar_toggler_0 || !navbar_toggler_1 ) {
     
     return;
   }
@@ -15,130 +17,53 @@ export const slider_nav = () => {
 
   let positive = false;
 
-  let collapse;
+  const handle_toggle_0 = () => {
 
-  let has_collapsed = true;
-
-  let height = window.innerWidth < 576 ? navigation.scrollHeight - navbar_collapse.scrollHeight : navigation.scrollHeight;
-
-  const handle_bars = () => {
-
-    const wins = window.innerWidth < 576;
-
-    for (const index of navbar_collapse.children[0].children) {
-
-      Object.assign(index.style, {
-
-        transition: wins ? "transform 0.375s" : "none",
-        transform: wins && has_collapsed ? `translateY(-${navbar_collapse.children.length}00%)` : "translateY(0)",
-      });
-    };
-
-    Object.assign(navbar_toggler.children[0].children[0].style, {
-
-      transition: wins ? "transform 0.375s" : "none",
-      transform: has_collapsed ? "none" : "translate(0, 7px) rotate(-45deg)",
-    });
-
-    Object.assign(navbar_toggler.children[0].children[1].style, {
-
-      transition: wins ? "opacity 0.375s" : "none",
-      opacity: has_collapsed ? 1 : 0,
-    });
-
-    Object.assign(navbar_toggler.children[0].children[2].style, {
-
-      transition: wins ? "transform 0.375s" : "none",
-      transform: has_collapsed ? "none" : "translate(0, -7px) rotate(45deg)",
-    });
+    navbar_toggler_0.classList.toggle("has-collapsed");
+    navigation_0.classList.toggle("has-collapsed");
   };
 
-  const handle_toggle = () => {
+  const handle_toggle_1 = () => {
 
-    const wins = window.innerWidth < 576;
-    has_collapsed = !has_collapsed;
-    collapse = has_collapsed ? height : navigation.scrollHeight;
-
-    Object.assign(navigation.style, {
-
-      transition: wins ? "max-height 0.375s" : "top 0.375s, max-height 0.375s",
-      maxHeight: `${collapse}px`,
-    });
-
-    handle_bars();
+    navbar_toggler_1.classList.toggle("has-collapsed");
+    navigation_1.classList.toggle("has-collapsed");
   };
 
   const handle_navigationigation = () => {
 
-    const wins = window.innerWidth < 576;
+    const height = 83;
 
-    height = wins ? navigation.scrollHeight - navbar_collapse.scrollHeight : navigation.scrollHeight;
-
-    collapse = has_collapsed ? height : navigation.scrollHeight;
+    const top = main.offsetTop;
 
     const scroll_pos = window.scrollY;
 
-    const obj = {
-      position: "static",
-      top: "initial",
-      transition: "max-height 0.375s",
-      maxHeight: `${height}px`,
+    if (scroll_pos < top) {
+
+      navigation_1.classList.remove("has-float");
+      navigation_1.classList.remove("has-positive");
+      navigation_1.classList.remove("has-negative");
+      navbar_toggler_1.classList.remove("has-collapsed");
+      navigation_1.classList.remove("has-collapsed");
+    } else if (scroll_pos > top && scroll_pos < (top + height)) {
+
+      navigation_1.classList.add("has-float");
+      navigation_1.classList.remove("has-positive");
+      navigation_1.classList.remove("has-negative");
+      navbar_toggler_1.classList.remove("has-collapsed");
+      navigation_1.classList.remove("has-collapsed");
+    } else if ((scroll_pos > (top + height) && positive) || (scroll_pos > (footer.offsetTop - height))) {
+
+      navigation_1.classList.remove("has-float");
+      navigation_1.classList.add("has-positive");
+      navigation_1.classList.remove("has-negative");
+      navbar_toggler_1.classList.remove("has-collapsed");
+      navigation_1.classList.remove("has-collapsed");
+    } else if (scroll_pos > (top + height) && !positive) {
+
+      navigation_1.classList.remove("has-float");
+      navigation_1.classList.remove("has-positive");
+      navigation_1.classList.add("has-negative");
     };
-
-    const main_top = main.offsetTop;
-
-    const main_bottom = main.offsetTop + main.scrollHeight - height;
-    
-     if (scroll_pos < height) {  
-
-      obj.position = "static";
-      obj.top = "initial";
-      obj.transition = "max-height 0.375s";
-      obj.maxHeight = `${height}px`;
-      has_collapsed = true;
-      collapse = height;
-      handle_bars();
-      document.body.style.marginTop = "";
-    } else if (scroll_pos > main_top && scroll_pos < main_top + height && !positive) {
-
-      obj.position = "fixed";
-      obj.top = `-${height}px`;
-      obj.transition = "top 0.375s, max-height 0.375s";
-      obj.maxHeight = `${height}px`;
-      has_collapsed = true;
-      collapse = height;
-      handle_bars();
-      document.body.style.marginTop = `${height}px`;
-    } else if (scroll_pos > height && scroll_pos < main_top + height) {  
-
-      obj.position = "fixed";
-      obj.top = `-${height}px`;
-      obj.transition = "none";
-      obj.maxHeight = `${height}px`;
-      has_collapsed = true;
-      collapse = height;
-      handle_bars();
-      document.body.style.marginTop = `${height}px`;
-    } else if ((scroll_pos > main_top + height && positive) || (scroll_pos > main_bottom)) {
-
-      obj.position = "fixed";
-      obj.top = `-${height}px`;
-      obj.transition = "top 0.375s, max-height 0.375s";
-      obj.maxHeight = "0px";
-      has_collapsed = true;
-      collapse = height;
-      handle_bars();
-      document.body.style.marginTop = `${height}px`;
-    } else {
-  
-      obj.position = "fixed";
-      obj.top = "0px";
-      obj.transition = "top 0.375s, max-height 0.375s";
-      obj.maxHeight = `${collapse}px`;
-      document.body.style.marginTop = `${height}px`;
-    }
-
-    Object.assign(navigation.style, obj);
 
     if (scroll_pos > scrollY) {
 
@@ -150,8 +75,7 @@ export const slider_nav = () => {
     scrollY = scroll_pos;
   };
 
-  events(navbar_toggler, "click", handle_toggle);
+  events(navbar_toggler_0, "click", handle_toggle_0);
+  events(navbar_toggler_1, "click", handle_toggle_1);
   events(window, "scroll", handle_navigationigation, { passive: true });
-  events(window, "wheel", handle_navigationigation, { passive: true });
-  events(window, "resize", handle_navigationigation, { passive: true });
 };

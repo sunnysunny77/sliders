@@ -2,13 +2,68 @@
     background-color: $white;
     will-change: top, max-height;
     z-index: 999;
-    right: 0;
-    left: 0;
     overflow: hidden;
-    max-height: 74px;
-    transition: max-height 0.75s;
+    will-change: top, max-height;
+    max-height: 73px;
+    transition:
+        top 0.375s,
+        max-height 0.375s;
     @include min_sm {
         max-height: 57px;
+    }
+    &.navigation-fixed {
+        z-index: -1;
+        position: fixed;
+        top: -73px;
+        max-height: 0px;
+        width: 100%;
+        transition: none;
+        @include min_sm {
+            top: -57px;
+        }
+        &.has-float {
+            z-index: 999;
+            position: fixed;
+            top: -73px;
+            width: 100%;
+            transition:
+                top 0.375s,
+                max-height 0.375s;
+            max-height: 0px;
+            @include min_sm {
+                top: -57px;
+            }
+        }
+        &.has-positive {
+            z-index: 999;
+            position: fixed;
+            top: -73px;
+            width: 100%;
+            transition:
+                top 0.375s,
+                max-height 0.375s;
+            max-height: 0px;
+            @include min_sm {
+                top: -57px;
+            }
+        }
+        &.has-negative {
+            z-index: 999;
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            transition:
+                top 0.375s,
+                max-height 0.375s;
+            max-height: 73px;
+            @include min_sm {
+                max-height: 57px;
+            }
+        }
+    }
+    &.has-collapsed,
+    &.has-collapsed.navigation-fixed {
+        max-height: 212px;
     }
     .navbar-collapse {
         background-color: inherit;
@@ -41,7 +96,21 @@
         background-color: $color_1;
         margin: 4px 0;
         border-radius: 1.5px;
-        will-change: transform;
+        will-change: transform, opacity;
+        transition:
+            transform 0.375s,
+            opacity 0.375s;
+    }
+    &.has-collapsed {
+        .slider_nav-bar-1 {
+            transform: translate(0, 7px) rotate(-45deg);
+        }
+        .slider_nav-bar-2 {
+            opacity: 0;
+        }
+        .slider_nav-bar-3 {
+            transform: translate(0, -7px) rotate(45deg);
+        }
     }
 }
 
